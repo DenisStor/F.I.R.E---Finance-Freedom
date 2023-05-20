@@ -1,0 +1,115 @@
+/* 
+  Localizable.strings
+  F.I.R.E.
+
+  Created by Денис Сторожев on 20.05.2023.
+  
+*/
+"word_0" = "Ustalaj konkretny cel finansowy i zapisz go na papierze. Pomoże to utrzymać skupienie i motywację";
+"word_1" = "Stwórz automatyczny system oszczędzania. Regularnie odkładaj określoną sumę pieniędzy na inwestycje";
+"word_2" = "Zdywersyfikuj swój portfel inwestycyjny. Inwestuj w różne aktywa, aby zminimalizować ryzyko";
+"word_3" = "Regularnie analizuj swoje inwestycje. Oceń ich wydajność i dokonuj niezbędnych zmian";
+"word_4" = "Weź udział w programie inwestowania pasywnego. Wykorzystaj indeksowe fundusze inwestycyjne do długoterminowych inwestycji";
+"word_5" = "Badaj rynki i trendy ekonomiczne. Bądź na bieżąco z wydarzeniami, które mogą wpływać na Twoje inwestycje";
+"word_6" = "Nie panikuj przy krótkoterminowych wahaniach na rynku. Trzymaj swoje inwestycje na długoterminowy horyzont";
+"word_7" = "Inwestuj w edukację finansową. Rozwijaj swoją wiedzę i umiejętności z zakresu inwestycji";
+"word_8" = "Rozważ inwestowanie w nieruchomości. Mogą one stanowić stabilny dochód pasywny";
+"word_9" = "Poszukaj okazji inwestycyjnych w nowych technologiach i sektorach wzrostowych";
+"word_10" = "Pracuj nad zwiększeniem swojego przychodu. Możesz to zrobić poprzez zdobywanie nowych umiejętności i rozwój kariery";
+"word_11" = "Konsultuj się z profesjonalistami. Skorzystaj z usług doradców finansowych i ekspertów inwestycyjnych";
+"word_12" = "Oszczędzaj na podatku. Wykorzystuj dostępne ulgi i strategie podatkowe";
+"word_13" = "Pamiętaj o zrównoważonym podejściu do ryzyka. Nie inwestuj wszystkich swoich środków w jedno miejsce";
+"word_14" = "Bądź cierpliwy. Inwestowanie to długoterminowa gra, wymagająca czasu i determinacji";
+"word_15" = "Kontroluj swoje wydatki. Twórz budżet i świadomie podejmuj decyzje zakupowe";
+"word_16" = "Inwestuj w swoje zdrowie i edukację. To inwestycje, które zawsze się opłacają";
+"word_17" = "Rozważ inwestowanie w fundusze emerytalne. Zapewnij sobie stabilną przyszłość finansową";
+"word_18" = "Badaj i analizuj historię inwestycji. Wyciągaj wnioski z przeszłych doświadczeń";
+"word_19" = "Bądź elastyczny. Dopasuj swoje inwestycje do zmieniających się warunków rynkowych";
+"word_20" = "Oszczędzaj na nagłe wydatki. Stwórz fundusz awaryjny dla nieprzewidzianych sytuacji";
+"word_21" = "Inwestuj w zrównoważone fundusze inwestycyjne. Możesz zarabiać pieniądze i jednocześnie wspierać odpowiedzialne inwestowanie";
+"word_22" = "Bądź świadomy kosztów inwestycji. Zwracaj uwagę na prowizje i opłaty";
+"word_23" = "Inwestuj w branże przyszłości, takie jak energia odnawialna i technologie";
+"word_24" = "Pamiętaj o dywersyfikacji walutowej. Inwestuj również w zagraniczne waluty";
+"word_25" = "Zaangażuj się w społeczne inwestowanie. Inwestuj w projekty i przedsięwzięcia o pozytywnym wpływie społecznym";
+"word_26" = "Podejmuj decyzje inwestycyjne na podstawie solidnych fundamentów. Badaj zarówno fundamentalne, jak i techniczne aspekty inwestycji";
+"word_27" = "Inwestuj w akcje spółek dywidendowych. Możesz otrzymywać regularne wypłaty dywidendy";
+"word_28" = "Oceniaj ryzyko i potencjał zwrotu przed podjęciem decyzji inwestycyjnych";
+"word_29" = "Pamiętaj o zasadzie składania procentu. Regularne długoterminowe inwestowanie może przynieść znaczne zyski";
+"word_30" = "Wykorzystaj okazje inwestycyjne na rynku forex. Pamiętaj jednak o ryzyku związanym z handlem walutami";
+"word_31" = "Badaj i śledź trendy konsumenckie. Inwestuj w firmy, które odpowiadają na zmieniające się preferencje konsumentów";
+"word_32" = "Inwestuj w nowe technologie i innowacyjne start-upy. Mogą one przynieść znaczne zyski w przyszłości";
+"word_33" = "Rozważ inwestowanie w sektor nieruchomości. Dobra jakość i lokalizacja mogą przynieść stabilny zwrot z inwestycji";
+"word_34" = "Bądź świadomy polityki monetarnej i wpływu stóp procentowych na rynki finansowe";
+"word_35" = "Inwestuj w kryptowaluty. Pamiętaj jednak o ich dużym ryzyku i zmienności";
+"word_36" = "Badaj i analizuj wskaźniki finans
+
+owe przed inwestycją w konkretne spółki";
+"word_37" = "Bądź odporny na emocje. Nie podejmuj impulsywnych decyzji inwestycyjnych";
+"word_38" = "Inwestuj w siebie. Własne umiejętności i rozwój osobisty to najlepsza inwestycja";
+"word_39" = "Zacznij inwestować jak najwcześniej. Długoterminowy horyzont inwestycyjny daje większe możliwości wzrostu";
+"word_40" = "Badaj i śledź wskaźniki gospodarcze. Mogą one dawać wskazówki dotyczące kierunku rynków finansowych";
+"word_41" = "Inwestuj w spółki z branży zdrowia i opieki medycznej. To sektor o dużym potencjale wzrostu";
+"word_42" = "Dywersyfikuj swoje portfolio, inwestując zarówno w duże, jak i małe spółki akcyjne";
+"word_43" = "Zwróć uwagę na potencjał wzrostu i udział w rynku firm";
+"word_44" = "Bądź na bieżąco z postępami technologicznymi, które mogą wpływać na branże";
+"word_45" = "Inwestuj w niskokosztowe konta brokerskie online, aby obniżyć koszty transakcji";
+"word_46" = "Przed inwestowaniem zwróć uwagę na stabilność finansową i poziom zadłużenia firm";
+"word_47" = "Oceń charakterystykę ryzyka i potencjalnego zwrotu różnych opcji inwestycyjnych";
+"word_48" = "Dywersyfikuj swoje portfolio inwestując w różne sektory gospodarki";
+"word_49" = "Bądź na bieżąco z otoczeniem stóp procentowych i ich wpływem na inwestycje";
+"word_50" = "Inwestuj w fundusze inwestycyjne o orientacji wzrostowej dla potencjalnego zysku kapitałowego";
+"word_51" = "Przed inwestowaniem zwróć uwagę na doświadczenie i styl zarządzania menedżerów funduszy inwestycyjnych";
+"word_52" = "Oceń opłaty i koszty związane z funduszami inwestycyjnymi";
+"word_53" = "Dywersyfikuj swoje portfolio inwestując w międzynarodowe fundusze inwestycyjne";
+"word_54" = "Bądź na bieżąco z globalnymi trendami gospodarczymi i wydarzeniami geopolitycznymi";
+"word_55" = "Inwestuj w obligacje skarbowe dla niższego ryzyka i zabezpieczenia ze strony państwa";
+"word_56" = "Rozważ inwestowanie w papiery wartościowe chron
+
+iące przed inflacją (TIPS), aby zachować siłę nabywczą";
+"word_57" = "Oceń rentowność i termin zapadalności obligacji przed podjęciem decyzji inwestycyjnych";
+"word_58" = "Dywersyfikuj swoje portfolio obligacji inwestując w różnych emitentów i sektory";
+"word_59" = "Bądź na bieżąco z ratingami kredytowymi i ryzykiem niewypłacalności obligacji";
+"word_60" = "Inwestuj w obligacje korporacyjne dla potencjalnie wyższych dochodów";
+"word_61" = "Zbadaj rynek i określ własny profil inwestycyjny. Dopasuj swoje inwestycje do swoich celów i tolerancji ryzyka";
+"word_62" = "Inwestuj w rynek surowców. Mogą one stanowić zabezpieczenie przed inflacją i zmiennością rynków finansowych";
+"word_63" = "Rozważ inwestowanie w sektor energetyczny. Jest to branża kluczowa dla gospodarki i może przynieść stabilne zyski";
+"word_64" = "Bądź świadomy potencjalnych czynników ryzyka związanych z inwestycjami. Wykonaj dogłębną analizę przed podjęciem decyzji";
+"word_65" = "Inwestuj w spółki z sektora technologicznego. To dynamiczny sektor o dużym potencjale wzrostu";
+"word_66" = "Zarządzaj swoimi długami. Unikaj nadmiernego zadłużenia, które może wpływać na Twoje możliwości inwestycyjne";
+"word_67" = "Inwestuj w sektor usług konsumenckich. To branża odporna na recesje i stabilna w długim okresie";
+"word_68" = "Bądź cierpliwy i konsekwentny. Inwestowanie to proces, który wymaga czasu i systematyczności";
+"word_69" = "Rozważ inwestowanie w sektor finansowy. To ważny sektor gospodarki, który może generować stabilne dochody";
+"word_70" = "Uważaj na nadmierne skoncentrowanie inwestycji w jednej branży. Dywersyfikacja jest kluczem do minimalizowania ryzyka";
+"word_71" = "Inwestuj w spółki o ugruntowanej pozycji na rynku. To może zapewnić stabilność i długoterminowy wzrost";
+"word_72" = "Bądź świadomy zmian prawnych i regulacyjnych. Zmiany w przepisach mogą mieć wpływ na inwestycje";
+"word_73" = "Inwestuj w sektor edukacyjny i rozwojowy. To inwestycja w przyszłe pokolenia i rozwój społeczny";
+"word_74" = "Badaj i śledź wskaźn
+
+iki makroekonomiczne. Mogą one dawać wskazówki dotyczące stanu gospodarki";
+"word_75" = "Inwestuj w sektor infrastruktury. To branża kluczowa dla rozwoju gospodarczego";
+"word_76" = "Bądź elastyczny w podejściu do inwestycji. Czasami konieczne jest dostosowanie strategii do zmieniających się warunków rynkowych";
+"word_77" = "Inwestuj w spółki o stabilnym wzroście zysków i dywidendy";
+"word_78" = "Oceń potencjał wzrostu rynków zagranicznych i rozważ inwestycje w międzynarodowe akcje";
+"word_79" = "Bądź świadomy ryzyka walutowego. Inwestycje w zagraniczne rynki mogą być narażone na zmienność kursów walutowych";
+"word_80" = "Zrób research i zapoznaj się z opiniami analityków przed dokonaniem inwestycji";
+"word_81" = "Rozważ inwestowanie w fundusze indeksowe, które odzwierciedlają ogólny stan rynku";
+"word_82" = "Zainwestuj w swoje cele życiowe. Inwestycje powinny służyć realizacji Twoich marzeń i planów";
+"word_83" = "Bądź gotowy na zmienność rynków. Inwestowanie to nie tylko wzrost, ale także spadki";
+"word_84" = "Badaj i analizuj konkurencję przed inwestycją w określoną branżę";
+"word_85" = "Inwestuj w spółki z sektora konsumenckiego. To branża odporna na kryzysy i zmienne warunki gospodarcze";
+"word_86" = "Dopasuj swoje inwestycje do swojego okresu inwestycyjnego. Krótkoterminowe cele wymagają innego podejścia niż długoterminowe";
+"word_87" = "Bądź aktywny inwestor. Monitoruj swoje inwestycje i podejmuj świadome decyzje";
+"word_88" = "Inwestuj w spółki o silnym modelu biznesowym i zrównoważonej strategii wzrostu";
+"word_89" = "Bądź świadomy zmian technologicznych, które mogą wpływać na różne branże";
+"word_90" = "Inwestuj w sektor transportu i logistyki. To branża kluczowa dla handlu i rozwoju gospodarczego";
+"word_91" = "Oceń potencjał wzrostu i zyskowności przedsiębiorstw przed inwestycją";
+"word_92" = "Bądź gotowy na ryzyko inwestycyjne. Inwestowanie wiąże się z pewnym stopniem ryzyka, którego nie można całkowicie uniknąć";
+"word_93" = "Inwestuj w
+
+ spółki o solidnym bilansie i zdolności do generowania gotówki";
+"word_94" = "Zbadaj rynek i określ trend inwestycyjny. Może to pomóc w identyfikacji potencjalnych okazji inwestycyjnych";
+"word_95" = "Bądź świadomy podatkowych konsekwencji inwestycji. Zrozumienie aspektów podatkowych może wpłynąć na ostateczne wyniki inwestycyjne";
+"word_96" = "Inwestuj w spółki o stabilnym i zrównoważonym wzroście przychodów";
+"word_97" = "Oceń zgodność inwestycji z własnymi wartościami i przekonaniami";
+"word_98" = "Bądź otwarty na różne strategie inwestycyjne. Nie ma jednego najlepszego podejścia do inwestowania";
+"word_99" = "Inwestuj w sektor usług finansowych. To ważna branża dla gospodarki i może generować stabilne dochody";
