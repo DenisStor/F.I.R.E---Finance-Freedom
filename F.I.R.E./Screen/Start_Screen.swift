@@ -1,20 +1,59 @@
-//
-//  Start_Screen.swift
-//  F.I.R.E.
-//
-//  Created by Денис Сторожев on 20.05.2023.
-//
+
 
 import SwiftUI
 
 struct Start_Screen: View {
+    
+    @AppStorage ("currentPage") var currentPage = 1
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("Color_back")
+            VStack(spacing:0){
+                VStack{
+                    Image("Start_Image")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                    
+                }
+                
+                ZStack{
+                    VStack(alignment: .leading,spacing: 15){
+                        Text("F.I.R.E.")
+                            .font(.system(size: 87,weight: .medium))
+                            .foregroundColor(Color("Color_font_1"))
+                        Text("F.I.R.E. - это философия финансовой независимости. Она стремится к достижению финансовой свободы.")
+                            .font(.system(size: 22,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                        HStack{
+                            Text("в меню")
+                                .font(.system(size: 28,weight: .medium))
+                                .overlay(
+                                    Rectangle().frame(height: 2).offset(y: 4)
+                                    , alignment: .bottom)
+                            Image("Start_Image_1")
+                                .renderingMode(.template)
+                        }.foregroundColor(Color("Color_font"))
+                            .onTapGesture {
+                            currentPage = 2
+                            }
+                       
+                    }.padding(.horizontal,10)
+                        .padding(.bottom, 10)
+                }
+                
+                
+            }
+            
+        }
     }
 }
 
 struct Start_Screen_Previews: PreviewProvider {
     static var previews: some View {
-        Start_Screen()
+        ContentView()
+            .previewDevice("iPhone SE (3rd generation)")
+        ContentView()
+            .previewDevice("iPhone 14 Pro Max")
     }
 }
