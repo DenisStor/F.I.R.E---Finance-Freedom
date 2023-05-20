@@ -99,3 +99,11 @@
 "word_97" = "Evaluate the storage and transportation costs associated with physical energy commodities";
 "word_98" = "Diversify your commodity investments across different types of commodities";
 "word_99" = "Stay informed about global energy markets and regulatory changes";
+
+
+"setLang" = "Settings";
+"set1" = "Notifications";
+"set2" = "Theme";
+"set3" = "Currency";
+"set4" = "You already have an up-to-date version of the app";
+"set5" = "reset data";
