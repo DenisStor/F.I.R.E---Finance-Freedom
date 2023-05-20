@@ -9,6 +9,7 @@ struct Start_Screen: View {
     var body: some View {
         ZStack{
             Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
             VStack(spacing:0){
                 VStack{
                     Image("Start_Image")
