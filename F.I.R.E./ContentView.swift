@@ -3,14 +3,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @AppStorage ("currentPage") var currentPage = 1
     var body: some View {
-        VStack {
-      
-            
-            
-        }
+        ZStack{
         
-    }
+            Start_Screen()
+                .offset(x: currentPage == 1 ? 0 :  -1000)
+        
+            Bar_Screen()
+                .offset(x: currentPage == 2 ? 0 :  1000)
+        
+        
+        }.animation(.spring(), value: currentPage )
+   }
 }
 
 struct ContentView_Previews: PreviewProvider {
