@@ -1,9 +1,4 @@
-//
-//  Home_Screen.swift
-//  F.I.R.E.
-//
-//  Created by Денис Сторожев on 20.05.2023.
-//
+
 
 import SwiftUI
 
