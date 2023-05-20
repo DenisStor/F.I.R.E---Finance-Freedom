@@ -15,7 +15,7 @@ struct Settings_screen: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 22)
-                                .foregroundColor(Color("button"))
+                                .foregroundColor(Color("Color_button"))
                                 .frame(height: 64)
                             HStack {
                                 Text("set1")
@@ -31,7 +31,7 @@ struct Settings_screen: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 22)
-                                .foregroundColor(Color("button"))
+                                .foregroundColor(Color("Color_button"))
                                 .frame(height: 64)
                             HStack {
                                 Text("set2")
@@ -44,7 +44,7 @@ struct Settings_screen: View {
                         
                         ZStack{
                             RoundedRectangle(cornerRadius: 22)
-                                .foregroundColor(Color("button"))
+                                .foregroundColor(Color("Color_button"))
                                 .frame(height: 64)
                             HStack {
                                 Text("set3")
