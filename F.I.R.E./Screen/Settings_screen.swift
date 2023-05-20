@@ -18,7 +18,7 @@ struct Settings_screen: View {
                                 .foregroundColor(Color("button"))
                                 .frame(height: 64)
                             HStack {
-                                Text("🔔 Уведомления")
+                                Text("set1")
                                     .font(.system(size: 24.5, weight: .medium))
                                     .padding(20)
                                 Spacer()
@@ -34,7 +34,7 @@ struct Settings_screen: View {
                                 .foregroundColor(Color("button"))
                                 .frame(height: 64)
                             HStack {
-                                Text("🌙 Тема")
+                                Text("set2")
                                     .font(.system(size: 24.5, weight: .medium))
                                     .padding(20)
                                 Spacer()
@@ -47,7 +47,7 @@ struct Settings_screen: View {
                                 .foregroundColor(Color("button"))
                                 .frame(height: 64)
                             HStack {
-                                Text("💵 Валюта")
+                                Text("set3")
                                     .font(.system(size: 24.5, weight: .medium))
                                     .padding(20)
                                 
@@ -59,7 +59,7 @@ struct Settings_screen: View {
                         
                         Spacer()
                         
-                        Text("У вас актуальная версия приложения")
+                        Text("set4")
                             .font(.system(size: 24.5, weight: .medium))
                             .foregroundColor(Color("Color_font"))
                        
@@ -68,7 +68,7 @@ struct Settings_screen: View {
                                 .foregroundColor(Color("Color_font_1"))
                                 .frame(height: 64)
                             HStack {
-                                Text("Сбросить данные")
+                                Text("set5")
                                 
                                     .font(.system(size: 24.5, weight: .medium))
                                     
@@ -87,7 +87,7 @@ struct Settings_screen: View {
                     }
                     .padding(.horizontal, 15)
                    // .padding(.bottom, 20)
-                    .navigationTitle("Настройки")
+                    .navigationTitle("setLang")
                     .navigationBarTitleDisplayMode(.inline)
                     
                     
