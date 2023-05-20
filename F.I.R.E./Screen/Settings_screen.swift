@@ -80,7 +80,7 @@ struct Settings_screen: View {
                     
                 }
                 .padding(.horizontal, 15)
-                .padding(.bottom, 15)
+                .padding(.bottom, 20)
                 .navigationTitle("Настройки")
                 .navigationBarTitleDisplayMode(.inline)
                 
