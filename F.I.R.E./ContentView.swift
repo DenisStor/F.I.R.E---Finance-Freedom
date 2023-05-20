@@ -15,6 +15,7 @@ struct ContentView: View {
         
         
         }.animation(.spring(), value: currentPage )
+        
    }
 }
 
