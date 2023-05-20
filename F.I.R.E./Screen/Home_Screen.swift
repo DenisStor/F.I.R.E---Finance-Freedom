@@ -11,8 +11,12 @@ struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage = 1
     @State private var test : Bool = false
     var body: some View {
-        ZStack{
+       
+            
             NavigationStack{
+                ZStack{
+                    Color("Color_back")
+                        .edgesIgnoringSafeArea(.all)
                 ScrollView{
                     
                     
@@ -57,7 +61,7 @@ struct Home_Screen: View {
                     
                     
                     }.padding(.horizontal,10)
-                    .navigationTitle("Главная")
+                    .navigationTitle("main")
                     .navigationBarTitleDisplayMode(.inline)
             }
         }

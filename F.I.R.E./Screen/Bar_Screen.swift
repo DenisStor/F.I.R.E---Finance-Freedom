@@ -6,13 +6,13 @@ struct Bar_Screen: View {
    
     var body: some View {
         ZStack{
- 
+             
                    TabView {
                        Home_Screen()
                            
                            .tabItem {
                              
-                               Label("Home", systemImage: "house")
+                               Label("main", systemImage: "house")
                                    
                            }
                        Calculator_Screen()
