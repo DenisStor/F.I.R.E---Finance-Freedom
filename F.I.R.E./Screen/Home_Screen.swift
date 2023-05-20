@@ -52,7 +52,7 @@ struct Home_Screen: View {
                                 }
                             }
                             
-                        NavigationLink { AboutFIRE_Screen()} label: {
+                        
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
                                     .frame(height: 280)
@@ -64,24 +64,28 @@ struct Home_Screen: View {
                                         .multilineTextAlignment(.leading)
                                     Spacer()
                                         .frame(maxHeight: 30)
-                                    ZStack{
-                                        RoundedRectangle(cornerRadius: 14)
-                                            .foregroundColor(Color("Color_font_1"))
-                                        HStack{
-                                            Text("Подробнее")
-                                                .foregroundColor(Color("Color_font_2"))
-                                                .font(.system(size: 24,weight: .medium))
-                                            Image("To_Image")
-                                               
-                                                
-                                        }
-                                    }.frame(maxWidth: 340,maxHeight:55)
+                                    NavigationLink {AboutFIRE_Screen()}label: {
                                         
+                                        
+                                        ZStack{
+                                            RoundedRectangle(cornerRadius: 14)
+                                                .foregroundColor(Color("Color_font_1"))
+                                            HStack{
+                                                Text("Подробнее")
+                                                    .foregroundColor(Color("Color_font_2"))
+                                                    .font(.system(size: 24,weight: .medium))
+                                                Image("To_Image")
+                                                
+                                                
+                                            }
+                                            
+                                        }.frame(maxWidth: 340,maxHeight:55)
+                                    }
                                 }.frame(maxWidth: 360)
                                     .padding(.horizontal)
                                 
                             }
-                        }
+                        
                             
                         
                     }
