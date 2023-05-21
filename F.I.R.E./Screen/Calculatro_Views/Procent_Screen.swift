@@ -10,16 +10,19 @@ import SwiftUI
 struct Procent_Screen: View {
     @StateObject var data = calculator()
     
-    @AppStorage ("Start") var Start : Double = 0
-    @AppStorage ("InMonth") var InMonth : Double = 0
+    @AppStorage ("Start") var Start : Double = 10
+    @AppStorage ("InMonth") var InMonth : Double = 10
     @AppStorage ("Year") var Year : Double = 9.0
-    
+    @AppStorage ("Rate") var Rate : Int = 4
+    @State private var Sheet : Bool = false
     var body: some View {
         ZStack {
             Color("Color_back")
+            
                 .edgesIgnoringSafeArea(.all)
+                
             ScrollView(showsIndicators: false) {
-                VStack{
+                VStack(spacing: 20){
                     ZStack{
                         RoundedRectangle(cornerRadius: 30)
                             .frame(height: 180)
@@ -107,8 +110,76 @@ struct Procent_Screen: View {
                     }.padding(.top,20)
                         
                     }
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                            .frame(height: 300)
+                            .foregroundColor(Color("Color_Start"))
+                        VStack(alignment: .leading,spacing:0){
+                            VStack{
+                                
+                                Text("Выбрать риск профиль")
+                                    .font(.system(size: 33,weight: .medium))
+                                    .foregroundColor(Color("Color_font"))
+                                
+                            }
+                            VStack{
+                                Picker(selection: $Rate, label: Text("Choose")) {
+                                    Text("4%").tag(4)
+                                    Text("8%").tag(8)
+                                    Text("12%").tag(12)
+                                    Text("20%").tag(20)
+                                }.pickerStyle(.inline)
+                                    .frame(height: 150)
+                            }
+                            VStack{
+                                HStack{
+                                    Text("что это такое?")
+                                    Image(systemName: "info.circle")
+                                }.foregroundColor(Color("Color_font_3"))
+                                
+                            }
+                            .onTapGesture {
+                                Sheet = true
+                            }
+                            
+                            
+                        }.padding(.horizontal,20)
+                            .foregroundColor(Color("Color_font_2"))
+                            .font(.system(size: 22,weight: .medium))
+                    }
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                            .frame(height: 200)
+                            .foregroundColor(Color("Color_Start"))
+                        VStack(alignment: .leading,spacing: 0){
+                            HStack{
+                              Text("Ваш капитал \nсоставит")
+                                    .font(.system(size: 30,weight: .medium))
+                                    .foregroundColor(Color("Color_font"))
+                                  
+                            }
+                            HStack{
+                                Text("\(Int(data.calculate(capital: Start, rate: Double(Rate), monthlyDeposit: InMonth, numberOfYears: Int(Year))))")
+                                    .font(.system(size: 50,weight: .medium))
+                                    .foregroundColor(Color("Color_font_1"))
+                                Text("$")
+                                    .font(.system(size: 50,weight: .medium))
+                                    .foregroundColor(Color("Color_font_1"))
+                                Spacer()
+                            }
+                        }.padding(.horizontal,20)
+                    }
+                    
                 }
-            }.padding(.horizontal,10)
+            }.padding(.horizontal,15)
+                .sheet(isPresented: $Sheet) {
+                    VStack{
+                        Text("Риск-профиль или инвестиционный профиль участника рынка — это оценка его толерантности к риску. Со всем этим может помочь разобраться определение риск-профиля, которое, кстати, используется для того, чтобы затем выбрать подходящие именно для вас и реализации вашей цели финансовые инструменты и сформировать удобную для вас инвестстратегию.")
+                            .font(.system(size: 25,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                            .multilineTextAlignment(.leading)
+                    }.padding(20)
+                    }
         }
     }
 }

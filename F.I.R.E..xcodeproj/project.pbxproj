@@ -20,6 +20,7 @@
 		B72893702A192363003634D7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B728936F2A192363003634D7 /* Strings.swift */; };
 		B72893742A1923F4003634D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B72893762A1923F4003634D7 /* Localizable.strings */; };
 		B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989012A1A731400D887CC /* Procent_Screen.swift */; };
+		B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */; };
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		B72893772A1923F6003634D7 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B72893782A1923FA003634D7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B73989012A1A731400D887CC /* Procent_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Procent_Screen.swift; sourceTree = "<group>"; };
+		B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeMoney_Screen.swift; sourceTree = "<group>"; };
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 			children = (
 				B72893642A190A89003634D7 /* Calculator_Screen.swift */,
 				B73989012A1A731400D887CC /* Procent_Screen.swift */,
+				B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */,
 			);
 			path = Calculatro_Views;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
 				B72893652A190A89003634D7 /* Calculator_Screen.swift in Sources */,
 				B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */,
+				B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */,
 				B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */,
 				B72893672A190A95003634D7 /* Settings_screen.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,

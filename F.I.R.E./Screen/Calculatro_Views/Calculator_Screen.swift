@@ -45,29 +45,32 @@ struct Calculator_Screen: View {
                                     }
                             }
                         }
-                        ZStack{
+                        NavigationLink {SafeMoney_Screen()} label: {
                             
-                            Image("Calcul_2")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .overlay{
-                                    HStack{
-                                        VStack(alignment:.leading,spacing: 0){
+                            ZStack{
+                                
+                                Image("Calcul_2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .overlay{
+                                        HStack{
+                                            VStack(alignment:.leading,spacing: 0){
+                                                Spacer()
+                                                
+                                                
+                                                Text("Сколько можно потратить в день")
+                                                    .font(.system(size: 38,weight: .medium))
+                                                    .foregroundColor(Color("Color_font"))
+                                                    .multilineTextAlignment(.leading)
+                                                    .lineSpacing(0)
+                                                
+                                                
+                                            }.padding(20)
+                                            
                                             Spacer()
-                                            
-                                            
-                                            Text("Сколько можно потратить в день")
-                                                .font(.system(size: 38,weight: .medium))
-                                                .foregroundColor(Color("Color_font"))
-                                                .multilineTextAlignment(.leading)
-                                                .lineSpacing(0)
-                                            
-                                            
-                                        }.padding(20)
-                                        
-                                        Spacer()
+                                        }
                                     }
-                                }
+                            }
                         }
                     }.padding(.horizontal,15)
                     

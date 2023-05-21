@@ -25,7 +25,7 @@ final class calculator : ObservableObject {
         
     func calculate(capital: Double, rate: Double, monthlyDeposit: Double, numberOfYears: Int) -> Double {
         
-     
+       
         let interestRate = rate / 100.0 //привести в нормальный вид
         let periodsPerYear = 12 //месяцев в году
         let totalPeriods = periodsPerYear * numberOfYears //всего месяцев
