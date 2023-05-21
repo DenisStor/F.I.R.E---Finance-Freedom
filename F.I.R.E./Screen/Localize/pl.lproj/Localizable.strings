@@ -1,10 +1,3 @@
-/* 
-  Localizable.strings
-  F.I.R.E.
-
-  Created by Денис Сторожев on 20.05.2023.
-  
-*/
 "word_0" = "Ustalaj konkretny cel finansowy i zapisz go na papierze. Pomoże to utrzymać skupienie i motywację";
 "word_1" = "Stwórz automatyczny system oszczędzania. Regularnie odkładaj określoną sumę pieniędzy na inwestycje";
 "word_2" = "Zdywersyfikuj swój portfel inwestycyjny. Inwestuj w różne aktywa, aby zminimalizować ryzyko";
@@ -121,3 +114,8 @@ iki makroekonomiczne. Mogą one dawać wskazówki dotyczące stanu gospodarki";
 "set3" = "Waluta";
 "set4" = "masz już aktualną wersję aplikacji";
 "set5" = "Resetuj dane";
+
+
+"Fire_1" = "Możliwe jest zaprzestanie pracy i życie z pasywnego dochodu już w wieku 30-40 lat. Ale aby to osiągnąć, trzeba najpierw ograniczyć się na wiele sposobów. Takie podejście nazywa się FIRE i nabiera rozpędu. Ale czy cel uświęca środki?";
+"Fire_2" = "Ruch F.I.R.E. to skrót od Financial Independence Retire Early, czyli niezależność finansowa i wcześniejsza emerytura. Jego znaczenie polega na aktywnym zarabianiu, oszczędzaniu, oszczędzaniu i inwestowaniu w młodym wieku. A w wieku 30-40 lat zaoszczędzić wystarczająco dużo, aby mieć pasywny dochód, przestać pracować i przejść na emeryturę";
+"Fire_3" = "Co to jest F.I.R.E.";
