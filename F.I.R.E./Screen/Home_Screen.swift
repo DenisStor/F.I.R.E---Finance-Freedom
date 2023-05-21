@@ -41,8 +41,8 @@ struct Home_Screen: View {
                                             Image("To_Image")
                                                 .renderingMode(.template)
                                         }.foregroundColor(Color(white: 1, opacity: 0.5))
-                                    }.frame(maxWidth: 360)
-                                        .padding(.horizontal)
+                                    }
+                                        .padding(.horizontal,10)
                                     
                                 }
                             }
@@ -76,8 +76,8 @@ struct Home_Screen: View {
                                             
                                         }.frame(maxWidth: 340,maxHeight:55)
                                     }
-                                }.frame(maxWidth: 360)
-                                    .padding(.horizontal)
+                                }
+                                    .padding(.horizontal,10)
                                 
                             }
                         

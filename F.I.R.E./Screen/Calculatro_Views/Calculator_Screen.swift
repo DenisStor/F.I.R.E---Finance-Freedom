@@ -11,11 +11,69 @@ struct Calculator_Screen: View {
     @AppStorage ("year") var yaer: Int = 10
    
     var body: some View {
-        VStack{
-        TextField("Стартовый капитал", value: $start, format: .number)
-        TextField("Сколько вы готовы откладывать", value: $ch, format: .number)
-        TextField("Количество лет", value: $yaer, format: .number)
-            Text("\(Int(data.calculate(capital: start, rate: Double(10), monthlyDeposit: ch, numberOfYears: yaer)))")
+        NavigationStack{
+            ZStack{
+                Color("Color_back")
+                    .edgesIgnoringSafeArea(.all)
+                
+                ScrollView(showsIndicators: false){
+                    
+                    
+                    
+                    VStack(spacing: 20){
+                        ZStack{
+                            
+                            Image("Calcul_1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .overlay{
+                                    HStack{
+                                        VStack(alignment:.leading,spacing: 0){
+                                            Spacer()
+                                            
+                                            
+                                            Text("Сложные проценты")
+                                                .font(.system(size: 45,weight: .medium))
+                                                .foregroundColor(Color("Color_font_2"))
+                                                .multilineTextAlignment(.leading)
+                                                .lineSpacing(0)
+                                            
+                                            
+                                        }.padding(20)
+                                        
+                                        Spacer()
+                                    }
+                                }
+                        }
+                        ZStack{
+                            
+                            Image("Calcul_2")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .overlay{
+                                    HStack{
+                                        VStack(alignment:.leading,spacing: 0){
+                                            Spacer()
+                                            
+                                            
+                                            Text("Сколько можно потратить в день")
+                                                .font(.system(size: 38,weight: .medium))
+                                                .foregroundColor(Color("Color_font"))
+                                                .multilineTextAlignment(.leading)
+                                                .lineSpacing(0)
+                                            
+                                            
+                                        }.padding(20)
+                                        
+                                        Spacer()
+                                    }
+                                }
+                        }
+                    }.padding(.horizontal,15)
+                    
+                    
+                }
+            }
         }
     }
 }
