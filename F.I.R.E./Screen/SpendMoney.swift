@@ -7,11 +7,11 @@
 
 import Foundation
 
-final class spendmoney : ObservableObject {
+final class SpendMoney : ObservableObject {
     
 //
 //    Доходы - расходы / 30.4
-//    
+//    30 000 - 20 000 / 30.4 ( 365 / 12 ) = 328 в день
 //
     
     

@@ -46,7 +46,7 @@ struct Advice_Screen: View {
                     impactHeavy.impactOccurred()
                 }
             }.frame(maxHeight: 270)
-                .padding(.horizontal,20)
+                .padding(.horizontal,15)
             
             
             

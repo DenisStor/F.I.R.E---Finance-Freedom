@@ -28,25 +28,28 @@ struct Home_Screen: View {
                                         Text("Создавайте финансовые резервы")
                                             .font(.system(size: 30,weight: .medium))
                                             .foregroundColor(Color("Color_font_2"))
-                                            .multilineTextAlignment(.leading)
+                                            
                                         HStack{
-                                            VStack{
+                                            
                                                 Text("Открыть советы")
                                                     .font(.system(size: 24,weight: .medium))
                                                 
                                                     .overlay(
                                                         Rectangle().frame(height: 2).offset(y: 4)
                                                         , alignment: .bottom)
-                                            } .multilineTextAlignment(.leading)
+                                             
                                             Image("To_Image")
                                                 .renderingMode(.template)
                                         }.foregroundColor(Color(white: 1, opacity: 0.5))
-                                    }
-                                        .padding(.horizontal,20)
+                                    }.multilineTextAlignment(.leading)
+                                        .padding(.horizontal,10)
                                     
                                 }
                             }
                             
+                        
+                        
+                        
                         
                             ZStack{
                                 RoundedRectangle(cornerRadius: 30)
@@ -56,9 +59,9 @@ struct Home_Screen: View {
                                     Text("F.I.R.E. - это философия финансовой независимости. Она стремится к достижению финансовой свободы.")
                                         .font(.system(size: 24,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
-                                        .multilineTextAlignment(.leading)
+                                        
                                     Spacer()
-                                        .frame(maxHeight: 30)
+                                        .frame(maxHeight: 20)
                                     NavigationLink {AboutFIRE_Screen()}label: {
                                         
                                         
@@ -88,7 +91,7 @@ struct Home_Screen: View {
                     
                     
                     
-                    }.padding(.horizontal,10)
+                    }.padding(.horizontal,15)
                     .navigationTitle("main")
                     .navigationBarTitleDisplayMode(.inline)
             }

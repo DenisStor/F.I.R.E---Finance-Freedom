@@ -8,7 +8,7 @@
 import Foundation
 
 
-final class calculator : ObservableObject {
+final class Calculator : ObservableObject {
 /*Где:
  total - конечная сумма
  capital - стартовый капитал

@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct Procent_Screen: View {
-    @StateObject var data = calculator()
+    
+    @StateObject var data = Calculator()
     
     @AppStorage ("Start") var Start : Double = 0
     @AppStorage ("InMonth") var InMonth : Double = 0
     @AppStorage ("Year") var Year : Double = 1
     @AppStorage ("Rate") var Rate : Int = 4
+    
     @State private var Sheet : Bool = false
+    @FocusState var isInputActive: Bool
+    @FocusState var isInputActive_1: Bool
+    
     var body: some View {
         ZStack {
             Color("Color_back")
-            
                 .edgesIgnoringSafeArea(.all)
                 
             ScrollView(showsIndicators: false) {
@@ -34,14 +38,19 @@ struct Procent_Screen: View {
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
                                     TextField("в месяц",value: $InMonth, format: .number)
+                                    
                                         .font(.system(size: 33))
                                         .padding(.horizontal,15)
-                                        .foregroundColor(Color("Color_procent_text"))
+                                        .foregroundColor(Color("Color_black"))
                                         .background{
                                             RoundedRectangle(cornerRadius: 15)
                                                 .foregroundColor(Color("Color_font_2"))
                                                
                                     }
+                                        .keyboardType(.numberPad)
+                                        .focused($isInputActive)
+                                                        
+                                      
                                     Text("$")
                                         .font(.system(size: 33,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
@@ -65,12 +74,15 @@ struct Procent_Screen: View {
                                     TextField("стартовый",value: $Start, format: .number)
                                         .font(.system(size: 33))
                                         .padding(.horizontal,15)
-                                        .foregroundColor(Color("Color_procent_text"))
+                                        .foregroundColor(Color("Color_black"))
                                         .background{
                                             RoundedRectangle(cornerRadius: 15)
                                                 .foregroundColor(Color("Color_font_2"))
                                             
                                         }
+                                        .keyboardType(.numberPad)
+                                        .focused($isInputActive_1)
+                                       
                                     Text("$")
                                         .font(.system(size: 33,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
@@ -89,15 +101,15 @@ struct Procent_Screen: View {
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 VStack(spacing: 0) {
-                                    
-                                    
                                             Slider(value: $Year, in: 1...70) {
                                                 Text("Slider")
+                                                
                                             } minimumValueLabel: {
                                                 Text("1").font(.title2).fontWeight(.thin)
                                             } maximumValueLabel: {
                                                 Text("70").font(.title2).fontWeight(.thin)
                                             }.tint(.red)
+                                        
                                         .padding(.top,30)
                                     Text("\(Int(Year))")
                                         .font(.system(size: 21,weight: .medium))
@@ -181,6 +193,22 @@ struct Procent_Screen: View {
                     }.padding(20)
                     }
         }.toolbar(.hidden, for: .tabBar)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    if isInputActive {
+                        Button("Done") {
+                            isInputActive = false
+                        }
+                    } else {
+                        Button("Done") {
+                            isInputActive_1 = false
+                        }
+                    }
+                }
+            }
+       
+        
     }
 }
 

@@ -3,7 +3,12 @@
 import SwiftUI
 
 struct Settings_screen: View {
-    @AppStorage ("currentPage") var currentPage = 1
+    
+    @AppStorage ("Start") var Start : Double = 0
+    @AppStorage ("InMonth") var InMonth : Double = 0
+    @AppStorage ("Year") var Year : Double = 1
+    @AppStorage ("Rate") var Rate : Int = 4
+    
     var body: some View {
         NavigationStack{
             
@@ -77,10 +82,15 @@ struct Settings_screen: View {
                                 Spacer()
                             } .padding(20)
                                 .foregroundColor(Color("Color_font_2"))
-                                .onTapGesture {
-                                    currentPage = 1
-                                }
+                                
                             
+                        }
+                        .onTapGesture {
+                           
+                            Start = 0
+                            Year = 1
+                            InMonth = 0
+                            Rate = 4
                         }
                         Spacer()
                             .frame(maxHeight: 25)
