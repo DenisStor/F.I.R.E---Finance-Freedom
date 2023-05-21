@@ -26,7 +26,7 @@ struct Advice_Screen: View {
                 
                 HStack{
                     Text("\(currentword)")
-                        .font(.system(size: 32,weight: .medium))
+                        .font(.system(size: 30,weight: .medium))
                         .foregroundColor(Color("Color_font"))
                     Spacer()
                 }

@@ -3,8 +3,20 @@
 import SwiftUI
 
 struct Calculator_Screen: View {
+    
+    @StateObject var data = calculator()
+    
+    @AppStorage ("Start") var start : Double = 0
+    @AppStorage ("Ch") var ch : Double = 0
+    @AppStorage ("year") var yaer: Int = 10
+   
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+        TextField("Стартовый капитал", value: $start, format: .number)
+        TextField("Сколько вы готовы откладывать", value: $ch, format: .number)
+        TextField("Количество лет", value: $yaer, format: .number)
+            Text("\(Int(data.calculate(capital: start, rate: Double(10), monthlyDeposit: ch, numberOfYears: yaer)))")
+        }
     }
 }
 

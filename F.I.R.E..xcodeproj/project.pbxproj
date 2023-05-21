@@ -20,6 +20,7 @@
 		B72893702A192363003634D7 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B728936F2A192363003634D7 /* Strings.swift */; };
 		B72893742A1923F4003634D7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B72893762A1923F4003634D7 /* Localizable.strings */; };
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
+		B7C862042A1A5BF80031BEE8 /* calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		B72893772A1923F6003634D7 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B72893782A1923FA003634D7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
+		B7C862032A1A5BF80031BEE8 /* calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				B728936B2A1915D5003634D7 /* Home_Screen.swift */,
 				B728937A2A192D1C003634D7 /* Screen_Home */,
 				B728936F2A192363003634D7 /* Strings.swift */,
+				B7C862032A1A5BF80031BEE8 /* calculator.swift */,
 				B72893712A1923D6003634D7 /* Localize */,
 			);
 			path = Screen;
@@ -201,6 +204,7 @@
 				B72893692A190AF1003634D7 /* Start_Screen.swift in Sources */,
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
 				B72893652A190A89003634D7 /* Calculator_Screen.swift in Sources */,
+				B7C862042A1A5BF80031BEE8 /* calculator.swift in Sources */,
 				B72893672A190A95003634D7 /* Settings_screen.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,
 			);
