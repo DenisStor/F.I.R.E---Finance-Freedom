@@ -10,9 +10,9 @@ import SwiftUI
 struct Procent_Screen: View {
     @StateObject var data = calculator()
     
-    @AppStorage ("Start") var Start : Double = 10
-    @AppStorage ("InMonth") var InMonth : Double = 10
-    @AppStorage ("Year") var Year : Double = 9.0
+    @AppStorage ("Start") var Start : Double = 0
+    @AppStorage ("InMonth") var InMonth : Double = 0
+    @AppStorage ("Year") var Year : Double = 1
     @AppStorage ("Rate") var Rate : Int = 4
     @State private var Sheet : Bool = false
     var body: some View {
@@ -180,7 +180,7 @@ struct Procent_Screen: View {
                             .multilineTextAlignment(.leading)
                     }.padding(20)
                     }
-        }
+        }.toolbar(.hidden, for: .tabBar)
     }
 }
 
