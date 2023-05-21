@@ -32,7 +32,7 @@ struct AboutFIRE_Screen: View {
                         .foregroundColor(Color("Color_font"))
                         .padding(.bottom,30)
                   
-                    Image("logo_Fire")
+                    Image("logoFire")
 
                     
                 } .padding(15)
