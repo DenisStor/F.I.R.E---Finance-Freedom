@@ -42,7 +42,7 @@ struct Home_Screen: View {
                                                 .renderingMode(.template)
                                         }.foregroundColor(Color(white: 1, opacity: 0.5))
                                     }
-                                        .padding(.horizontal,15)
+                                        .padding(.horizontal,20)
                                     
                                 }
                             }
@@ -77,7 +77,7 @@ struct Home_Screen: View {
                                         }.frame(maxWidth: 340,maxHeight:55)
                                     }
                                 }
-                                    .padding(.horizontal,15)
+                                    .padding(.horizontal,25)
                                 
                             }
                         
