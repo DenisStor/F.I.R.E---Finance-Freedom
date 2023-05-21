@@ -4,11 +4,7 @@ import SwiftUI
 
 struct Calculator_Screen: View {
     
-    @StateObject var data = calculator()
     
-    @AppStorage ("Start") var start : Double = 0
-    @AppStorage ("Ch") var ch : Double = 0
-    @AppStorage ("year") var yaer: Int = 10
    
     var body: some View {
         NavigationStack{
@@ -21,29 +17,33 @@ struct Calculator_Screen: View {
                     
                     
                     VStack(spacing: 20){
-                        ZStack{
+                        NavigationLink { Procent_Screen()} label: {
                             
-                            Image("Calcul_1")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .overlay{
-                                    HStack{
-                                        VStack(alignment:.leading,spacing: 0){
+                            
+                            ZStack{
+                                
+                                Image("Calcul_1")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .overlay{
+                                        HStack{
+                                            VStack(alignment:.leading,spacing: 0){
+                                                Spacer()
+                                                
+                                                
+                                                Text("Сложные проценты")
+                                                    .font(.system(size: 45,weight: .medium))
+                                                    .foregroundColor(Color("Color_font_2"))
+                                                    .multilineTextAlignment(.leading)
+                                                    .lineSpacing(0)
+                                                
+                                                
+                                            }.padding(20)
+                                            
                                             Spacer()
-                                            
-                                            
-                                            Text("Сложные проценты")
-                                                .font(.system(size: 45,weight: .medium))
-                                                .foregroundColor(Color("Color_font_2"))
-                                                .multilineTextAlignment(.leading)
-                                                .lineSpacing(0)
-                                            
-                                            
-                                        }.padding(20)
-                                        
-                                        Spacer()
+                                        }
                                     }
-                                }
+                            }
                         }
                         ZStack{
                             

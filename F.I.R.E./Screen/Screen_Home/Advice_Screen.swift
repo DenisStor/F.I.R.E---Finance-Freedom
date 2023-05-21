@@ -45,7 +45,7 @@ struct Advice_Screen: View {
                     let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                     impactHeavy.impactOccurred()
                 }
-            }.frame(maxHeight: 300)
+            }.frame(maxHeight: 270)
                 .padding(.horizontal,20)
             
             
