@@ -28,13 +28,13 @@ struct Home_Screen: View {
                                 .foregroundColor(Color("Color_font_1"))
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
-                                    Text("Создавайте финансовые резервы")
+                                    Text("Create financial reserves")
                                         .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                     
                                     
                                     
-                                    Text("Открыть советы")
+                                    Text("Advice_home")
                                         .font(.system(size: 24,weight: .medium))
                                         .foregroundColor(Color(white: 1, opacity: 0.5))
                                         .overlay(
@@ -80,7 +80,7 @@ struct Home_Screen: View {
                                         RoundedRectangle(cornerRadius: 14)
                                             .foregroundColor(Color("Color_font_1"))
                                         HStack{
-                                            Text("Подробнее")
+                                            Text("More")
                                                 .foregroundColor(Color("Color_font_2"))
                                                 .font(.system(size: 24,weight: .medium))
                                             
