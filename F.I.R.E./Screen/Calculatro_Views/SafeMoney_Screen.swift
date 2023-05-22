@@ -154,7 +154,7 @@ struct SafeMoney_Screen: View {
                     
                     VStack {
                         HStack {
-                            Text("\(String(Int(data.spendEarn(earn: Double (earnMoney) ?? 0, spend: Double (spendMoney) ?? 0 ))))")
+                            Text("\(String(Float(data.spendEarn(earn: Float (earnMoney) ?? 0, spend: Float (spendMoney) ?? 0 ))))")
                             
                                 .font(.system(size: 60, weight: .medium))
                                 .foregroundColor(Color("Color_font_1"))

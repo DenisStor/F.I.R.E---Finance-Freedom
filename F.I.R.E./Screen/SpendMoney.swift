@@ -14,11 +14,11 @@ final class SpendMoney : ObservableObject {
     //    30 000 - 20 000 / 30.4 ( 365 / 12 ) = 328 в день
     //
     
-    func spendEarn (earn:Double, spend: Double) -> Double {
+    func spendEarn (earn:Float, spend: Float) -> Float {
         
-        var total = earn - spend
+        var total: Float = earn - spend
         total/=30.4
-        
+
         
         if total <= 0 {
             total = 0
