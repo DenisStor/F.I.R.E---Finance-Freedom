@@ -11,14 +11,16 @@ struct Procent_Screen: View {
     
     @StateObject var data = Calculator()
     
-    @AppStorage ("Start") var Start : Double = 0
-    @AppStorage ("InMonth") var InMonth : Double = 0
+    @AppStorage ("Start") var Start : String = ""
+    @AppStorage ("InMonth") var InMonth : String = ""
     @AppStorage ("Year") var Year : Double = 1
     @AppStorage ("Rate") var Rate : Int = 4
     
     @State private var Sheet : Bool = false
     @FocusState var isInputActive: Bool
     @FocusState var isInputActive_1: Bool
+    
+    let characterLimit = 9
     
     var body: some View {
         ZStack {
@@ -37,7 +39,17 @@ struct Procent_Screen: View {
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
-                                    TextField("в месяц",value: $InMonth, format: .number)
+                                    TextField("Введите число", text: Binding(
+                                               get: {
+                                                   self.InMonth
+                                               },
+                                               set: { newValue in
+                                                   let filtered = newValue.filter { "0123456789".contains($0) }
+                                                   if filtered.count <= characterLimit {
+                                                       self.InMonth = filtered
+                                                   }
+                                               }
+                                           ))
                                     
                                         .font(.system(size: 33))
                                         .padding(.horizontal,15)
@@ -71,7 +83,17 @@ struct Procent_Screen: View {
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 HStack {
-                                    TextField("стартовый",value: $Start, format: .number)
+                                    TextField("Введите число", text: Binding(
+                                               get: {
+                                                   self.Start
+                                               },
+                                               set: { newValue in
+                                                   let filtered = newValue.filter { "0123456789".contains($0) }
+                                                   if filtered.count <= characterLimit {
+                                                       self.Start = filtered
+                                                   }
+                                               }
+                                           ))
                                         .font(.system(size: 33))
                                         .padding(.horizontal,15)
                                         .foregroundColor(Color("Color_black"))
@@ -101,14 +123,11 @@ struct Procent_Screen: View {
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 VStack(spacing: 0) {
-                                            Slider(value: $Year, in: 1...70) {
+                                            Slider(value: $Year, in: 1...50) {
                                                 Text("Slider")
                                                 
-                                            } minimumValueLabel: {
-                                                Text("1").font(.title2).fontWeight(.thin)
-                                            } maximumValueLabel: {
-                                                Text("70").font(.title2).fontWeight(.thin)
-                                            }.tint(.red)
+                                            }
+                                            .tint(.red)
                                         
                                         .padding(.top,30)
                                     Text("\(Int(Year))")
@@ -171,9 +190,10 @@ struct Procent_Screen: View {
                                   
                             }
                             HStack{
-                                Text("\(Int(data.calculate(capital: Start, rate: Double(Rate), monthlyDeposit: InMonth, numberOfYears: Int(Year))))")
-                                    .font(.system(size: 50,weight: .medium))
+                                Text("\(String(data.calculate(capital: Double(Start)  ?? 0, rate: Double(Rate), monthlyDeposit: Double(InMonth) ?? 0, numberOfYears: Int(Year))))")
+                                    .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
+                                    .lineLimit(1)
                                 Text("$")
                                     .font(.system(size: 50,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))

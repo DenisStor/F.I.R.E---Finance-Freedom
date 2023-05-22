@@ -72,6 +72,8 @@ struct Calculator_Screen: View {
                                     }
                             }
                         }
+                        
+
                     }.padding(.horizontal,15)
                     
                     
