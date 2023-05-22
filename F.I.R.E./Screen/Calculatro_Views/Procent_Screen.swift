@@ -195,7 +195,7 @@ struct Procent_Screen: View {
                                     .foregroundColor(Color("Color_font_1"))
                                     .lineLimit(1)
                                 Text("$")
-                                    .font(.system(size: 50,weight: .medium))
+                                    .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                 Spacer()
                             }

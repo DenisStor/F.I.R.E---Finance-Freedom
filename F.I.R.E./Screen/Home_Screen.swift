@@ -56,7 +56,7 @@ struct Home_Screen: View {
                                     .frame(height: 280)
                                     .foregroundColor(Color("Color_wgt"))
                                 VStack(alignment: .leading,spacing: 5){
-                                    Text("F.I.R.E. - это философия финансовой независимости. Она стремится к достижению финансовой свободы.")
+                                    Text("F.I.R.E.")
                                         .font(.system(size: 24,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                         
