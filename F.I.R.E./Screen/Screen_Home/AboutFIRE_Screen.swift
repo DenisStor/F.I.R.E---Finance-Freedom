@@ -35,7 +35,7 @@ struct AboutFIRE_Screen: View {
                     Image("logoFire")
 
                     
-                } .padding(10)
+                } .padding(20)
             }
         }
     }

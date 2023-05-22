@@ -23,7 +23,6 @@
 		B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */; };
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
-		D2176AE52A1AB0AF00D14A03 /* SpendMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2176AE42A1AB0AF00D14A03 /* SpendMoney.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +45,6 @@
 		B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeMoney_Screen.swift; sourceTree = "<group>"; };
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
-		D2176AE42A1AB0AF00D14A03 /* SpendMoney.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendMoney.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +104,6 @@
 				B728936B2A1915D5003634D7 /* Home_Screen.swift */,
 				B728937A2A192D1C003634D7 /* Screen_Home */,
 				B728936F2A192363003634D7 /* Strings.swift */,
-				D2176AE42A1AB0AF00D14A03 /* SpendMoney.swift */,
 				B7C862032A1A5BF80031BEE8 /* Calculator.swift */,
 				B72893712A1923D6003634D7 /* Localize */,
 			);
@@ -218,7 +215,6 @@
 				B72893572A1908EA003634D7 /* ContentView.swift in Sources */,
 				B72893702A192363003634D7 /* Strings.swift in Sources */,
 				B728936C2A1915D5003634D7 /* Home_Screen.swift in Sources */,
-				D2176AE52A1AB0AF00D14A03 /* SpendMoney.swift in Sources */,
 				B72893692A190AF1003634D7 /* Start_Screen.swift in Sources */,
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
 				B72893652A190A89003634D7 /* Calculator_Screen.swift in Sources */,

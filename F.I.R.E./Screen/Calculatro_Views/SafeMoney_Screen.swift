@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SafeMoney_Screen: View {
     
-    @StateObject var data = SpendMoney()
+    @StateObject var data = Calculator()
     
     @AppStorage ("earnMoney") var earnMoney : String = ""
     @AppStorage ("spendMoney") var spendMoney : String = ""

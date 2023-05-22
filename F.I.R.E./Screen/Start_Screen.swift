@@ -4,7 +4,7 @@ import SwiftUI
 
 struct Start_Screen: View {
     
-    @AppStorage ("currentPage") var currentPage = 1
+    @AppStorage ("currentPage") var currentPage : Int = 1
     
     var body: some View {
         ZStack{
@@ -23,7 +23,7 @@ struct Start_Screen: View {
                         Text("F.I.R.E.")
                             .font(.system(size: 87,weight: .medium))
                             .foregroundColor(Color("Color_font_1"))
-                        Text("F.I.R.E. - это философия финансовой независимости. Она стремится к достижению финансовой свободы.")
+                        Text("F.I.R.E.1")
                             .font(.system(size: 22,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                         HStack{

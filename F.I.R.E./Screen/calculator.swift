@@ -9,29 +9,49 @@ import Foundation
 
 
 final class Calculator : ObservableObject {
-/*Где:
- total - конечная сумма
- capital - стартовый капитал
- rate - процентная ставка в десятичном формате (например, 0.05 для 5%)
- numberOfYears - количество периодов (лет)
- monthlyDeposit - сумма, которую вы пополняете ежемесячно
-Эта формула учитывает как процентный рост на существующий капитал, так и ежемесячное пополнение, которое начисляется каждый месяц.
-Примечание: Формула предполагает, что пополнение происходит в конце каждого периода (например, в конце каждого месяца).  */
+
     
+    
+    func spendEarn (earn:Float, spend: Float) -> Float {
+        
+        var total: Float = earn - spend
+        total/=30.4
+
+        
+        if total <= 0 {
+            total = 0
+        }
+        
+        
+        
+        return total
+        //
+        //    Доходы - расходы / 30.4
+        //    30 000 - 20 000 / 30.4 ( 365 / 12 ) = 328 в день
+        //
     
   
+        
+    }
     
    
         
-    func calculate(capital: Double, rate: Double, monthlyDeposit: Double, numberOfYears: Int) -> Double {
-        
+    func calculate(capital: Float, rate: Float, monthlyDeposit: Float, numberOfYears: Int) -> Float {
+        /*Где:
+         total - конечная сумма
+         capital - стартовый капитал
+         rate - процентная ставка в десятичном формате (например, 0.05 для 5%)
+         numberOfYears - количество периодов (лет)
+         monthlyDeposit - сумма, которую вы пополняете ежемесячно
+        Эта формула учитывает как процентный рост на существующий капитал, так и ежемесячное пополнение, которое начисляется каждый месяц.
+        Примечание: Формула предполагает, что пополнение происходит в конце каждого периода (например, в конце каждого месяца).  */
        
         let interestRate = rate / 100.0 //привести в нормальный вид
         let periodsPerYear = 12 //месяцев в году
         let totalPeriods = periodsPerYear * numberOfYears //всего месяцев
         
         var total = capital //для удобсва
-        let monthlyRate = 1.0 + interestRate / Double(periodsPerYear)
+        let monthlyRate = 1.0 + interestRate / Float(periodsPerYear)
         
         for _ in 1..<totalPeriods {
             total *= monthlyRate

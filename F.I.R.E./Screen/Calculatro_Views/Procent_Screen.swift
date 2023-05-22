@@ -20,13 +20,13 @@ struct Procent_Screen: View {
     @FocusState var isInputActive: Bool
     @FocusState var isInputActive_1: Bool
     
-    let characterLimit = 9
+    let characterLimit : Int = 9
     
     var body: some View {
         ZStack {
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
-                
+            
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20){
                     ZStack{
@@ -39,30 +39,30 @@ struct Procent_Screen: View {
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
-                                    TextField("Введите число", text: Binding(
-                                               get: {
-                                                   self.InMonth
-                                               },
-                                               set: { newValue in
-                                                   let filtered = newValue.filter { "0123456789".contains($0) }
-                                                   if filtered.count <= characterLimit {
-                                                       self.InMonth = filtered
-                                                   }
-                                               }
-                                           ))
+                                    TextField("", text: Binding(
+                                        get: {
+                                            self.InMonth
+                                        },
+                                        set: { newValue in
+                                            let filtered = newValue.filter { "0123456789".contains($0) }
+                                            if filtered.count <= characterLimit {
+                                                self.InMonth = filtered
+                                            }
+                                        }
+                                    ))
                                     
-                                        .font(.system(size: 33))
-                                        .padding(.horizontal,15)
-                                        .foregroundColor(Color("Color_black"))
-                                        .background{
-                                            RoundedRectangle(cornerRadius: 15)
-                                                .foregroundColor(Color("Color_font_2"))
-                                               
+                                    .font(.system(size: 33))
+                                    .padding(.horizontal,15)
+                                    .foregroundColor(Color("Color_black"))
+                                    .background{
+                                        RoundedRectangle(cornerRadius: 15)
+                                            .foregroundColor(Color("Color_font_2"))
+                                        
                                     }
-                                        .keyboardType(.numberPad)
-                                        .focused($isInputActive)
-                                                        
-                                      
+                                    .keyboardType(.numberPad)
+                                    .focused($isInputActive)
+                                    
+                                    
                                     Text("$")
                                         .font(.system(size: 33,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
@@ -76,24 +76,24 @@ struct Procent_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .frame(height: 350)
                             .foregroundColor(Color("Color_Start"))
-                    VStack{
-                        HStack{
-                            VStack(alignment: .leading,spacing: 10){
-                                Text("Стартовый \nкапитал")
-                                    .font(.system(size: 33,weight: .medium))
-                                    .foregroundColor(Color("Color_font"))
-                                HStack {
-                                    TextField("Введите число", text: Binding(
-                                               get: {
-                                                   self.Start
-                                               },
-                                               set: { newValue in
-                                                   let filtered = newValue.filter { "0123456789".contains($0) }
-                                                   if filtered.count <= characterLimit {
-                                                       self.Start = filtered
-                                                   }
-                                               }
-                                           ))
+                        VStack{
+                            HStack{
+                                VStack(alignment: .leading,spacing: 10){
+                                    Text("Стартовый \nкапитал")
+                                        .font(.system(size: 33,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                    HStack {
+                                        TextField("", text: Binding(
+                                            get: {
+                                                self.Start
+                                            },
+                                            set: { newValue in
+                                                let filtered = newValue.filter { "0123456789".contains($0) }
+                                                if filtered.count <= characterLimit {
+                                                    self.Start = filtered
+                                                }
+                                            }
+                                        ))
                                         .font(.system(size: 33))
                                         .padding(.horizontal,15)
                                         .foregroundColor(Color("Color_black"))
@@ -104,41 +104,41 @@ struct Procent_Screen: View {
                                         }
                                         .keyboardType(.numberPad)
                                         .focused($isInputActive_1)
-                                       
-                                    Text("$")
+                                        
+                                        Text("$")
+                                            .font(.system(size: 33,weight: .medium))
+                                            .foregroundColor(Color("Color_font"))
+                                        Spacer()
+                                    }
+                                }
+                            }.padding(.horizontal,20)
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                .frame(height: 5)
+                                .foregroundColor(Color("Color_font_2"))
+                                .opacity(0.4)
+                            HStack{
+                                VStack(alignment: .leading,spacing: 10){
+                                    Text("Количество лет")
                                         .font(.system(size: 33,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
-                                    Spacer()
-                                }
-                            }
-                        }.padding(.horizontal,20)
-                        
-                        RoundedRectangle(cornerRadius: 30)
-                            .frame(height: 5)
-                            .foregroundColor(Color("Color_font_2"))
-                            .opacity(0.4)
-                        HStack{
-                            VStack(alignment: .leading,spacing: 10){
-                                Text("Количество лет")
-                                    .font(.system(size: 33,weight: .medium))
-                                    .foregroundColor(Color("Color_font"))
-                                VStack(spacing: 0) {
-                                            Slider(value: $Year, in: 1...50) {
-                                                Text("Slider")
-                                                
-                                            }
-                                            .tint(.red)
+                                    VStack(spacing: 0) {
+                                        Slider(value: $Year, in: 1...50) {
+                                            Text("Slider")
+                                            
+                                        }
+                                        .tint(.red)
                                         
                                         .padding(.top,30)
-                                    Text("\(Int(Year))")
-                                        .font(.system(size: 21,weight: .medium))
-                                        .foregroundColor(Color("Color_font_3"))
+                                        Text("\(Int(Year))")
+                                            .font(.system(size: 21,weight: .medium))
+                                            .foregroundColor(Color("Color_font_3"))
                                         
-                                    Spacer()
+                                        Spacer()
+                                    }
                                 }
-                            }
-                        }.padding(.horizontal,20)
-                    }.padding(.top,20)
+                            }.padding(.horizontal,20)
+                        }.padding(.top,20)
                         
                     }
                     ZStack{
@@ -184,13 +184,13 @@ struct Procent_Screen: View {
                             .foregroundColor(Color("Color_Start"))
                         VStack(alignment: .leading,spacing: 15){
                             HStack{
-                              Text("Ваш капитал \nсоставит")
+                                Text("Ваш капитал \nсоставит")
                                     .font(.system(size: 30,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
-                                  
+                                
                             }
                             HStack{
-                                Text("\(String(Int(data.calculate(capital: Double(Start)  ?? 0, rate: Double(Rate), monthlyDeposit: Double(InMonth) ?? 0, numberOfYears: Int(Year)))))")
+                                Text("\(String(Int(data.calculate(capital: Float(Start)  ?? 0, rate: Float(Rate), monthlyDeposit: Float(InMonth) ?? 0, numberOfYears: Int(Year)))))")
                                     .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                     .lineLimit(1)
@@ -211,9 +211,9 @@ struct Procent_Screen: View {
                             .foregroundColor(Color("Color_font"))
                             .multilineTextAlignment(.leading)
                         
-                        .presentationDetents([.height(500)])
+                            .presentationDetents([.height(500)])
                     }.padding(.horizontal,20)
-                    }
+                }
         }.toolbar(.hidden, for: .tabBar)
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
@@ -229,7 +229,7 @@ struct Procent_Screen: View {
                     }
                 }
             }
-       
+        
         
     }
 }
@@ -239,3 +239,4 @@ struct Procent_Screen_Previews: PreviewProvider {
         Procent_Screen()
     }
 }
+
