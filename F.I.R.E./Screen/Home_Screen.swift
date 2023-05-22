@@ -16,7 +16,7 @@ struct Home_Screen: View {
                     
                     
                     
-                    VStack(spacing: 20){
+                    LazyVStack(spacing: 20){
                         
                         
                             NavigationLink { Advice_Screen()} label: {
