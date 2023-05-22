@@ -145,7 +145,7 @@ struct Procent_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .frame(height: 300)
                             .foregroundColor(Color("Color_Start"))
-                        VStack(alignment: .leading,spacing:0){
+                        VStack(alignment: .leading,spacing:10){
                             VStack{
                                 
                                 Text("Выбрать риск профиль")
@@ -182,7 +182,7 @@ struct Procent_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .frame(height: 200)
                             .foregroundColor(Color("Color_Start"))
-                        VStack(alignment: .leading,spacing: 0){
+                        VStack(alignment: .leading,spacing: 15){
                             HStack{
                               Text("Ваш капитал \nсоставит")
                                     .font(.system(size: 30,weight: .medium))
@@ -190,7 +190,7 @@ struct Procent_Screen: View {
                                   
                             }
                             HStack{
-                                Text("\(String(data.calculate(capital: Double(Start)  ?? 0, rate: Double(Rate), monthlyDeposit: Double(InMonth) ?? 0, numberOfYears: Int(Year))))")
+                                Text("\(String(Int(data.calculate(capital: Double(Start)  ?? 0, rate: Double(Rate), monthlyDeposit: Double(InMonth) ?? 0, numberOfYears: Int(Year)))))")
                                     .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                     .lineLimit(1)
