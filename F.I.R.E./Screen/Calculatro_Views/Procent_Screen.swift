@@ -187,10 +187,12 @@ struct Procent_Screen: View {
                 .sheet(isPresented: $Sheet) {
                     VStack{
                         Text("Риск-профиль или инвестиционный профиль участника рынка — это оценка его толерантности к риску. Со всем этим может помочь разобраться определение риск-профиля, которое, кстати, используется для того, чтобы затем выбрать подходящие именно для вас и реализации вашей цели финансовые инструменты и сформировать удобную для вас инвестстратегию.")
-                            .font(.system(size: 25,weight: .medium))
+                            .font(.system(size: 22,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                             .multilineTextAlignment(.leading)
-                    }.padding(20)
+                        
+                        .presentationDetents([.height(500)])
+                    }.padding(.horizontal,20)
                     }
         }.toolbar(.hidden, for: .tabBar)
             .toolbar {
