@@ -11,10 +11,17 @@ struct SafeMoney_Screen: View {
     
     @StateObject var data = SpendMoney()
     
+    @AppStorage ("earnMoney") var earnMoney : String = ""
+    @AppStorage ("spendMoney") var spendMoney : String = ""
+    let characterLimit = 9
+    
+    
+    @FocusState var isInputActive: Bool
+    @FocusState var isInputActive_1: Bool
+    
     var body: some View {
         
-        @AppStorage ("earnMoney") var earnMoney : Double = 10
-        @AppStorage ("spendMoney") var spendMoney : Double = 10
+       
         
         
         ZStack {
@@ -38,17 +45,32 @@ struct SafeMoney_Screen: View {
                         HStack {
                             HStack {
                                 
-                                TextField("в месяц",value: $earnMoney, format: .number)
-                                    .font(.system(size: 33))
-                                    .foregroundColor(Color("Color_procent_text"))
+                                TextField("Введите число", text: Binding(
+                                           get: {
+                                               self.earnMoney
+                                           },
+                                           set: { newValue in
+                                               let filtered = newValue.filter { "0123456789".contains($0) }
+                                               if filtered.count <= characterLimit {
+                                                   self.earnMoney = filtered
+                                               }
+                                           }
+                                       ))
                                 
+                                    .font(.system(size: 33))
+                                    .padding(.horizontal,15)
+                                    .foregroundColor(Color("Color_black"))
                                     .background{
-                                        
                                         RoundedRectangle(cornerRadius: 15)
                                             .foregroundColor(Color("Color_font_2"))
-                                        
-                                        
-                                    }
+                                           
+                                }
+                                    .keyboardType(.numberPad)
+                                    .focused($isInputActive)
+                                                    
+                                
+                                
+                                
                                 Text("$")
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
@@ -73,7 +95,7 @@ struct SafeMoney_Screen: View {
                     VStack {
                         HStack {
                             
-                            Text("Обязательные трат в месяц ")
+                            Text("Обязательные траты в месяц ")
                                 .font(.system(size: 33, weight: .medium)).foregroundColor(Color("Color_font"))
                                 .padding(.horizontal,15)
                             
@@ -83,17 +105,32 @@ struct SafeMoney_Screen: View {
                         HStack {
                             HStack {
                                 
-                                TextField("в месяц",value: $spendMoney, format: .number)
-                                    .font(.system(size: 33))
-                                    .foregroundColor(Color("Color_procent_text"))
                                 
+                                TextField("Введите число", text: Binding(
+                                           get: {
+                                               self.spendMoney
+                                           },
+                                           set: { newValue in
+                                               let filtered = newValue.filter { "0123456789".contains($0) }
+                                               if filtered.count <= characterLimit {
+                                                   self.spendMoney = filtered
+                                               }
+                                           }
+                                       ))
+                                
+                                    .font(.system(size: 33))
+                                    .padding(.horizontal,15)
+                                    .foregroundColor(Color("Color_black"))
                                     .background{
-                                        
                                         RoundedRectangle(cornerRadius: 15)
                                             .foregroundColor(Color("Color_font_2"))
-                                        
-                                        
-                                    }
+                                           
+                                }
+                                    .keyboardType(.numberPad)
+                                    .focused($isInputActive_1)
+                                                    
+                                
+                                    
                                 Text("$")
                                     .font(.system(size: 33,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
@@ -117,7 +154,16 @@ struct SafeMoney_Screen: View {
                     
                     VStack {
                         HStack {
-                            Text("1 321₽").font(.system(size: 117.2, weight: .medium)).foregroundColor(Color("Color_font_1"))
+                            Text("\(String(Int(data.spendEarn(earn: Double (earnMoney) ?? 0, spend: Double (spendMoney) ?? 0 ))))")
+                            
+                                .font(.system(size: 60, weight: .medium))
+                                .foregroundColor(Color("Color_font_1"))
+                            
+                            Text("$")
+                                .font(.system(size: 60,weight: .medium))
+                                .foregroundColor(Color("Color_font_1"))
+                            
+                        
                             Spacer()
                         }
                         
@@ -128,13 +174,16 @@ struct SafeMoney_Screen: View {
                 ZStack {
                     VStack {
                         HStack {
-                            Text("Вы можете потратить в день").font(.system(size: 44.9, weight: .medium))
+                            Text("Вы можете потратить в день")
+                .font(.system(size: 34, weight: .medium))
+                .foregroundColor(Color("Color_font"))
+
                             Spacer()
                         }
                     }
                 }
                     
-                }.padding(10)
+                }.padding(20)
             }
         }
         struct SafeMoney_Screen_Previews: PreviewProvider {
