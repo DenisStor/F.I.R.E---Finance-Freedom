@@ -38,8 +38,7 @@ struct Home_Screen: View {
                                                         Rectangle().frame(height: 2).offset(y: 4)
                                                         , alignment: .bottom)
                                              
-                                            Image("To_Image")
-                                                .renderingMode(.template)
+                                           
                                         }.foregroundColor(Color(white: 1, opacity: 0.5))
                                     }.multilineTextAlignment(.leading)
                                         .padding(.horizontal,10)
@@ -72,7 +71,7 @@ struct Home_Screen: View {
                                                 Text("Подробнее")
                                                     .foregroundColor(Color("Color_font_2"))
                                                     .font(.system(size: 24,weight: .medium))
-                                                Image("To_Image")
+                                                
                                                 
                                                 
                                             }
