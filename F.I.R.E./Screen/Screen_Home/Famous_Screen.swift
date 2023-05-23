@@ -8,14 +8,39 @@
 import SwiftUI
 
 struct Famous_Screen: View {
-    @State private var name : [String] = ["","","",""] //их имена \n для разделения имени и фамилии
+    @State private var name : [String] = [
+    NSLocalizedString("word_0", comment: ""),
+    NSLocalizedString("word_1", comment: ""),
+    NSLocalizedString("word_2", comment: ""),
+    NSLocalizedString("word_3", comment: ""),
+    NSLocalizedString("word_4", comment: ""),
+    ]
+    
+    
+    //их имена \n для разделения имени и фамилии
     @State private var Image1 : [String] = ["Baffet","Bill","Elon","Pitere"] // картинки
     
     
     
-    @State private var title : [String] = ["","","",""] //заголовок статьи
+    @State private var title : [String] = [
+    NSLocalizedString("word_0", comment: ""),
+    NSLocalizedString("word_1", comment: ""),
+    NSLocalizedString("word_2", comment: ""),
+    NSLocalizedString("word_3", comment: ""),
+    NSLocalizedString("word_4", comment: ""),
+    ]
+    
+    
+    
+    //заголовок статьи
     @State private var Image2 : [String] = ["Baffet","Bill","Elon","Pitere"] // картинка
-    @State private var Text1 : [String] = ["Baffet","Bill","Elon","Pitere"] // основной текст
+    @State private var Text1 : [String] = [
+        NSLocalizedString("word_0", comment: ""),
+        NSLocalizedString("word_1", comment: ""),
+        NSLocalizedString("word_2", comment: ""),
+        NSLocalizedString("word_3", comment: ""),
+        NSLocalizedString("word_4", comment: ""),
+        ] // основной текст
     
     var body: some View {
         ZStack{

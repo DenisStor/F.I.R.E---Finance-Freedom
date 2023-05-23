@@ -8,6 +8,7 @@ struct Settings_screen: View {
     @AppStorage ("InMonth") var InMonth : Double = 0
     @AppStorage ("Year") var Year : Double = 1
     @AppStorage ("Rate") var Rate : Int = 4
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         NavigationStack{
@@ -18,19 +19,7 @@ struct Settings_screen: View {
                 
                 VStack(alignment: .leading){
                     
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 22)
-                            .foregroundColor(Color("Color_button"))
-                            .frame(height: 64)
-                        HStack {
-                            Text("set1")
-                                .font(.system(size: 24.5, weight: .medium))
-                                .padding(20)
-                            Spacer()
-                            
-                            
-                        }
-                    }
+                    
                     
                     
                     
@@ -42,25 +31,14 @@ struct Settings_screen: View {
                             Text("set2")
                                 .font(.system(size: 24.5, weight: .medium))
                                 .padding(20)
+                            Text(colorScheme == .dark ? "In dark mode" : "In light mode")
+                           // Button("tup") { colorScheme = .dark}
                             Spacer()
                             
                         }
                     }
                     
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 22)
-                            .foregroundColor(Color("Color_button"))
-                            .frame(height: 64)
-                        HStack {
-                            Text("set3")
-                                .font(.system(size: 24.5, weight: .medium))
-                                .padding(20)
-                            
-                            Spacer()
-                            
-                        }
-                        
-                    }
+                   
                     
                     Spacer()
                     
