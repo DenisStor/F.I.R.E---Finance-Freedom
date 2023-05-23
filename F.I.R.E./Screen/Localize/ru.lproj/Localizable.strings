@@ -115,7 +115,7 @@
 "$" = "₽";
 "main" = "Главная";
 "Settings" = "Настройки";
-"Create financial reserves" = "Создавайте финансовые резервы";
+"Createfinancialreserves" = "Создавайте финансовые резервы";
 "Advice_home" = "Открыть советы";
 "More" = "Подробнее";
 "Whatarethey" = "Кто они такие?";
