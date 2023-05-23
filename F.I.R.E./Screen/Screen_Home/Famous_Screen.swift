@@ -9,7 +9,32 @@ import SwiftUI
 
 struct Famous_Screen: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
+            
+            ScrollView{
+                LazyVStack(spacing:20){
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 30)
+                        HStack{
+                            Spacer()
+                            VStack{
+                                Spacer()
+                                Image("test")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                            }
+                        }
+                    }.frame(height: 194)
+                    
+                    
+                }
+            }.padding(.horizontal,15)
+            
+            
+            
+        }
     }
 }
 
