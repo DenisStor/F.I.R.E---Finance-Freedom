@@ -12,12 +12,13 @@ struct AboutUs_Screen: View {
         ZStack{
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
-            ScrollView{
+            
                 
                 HStack {
                     VStack(alignment: .leading){
                         
                         VStack(alignment: .leading){
+                            Spacer()
                             Image("banana_Image")
                             Text("Разработано")
                                 .font(.system(size: 40,weight: .medium))
@@ -40,14 +41,14 @@ struct AboutUs_Screen: View {
                                 .tint(Color("Color_font_3"))
                             
                         } .multilineTextAlignment(.leading)
-                    }.frame(height: 500)
+                    }.frame(height: .infinity)
                     .padding(.horizontal,20)
                        
                       
                     Spacer()
                 }.padding(5)
                 
-            }
+            
             
         }
     }
