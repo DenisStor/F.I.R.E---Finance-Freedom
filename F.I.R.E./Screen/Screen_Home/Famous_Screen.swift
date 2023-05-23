@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct Famous_Screen: View {
-    @State private var name : [String] = ["","","",""]
-    @State private var Image1 : [String] = ["Baffet","Bill","Elon","Pitere"]
+    @State private var name : [String] = ["","","",""] //их имена \n для разделения имени и фамилии
+    @State private var Image1 : [String] = ["Baffet","Bill","Elon","Pitere"] // картинки
     
     
     
-    @State private var title : [String] = ["","","",""]
-    @State private var Image2 : [String] = ["Baffet","Bill","Elon","Pitere"]
-    @State private var Text1 : [String] = ["Baffet","Bill","Elon","Pitere"]
+    @State private var title : [String] = ["","","",""] //заголовок статьи
+    @State private var Image2 : [String] = ["Baffet","Bill","Elon","Pitere"] // картинка
+    @State private var Text1 : [String] = ["Baffet","Bill","Elon","Pitere"] // основной текст
     
     var body: some View {
         ZStack{

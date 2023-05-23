@@ -96,7 +96,7 @@ struct Settings_screen: View {
                         .frame(maxHeight: 25)
                 }
                 .padding(.horizontal, 15)
-                // .padding(.bottom, 20)
+              
                 .navigationTitle("setLang")
                 .navigationBarTitleDisplayMode(.inline)
                 
