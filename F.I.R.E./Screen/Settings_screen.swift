@@ -102,7 +102,7 @@ struct Settings_screen: View {
         if selectedTheme == "dark" {
             return .dark
         } else if selectedTheme == "system" {
-            return colorScheme == .dark ? .light : .dark
+            return colorScheme == .light ? .light : .dark
         } else {
             return .light
         }
