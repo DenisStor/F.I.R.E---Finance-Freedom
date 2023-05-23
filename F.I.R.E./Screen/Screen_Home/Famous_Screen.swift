@@ -30,7 +30,7 @@ struct Famous_Screen: View {
                                     Color("Color_back")
                                         .edgesIgnoringSafeArea(.all)
                                     ScrollView{
-                                        LazyVStack{
+                                        LazyVStack(alignment: .leading){
                                             Text(title[index])
                                             Image(Image2[index])
                                             Text(Text1[index])
@@ -38,7 +38,7 @@ struct Famous_Screen: View {
                                             
                                             
                                         }
-                                    }
+                                    }.padding(.horizontal,15)
                                 }
                                 
                             } label: {
