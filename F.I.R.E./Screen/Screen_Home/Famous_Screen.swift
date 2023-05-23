@@ -58,6 +58,9 @@ struct Famous_Screen: View {
                                         LazyVStack(alignment: .leading){
                                             Text(title[index])
                                             Image(Image2[index])
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                            
                                             Text(Text1[index])
                                                 
                                             

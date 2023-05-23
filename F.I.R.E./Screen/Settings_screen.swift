@@ -8,6 +8,7 @@ struct Settings_screen: View {
     @AppStorage ("InMonth") var InMonth : Double = 0
     @AppStorage ("Year") var Year : Double = 1
     @AppStorage ("Rate") var Rate : Int = 4
+    @AppStorage("theme") var selectedTheme: String = "system"
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -31,14 +32,19 @@ struct Settings_screen: View {
                             Text("set2")
                                 .font(.system(size: 24.5, weight: .medium))
                                 .padding(20)
-                            Text(colorScheme == .dark ? "In dark mode" : "In light mode")
-                           // Button("tup") { colorScheme = .dark}
                             Spacer()
+                            Picker("Тема", selection: $selectedTheme) {
+                                Text("Светлая").tag("light")
+                                Text("Темная").tag("dark")
+                                Text("Системная").tag("system")
+                            }
                             
-                        }
+                            
+                            
+                        }.padding(.horizontal,10)
                     }
                     
-                   
+                    
                     
                     Spacer()
                     
@@ -74,7 +80,7 @@ struct Settings_screen: View {
                         .frame(maxHeight: 25)
                 }
                 .padding(.horizontal, 15)
-              
+                
                 .navigationTitle("setLang")
                 .navigationBarTitleDisplayMode(.inline)
                 
@@ -88,9 +94,20 @@ struct Settings_screen: View {
                 
                 
             }
+            
+        }
+        .preferredColorScheme(getColorScheme())
+    }
+    func getColorScheme() -> ColorScheme {
+        if selectedTheme == "dark" {
+            return .dark
+        } else if selectedTheme == "system" {
+            return colorScheme == .dark ? .light : .dark
+        } else {
+            return .light
         }
     }
-    
+}
     struct Settings_screen_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
@@ -99,5 +116,5 @@ struct Settings_screen: View {
                 .previewDevice("iPhone 14 Pro Max")
         }
     }
-}
+
 
