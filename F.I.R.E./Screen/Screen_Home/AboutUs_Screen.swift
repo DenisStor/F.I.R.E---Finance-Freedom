@@ -17,29 +17,32 @@ struct AboutUs_Screen: View {
                 HStack {
                     VStack(alignment: .leading){
                         
-                        Image("banana_Image")
-                        Text("Разработано")
-                            .font(.system(size: 40,weight: .medium))
-                            .foregroundColor(Color("Color_font"))
-                        Text("Banana project")
-                            .font(.system(size: 40,weight: .medium))
-                            .foregroundColor(Color("Color_banana"))
-                        Text("перейти на сайт")
-                            .font(.system(size: 26,weight: .medium))
-                            .foregroundColor(Color("Color_font_3"))
+                        VStack(alignment: .leading){
+                            Image("banana_Image")
+                            Text("Разработано")
+                                .font(.system(size: 40,weight: .medium))
+                                .foregroundColor(Color("Color_font"))
+                            Text("Banana project")
+                                .font(.system(size: 40,weight: .medium))
+                                .foregroundColor(Color("Color_banana"))
+                            Text("перейти на сайт")
+                                .font(.system(size: 26,weight: .medium))
+                                .foregroundColor(Color("Color_font_3"))
+                        } .multilineTextAlignment(.leading)
+                        Spacer()
+                        VStack(alignment: .leading){
+                            Text("Советы и \nпредложения")
+                                .font(.system(size: 34,weight: .medium))
+                                .foregroundColor(Color("Color_font"))
+                                .padding(.top,100)
+                            Text("support@banana.ru")
+                                .font(.system(size: 34,weight: .medium))
+                                .tint(Color("Color_font_3"))
                             
-                        Text("Советы и \nпредложения")
-                            .font(.system(size: 34,weight: .medium))
-                            .foregroundColor(Color("Color_font"))
-                            .padding(.top,100)
-                        Text("support@banana.ru")
-                            .font(.system(size: 34,weight: .medium))
-                            .tint(Color("Color_font_3"))
-                        
-                        
-                    }//.frame(height: 800)
+                        } .multilineTextAlignment(.leading)
+                    }.frame(height: 500)
                     .padding(.horizontal,20)
-                        .multilineTextAlignment(.leading)
+                       
                       
                     Spacer()
                 }.padding(5)
