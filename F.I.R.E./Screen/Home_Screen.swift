@@ -12,7 +12,7 @@ struct Home_Screen: View {
             ZStack{
                 Color("Color_back")
                     .edgesIgnoringSafeArea(.all)
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     
                     
                     
@@ -28,14 +28,14 @@ struct Home_Screen: View {
                                 .foregroundColor(Color("Color_font_1"))
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
-                                    Text("Create financial reserves")
+                                    Text("Createfinancialreserves")
                                         .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                     
                                     
                                     
                                     Text("Advice_home")
-                                        .font(.system(size: 24,weight: .medium))
+                                        .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color(white: 1, opacity: 0.5))
                                         .overlay(
                                             Rectangle().frame(height: 2).offset(y: 4)
@@ -97,11 +97,71 @@ struct Home_Screen: View {
                         
                         
                         
+                        NavigationLink { Famous_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            
+                            Image("FamousPeople")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 140)
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    Text("Whatarethey")
+                                        .font(.system(size: 26,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                    
+                                    
+                                    
+                                    Text("И как  \nразбогатели")
+                                        .font(.system(size: 22,weight: .medium))
+                                        .foregroundColor(Color(white: 1, opacity: 0.5))
+                                        .overlay(
+                                            Rectangle().frame(height: 2).offset(y: 4)
+                                            , alignment: .bottom)
+                                    
+                                    
+                                        .foregroundColor(Color(white: 1, opacity: 0.5))
+                                    
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
                     }
-                    
-                    
-                    
-                    
+                        
+                        
+                        NavigationLink { AboutUs_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                .strokeBorder(lineWidth: 2)
+                                    .frame(height: 100)
+                                    .foregroundColor(Color("Color_font"))
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        Text("О нас")
+                                            .font(.system(size: 26,weight: .medium))
+                                            .foregroundColor(Color("Color_font"))
+                                        
+                                        Image("Home_image")
+                                            .renderingMode(.template)
+                                            .foregroundColor(Color("Color_font"))
+                                        
+                                    }
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
+                        
+                    }
                 }.padding(.horizontal,15)
                     .navigationTitle("main")
                     .navigationBarTitleDisplayMode(.inline)

@@ -116,6 +116,7 @@
 "$" = "$";
 "main" = "Home";
 "Settings" = "Settings";
-"Create financial reserves" = "Create financial reserves";
+"Createfinancialreserves" = "Create financial reserves";
 "Advice_home" = "Open Tips";
 "More" = "More";
+"Whatarethey" = "What are they?";
