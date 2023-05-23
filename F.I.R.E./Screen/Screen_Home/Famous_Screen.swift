@@ -9,24 +9,24 @@ import SwiftUI
 
 struct Famous_Screen: View {
     @State private var name : [String] = [
-    NSLocalizedString("word_0", comment: ""),
-    NSLocalizedString("word_1", comment: ""),
-    NSLocalizedString("word_2", comment: ""),
-    NSLocalizedString("word_3", comment: ""),
-    NSLocalizedString("word_4", comment: ""),
+    NSLocalizedString("famous_name1", comment: ""),
+    NSLocalizedString("famous_name2", comment: ""),
+    NSLocalizedString("famous_name4", comment: ""),
+    NSLocalizedString("famous_name3", comment: ""),
+    NSLocalizedString("famous_name4", comment: ""),
     ]
     
     
     //их имена \n для разделения имени и фамилии
     @State private var Image1 : [String] = ["Baffet","Bill","Elon","Pitere"] // картинки
     
-    
+    @State private var Color1 : [String] = ["Color_font_2","Color_font","Color_font","Color_font"]
     
     @State private var title : [String] = [
-    NSLocalizedString("word_0", comment: ""),
-    NSLocalizedString("word_1", comment: ""),
-    NSLocalizedString("word_2", comment: ""),
-    NSLocalizedString("word_3", comment: ""),
+    NSLocalizedString("famous_name1", comment: ""),
+    NSLocalizedString("famous_name2", comment: ""),
+    NSLocalizedString("famous_name4", comment: ""),
+    NSLocalizedString("famous_name3", comment: ""),
     NSLocalizedString("word_4", comment: ""),
     ]
     
@@ -35,7 +35,7 @@ struct Famous_Screen: View {
     //заголовок статьи
     @State private var Image2 : [String] = ["Baffet","Bill","Elon","Pitere"] // картинка
     @State private var Text1 : [String] = [
-        NSLocalizedString("word_0", comment: ""),
+        NSLocalizedString("famous_name1", comment: ""),
         NSLocalizedString("word_1", comment: ""),
         NSLocalizedString("word_2", comment: ""),
         NSLocalizedString("word_3", comment: ""),
@@ -48,7 +48,7 @@ struct Famous_Screen: View {
                 .edgesIgnoringSafeArea(.all)
             NavigationStack{
                 ScrollView(showsIndicators: false){
-                    LazyVStack(spacing:20){
+                    LazyVStack(spacing: 5){
                         ForEach(0..<4) { index in
                             NavigationLink {
                                 ZStack{
@@ -57,11 +57,13 @@ struct Famous_Screen: View {
                                     ScrollView{
                                         LazyVStack(alignment: .leading){
                                             Text(title[index])
+                                                .font(.system(size: 53, weight: .medium)).foregroundColor(Color("Color_font_1"))
                                             Image(Image2[index])
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                             
                                             Text(Text1[index])
+                                     
                                                 
                                             
                                             
@@ -80,17 +82,21 @@ struct Famous_Screen: View {
                                         .aspectRatio(contentMode: .fit)
                                     VStack{
                                         HStack{
+                                            
                                             Text(name[index])
-                                                .font(.system(size: 44,weight: .medium))
+                                                .multilineTextAlignment(.leading)
+                                            .font(.system(size: 43.4, weight: .medium))
+                                            .foregroundColor(Color(Color1[index]))
                                             Spacer()
                                         }
-                                    }.padding(.horizontal,30)
+                                    }.padding(.horizontal,20)
                                 }.frame(height: 200)
                             }
                         }
                         
                     }
                 }.padding(.horizontal,15)
+    
                 
             }
             
