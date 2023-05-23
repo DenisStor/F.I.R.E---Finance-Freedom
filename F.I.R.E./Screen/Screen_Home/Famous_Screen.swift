@@ -8,31 +8,63 @@
 import SwiftUI
 
 struct Famous_Screen: View {
+    @State private var name : [String] = ["","","",""]
+    @State private var Image1 : [String] = ["Baffet","Bill","Elon","Pitere"]
+    
+    
+    
+    @State private var title : [String] = ["","","",""]
+    @State private var Image2 : [String] = ["Baffet","Bill","Elon","Pitere"]
+    @State private var Text1 : [String] = ["Baffet","Bill","Elon","Pitere"]
+    
     var body: some View {
         ZStack{
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
-            
-            ScrollView{
-                LazyVStack(spacing:20){
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                        HStack{
-                            Spacer()
-                            VStack{
-                                Spacer()
-                                Image("test")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
+            NavigationStack{
+                ScrollView(showsIndicators: false){
+                    LazyVStack(spacing:20){
+                        ForEach(0..<4) { index in
+                            NavigationLink {
+                                ZStack{
+                                    Color("Color_back")
+                                        .edgesIgnoringSafeArea(.all)
+                                    ScrollView{
+                                        LazyVStack{
+                                            Text(title[index])
+                                            Image(Image2[index])
+                                            Text(Text1[index])
+                                                
+                                            
+                                            
+                                        }
+                                    }
+                                }
+                                
+                            } label: {
+                                
+                                
+                                ZStack{
+                                    
+                                    
+                                    Image(Image1[index])
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                    VStack{
+                                        HStack{
+                                            Text(name[index])
+                                                .font(.system(size: 44,weight: .medium))
+                                            Spacer()
+                                        }
+                                    }.padding(.horizontal,30)
+                                }.frame(height: 200)
                             }
                         }
-                    }.frame(height: 194)
-                    
-                    
-                }
-            }.padding(.horizontal,15)
-            
-            
+                        
+                    }
+                }.padding(.horizontal,15)
+                
+            }
             
         }
     }
