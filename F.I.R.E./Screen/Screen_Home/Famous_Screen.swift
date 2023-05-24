@@ -44,18 +44,23 @@ struct Famous_Screen: View {
         ] // основной текст
     
     var body: some View {
+        
         ZStack{
-            Color("Color_back")
-                .edgesIgnoringSafeArea(.all)
+       
+         
             NavigationStack{
+                
                 ScrollView(showsIndicators: false){
+                    
                     LazyVStack(spacing: 15){
+                        
                         ForEach(0..<4) { index in
                             NavigationLink {
+                                
                                 ZStack{
-                                    Color("Color_back")
-                                        .edgesIgnoringSafeArea(.all)
+                                    
                                     ScrollView{
+                                        
                                         LazyVStack(alignment: .leading){
                                             Text(title[index])
                                                 .font(.system(size: 53, weight: .medium)).foregroundColor(Color("Color_font_1"))
@@ -89,9 +94,10 @@ struct Famous_Screen: View {
                                         HStack{
                                             
                                             Text(name[index])
-                                                .multilineTextAlignment(.leading)
+                                             
                                             .font(.system(size: 43.4, weight: .medium))
                                             .foregroundColor(Color(Color1[index]))
+                                            .multilineTextAlignment(.leading)
                                             Spacer()
                                         }
                                     }.padding(.horizontal,20)
@@ -106,7 +112,9 @@ struct Famous_Screen: View {
             }
             
         }
+        
     }
+    
 }
 
 struct Famous_Screen_Previews: PreviewProvider {
