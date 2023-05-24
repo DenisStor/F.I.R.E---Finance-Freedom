@@ -12,8 +12,7 @@ final class Calculator : ObservableObject {
 
     
     
-    func spendEarn (earn:Float, spend: Float) -> Float {
-        
+    func spendEarn (earn: Float, spend: Float) -> Float {
         var total: Float = earn - spend
         total/=30.4
 

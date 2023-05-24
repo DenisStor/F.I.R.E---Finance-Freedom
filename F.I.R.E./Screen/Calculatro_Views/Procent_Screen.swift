@@ -36,7 +36,7 @@ struct Procent_Screen: View {
                         HStack{
                             VStack(alignment: .leading,spacing: 10){
                                 Text("Сколько вы готовы откладывать")
-                                    .font(.system(size: 33,weight: .medium))
+                                    .font(.system(size: 30 ,weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
                                     TextField("", text: Binding(
@@ -51,7 +51,8 @@ struct Procent_Screen: View {
                                         }
                                     ))
                                     
-                                    .font(.system(size: 33))
+                                    .font(.system(size: 25))
+                                    .frame(height: 45)
                                     .padding(.horizontal,15)
                                     .foregroundColor(Color("Color_black"))
                                     .background{
@@ -94,8 +95,9 @@ struct Procent_Screen: View {
                                                 }
                                             }
                                         ))
-                                        .font(.system(size: 33))
+                                        .font(.system(size: 25))
                                         .padding(.horizontal,15)
+                                        .frame(height: 45)
                                         .foregroundColor(Color("Color_black"))
                                         .background{
                                             RoundedRectangle(cornerRadius: 15)
