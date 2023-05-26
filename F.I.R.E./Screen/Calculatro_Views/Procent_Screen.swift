@@ -35,8 +35,8 @@ struct Procent_Screen: View {
                             .foregroundColor(Color("Color_font_1"))
                         HStack{
                             VStack(alignment: .leading,spacing: 10){
-                                Text("Сколько вы готовы откладывать")
-                                    .font(.system(size: 30 ,weight: .medium))
+                                Text("procent1")
+                                    .font(.system(size: 30, weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
                                     TextField("", text: Binding(
@@ -64,7 +64,7 @@ struct Procent_Screen: View {
                                     .focused($isInputActive)
                                     
                                     
-                                    Text("$")
+                                    Text("valuta")
                                         .font(.system(size: 33,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                     Spacer()
@@ -80,8 +80,8 @@ struct Procent_Screen: View {
                         VStack{
                             HStack{
                                 VStack(alignment: .leading,spacing: 10){
-                                    Text("Стартовый \nкапитал")
-                                        .font(.system(size: 33,weight: .medium))
+                                    Text("procent2")
+                                        .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
                                     HStack {
                                         TextField("", text: Binding(
@@ -107,7 +107,7 @@ struct Procent_Screen: View {
                                         .keyboardType(.numberPad)
                                         .focused($isInputActive_1)
                                         
-                                        Text("$")
+                                        Text("valuta")
                                             .font(.system(size: 33,weight: .medium))
                                             .foregroundColor(Color("Color_font"))
                                         Spacer()
@@ -121,9 +121,10 @@ struct Procent_Screen: View {
                                 .opacity(0.4)
                             HStack{
                                 VStack(alignment: .leading,spacing: 10){
-                                    Text("Количество лет")
-                                        .font(.system(size: 33,weight: .medium))
+                                    Text("procent3")
+                                        .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
+                                        .padding(.top,33)
                                     VStack(spacing: 0) {
                                         Slider(value: $Year, in: 1...50) {
                                             Text("Slider")
@@ -131,7 +132,7 @@ struct Procent_Screen: View {
                                         }
                                         .tint(.red)
                                         
-                                        .padding(.top,30)
+                                        .padding(.top,33)
                                         Text("\(Int(Year))")
                                             .font(.system(size: 21,weight: .medium))
                                             .foregroundColor(Color("Color_font_3"))
@@ -150,8 +151,8 @@ struct Procent_Screen: View {
                         VStack(alignment: .leading,spacing:10){
                             VStack{
                                 
-                                Text("Выбрать риск профиль")
-                                    .font(.system(size: 33,weight: .medium))
+                                Text("procent4")
+                                    .font(.system(size: 30,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 
                             }
@@ -166,7 +167,7 @@ struct Procent_Screen: View {
                             }
                             VStack{
                                 HStack{
-                                    Text("что это такое?")
+                                    Text("procent5")
                                     Image(systemName: "info.circle")
                                 }.foregroundColor(Color("Color_font_3"))
                                 
@@ -186,7 +187,7 @@ struct Procent_Screen: View {
                             .foregroundColor(Color("Color_Start"))
                         VStack(alignment: .leading,spacing: 15){
                             HStack{
-                                Text("Ваш капитал \nсоставит")
+                                Text("procent6")
                                     .font(.system(size: 30,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 
@@ -196,7 +197,7 @@ struct Procent_Screen: View {
                                     .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                     .lineLimit(1)
-                                Text("$")
+                                Text("valuta")
                                     .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                 Spacer()

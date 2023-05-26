@@ -31,17 +31,17 @@ struct Settings_screen: View {
                         HStack {
                             Text("set2")
                                 .font(.system(size: 24.5, weight: .medium))
-                                .padding(20)
+                                
                             Spacer()
                             Picker("Тема", selection: $selectedTheme) {
-                                Text("Светлая").tag("light")
-                                Text("Темная").tag("dark")
-                                Text("Системная").tag("system")
+                                Text("themeSettings3").tag("light")
+                                Text("themeSettings2").tag("dark")
+                                Text("themeSettings").tag("system")
                             }
                             
                             
                             
-                        }.padding(.horizontal,10)
+                        }.padding(.horizontal,20)
                     }
                     
                     

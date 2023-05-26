@@ -32,15 +32,15 @@ struct SafeMoney_Screen: View {
                         .frame(height: 179)
                     VStack {
                         HStack {
-                            Text("Сколько вы зарабатываете")
-                                .font(.system(size: 33, weight: .medium))
+                            Text("safeMoney1")
+                                .font(.system(size: 30, weight: .medium))
                                 .foregroundColor(Color("Color_font_2"))
                             
                             Spacer()
                         }
                         
                         HStack {
-                            TextField("Введите число", text: Binding(
+                            TextField("safeMoney2", text: Binding(
                                 get: {
                                     self.earnMoney
                                 },
@@ -63,8 +63,8 @@ struct SafeMoney_Screen: View {
                             .focused($isInputActive)
                             
                             
-                            Text("$")
-                                .font(.system(size: 33,weight: .medium))
+                            Text("valuta")
+                                .font(.system(size: 30,weight: .medium))
                                 .foregroundColor(Color("Color_font_2"))
                             Spacer()
                             
@@ -86,8 +86,8 @@ struct SafeMoney_Screen: View {
                         .frame(height: 233)
                     VStack {
                         HStack {
-                            Text("Стоимость обязательных трат в месяц ")
-                                .font(.system(size: 33, weight: .medium))
+                            Text("safeMoney3")
+                                .font(.system(size: 30, weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             
                             Spacer()
@@ -118,8 +118,8 @@ struct SafeMoney_Screen: View {
                             .focused($isInputActive)
                             
                             
-                            Text("$")
-                                .font(.system(size: 33,weight: .medium))
+                            Text("valuta")
+                                .font(.system(size: 30,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
                             
@@ -152,7 +152,7 @@ struct SafeMoney_Screen: View {
                                     .foregroundColor(Color("Color_font_1"))
                                 
                                 
-                                Text("$")
+                                Text("valuta")
                                     .font(.system(size: 60,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                 
@@ -164,7 +164,7 @@ struct SafeMoney_Screen: View {
                                 VStack {
                                     
                                     HStack {
-                                        Text("Вы можете потратить в день")
+                                        Text("safeMoney4")
                                             .font(.system(size: 34, weight: .medium))
                                             .foregroundColor(Color("Color_font"))
                                            

@@ -114,7 +114,7 @@ struct Home_Screen: View {
                                     
                                     
                                     
-                                    Text("И как  \nразбогатели")
+                                    Text("homeWord1")
                                         .font(.system(size: 22,weight: .medium))
                                         .foregroundColor(Color(white: 1, opacity: 0.5))
                                         .overlay(
@@ -144,7 +144,7 @@ struct Home_Screen: View {
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     HStack{
-                                        Text("О нас")
+                                        Text("homeWord2")
                                             .font(.system(size: 26,weight: .medium))
                                             .foregroundColor(Color("Color_font"))
                                         

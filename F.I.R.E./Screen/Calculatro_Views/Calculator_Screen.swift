@@ -31,7 +31,7 @@ struct Calculator_Screen: View {
                                                 Spacer()
                                                 
                                                 
-                                                Text("Сложные проценты")
+                                                Text("calc1")
                                                     .font(.system(size: 45,weight: .medium))
                                                     .foregroundColor(Color("Color_font_2"))
                                                     .multilineTextAlignment(.leading)
@@ -58,7 +58,7 @@ struct Calculator_Screen: View {
                                                 Spacer()
                                                 
                                                 
-                                                Text("Сколько можно потратить в день")
+                                                Text("calc2")
                                                     .font(.system(size: 38,weight: .medium))
                                                     .foregroundColor(Color("Color_font"))
                                                     .multilineTextAlignment(.leading)
