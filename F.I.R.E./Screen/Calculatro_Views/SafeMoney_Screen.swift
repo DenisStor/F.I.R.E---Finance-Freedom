@@ -145,16 +145,14 @@ struct SafeMoney_Screen: View {
                             
                             HStack {
                                
-                              Text("\(String(Float(data.spendEarn(earn: Float (earnMoney) ?? 0, spend: Float (spendMoney) ?? 0 ))))")
+                                Text("\(Float(data.spendEarn(earn: Float (earnMoney) ?? 0, spend: Float (spendMoney) ?? 0 )),format: .currency(code: "\("USD")"))")
                                 
                                
                                     .font(.system(size: 60, weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                 
                                 
-                                Text("valuta")
-                                    .font(.system(size: 60,weight: .medium))
-                                    .foregroundColor(Color("Color_font_1"))
+                             
                                 
                                 Spacer()
                                 
