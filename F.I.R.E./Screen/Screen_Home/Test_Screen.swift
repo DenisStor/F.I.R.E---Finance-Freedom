@@ -52,11 +52,11 @@ struct Test_Screen: View {
                         .padding(.vertical,30)
                         Spacer()
                     }
-                    VStack(spacing: 40){
+                    VStack(spacing: 20){
                         HStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 30, height: 30)
-                                .foregroundColor(BoolCount[IsCount] == true ? .red : .black)
+                                .foregroundColor(BoolCount[IsCount] == true ? Color("Color_font_1") : Color("Color_font_3"))
                             Text("Yes")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
@@ -72,7 +72,7 @@ struct Test_Screen: View {
                         HStack{
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 30, height: 30)
-                                .foregroundColor(BoolCount[IsCount] == false ? .red : .black)
+                                .foregroundColor(BoolCount[IsCount] == false ? Color("Color_font_1") : Color("Color_font_3"))
                             Text("No")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
@@ -92,7 +92,7 @@ struct Test_Screen: View {
                             .frame(height: 60)
                             .foregroundColor(Color("Color_font_1"))
                         if IsCount == 3{
-                            Text("All")
+                            Text("Done")
                                 .foregroundColor(Color("Color_font_2"))
                                 .font(.system(size: 25,weight: .medium))
                         } else {
