@@ -22,63 +22,65 @@ struct Test_Screen: View {
             if IsCount > 3 {
                 VStack{
                     Text("Finish")
-                    if Ideal[0] == BoolCount[0] {
-                        Text("True")
+                    ForEach (0..<4) { index in
+                        if Ideal[index] == BoolCount[index]{
+                            Text("True")
+                        } else {
+                            Text("False")
+                        }
+                        
                     }
-                    else {
-                        Text("False")
-                    }
-                    if Ideal[1] == BoolCount[1] {
-                        Text("True")
-                    }
-                    else {
-                        Text("False")
-                    }
-                    if Ideal[2] == BoolCount[2] {
-                        Text("True")
-                    }
-                    else {
-                        Text("False")
-                    }
-                    if Ideal[3] == BoolCount[3] {
-                        Text("True")
-                    }
-                    else {
-                        Text("False")
-                    }
+                   
                 }
             } else {
                 VStack(alignment: .leading){
                     
-                    Text("\(lesson[IsCount])")
-                        .foregroundColor(Color("Color_font_1"))
-                        .font(.system(size: 55,weight: .medium))
-                        .multilineTextAlignment(.leading)
+                    HStack {
+                        Text("\(lesson[IsCount])")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 55,weight: .medium))
+                            .multilineTextAlignment(.leading)
                         .padding(.vertical,10)
+                        Spacer()
+                    }
                     
-                    Text("\(TextInf[IsCount])")
-                        .foregroundColor(Color("Color_font"))
-                        .font(.system(size: 30,weight: .medium))
-                        .multilineTextAlignment(.leading)
+                    HStack {
+                        Text("\(TextInf[IsCount])")
+                            .foregroundColor(Color("Color_font"))
+                            .font(.system(size: 30,weight: .medium))
+                            .multilineTextAlignment(.leading)
                         .padding(.vertical,30)
+                        Spacer()
+                    }
                     VStack(spacing: 40){
                         HStack{
-                            
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(BoolCount[IsCount] == true ? .red : .black)
                             Text("Yes")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
+                            Spacer()
                         }.onTapGesture {
                             if BoolCount[IsCount] == nil {
+                                BoolCount[IsCount] = true
+                            }else {
                                 BoolCount[IsCount] = true
                             }
                             tru[IsCount] = true
                         }
                         HStack{
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(BoolCount[IsCount] == false ? .red : .black)
                             Text("No")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
+                            Spacer()
                         }.onTapGesture {
                             if BoolCount[IsCount] == nil {
+                                BoolCount[IsCount] = false
+                            }else {
                                 BoolCount[IsCount] = false
                             }
                             tru[IsCount] = true
@@ -110,7 +112,8 @@ struct Test_Screen: View {
                         }
                     } // нижняя кнопка
                     
-                }.padding(.horizontal,15)
+                }.padding(.horizontal,10)
+                    .padding(5)
             }
         }
     }
