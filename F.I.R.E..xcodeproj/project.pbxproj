@@ -23,10 +23,10 @@
 		B72BFE182A1CEBFA000CDE1D /* AboutUs_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFE172A1CEBFA000CDE1D /* AboutUs_Screen.swift */; };
 		B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989012A1A731400D887CC /* Procent_Screen.swift */; };
 		B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */; };
+		B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */; };
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
 		B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DECD942A22800400C0D5CA /* Test_Screen.swift */; };
-		D27A4BD82A22B67C005D23F0 /* Tax_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A4BD72A22B67C005D23F0 /* Tax_Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,10 +49,10 @@
 		B72BFE172A1CEBFA000CDE1D /* AboutUs_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUs_Screen.swift; sourceTree = "<group>"; };
 		B73989012A1A731400D887CC /* Procent_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Procent_Screen.swift; sourceTree = "<group>"; };
 		B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeMoney_Screen.swift; sourceTree = "<group>"; };
+		B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Screen.swift; sourceTree = "<group>"; };
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		B7DECD942A22800400C0D5CA /* Test_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Screen.swift; sourceTree = "<group>"; };
-		D27A4BD72A22B67C005D23F0 /* Tax_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +133,8 @@
 				B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */,
 				B72BFE152A1CEBDA000CDE1D /* Famous_Screen.swift */,
 				B72BFE172A1CEBFA000CDE1D /* AboutUs_Screen.swift */,
-				D27A4BD72A22B67C005D23F0 /* Tax_Screen.swift */,
 				B7DECD942A22800400C0D5CA /* Test_Screen.swift */,
+				B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */,
 			);
 			path = Screen_Home;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 				B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */,
 				B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */,
 				B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */,
-				D27A4BD82A22B67C005D23F0 /* Tax_Screen.swift in Sources */,
+				B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */,
 				B72893672A190A95003634D7 /* Settings_screen.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,
 			);
