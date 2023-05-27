@@ -19,8 +19,9 @@ struct Test_Screen: View {
         ZStack{
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
+            
             if IsCount > 3 {
-                VStack{
+                VStack(alignment:.leading){
                     Text("Finish")
                     ForEach (0..<4) { index in
                         if Ideal[index] == BoolCount[index]{
@@ -47,7 +48,7 @@ struct Test_Screen: View {
                     HStack {
                         Text("\(TextInf[IsCount])")
                             .foregroundColor(Color("Color_font"))
-                            .font(.system(size: 30,weight: .medium))
+                            .font(.system(size: 25,weight: .medium))
                             .multilineTextAlignment(.leading)
                         .padding(.vertical,30)
                         Spacer()
@@ -114,6 +115,7 @@ struct Test_Screen: View {
                     
                 }.padding(.horizontal,10)
                     .padding(5)
+                    .padding(.vertical,30)
             }
         }
     }

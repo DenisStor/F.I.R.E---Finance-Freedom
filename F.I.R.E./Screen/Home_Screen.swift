@@ -161,7 +161,31 @@ struct Home_Screen: View {
                         }
                     }
                         
-                        
+                        NavigationLink { Test_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                
+                                    .frame(height: 100)
+                                    .foregroundColor(Color("Color_wgt"))
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        Text("Test")
+                                            .font(.system(size: 26,weight: .medium))
+                                            .foregroundColor(Color("Color_font_2"))
+                                        Text("")
+                     //надо сделать пройдено или нет , попозже сделаю
+                                        
+                                    }
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
                         
                         
                         
