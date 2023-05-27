@@ -42,7 +42,7 @@ struct AboutUs_Screen: View {
                             
                         } .multilineTextAlignment(.leading)
                     }.frame(height: .infinity)
-                    .padding(.horizontal,20)
+                    .padding(.horizontal,15)
                        
                       
                     Spacer()

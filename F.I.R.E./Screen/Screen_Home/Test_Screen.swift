@@ -110,7 +110,7 @@ struct Test_Screen: View {
                         }
                     } // нижняя кнопка
                     
-                }.padding(.horizontal,20)
+                }.padding(.horizontal,15)
             }
         }
     }
