@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "do11.png",
+      "filename" : "banana_1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "do11 1.png",
+      "filename" : "banana_2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dp 11.png",
+      "filename" : "banana_3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

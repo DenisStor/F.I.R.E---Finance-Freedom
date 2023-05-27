@@ -133,6 +133,38 @@ struct Home_Screen: View {
                     }
                         
                         
+                        
+                        
+                        NavigationLink { Tax_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                
+                                    .frame(height: 100)
+                                    .foregroundColor(Color("Color_wgt"))
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        Text("tax")
+                                            .font(.system(size: 26,weight: .medium))
+                                            .foregroundColor(Color("Color_font_2"))
+                                        
+                     
+                                        
+                                    }
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
+                        
+                        
+                        
+                        
+                        
                         NavigationLink { AboutUs_Screen()}
                     label: {
                         ZStack{
