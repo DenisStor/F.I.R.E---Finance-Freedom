@@ -60,7 +60,8 @@ struct Famous_Screen: View {
                             NavigationLink {
                                 
                                 ZStack{
-                                    
+                                    Color("Color_back")
+                                        .edgesIgnoringSafeArea(.all)
                                     ScrollView{
                                         
                                         LazyVStack(alignment: .leading){
