@@ -40,7 +40,7 @@ struct Procent_Screen: View {
                                     .font(.system(size: 30, weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
-                                    TextField("", text: Binding(
+                                    TextField("safeMoney2", text: Binding(
                                         get: {
                                             self.InMonth
                                         },
@@ -85,7 +85,7 @@ struct Procent_Screen: View {
                                         .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
                                     HStack {
-                                        TextField("", text: Binding(
+                                        TextField("safeMoney2", text: Binding(
                                             get: {
                                                 self.Start
                                             },

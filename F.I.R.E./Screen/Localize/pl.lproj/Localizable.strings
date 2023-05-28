@@ -109,7 +109,7 @@ iki makroekonomiczne. Mogą one dawać wskazówki dotyczące stanu gospodarki";
 
 
 "setLang" = "Ustawienia";
-"set1" = "powiadomienia";
+"set1" = "Powiadomienia";
 "set2" = "Theme";
 "set3" = "Waluta";
 "set4" = "masz już aktualną wersję aplikacji";
@@ -123,7 +123,7 @@ iki makroekonomiczne. Mogą one dawać wskazówki dotyczące stanu gospodarki";
 "F.I.R.E.1" = "OGIEŃ. jest filozofią niezależności finansowej. Dąży do osiągnięcia wolności finansowej.";
 "$" = "zł";
 "main" = "Dom";
-"Settings" = "ustawienia";
+"Settings" = "Ustawienia";
 "Createfinancialreserves" = "Twórz rezerwy finansowe";
 "Advice_home" = "Otwórz wskazówki";
 "More" = "Więcej";
@@ -173,7 +173,7 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 "themeSettings2" = "Dark";
 "themeSettings3" = "Light";
 
-"calc1" = "procent składany";
+"calc1" = "Procent składany";
 "calc2" = "Ile można wydać dziennie";
 
 "safeMoney1" = "Ile zarabiasz";
@@ -195,3 +195,49 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 "USD" = "ZLT";
 
 "podatki" = "o podatkach";
+
+
+"1q" = "1 pytanie";
+"2q" = "2 pytanie";
+"3q" = "3 pytanie";
+"4q" = "4 pytanie";
+"5q" = "5 pytanie";
+"6q" = "6 pytanie";
+"7q" = "7 pytanie";
+"8q" = "8 pytanie";
+
+
+"1a" = "Czy można osiągnąć stałe zyski na rynkach finansowych, ignorując czynniki makroekonomiczne?";
+"2a" = "Czy ruchy cen akcji i innych instrumentów finansowych można z powodzeniem przewidzieć przy użyciu wyłącznie analizy technicznej?";
+"3a" = "Czy możemy przewidzieć dokładny czas rozpoczęcia i zakończenia cykli rynkowych?";
+"4a" = "Czy można zagwarantować wysokie zyski inwestując tylko w jedną branżę lub aktywa?";
+"5a" = "Czy można skutecznie zarządzać portfelem inwestycyjnym, ignorując analizę fundamentalną spółek?";
+"6a" = "Czy można uniknąć wszystkich ryzyk i strat związanych z inwestowaniem?";
+"7a" = "Czy wszystkie wydarzenia makroekonomiczne i ryzyka geopolityczne można w pełni przewidzieć i uwzględnić przy podejmowaniu decyzji inwestycyjnych?";
+"8a" = "Czy można osiągnąć stabilny zwrot bez ciągłego monitorowania i aktualizacji portfela inwestycyjnego?";
+
+
+"yes" = "tak";
+"nie" = "nie";
+
+
+"nextq" = "Następny";
+"Done" = "Gotowe";
+
+
+"textfinish" = "To już dobry wynik! Ale aby stać się prawdziwym ekspertem w tej dziedzinie, musisz ciągle się uczyć.";
+
+
+
+"nalog1" = "Polska stosuje system progresywnego opodatkowania dochodów osób fizycznych. Stawki podatku dochodowego zależą od poziomu dochodów i wynoszą od 17% do 32%.";
+
+"nalogiName" = "Podatki";
+"znaknalogi" = "zł";
+"textNalogi1"="Dywidendy i odsetki otrzymane z inwestycji również mogą podlegać opodatkowaniu. W Polsce istnieje system opodatkowania dywidend, który zależy od statusu odbiorcy (osoba fizyczna lub prawna) i innych czynników.";
+"titleNalogi2" = "ZYSK";
+"textNalogi2" = "Jeśli inwestujesz za pośrednictwem firmy lub organizacji, mogą one podlegać opodatkowaniu podatkiem dochodowym według stawki 19%.";
+"titleNalogi3" = "KORZYŚCI";
+"textNalogi3" = "Polska zapewnia również różne ulgi podatkowe i zachęty dla inwestorów, zwłaszcza w niektórych sektorach lub regionach. Istnieją na przykład programy promocji inwestycji, zachęty podatkowe dla innowacyjnych projektów itp.";
+
+"menuStart" = "W menu";
+"testgram" = "Test umiejętności finansowych";

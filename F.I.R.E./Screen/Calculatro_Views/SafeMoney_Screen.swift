@@ -52,13 +52,13 @@ struct SafeMoney_Screen: View {
                                     }
                                 }
                             ))
-                            .font(.system(size: 20))
+                            .font(.system(size: 25))
+                            .frame(height: 45)
                             .padding(.horizontal,15)
                             .foregroundColor(Color("Color_black"))
                             .background{
                                 RoundedRectangle(cornerRadius: 15)
                                     .foregroundColor(Color("Color_font_2"))
-                                    .frame(height: 45)
                             }
                             .keyboardType(.numberPad)
                             .focused($isInputActive)
@@ -106,12 +106,12 @@ struct SafeMoney_Screen: View {
                                     }
                                 }
                             ))
-                            .font(.system(size: 20))
+                            .font(.system(size: 25))
+                            .frame(height: 45)
                             .padding(.horizontal,15)
                             .foregroundColor(Color("Color_black"))
                             .background{
-                                RoundedRectangle(cornerRadius: 13)
-                                    .frame(height: 45)
+                                RoundedRectangle(cornerRadius: 15)
                                     .foregroundColor(Color("Color_font_2"))
                                 
                             }

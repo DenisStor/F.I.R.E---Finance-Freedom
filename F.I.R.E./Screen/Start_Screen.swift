@@ -27,7 +27,7 @@ struct Start_Screen: View {
                             .font(.system(size: 22,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                         HStack{
-                            Text("в меню")
+                            Text("menuStart")
                                 .font(.system(size: 28,weight: .medium))
                                 .overlay(
                                     Rectangle().frame(height: 2).offset(y: 4)

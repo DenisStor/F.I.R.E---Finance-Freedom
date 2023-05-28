@@ -18,13 +18,16 @@ struct Tax_Screen: View {
                         
                         VStack (alignment: .leading){
                             
-                            Text("Налоги")
+                            Text("nalogiName")
                                 .font(.system(size: 37.5, weight: .semibold))
                                 .foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
                                 .padding(.top, 10)
-                            Text("Большую часть налогов за инвестора платит налоговый агент (брокер или банк) — самому обращаться в налоговую не нужно.")
+                            Text("nalog1")
                                 .font(.system(size: 23, weight: .semibold))
-                                .lineSpacing(3)
+                                .lineSpacing(4)
+                                .padding(.top)
+                                
+                            Spacer()
                             
                             
                         }
@@ -44,7 +47,7 @@ struct Tax_Screen: View {
                                 
                                 HStack {
                                     
-                                    Text("₽")
+                                    Text("znaknalogi")
                                     
                                     
                                         .font(.system(size: 60, weight: .medium))
@@ -58,9 +61,9 @@ struct Tax_Screen: View {
                                     VStack (alignment: .leading){
                                         
                                         HStack {
-                                            Text("Расчёты перед бюджетом — только в рублях. Доходы по операциям с ценными бумагами, выраженные в иностранной валюте, пересчитываются в рубли.")
+                                            Text("textNalogi1")
                                                 .font(.system(size: 23, weight: .semibold))
-                                                .foregroundColor(Color("Color_font"))
+                                                .foregroundColor(Color("Color_font_2"))
                                                 .lineSpacing(3)
                                             Spacer()
                                             
@@ -76,14 +79,14 @@ struct Tax_Screen: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_Start"))
-                            .frame(height: 315)
+                            .frame(height: 215)
                        
                             
                             VStack(alignment: .leading) {
                                 
                                 HStack {
                                     
-                                    Text("НДФЛ")
+                                    Text("titleNalogi2")
                                     
                                     
                                         .font(.system(size: 60, weight: .medium))
@@ -98,12 +101,12 @@ struct Tax_Screen: View {
                                     VStack (alignment: .leading){
                                         
                                         HStack {
-                                            Text("Расчёты перед бюджетом — только в рублях. Доходы по операциям с ценными бумагами, выраженные в иностранной валюте, пересчитываются в рубли.")
+                                            Text("textNalogi2")
                                                 .font(.system(size: 23, weight: .semibold))
                                                 .foregroundColor(Color("Color_font"))
                                                 .lineSpacing(3)
                                             
-                                            Spacer()
+                                           
                                             
                                             
                                             
@@ -117,14 +120,14 @@ struct Tax_Screen: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_Start"))
-                            .frame(height: 290)
+                            .frame(height: 350)
                         ZStack {
                             
                             VStack(alignment: .leading) {
                                 
                                 HStack {
                                     
-                                    Text("ДОХОД")
+                                    Text("titleNalogi3")
                                     
                                     
                                     
@@ -139,7 +142,7 @@ struct Tax_Screen: View {
                                     VStack (alignment: .leading){
                                         
                                         HStack {
-                                            Text("Обложению НДФЛ подлежат доходы от реализации ценных бумаг за вычетом соответствующих расходов.")
+                                            Text("textNalogi3")
                                                 .font(.system(size: 23, weight: .semibold))
                                                 .foregroundColor(Color("Color_font"))
                                                 .lineSpacing(3)
@@ -157,7 +160,7 @@ struct Tax_Screen: View {
                 }
                 
                 
-            } .padding(.horizontal,15)
+            } .padding(15)
         }
     }
 }

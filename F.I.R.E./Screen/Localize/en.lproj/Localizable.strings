@@ -162,7 +162,7 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 "themeSettings3" = "Light";
 
 
-"calc1" = "compound interest";
+"calc1" = "Compound interest";
 "calc2" = "How much can be spent per day";
 
 "safeMoney1" = "How much you earn";
@@ -187,4 +187,47 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 
 
 "tax" = "About tax";
+
+
+"1q" = "1 question";
+"2q" = "2 question";
+"3q" = "3 question";
+"4q" = "4 question";
+"5q" = "5 question";
+"6q" = "6 question";
+"7q" = "7 question";
+"8q" = "8 question";
+
+
+"1a" = "Can consistent returns in financial markets be achieved by ignoring macroeconomic factors?";
+"2a" = "Can we successfully predict the price movements of stocks and other financial instruments using only technical analysis?";
+"3a" = "Is it possible to predict the exact timing of the beginning and end of market cycles?";
+"4a" = "Can high returns be guaranteed by investing in only one industry or asset?";
+"5a" = "Can an investment portfolio be effectively managed by ignoring fundamental analysis of companies?";
+"6a" = "Is it possible to avoid all risks and losses in investing?";
+"7a" = "Is it possible to fully predict and account for all macroeconomic events and geopolitical risks when making investment decisions?";
+"8a" = "Is it possible to achieve stable returns without continuously monitoring and updating the investment portfolio?";
+
+
+"yes" = "Yes";
+"no" = "No";
+
+"nextq" = "Next";
+"Done" = "Done";
+
+"textfinish" = "That's already a good result! But to become a real expert in this field, you need to keep learning.";
+
+
+"nalog1" = "When selling capital assets, such as stocks, bonds or real estate, investors may encounter capital gains. Capital gains fall into two categories. Long-term capital gains are usually subject to a lower tax rate than short-term capital gains.";
+
+"nalogiName" = "Taxes";
+"znaknalogi" = "$";
+"textNalogi1"="Dividends received from stocks can be taxable. The U.S. has a double taxation system where companies pay taxes on profits and then dividends received by investors can also be taxable.";
+"titleNalogi2" = "PROFIT";
+"textNalogi2" = "If you invest through a company or organization, it may be subject to income tax.";
+"titleNalogi3" = "BENEFITS";
+"textNalogi3" = "Tax-advantaged investment accounts: In the U.S., there are special investment accounts, such as individual retirement accounts (IRAs) and 401(k), that allow investors to receive tax credits on investments and defer tax payments until a certain date.";
+
+"menuStart" = "on the menu";
+"testgram" = "Financial literacy test";
 

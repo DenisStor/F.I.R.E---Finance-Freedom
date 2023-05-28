@@ -47,6 +47,8 @@ struct Famous_Screen: View {
         
         ZStack{
        
+            Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
          
             NavigationStack{
                 
@@ -106,7 +108,7 @@ struct Famous_Screen: View {
                         }
                         
                     }
-                }.padding(.horizontal,15)
+                } .padding(.horizontal,15)
     
                 
             }

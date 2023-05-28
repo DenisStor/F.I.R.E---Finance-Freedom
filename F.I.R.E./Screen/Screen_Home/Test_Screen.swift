@@ -9,28 +9,28 @@ import SwiftUI
 
 struct Test_Screen: View {
     
-    @State private var lesson : [String] =  [ NSLocalizedString("5 вопрос", comment: ""),
-        NSLocalizedString("lesson_2", comment: ""),
-        NSLocalizedString("lesson_3", comment: ""),
-        NSLocalizedString("lesson_4", comment: ""),
-                                              NSLocalizedString("5 вопрос", comment: ""),
-                                                  NSLocalizedString("lesson_2", comment: ""),
-                                                  NSLocalizedString("lesson_3", comment: ""),
-                                                  NSLocalizedString("lesson_4", comment: "")]
+    @State private var lesson : [String] =  [ NSLocalizedString("1q", comment: ""),
+        NSLocalizedString("2q", comment: ""),
+        NSLocalizedString("3q", comment: ""),
+        NSLocalizedString("4q", comment: ""),
+         NSLocalizedString("5q", comment: ""),
+       NSLocalizedString("6q", comment: ""),
+          NSLocalizedString("7q", comment: ""),
+          NSLocalizedString("8q", comment: "")]
     
     @State private var IsCount : Int = 0
     
     @State private var TextInf : [String] = [
-        NSLocalizedString("Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?", comment: ""),
-        NSLocalizedString("question_2", comment: ""),
-        NSLocalizedString("question_3", comment: ""),
-        NSLocalizedString("question_4", comment: ""),
-        NSLocalizedString("Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?", comment: ""),
-        NSLocalizedString("question_2", comment: ""),
-        NSLocalizedString("question_3", comment: ""),
-        NSLocalizedString("question_4", comment: "")]
+        NSLocalizedString("1a", comment: ""),
+        NSLocalizedString("2a", comment: ""),
+        NSLocalizedString("3a", comment: ""),
+        NSLocalizedString("4a", comment: ""),
+        NSLocalizedString("5a", comment: ""),
+        NSLocalizedString("6a", comment: ""),
+        NSLocalizedString("7a", comment: ""),
+        NSLocalizedString("8a", comment: "")]
    @State private var BoolCount : [Bool?] = [nil,nil,nil,nil,nil,nil,nil,nil] // не трогаем
-   @State private var Ideal : [Bool] = [true,false,false,true,false,false,false,false] //правильные ответы
+   @State private var Ideal : [Bool] = [false,false,false,false,false,false,false,false] //правильные ответы
    @State private var tru : [Bool] = [false,false,false,false,false,false,false,false] //не трогать
     @State private var trueee = Calculator()
     
@@ -43,16 +43,20 @@ struct Test_Screen: View {
                 VStack(alignment:.leading){
                     VStack {
                         HStack {
-                            Text("Тест\nпройден").font(.system(size: 54.9, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
+                            Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal)) правильных ответа из 8")
+                                .font(.system(size: 54.9, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
+                                .padding(.bottom,10)
                             Spacer()
-                            }
-                      
-                        Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal))")
-                      
-                   Spacer()
+                        }
                         
-                    }
-                    .padding(15)
+                        
+                       
+                        
+                        Text("textfinish").font(.system(size: 30, weight: .medium))
+                            
+                        
+                        Spacer()   }
+                    
                 }
             } else {
                 VStack(alignment: .leading){
@@ -62,7 +66,7 @@ struct Test_Screen: View {
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 55,weight: .medium))
                             .multilineTextAlignment(.leading)
-                        .padding(.vertical,10)
+                       
                         
                         Spacer()
                     }
@@ -81,7 +85,7 @@ struct Test_Screen: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(BoolCount[IsCount] == true ? Color("Color_font_1") : Color("Color_button"))
-                            Text("Да")
+                            Text("yes")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 24,weight: .medium))
                             
@@ -105,7 +109,7 @@ struct Test_Screen: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 40, height: 40)
                                 .foregroundColor(BoolCount[IsCount] == false ? Color("Color_font_1") : Color("Color_button"))
-                            Text("Нет")
+                            Text("no")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 24,weight: .medium))
                             Spacer()
@@ -134,7 +138,7 @@ struct Test_Screen: View {
                                 .foregroundColor(Color("Color_font_2"))
                                 .font(.system(size: 25,weight: .medium))
                         } else {
-                            Text("Дальше")
+                            Text("nextq")
                                 .foregroundColor(Color("Color_font_2"))
                                 .font(.system(size: 25,weight: .medium))
                         }
@@ -150,9 +154,7 @@ struct Test_Screen: View {
                         }
                     } // нижняя кнопка
                     
-                }.padding(.horizontal,10)
-                    .padding(5)
-                    .padding(.vertical,30)
+                }.padding(20)
             }
         }
     }

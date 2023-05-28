@@ -29,8 +29,11 @@ struct Advice_Screen: View {
                         .font(.system(size: 30,weight: .medium))
                         .foregroundColor(Color("Color_font"))
                     Spacer()
+                    
                 }
-                Spacer()
+                
+
+            
                 HStack{
                     Text("read next")
                         .font(.system(size: 24,weight: .medium))
@@ -47,8 +50,6 @@ struct Advice_Screen: View {
                 }
             }.frame(maxHeight: 270)
                 .padding(.horizontal,15)
-            
-            
             
         }.toolbar(.hidden, for: .tabBar)//cкрыть таб бар
             .onAppear{
