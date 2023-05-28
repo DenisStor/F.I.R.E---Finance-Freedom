@@ -60,7 +60,7 @@ struct Tax_Screen: View {
                                         HStack {
                                             Text("Расчёты перед бюджетом — только в рублях. Доходы по операциям с ценными бумагами, выраженные в иностранной валюте, пересчитываются в рубли.")
                                                 .font(.system(size: 23, weight: .semibold))
-                                                .foregroundColor(Color("Color_font_2"))
+                                                .foregroundColor(Color("Color_font"))
                                                 .lineSpacing(3)
                                             Spacer()
                                             
@@ -77,7 +77,7 @@ struct Tax_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_Start"))
                             .frame(height: 315)
-                        ZStack {
+                       
                             
                             VStack(alignment: .leading) {
                                 
@@ -94,13 +94,13 @@ struct Tax_Screen: View {
                                     
                                 }
                                 
-                                ZStack {
+                                
                                     VStack (alignment: .leading){
                                         
                                         HStack {
                                             Text("Расчёты перед бюджетом — только в рублях. Доходы по операциям с ценными бумагами, выраженные в иностранной валюте, пересчитываются в рубли.")
                                                 .font(.system(size: 23, weight: .semibold))
-                                                .foregroundColor(Color("Color_black"))
+                                                .foregroundColor(Color("Color_font"))
                                                 .lineSpacing(3)
                                             
                                             Spacer()
@@ -108,10 +108,10 @@ struct Tax_Screen: View {
                                             
                                             
                                         }
-                                    }
+                                    
                                 }
                             } .padding(.horizontal,15)
-                        }
+                        
                     }
                     
                     ZStack {
@@ -135,13 +135,13 @@ struct Tax_Screen: View {
                                     
                                     
                                 }
-                                ZStack {
+                                
                                     VStack (alignment: .leading){
                                         
                                         HStack {
                                             Text("Обложению НДФЛ подлежат доходы от реализации ценных бумаг за вычетом соответствующих расходов.")
                                                 .font(.system(size: 23, weight: .semibold))
-                                                .foregroundColor(Color("Color_black"))
+                                                .foregroundColor(Color("Color_font"))
                                                 .lineSpacing(3)
                                             Spacer()
                                             
@@ -149,7 +149,7 @@ struct Tax_Screen: View {
                                             
                                         }
                                     }
-                                }
+                                
                             }
                         } .padding(.horizontal,15)
                     }
