@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Test_Screen: View {
     
-    @State private var lesson : [String] =  [ NSLocalizedString("lesson_1", comment: ""),
+    @State private var lesson : [String] =  [ NSLocalizedString("5 вопрос", comment: ""),
         NSLocalizedString("lesson_2", comment: ""),
         NSLocalizedString("lesson_3", comment: ""),
         NSLocalizedString("lesson_4", comment: "")]
@@ -17,7 +17,7 @@ struct Test_Screen: View {
     @State private var IsCount : Int = 0
     
     @State private var TextInf : [String] = [
-        NSLocalizedString("question_1", comment: ""),
+        NSLocalizedString("Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?", comment: ""),
         NSLocalizedString("question_2", comment: ""),
         NSLocalizedString("question_3", comment: ""),
         NSLocalizedString("question_4", comment: "")]
@@ -31,16 +31,30 @@ struct Test_Screen: View {
             
             if IsCount > 3 {
                 VStack(alignment:.leading){
-                    Text("Finish")
-                    ForEach (0..<4) { index in
-                        if Ideal[index] == BoolCount[index]{
-                            Text("True")
-                        } else {
-                            Text("False")
-                        }
+                    VStack {
+                        HStack {
+                            Text("Тест\nпройден").font(.system(size: 54.9, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
+                            Spacer()
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
                         
-                    }
-                   
+                                
+                            }
+                        ForEach (0..<4) { index in
+                            if Ideal[index] == BoolCount[index]{
+                                Text("True")
+                            } else {
+                                Text("False")
+                            }
+                        }
+                   Spacer() }
+                    .padding(15)
                 }
             } else {
                 VStack(alignment: .leading){
@@ -51,25 +65,28 @@ struct Test_Screen: View {
                             .font(.system(size: 55,weight: .medium))
                             .multilineTextAlignment(.leading)
                         .padding(.vertical,10)
+                        
                         Spacer()
                     }
                     
                     HStack {
                         Text("\(TextInf[IsCount])")
                             .foregroundColor(Color("Color_font"))
-                            .font(.system(size: 25,weight: .medium))
+                            .font(.system(size: 30,weight: .medium))
                             .multilineTextAlignment(.leading)
-                        .padding(.vertical,30)
+                        
                         Spacer()
                     }
                     VStack(spacing: 20){
                         HStack{
+                            
                             RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(BoolCount[IsCount] == true ? Color("Color_font_1") : Color("Color_font_3"))
-                            Text("Yes")
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(BoolCount[IsCount] == true ? Color("Color_font_1") : Color("Color_button"))
+                            Text("Да")
                                 .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 30,weight: .medium))
+                                .font(.system(size: 24,weight: .medium))
+                            
                             Spacer()
                         }.onTapGesture {
                             if BoolCount[IsCount] == true {
@@ -88,11 +105,11 @@ struct Test_Screen: View {
                         }
                         HStack{
                             RoundedRectangle(cornerRadius: 10)
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(BoolCount[IsCount] == false ? Color("Color_font_1") : Color("Color_font_3"))
-                            Text("No")
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(BoolCount[IsCount] == false ? Color("Color_font_1") : Color("Color_button"))
+                            Text("Нет")
                                 .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 30,weight: .medium))
+                                .font(.system(size: 24,weight: .medium))
                             Spacer()
                         }.onTapGesture {
                             if BoolCount[IsCount] == false {
@@ -108,10 +125,10 @@ struct Test_Screen: View {
                                 tru[IsCount] = true
                             }
                         }
-                    }
+                    } .padding(.vertical,20)
                     Spacer()
                     ZStack {
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 15)
                             .frame(height: 60)
                             .foregroundColor(Color("Color_font_1"))
                         if IsCount == 3{
@@ -119,7 +136,7 @@ struct Test_Screen: View {
                                 .foregroundColor(Color("Color_font_2"))
                                 .font(.system(size: 25,weight: .medium))
                         } else {
-                            Text("Next")
+                            Text("Дальше")
                                 .foregroundColor(Color("Color_font_2"))
                                 .font(.system(size: 25,weight: .medium))
                         }
