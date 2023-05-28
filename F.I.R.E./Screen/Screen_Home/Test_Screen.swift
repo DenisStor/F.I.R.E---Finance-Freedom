@@ -84,6 +84,7 @@ struct Test_Screen: View {
                                 
                                 tru[IsCount] = true
                             }
+                            
                         }
                         HStack{
                             RoundedRectangle(cornerRadius: 10)

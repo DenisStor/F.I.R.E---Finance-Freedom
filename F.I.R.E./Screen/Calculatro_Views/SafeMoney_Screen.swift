@@ -12,10 +12,11 @@ struct SafeMoney_Screen: View {
     @StateObject var data = Calculator()
     @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
     @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
-    let characterLimit = 9 // кол-во символов
+    let characterLimit = 8 // кол-во символов
     @FocusState var isInputActive: Bool
     @FocusState var isInputActive_1: Bool
     
+    @State private var Total : Double = 0
     
     
     var body: some View {
@@ -112,7 +113,7 @@ struct SafeMoney_Screen: View {
                                 RoundedRectangle(cornerRadius: 13)
                                     .frame(height: 45)
                                     .foregroundColor(Color("Color_font_2"))
-                                  
+                                
                             }
                             .keyboardType(.numberPad)
                             .focused($isInputActive)
@@ -144,15 +145,21 @@ struct SafeMoney_Screen: View {
                         VStack {
                             
                             HStack {
-                               
-                                Text("\(Float(data.spendEarn(earn: Float (earnMoney) ?? 0, spend: Float (spendMoney) ?? 0 )),format: .currency(code: "\("USD")"))")
                                 
-                               
+                                Text("\(formatCurrency(_: Total))")
                                     .font(.system(size: 60, weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
+                                    .onChange(of: earnMoney) { _ in
+                                            updateTotal()
+                                        }
+                                        .onChange(of: spendMoney) { _ in
+                                            updateTotal()
+                                        }
+                                        .onAppear {
+                                            updateTotal()
+                                        }
+
                                 
-                                
-                             
                                 
                                 Spacer()
                                 
@@ -165,7 +172,7 @@ struct SafeMoney_Screen: View {
                                         Text("safeMoney4")
                                             .font(.system(size: 34, weight: .medium))
                                             .foregroundColor(Color("Color_font"))
-                                           
+                                        
                                         Spacer()
                                         
                                         
@@ -178,27 +185,42 @@ struct SafeMoney_Screen: View {
             } .padding(15)
         }
         
-                
-                
-                .toolbar(.hidden, for: .tabBar)
-                .toolbar {
-                    ToolbarItemGroup(placement: .keyboard) {
-                        Spacer()
-                        if isInputActive {
-                            Button("Done") {
-                                isInputActive = false
-                            }
-                        } else {
-                            Button("Done") {
-                                isInputActive_1 = false
-                            }
-                        }
+        
+        
+        .toolbar(.hidden, for: .tabBar)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard) {
+                Spacer()
+                if isInputActive {
+                    Button("Done") {
+                        isInputActive = false
+                    }
+                } else {
+                    Button("Done") {
+                        isInputActive_1 = false
                     }
                 }
-                
             }
-            
         }
+        
+    }
+    func formatCurrency(_ number: Double) -> String {
+        let formatforvalute = NumberFormatter()
+        formatforvalute.numberStyle = .currency
+        
+        
+        let locale = Locale.current
+        
+        
+        formatforvalute.locale = locale
+        
+        return formatforvalute.string(from: NSNumber(value: number)) ?? ""
+    }
+    func updateTotal() {
+        Total = Double(data.spendEarn(earn: Float(earnMoney) ?? 0, spend: Float(spendMoney) ?? 0))
+    }
+
+}
     
     
     struct SafeMoney_Screen_Previews: PreviewProvider {
