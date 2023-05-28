@@ -10,7 +10,20 @@ import Foundation
 
 final class Calculator : ObservableObject {
 
-    
+    func counttrue (BoolCount : [Bool?],ideal: [Bool]) -> Int {
+        var count : Int = 0
+        var index : Int = 0
+        while index < 4  {
+            
+            if ideal[index] == BoolCount[index]{
+                count += 1
+                
+            } 
+            index += 1
+        }
+            return count
+        
+    }
     
     func spendEarn (earn: Float, spend: Float) -> Float {
         var total: Float = earn - spend

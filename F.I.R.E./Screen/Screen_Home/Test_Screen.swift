@@ -24,6 +24,8 @@ struct Test_Screen: View {
    @State private var BoolCount : [Bool?] = [nil,nil,nil,nil] // не трогаем
    @State private var Ideal : [Bool] = [true,false,false,true] //правильные ответы
    @State private var tru : [Bool] = [false,false,false,false] //не трогать
+    @State private var trueee = Calculator()
+    
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -35,25 +37,13 @@ struct Test_Screen: View {
                         HStack {
                             Text("Тест\nпройден").font(.system(size: 54.9, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
                             Spacer()
-                            
-                            
-                            
-                            
-                            
-                            
-                            
-                            
+                            }
+                      
+                        Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal))")
+                      
+                   Spacer()
                         
-                                
-                            }
-                        ForEach (0..<4) { index in
-                            if Ideal[index] == BoolCount[index]{
-                                Text("True")
-                            } else {
-                                Text("False")
-                            }
-                        }
-                   Spacer() }
+                    }
                     .padding(15)
                 }
             } else {
@@ -158,6 +148,7 @@ struct Test_Screen: View {
             }
         }
     }
+   
 }
 
 struct Test_Screen_Previews: PreviewProvider {
