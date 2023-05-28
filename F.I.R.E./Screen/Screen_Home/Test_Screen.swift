@@ -12,7 +12,11 @@ struct Test_Screen: View {
     @State private var lesson : [String] =  [ NSLocalizedString("5 вопрос", comment: ""),
         NSLocalizedString("lesson_2", comment: ""),
         NSLocalizedString("lesson_3", comment: ""),
-        NSLocalizedString("lesson_4", comment: "")]
+        NSLocalizedString("lesson_4", comment: ""),
+                                              NSLocalizedString("5 вопрос", comment: ""),
+                                                  NSLocalizedString("lesson_2", comment: ""),
+                                                  NSLocalizedString("lesson_3", comment: ""),
+                                                  NSLocalizedString("lesson_4", comment: "")]
     
     @State private var IsCount : Int = 0
     
@@ -20,10 +24,14 @@ struct Test_Screen: View {
         NSLocalizedString("Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?", comment: ""),
         NSLocalizedString("question_2", comment: ""),
         NSLocalizedString("question_3", comment: ""),
+        NSLocalizedString("question_4", comment: ""),
+        NSLocalizedString("Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?", comment: ""),
+        NSLocalizedString("question_2", comment: ""),
+        NSLocalizedString("question_3", comment: ""),
         NSLocalizedString("question_4", comment: "")]
-   @State private var BoolCount : [Bool?] = [nil,nil,nil,nil] // не трогаем
-   @State private var Ideal : [Bool] = [true,false,false,true] //правильные ответы
-   @State private var tru : [Bool] = [false,false,false,false] //не трогать
+   @State private var BoolCount : [Bool?] = [nil,nil,nil,nil,nil,nil,nil,nil] // не трогаем
+   @State private var Ideal : [Bool] = [true,false,false,true,false,false,false,false] //правильные ответы
+   @State private var tru : [Bool] = [false,false,false,false,false,false,false,false] //не трогать
     @State private var trueee = Calculator()
     
     var body: some View {
@@ -31,7 +39,7 @@ struct Test_Screen: View {
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
             
-            if IsCount > 3 {
+            if IsCount > 7 {
                 VStack(alignment:.leading){
                     VStack {
                         HStack {
@@ -121,7 +129,7 @@ struct Test_Screen: View {
                         RoundedRectangle(cornerRadius: 15)
                             .frame(height: 60)
                             .foregroundColor(Color("Color_font_1"))
-                        if IsCount == 3{
+                        if IsCount == 7{
                             Text("Done")
                                 .foregroundColor(Color("Color_font_2"))
                                 .font(.system(size: 25,weight: .medium))

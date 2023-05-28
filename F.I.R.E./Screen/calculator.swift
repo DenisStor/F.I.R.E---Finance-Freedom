@@ -13,7 +13,7 @@ final class Calculator : ObservableObject {
     func counttrue (BoolCount : [Bool?],ideal: [Bool]) -> Int {
         var count : Int = 0
         var index : Int = 0
-        while index < 4  {
+        while index < 8  {
             
             if ideal[index] == BoolCount[index]{
                 count += 1
