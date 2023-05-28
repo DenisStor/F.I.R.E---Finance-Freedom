@@ -9,18 +9,18 @@ import SwiftUI
 
 struct Test_Screen: View {
     
-    @State private var lesson : [String] =  [ NSLocalizedString("famous_name1", comment: ""),
-        NSLocalizedString("famous_name3", comment: ""),
-        NSLocalizedString("famous_name4", comment: ""),
-        NSLocalizedString("famous_name2", comment: "")]
+    @State private var lesson : [String] =  [ NSLocalizedString("lesson_1", comment: ""),
+        NSLocalizedString("lesson_2", comment: ""),
+        NSLocalizedString("lesson_3", comment: ""),
+        NSLocalizedString("lesson_4", comment: "")]
     
     @State private var IsCount : Int = 0
     
     @State private var TextInf : [String] = [
-        NSLocalizedString("famous_name1", comment: ""),
-        NSLocalizedString("famous_name3", comment: ""),
-        NSLocalizedString("famous_name4", comment: ""),
-        NSLocalizedString("famous_name2", comment: "")]
+        NSLocalizedString("question_1", comment: ""),
+        NSLocalizedString("question_2", comment: ""),
+        NSLocalizedString("question_3", comment: ""),
+        NSLocalizedString("question_4", comment: "")]
    @State private var BoolCount : [Bool?] = [nil,nil,nil,nil] // не трогаем
    @State private var Ideal : [Bool] = [true,false,false,true] //правильные ответы
    @State private var tru : [Bool] = [false,false,false,false] //не трогать

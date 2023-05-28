@@ -56,7 +56,7 @@ struct Advice_Screen: View {
                                     if currentword.isEmpty {
                                         currentword = words.word.randomElement() ?? ""
                                     }
-                                    Timer.scheduledTimer(withTimeInterval: 28800, repeats: true) { _ in
+                                    Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { _ in
                                         currentword = words.word.randomElement() ?? ""
                                     }
                                     
