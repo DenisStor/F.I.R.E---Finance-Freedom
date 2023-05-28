@@ -10,6 +10,8 @@ import SwiftUI
 struct Tax_Screen: View {
     var body: some View {
         ZStack {
+            Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
             ScrollView(showsIndicators: false){
                 VStack {
                     HStack {
@@ -91,6 +93,7 @@ struct Tax_Screen: View {
                                     
                                     
                                 }
+                                
                                 ZStack {
                                     VStack (alignment: .leading){
                                         

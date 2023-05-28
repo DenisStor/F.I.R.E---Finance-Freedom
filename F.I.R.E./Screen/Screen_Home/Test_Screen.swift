@@ -9,9 +9,18 @@ import SwiftUI
 
 struct Test_Screen: View {
     
-    @State private var lesson : [String] = ["1 урок","2 урок","3 урок","4 урок"]
+    @State private var lesson : [String] =  [ NSLocalizedString("famous_name1", comment: ""),
+        NSLocalizedString("famous_name3", comment: ""),
+        NSLocalizedString("famous_name4", comment: ""),
+        NSLocalizedString("famous_name2", comment: "")]
+    
     @State private var IsCount : Int = 0
-    @State private var TextInf : [String] = ["Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?","Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?","Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?","Может ли инвестор по структурной облигации при ее погашении получить выплату меньше ее номинальной стоимости?"]
+    
+    @State private var TextInf : [String] = [
+        NSLocalizedString("famous_name1", comment: ""),
+        NSLocalizedString("famous_name3", comment: ""),
+        NSLocalizedString("famous_name4", comment: ""),
+        NSLocalizedString("famous_name2", comment: "")]
    @State private var BoolCount : [Bool?] = [nil,nil,nil,nil] // не трогаем
    @State private var Ideal : [Bool] = [true,false,false,true] //правильные ответы
    @State private var tru : [Bool] = [false,false,false,false] //не трогать
@@ -63,12 +72,18 @@ struct Test_Screen: View {
                                 .font(.system(size: 30,weight: .medium))
                             Spacer()
                         }.onTapGesture {
-                            if BoolCount[IsCount] == nil {
-                                BoolCount[IsCount] = true
-                            }else {
-                                BoolCount[IsCount] = true
+                            if BoolCount[IsCount] == true {
+                                BoolCount[IsCount] = nil
+                                tru[IsCount] = false
+                            } else {
+                                if BoolCount[IsCount] == nil {
+                                    BoolCount[IsCount] = true
+                                }else {
+                                    BoolCount[IsCount] = true
+                                }
+                                
+                                tru[IsCount] = true
                             }
-                            tru[IsCount] = true
                         }
                         HStack{
                             RoundedRectangle(cornerRadius: 10)
@@ -79,12 +94,18 @@ struct Test_Screen: View {
                                 .font(.system(size: 30,weight: .medium))
                             Spacer()
                         }.onTapGesture {
-                            if BoolCount[IsCount] == nil {
-                                BoolCount[IsCount] = false
-                            }else {
-                                BoolCount[IsCount] = false
+                            if BoolCount[IsCount] == false {
+                                BoolCount[IsCount] = nil
+                                tru[IsCount] = false
+                            } else {
+                                if BoolCount[IsCount] == nil {
+                                    BoolCount[IsCount] = false
+                                }else {
+                                    BoolCount[IsCount] = false
+                                }
+                                
+                                tru[IsCount] = true
                             }
-                            tru[IsCount] = true
                         }
                     }
                     Spacer()
