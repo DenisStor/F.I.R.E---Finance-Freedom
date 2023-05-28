@@ -20,7 +20,8 @@ struct Procent_Screen: View {
     @FocusState var isInputActive: Bool
     @FocusState var isInputActive_1: Bool
     
-    let characterLimit : Int = 9
+    let characterLimit : Int = 8
+    @State private var Total : Double = 0
     
     var body: some View {
         ZStack {
@@ -193,10 +194,25 @@ struct Procent_Screen: View {
                                 
                             }
                             HStack{
-                                Text("\(String(Int(data.calculate(capital: Float(Start)  ?? 0, rate: Float(Rate), monthlyDeposit: Float(InMonth) ?? 0, numberOfYears: Int(Year)))))")
-                                    .font(.system(size: 40,weight: .medium))
+                                Text("\(formatCurrency(_:Total))")
+                                    .font(.system(size: 35,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
                                     .lineLimit(1)
+                                    .onChange(of: InMonth) { _ in
+                                            updateTotal()
+                                        }
+                                        .onChange(of: Start) { _ in
+                                            updateTotal()
+                                        }
+                                        .onChange(of: Year) { _ in
+                                            updateTotal()
+                                        }
+                                        .onChange(of: Rate) { _ in
+                                            updateTotal()
+                                        }
+                                        .onAppear {
+                                            updateTotal()
+                                        }
                                 Text("valuta")
                                     .font(.system(size: 40,weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
@@ -234,6 +250,21 @@ struct Procent_Screen: View {
             }
         
         
+    }
+    func formatCurrency(_ number: Double) -> String {
+        let formatforvalute = NumberFormatter()
+        formatforvalute.numberStyle = .currency
+        
+        
+        let locale = Locale.current
+        
+        
+        formatforvalute.locale = locale
+        
+        return formatforvalute.string(from: NSNumber(value: number)) ?? ""
+    }
+    func updateTotal() {
+        Total = Double(data.calculate(capital: Float(Start) ?? 0, rate: Float(Rate), monthlyDeposit: Float(InMonth) ?? 0, numberOfYears: Int(Year)))
     }
 }
 

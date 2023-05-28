@@ -147,8 +147,9 @@ struct SafeMoney_Screen: View {
                             HStack {
                                 
                                 Text("\(formatCurrency(_: Total))")
-                                    .font(.system(size: 60, weight: .medium))
+                                    .font(.system(size: 50, weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
+                                    .lineLimit(1)
                                     .onChange(of: earnMoney) { _ in
                                             updateTotal()
                                         }
