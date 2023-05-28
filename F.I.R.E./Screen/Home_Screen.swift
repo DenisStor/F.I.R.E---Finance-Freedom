@@ -105,7 +105,7 @@ struct Home_Screen: View {
                             Image("FamousPeople")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame( height: 140)
+                              
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     Text("Whatarethey")
