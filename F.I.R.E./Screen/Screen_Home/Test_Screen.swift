@@ -52,7 +52,7 @@ struct Test_Screen: View {
                                         Spacer()
                                     }
                                     HStack {
-                                        Text("Из 8")
+                                        Text("правильных из 8")
                                             .font(.system(size: 45, weight: .medium))
                                         Spacer()
                                     }
@@ -71,26 +71,14 @@ struct Test_Screen: View {
                         
                         HStack {
                             switch trueee.counttrue(BoolCount: BoolCount, ideal: Ideal) {
-                            case 0:
-                                Text("0")
-                            case 1:
-                                Text("1")
-                            case 2:
-                                Text("2")
-                            case 3:
-                                Text("3")
-                            case 4:
-                                Text("4")
-                            case 5:
-                                Text("5")
-                            case 6:
-                                Text("6")
-                            case 7:
-                                Text("7")
-                            case 8:
-                                Text("8")
+                            case 0..<4:
+                                Text("Вы решили не правильно тест по инвестированию Необходимо проанализировать свои ошибки и попробовать понять, где вы допустили недочеты.")
+                            case 4..<6:
+                                Text("Надо еще учиться! Но результаты хорошие, Необходимо проанализировать свои ошибки и попробовать понять, где вы допустили недочеты. ")
+                            case 6..<8:
+                                Text("Поздравляем с успешным прохождением теста по инвестированию!Вы продемонстрировали свои знания в данной области, что является важным шагом в достижении ваших инвестиционных целей.")
                             default:
-                                Text("Erorore")
+                                Text("dsds")
                             }
                             
                             Spacer()
