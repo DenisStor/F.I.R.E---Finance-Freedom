@@ -183,7 +183,7 @@ struct SafeMoney_Screen: View {
                         }  .padding(.horizontal,15)
                     }
                 }
-            } .padding(15)
+            }.padding(.horizontal,15)
         }
         
         

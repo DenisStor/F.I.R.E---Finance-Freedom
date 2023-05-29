@@ -24,42 +24,44 @@ struct Settings_screen: View {
                     
                     
                     
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 22)
-                            .foregroundColor(Color("Color_button"))
-                            .frame(height: 64)
-                        HStack {
-                            Text("set2")
-                                .font(.system(size: 24.5, weight: .medium))
-                                
-                            Spacer()
-                            Picker("Тема", selection: $selectedTheme) {
-                                Text("themeSettings3").tag("light")
-                                Text("themeSettings2").tag("dark")
-                                Text("themeSettings").tag("system")
-                            }
-                            
-                            
-                            
-                        }.padding(.horizontal,20)
-                    }
+                /* ZStack{
+                 RoundedRectangle(cornerRadius: 22)
+                     .foregroundColor(Color("Color_button"))
+                     .frame(height: 64)
+                 HStack {
+                     Text("set2")
+                         .font(.system(size: 24.5, weight: .medium))
+                         
+                     Spacer()
+                     Picker("Тема", selection: $selectedTheme) {
+                         Text("themeSettings3").tag("light")
+                         Text("themeSettings2").tag("dark")
+                         Text("themeSettings").tag("system")
+                     }
+                     
+                     
+                     
+                 }.padding(.horizontal,20)
+             }
+                 */
                     
                     
                     
-                    Spacer()
                     
-                    Text("set4")
-                        .font(.system(size: 24.5, weight: .medium))
-                        .foregroundColor(Color("Color_font"))
+                   // Spacer()
+                    
+                 //   Text("set4")
+                     //   .font(.system(size: 24.5, weight: .medium))
+                     //   .foregroundColor(Color("Color_font"))
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 22)
                             .foregroundColor(Color("Color_font_1"))
-                            .frame(height: 64)
+                            .frame(height: 150)
                         HStack {
                             Text("set5")
                             
-                                .font(.system(size: 24.5, weight: .medium))
+                                .font(.system(size: 40, weight: .medium))
                             
                             Image("Start_Image_1")
                                 .renderingMode(.template)
@@ -96,17 +98,9 @@ struct Settings_screen: View {
             }
             
         }
-        .preferredColorScheme(getColorScheme())
+       
     }
-    func getColorScheme() -> ColorScheme {
-        if selectedTheme == "dark" {
-            return .dark
-        } else if selectedTheme == "system" {
-            return colorScheme == .dark ? .dark : .light
-        } else {
-            return .light
-        }
-    }
+  
 }
     struct Settings_screen_Previews: PreviewProvider {
         static var previews: some View {

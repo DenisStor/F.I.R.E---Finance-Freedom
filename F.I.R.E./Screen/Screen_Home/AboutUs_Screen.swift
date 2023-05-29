@@ -41,7 +41,7 @@ struct AboutUs_Screen: View {
                                 .tint(Color("Color_font_3"))
                             
                         } .multilineTextAlignment(.leading)
-                    }.frame(height: .infinity)
+                    }
                     .padding(.horizontal,15)
                        
                       

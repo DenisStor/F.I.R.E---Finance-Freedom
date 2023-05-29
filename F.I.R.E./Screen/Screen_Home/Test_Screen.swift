@@ -41,43 +41,77 @@ struct Test_Screen: View {
             
             if IsCount > 7 {
                 VStack(alignment:.leading){
-                    VStack {
+                    VStack (spacing: 10){
                         HStack {
-                            Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal)) правильных ответа из 8")
-                                .font(.system(size: 54.9, weight: .medium)).foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
-                                .padding(.bottom,10)
-                            Spacer()
+                            HStack {
+                              
+                                    Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal))")
+                                   
+                                
+                                  
+                                
+                            }.multilineTextAlignment(.leading)
+                                .font(.system(size: 45, weight: .medium)).foregroundColor(Color("Color_font_1"))
+                            //    .padding(.bottom,10)
+                          //  Spacer()
                         }
                         
                         
                        
                         
-                        Text("textfinish").font(.system(size: 30, weight: .medium))
+                        HStack {
+                            switch trueee.counttrue(BoolCount: BoolCount, ideal: Ideal) {
+                            case 1:
+                                Text("1")
+                            case 2:
+                                Text("2")
+                            case 3:
+                                Text("3")
+                            case 4:
+                                Text("4")
+                            case 5:
+                                Text("5")
+                            case 6:
+                                Text("6")
+                            case 7:
+                                Text("7")
+                            case 8:
+                                Text("8")
+                            default:
+                                Text("Erorore")
+                            }
+                            
+                            Spacer()
+                        }.font(.system(size: 30, weight: .medium))
+                            .multilineTextAlignment(.leading)
+                            .foregroundColor(Color("Color_font"))
                             
                         
                         Spacer()   }
                     
-                }
+                }.padding(.horizontal,15)
             } else {
-                VStack(alignment: .leading){
+                VStack(alignment: .leading,spacing: 20){
                     
                     HStack {
                         Text("\(lesson[IsCount])")
                             .foregroundColor(Color("Color_font_1"))
-                            .font(.system(size: 55,weight: .medium))
+                            .font(.system(size: 45,weight: .medium))
                             .multilineTextAlignment(.leading)
                        
                         
                         Spacer()
                     }
-                    
-                    HStack {
-                        Text("\(TextInf[IsCount])")
-                            .foregroundColor(Color("Color_font"))
-                            .font(.system(size: 30,weight: .medium))
-                            .multilineTextAlignment(.leading)
+                    VStack{
+                        HStack {
+                            Text("\(TextInf[IsCount])")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 25,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                            
+                            Spacer()
+                        }
                         
-                        Spacer()
                     }
                     VStack(spacing: 20){
                         HStack{
@@ -129,32 +163,37 @@ struct Test_Screen: View {
                         }
                     } .padding(.vertical,20)
                     Spacer()
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 15)
-                            .frame(height: 60)
-                            .foregroundColor(Color("Color_font_1"))
-                        if IsCount == 7{
-                            Text("Done")
-                                .foregroundColor(Color("Color_font_2"))
-                                .font(.system(size: 25,weight: .medium))
-                        } else {
-                            Text("nextq")
-                                .foregroundColor(Color("Color_font_2"))
-                                .font(.system(size: 25,weight: .medium))
-                        }
-                    }.opacity(tru[IsCount] == true ? 1 : 0.5)
-                    .onTapGesture {
-                        if tru[IsCount] {
-                            IsCount += 1
-                            if IsCount < 3 {
+                  
+                    VStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .frame(height: 60)
+                                .foregroundColor(Color("Color_font_1"))
+                            if IsCount == 7{
+                                Text("Done")
+                                    .foregroundColor(Color("Color_font_2"))
+                                    .font(.system(size: 25,weight: .medium))
+                            } else {
+                                Text("nextq")
+                                    .foregroundColor(Color("Color_font_2"))
+                                    .font(.system(size: 25,weight: .medium))
+                            }
+                        }.opacity(tru[IsCount] == true ? 1 : 0.5)
+                        .onTapGesture {
+                            if tru[IsCount] {
+                                IsCount += 1
+                                if IsCount < 3 {
+                                    
+                                }
+                            } else {
                                 
                             }
-                        } else {
-                            
-                        }
+                    }
+                        
                     } // нижняя кнопка
-                    
-                }.padding(20)
+                    .padding(.vertical,15)
+                }.padding(.horizontal,15)
+                    .padding(.top,20)
             }
         }
     }
