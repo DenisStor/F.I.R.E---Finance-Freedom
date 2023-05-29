@@ -128,10 +128,16 @@ struct Test_Screen: View {
                             if BoolCount[IsCount] == true {
                                 BoolCount[IsCount] = nil
                                 tru[IsCount] = false
+                                let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                impactHeavy.impactOccurred()
                             } else {
                                 if BoolCount[IsCount] == nil {
                                     BoolCount[IsCount] = true
+                                    let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                    impactHeavy.impactOccurred()
                                 }else {
+                                    let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                    impactHeavy.impactOccurred()
                                     BoolCount[IsCount] = true
                                 }
                                 
@@ -151,16 +157,23 @@ struct Test_Screen: View {
                             if BoolCount[IsCount] == false {
                                 BoolCount[IsCount] = nil
                                 tru[IsCount] = false
+                                let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                impactHeavy.impactOccurred()
                             } else {
                                 if BoolCount[IsCount] == nil {
                                     BoolCount[IsCount] = false
+                                    let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                    impactHeavy.impactOccurred()
                                 }else {
+                                    let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                    impactHeavy.impactOccurred()
                                     BoolCount[IsCount] = false
                                 }
                                 
                                 tru[IsCount] = true
                             }
                         }
+                        
                     } .padding(.vertical,20)
                     Spacer()
                   
@@ -182,6 +195,8 @@ struct Test_Screen: View {
                         .onTapGesture {
                             if tru[IsCount] {
                                 IsCount += 1
+                                let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                impactHeavy.impactOccurred()
                                 if IsCount < 3 {
                                     
                                 }
@@ -195,7 +210,7 @@ struct Test_Screen: View {
                 }.padding(.horizontal,15)
                     .padding(.top,20)
             }
-        }
+        }.toolbar(.hidden, for: .tabBar)
     }
    
 }
