@@ -8,9 +8,13 @@ struct Settings_screen: View {
     @AppStorage ("InMonth") var InMonth : Double = 0
     @AppStorage ("Year") var Year : Double = 1
     @AppStorage ("Rate") var Rate : Int = 4
+    @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
+    @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
     @AppStorage("theme") var selectedTheme: String = "system"
     @Environment(\.colorScheme) var colorScheme
     
+    @State private var anim = false
+    @State private var anim1 = false
     var body: some View {
         NavigationStack{
             
@@ -25,9 +29,15 @@ struct Settings_screen: View {
                     
                     
                     Text("Почта для предложений и идей")
-                       .font(.system(size: 23, weight: .medium))
+                        .font(.system(size: anim1 ? 40 : 25, weight: .medium))
                       .foregroundColor(Color("Color_font"))
                       .padding(.top,4)
+                      .onTapGesture {
+                          anim1.toggle()
+                          Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
+                              anim1 = false
+                          }
+                      }
                     Text("developerteam@test.ru")
                        .font(.system(size: 23, weight: .medium))
                       .foregroundColor(Color("Color_font_1"))
@@ -42,8 +52,10 @@ struct Settings_screen: View {
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 22)
-                            .foregroundColor(Color("Color_font_1"))
-                            .frame(height: 60)
+                           
+                            .frame(height: anim ? 70 : 60)
+                            .foregroundColor(Color(anim ? "Color_font_3" : "Color_font_1"))
+                           
                         HStack {
                             Text("set5")
                             
@@ -58,11 +70,18 @@ struct Settings_screen: View {
                         
                     }
                     .onTapGesture {
-                        
+                        let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
+                         impactHeavy.impactOccurred()
                         Start = 0
                         Year = 1
                         InMonth = 0
                         Rate = 4
+                        earnMoney = ""
+                        spendMoney = ""
+                        anim.toggle()
+                        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+                            anim = false
+                        }
                     }
                     Spacer()
                         .frame(maxHeight: 25)
@@ -84,7 +103,8 @@ struct Settings_screen: View {
             }
             
         }
-       
+        .animation(.spring(), value: anim)
+        .animation(.spring(), value: anim1)
     }
   
 }

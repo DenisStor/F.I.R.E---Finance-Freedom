@@ -18,6 +18,7 @@ struct SafeMoney_Screen: View {
     
     @State private var Total : Double = 0
     
+    @State private var anim = false
     
     var body: some View {
         ZStack {
@@ -142,14 +143,14 @@ struct SafeMoney_Screen: View {
                         .frame(height: 250)
                     ZStack {
                         
-                        VStack {
+                        VStack ( spacing : anim ? 20 : 0) {
                             
                             HStack {
                                 
                                 Text("\(formatCurrency(_: Total))")
                                     .font(.system(size: 50, weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
-                                    .lineLimit(1)
+                                    .lineLimit(anim ? 2:1)
                                     .onChange(of: earnMoney) { _ in
                                             updateTotal()
                                         }
@@ -159,7 +160,12 @@ struct SafeMoney_Screen: View {
                                         .onAppear {
                                             updateTotal()
                                         }
-
+                                        .onTapGesture {
+                                            anim.toggle()
+                                            Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { _ in
+                                                anim = false
+                                            }
+                                        }
                                 
                                 
                                 Spacer()
@@ -168,7 +174,7 @@ struct SafeMoney_Screen: View {
                             }
                             ZStack {
                                 VStack {
-                                    
+                                   
                                     HStack {
                                         Text("safeMoney4")
                                             .font(.system(size: 34, weight: .medium))
@@ -181,7 +187,7 @@ struct SafeMoney_Screen: View {
                                 }
                             }
                         }  .padding(.horizontal,15)
-                    }
+                    }.animation(.spring(), value: anim)
                 }
             }.padding(.horizontal,15)
         }
