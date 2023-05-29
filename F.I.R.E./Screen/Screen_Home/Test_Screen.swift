@@ -45,13 +45,23 @@ struct Test_Screen: View {
                         HStack {
                             HStack {
                               
-                                    Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal))")
-                                   
+                                VStack {
+                                    HStack {
+                                        Text("\(trueee.counttrue(BoolCount: BoolCount, ideal: Ideal))")
+                                            .font(.system(size: 50, weight: .medium))
+                                        Spacer()
+                                    }
+                                    HStack {
+                                        Text("Из 8")
+                                            .font(.system(size: 45, weight: .medium))
+                                        Spacer()
+                                    }
+                                }
                                 
-                                  
+                                  Spacer()
                                 
                             }.multilineTextAlignment(.leading)
-                                .font(.system(size: 45, weight: .medium)).foregroundColor(Color("Color_font_1"))
+                               .foregroundColor(Color("Color_font_1"))
                             //    .padding(.bottom,10)
                           //  Spacer()
                         }
@@ -61,6 +71,8 @@ struct Test_Screen: View {
                         
                         HStack {
                             switch trueee.counttrue(BoolCount: BoolCount, ideal: Ideal) {
+                            case 0:
+                                Text("0")
                             case 1:
                                 Text("1")
                             case 2:
