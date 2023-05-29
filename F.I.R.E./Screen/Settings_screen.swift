@@ -29,7 +29,7 @@ struct Settings_screen: View {
                     
                     
                     Text("Почта для предложений и идей")
-                        .font(.system(size: anim1 ? 40 : 25, weight: .medium))
+                        .font(.system(size:  25, weight: .medium))
                       .foregroundColor(Color("Color_font"))
                       .padding(.top,4)
                       .onTapGesture {
@@ -39,7 +39,7 @@ struct Settings_screen: View {
                           }
                       }
                     Text("developerteam@test.ru")
-                       .font(.system(size: 23, weight: .medium))
+                        .font(.system(size: anim1 ? 40 : 25, weight: .medium))
                       .foregroundColor(Color("Color_font_1"))
                     
                     
