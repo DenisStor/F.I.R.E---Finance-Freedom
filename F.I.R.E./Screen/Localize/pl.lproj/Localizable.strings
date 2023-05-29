@@ -233,11 +233,12 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 
 "nalogiName" = "Podatki";
 "znaknalogi" = "zł";
-"textNalogi1"="Dywidendy i odsetki otrzymane z inwestycji również mogą podlegać opodatkowaniu. W Polsce istnieje system opodatkowania dywidend, który zależy od statusu odbiorcy (osoba fizyczna lub prawna) i innych czynników.";
+"textNalogi1"="Dywidendy i odsetki otrzymane z inwestycji również mogą podlegać opodatkowaniu. W Polsce istnieje system opodatkowania dywidend, który zależy od statusu odbiorcy i innych czynników.";
 "titleNalogi2" = "ZYSK";
-"textNalogi2" = "Jeśli inwestujesz za pośrednictwem firmy lub organizacji, mogą one podlegać opodatkowaniu podatkiem dochodowym według stawki 19%.";
+"textNalogi2" = "Jeśli inwestujesz za pośrednictwem firmy, może ona być opodatkowana stawką 19%.";
 "titleNalogi3" = "KORZYŚCI";
-"textNalogi3" = "Polska zapewnia również różne ulgi podatkowe i zachęty dla inwestorów, zwłaszcza w niektórych sektorach lub regionach. Istnieją na przykład programy promocji inwestycji, zachęty podatkowe dla innowacyjnych projektów itp.";
+"textNalogi3" = "Polska zapewnia również zachęty podatkowe dla inwestorów. Istnieją na przykład programy promocji inwestycji, zachęty podatkowe dla innowacyjnych projektów itp.";
+
 
 "menuStart" = "W menu";
 "testgram" = "Test umiejętności finansowych";

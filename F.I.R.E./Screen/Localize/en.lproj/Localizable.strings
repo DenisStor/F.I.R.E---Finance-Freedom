@@ -222,12 +222,13 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 
 "nalogiName" = "Taxes";
 "znaknalogi" = "$";
+
 "textNalogi1"="Dividends received from stocks can be taxable. The U.S. has a double taxation system where companies pay taxes on profits and then dividends received by investors can also be taxable.";
 "titleNalogi2" = "PROFIT";
 "textNalogi2" = "If you invest through a company or organization, it may be subject to income tax.";
 "titleNalogi3" = "BENEFITS";
-"textNalogi3" = "Tax-advantaged investment accounts: In the U.S., there are special investment accounts, such as individual retirement accounts (IRAs) and 401(k), that allow investors to receive tax credits on investments and defer tax payments until a certain date.";
+"textNalogi3" = "Tax-advantaged investment accounts: In the U.S., there are special investment accounts, such as individual retirement accounts (IRAs) and 401(k)";
 
-"menuStart" = "on the menu";
+"menuStart" = "On the menu";
 "testgram" = "Financial literacy test";
 

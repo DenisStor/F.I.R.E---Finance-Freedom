@@ -24,44 +24,30 @@ struct Settings_screen: View {
                     
                     
                     
-                /* ZStack{
-                 RoundedRectangle(cornerRadius: 22)
-                     .foregroundColor(Color("Color_button"))
-                     .frame(height: 64)
-                 HStack {
-                     Text("set2")
-                         .font(.system(size: 24.5, weight: .medium))
-                         
-                     Spacer()
-                     Picker("Тема", selection: $selectedTheme) {
-                         Text("themeSettings3").tag("light")
-                         Text("themeSettings2").tag("dark")
-                         Text("themeSettings").tag("system")
-                     }
-                     
-                     
-                     
-                 }.padding(.horizontal,20)
-             }
-                 */
+                    Text("Почта для предложений и идей")
+                       .font(.system(size: 23, weight: .medium))
+                      .foregroundColor(Color("Color_font"))
+                      .padding(.top,4)
+                    Text("developerteam@test.ru")
+                       .font(.system(size: 23, weight: .medium))
+                      .foregroundColor(Color("Color_font_1"))
                     
                     
                     
+                   Spacer()
                     
-                   // Spacer()
-                    
-                 //   Text("set4")
-                     //   .font(.system(size: 24.5, weight: .medium))
-                     //   .foregroundColor(Color("Color_font"))
+                    Text("set4")
+                       .font(.system(size: 24.5, weight: .medium))
+                      .foregroundColor(Color("Color_font"))
                     
                     ZStack{
                         RoundedRectangle(cornerRadius: 22)
                             .foregroundColor(Color("Color_font_1"))
-                            .frame(height: 150)
+                            .frame(height: 60)
                         HStack {
                             Text("set5")
                             
-                                .font(.system(size: 40, weight: .medium))
+                                .font(.system(size: 30, weight: .medium))
                             
                             Image("Start_Image_1")
                                 .renderingMode(.template)

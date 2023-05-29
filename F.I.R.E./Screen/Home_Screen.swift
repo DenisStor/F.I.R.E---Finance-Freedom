@@ -189,33 +189,7 @@ struct Home_Screen: View {
                         
                         
                         
-                        NavigationLink { AboutUs_Screen()}
-                    label: {
-                        ZStack{
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .strokeBorder(lineWidth: 2)
-                                    .frame(height: 100)
-                                    .foregroundColor(Color("Color_font"))
-                            HStack {
-                                VStack(alignment: .leading,spacing: 5){
-                                    HStack{
-                                        Text("homeWord2")
-                                            .font(.system(size: 26,weight: .medium))
-                                            .foregroundColor(Color("Color_font"))
-                                        
-                                        Image("Home_image")
-                                            .renderingMode(.template)
-                                            .foregroundColor(Color("Color_font"))
-                                        
-                                    }
-                                }
-                                Spacer()
-                            }.multilineTextAlignment(.leading)
-                                .padding(.horizontal,20)
-                            
-                        }
-                    }
+
                         
                     }
                 }.padding(.horizontal,15)

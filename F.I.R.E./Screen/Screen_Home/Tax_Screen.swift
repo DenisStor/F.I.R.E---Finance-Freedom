@@ -22,10 +22,11 @@ struct Tax_Screen: View {
                                 .font(.system(size: 37.5, weight: .semibold))
                                 .foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
                                 .padding(.top, 10)
+                                .padding(.bottom,5)
                             Text("nalog1")
                                 .font(.system(size: 23, weight: .semibold))
                                 .lineSpacing(4)
-                                .padding(.top)
+                                
                                 
                             Spacer()
                             
@@ -120,7 +121,7 @@ struct Tax_Screen: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_Start"))
-                            .frame(height: 350)
+                            .frame(height: 300)
                         ZStack {
                             
                             VStack(alignment: .leading) {
