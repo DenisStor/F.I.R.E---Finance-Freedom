@@ -40,10 +40,6 @@ struct Tax_Screen: View {
                     
                     
                     ZStack {
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_font_1"))
-                            .frame(height: 315)
-                            .padding(.top, 20)
                         ZStack {
                             
                             VStack(alignment: .leading) {
@@ -75,32 +71,25 @@ struct Tax_Screen: View {
                                         }
                                     }
                                 }
-                            } .padding(.horizontal,15)
-                        }
+                            }    .padding(20)
+                            .background(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .foregroundColor(Color("Color_font_1"))
+                                
+                                 
+                            )  }
                     }
-                    
+                    .padding(.top,10)
                     ZStack {
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_Start"))
-                            .frame(height: 215)
-                       
                             
                             VStack(alignment: .leading) {
                                 
                                 HStack {
-                                    
                                     Text("titleNalogi2")
-                                    
-                                    
                                         .font(.system(size: 60, weight: .medium))
                                         .foregroundColor(Color("Color_font_1"))
-                                    
                                     Spacer()
-                                    
-                                    
                                 }
-                                
-                                
                                     VStack (alignment: .leading){
                                         
                                         HStack {
@@ -108,40 +97,27 @@ struct Tax_Screen: View {
                                                 .font(.system(size: 23, weight: .semibold))
                                                 .foregroundColor(Color("Color_font"))
                                                 .lineSpacing(3)
-                                            
-                                           
-                                            
-                                            
-                                            
                                         }
                                     
-                                }
-                            } .padding(.horizontal,15)
+                                    }
+                                } .padding(20)
                         
-                    }
+                            .background(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .foregroundColor(Color("Color_button"))
+                                
+                                 
+                            )      .padding(.top,15) }
                     
                     ZStack {
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_Start"))
-                            .frame(height: 300)
                         ZStack {
-                            
                             VStack(alignment: .leading) {
-                                
                                 HStack {
-                                    
                                     Text("titleNalogi3")
-                                    
-                                    
-                                    
                                         .font(.system(size: 60, weight: .medium))
                                         .foregroundColor(Color("Color_font_1"))
-                                    
                                     Spacer()
-                                    
-                                    
                                 }
-                                
                                     VStack (alignment: .leading){
                                         
                                         HStack {
@@ -156,9 +132,13 @@ struct Tax_Screen: View {
                                         }
                                     }
                                 
-                            }
-                        } .padding(.horizontal,15)
-                    }
+                            } .padding(20)
+                            .background(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .foregroundColor(Color("Color_button"))
+                                 
+                            )      }
+                        .padding(.top,15)    }
                     
                 }
                 
