@@ -177,7 +177,7 @@ struct Home_Screen: View {
                                         
                      
                                         Spacer()
-                                  Image(systemName: "arrow.up.right")
+                                        Image(systemName: "arrow.up.right")
                                             .font(.system(size: 100, weight: .medium))
                                             .foregroundColor(Color("Color_font_1"))
                                         
