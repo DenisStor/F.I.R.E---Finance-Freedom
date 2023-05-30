@@ -108,13 +108,13 @@ struct Home_Screen: View {
                                 VStack(alignment: .leading,spacing: 5){
                                     HStack{
                                         Text("testgram")
-                                        
+                                        Spacer()
                                         HStack(spacing:0) {
                                             Text("\(howmuch)")
                                             Text("/8")
                                         }
                                         
-                                       
+                                    Spacer()
                                         
                                     }    .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))

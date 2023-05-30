@@ -25,6 +25,7 @@ struct Bar_Screen: View {
                                Label("Settings", systemImage: "gear")
                            }
                    }.accentColor(.red)
+            
                       
                       
                }
