@@ -52,7 +52,7 @@ struct Test_Screen: View {
                                         Spacer()
                                     }
                                     HStack {
-                                        Text("правильных из 8")
+                                        Text("prav8")
                                             .font(.system(size: 45, weight: .medium))
                                         Spacer()
                                     }
@@ -72,13 +72,13 @@ struct Test_Screen: View {
                         HStack {
                             switch trueee.counttrue(BoolCount: BoolCount, ideal: Ideal) {
                             case 0..<4:
-                                Text("Вы решили не правильно тест по инвестированию Необходимо проанализировать свои ошибки и попробовать понять, где вы допустили недочеты.")
+                                Text("finaltest1")
                             case 4..<6:
-                                Text("Надо еще учиться! Но результаты хорошие, Необходимо проанализировать свои ошибки и попробовать понять, где вы допустили недочеты. ")
+                                Text("finaltest2")
                             case 6..<8:
-                                Text("Поздравляем с успешным прохождением теста по инвестированию!Вы продемонстрировали свои знания в данной области, что является важным шагом в достижении ваших инвестиционных целей.")
+                                Text("finaltest3")
                             default:
-                                Text("dsds")
+                                Text("error")
                             }
                             
                             Spacer()
