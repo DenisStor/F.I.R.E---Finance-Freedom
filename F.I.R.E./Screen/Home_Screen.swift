@@ -5,6 +5,7 @@ import SwiftUI
 struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
     @State private var test : Bool = false
+    @AppStorage ("howMuch") var howmuch : Int = 0
     var body: some View {
         
         
@@ -107,12 +108,16 @@ struct Home_Screen: View {
                                 VStack(alignment: .leading,spacing: 5){
                                     HStack{
                                         Text("testgram")
-                                            .font(.system(size: 26,weight: .medium))
-                                            .foregroundColor(Color("Color_font_2"))
-                                        Text("")
-                     //надо сделать пройдено или нет , попозже сделаю
                                         
-                                    }
+                                        HStack(spacing:0) {
+                                            Text("\(howmuch)")
+                                            Text("/8")
+                                        }
+                                        
+                                       
+                                        
+                                    }    .font(.system(size: 26,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
                                 }
                                 Spacer()
                             }.multilineTextAlignment(.leading)

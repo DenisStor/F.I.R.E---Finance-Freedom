@@ -13,15 +13,20 @@ final class Calculator : ObservableObject {
     func counttrue (BoolCount : [Bool?],ideal: [Bool]) -> Int {
         var count : Int = 0
         var index : Int = 0
-        while index < 8  {
-            
-            if ideal[index] == BoolCount[index]{
-                count += 1
+        if BoolCount[index] != nil {
+            while index < 8  {
                 
-            } 
-            index += 1
-        }
+                if ideal[index] == BoolCount[index]{
+                    count += 1
+                    
+                }
+                index += 1
+            }
             return count
+        } else {
+            count = 0
+            return count
+        }
         
     }
     

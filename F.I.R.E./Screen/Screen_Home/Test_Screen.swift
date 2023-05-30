@@ -33,7 +33,8 @@ struct Test_Screen: View {
    @State private var Ideal : [Bool] = [false,false,false,false,false,false,false,false] //правильные ответы
    @State private var tru : [Bool] = [false,false,false,false,false,false,false,false] //не трогать
     @State private var trueee = Calculator()
-    //@AppStorage ("howMuch") var howmuch = trueee.counttrue(BoolCount: BoolCount ?? [nil,nil,nil,nil,nil,nil,nil,nil], ideal: Ideal ?? [false,false,false,false,false,false,false,false] )
+    
+    @AppStorage ("howMuch") var howmuch : Int = 0
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -87,7 +88,9 @@ struct Test_Screen: View {
                         }.font(.system(size: 30, weight: .medium))
                             .multilineTextAlignment(.leading)
                             .foregroundColor(Color("Color_font"))
-                            
+                            .onAppear{
+                                howmuch = trueee.counttrue(BoolCount: BoolCount, ideal: Ideal)
+                            }
                         
                         Spacer()   }
                     
@@ -188,6 +191,7 @@ struct Test_Screen: View {
                                 Text("Done")
                                     .foregroundColor(Color("Color_font_2"))
                                     .font(.system(size: 25,weight: .medium))
+                                
                             } else {
                                 Text("nextq")
                                     .foregroundColor(Color("Color_font_2"))
@@ -213,6 +217,7 @@ struct Test_Screen: View {
                     .padding(.top,20)
             }
         }.toolbar(.hidden, for: .tabBar)
+           
     }
    
 }
