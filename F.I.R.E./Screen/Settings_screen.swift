@@ -10,6 +10,7 @@ struct Settings_screen: View {
     @AppStorage ("Rate") var Rate : Int = 4
     @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
     @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
+    @AppStorage ("howMuch") var howmuch : Int = 0
     @AppStorage("theme") var selectedTheme: String = "system"
     @Environment(\.colorScheme) var colorScheme
     
@@ -78,6 +79,7 @@ struct Settings_screen: View {
                         Rate = 4
                         earnMoney = ""
                         spendMoney = ""
+                        howmuch = 0
                         anim.toggle()
                         Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
                             anim = false

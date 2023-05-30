@@ -4,7 +4,7 @@ import SwiftUI
 
 struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
-    @State private var test : Bool = false
+  
     @AppStorage ("howMuch") var howmuch : Int = 0
     var body: some View {
         

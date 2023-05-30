@@ -13,10 +13,10 @@ struct Test_Screen: View {
         NSLocalizedString("2q", comment: ""),
         NSLocalizedString("3q", comment: ""),
         NSLocalizedString("4q", comment: ""),
-         NSLocalizedString("5q", comment: ""),
-       NSLocalizedString("6q", comment: ""),
-          NSLocalizedString("7q", comment: ""),
-          NSLocalizedString("8q", comment: "")]
+        NSLocalizedString("5q", comment: ""),
+        NSLocalizedString("6q", comment: ""),
+        NSLocalizedString("7q", comment: ""),
+        NSLocalizedString("8q", comment: "")]
     
     @State private var IsCount : Int = 0
     
