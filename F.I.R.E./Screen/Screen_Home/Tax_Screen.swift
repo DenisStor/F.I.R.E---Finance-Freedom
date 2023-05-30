@@ -20,7 +20,7 @@ struct Tax_Screen: View {
                             
                             Text("nalogiName")
                                 .font(.system(size: 37.5, weight: .semibold))
-                                .foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
+                                .foregroundColor(Color("Color_font_1"))
                                 .padding(.top, 10)
                                 .padding(.bottom,5)
                             
@@ -143,7 +143,7 @@ struct Tax_Screen: View {
                 }
                 
                 
-            } .padding(15)
+            } .padding(.horizontal,15)
         }
     }
 }
