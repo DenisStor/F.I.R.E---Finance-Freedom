@@ -166,7 +166,7 @@ struct Home_Screen: View {
                             
                             RoundedRectangle(cornerRadius: 30)
                                 
-                                    .frame(height: 100)
+                                    .frame(height: 140)
                                     .foregroundColor(Color("Color_wgt"))
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
@@ -176,6 +176,10 @@ struct Home_Screen: View {
                                             .foregroundColor(Color("Color_font_2"))
                                         
                      
+                                        Spacer()
+                                  Image(systemName: "arrow.up.right")
+                                            .font(.system(size: 100, weight: .medium))
+                                            .foregroundColor(Color("Color_font_1"))
                                         
                                     }
                                 }

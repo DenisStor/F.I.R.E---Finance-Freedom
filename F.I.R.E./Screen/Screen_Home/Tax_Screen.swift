@@ -23,9 +23,11 @@ struct Tax_Screen: View {
                                 .foregroundColor(Color(#colorLiteral(red: 0.93, green: 0.25, blue: 0.25, alpha: 1)))
                                 .padding(.top, 10)
                                 .padding(.bottom,5)
+                            
                             Text("nalog1")
                                 .font(.system(size: 23, weight: .semibold))
                                 .lineSpacing(4)
+                            
                                 
                                 
                             Spacer()
