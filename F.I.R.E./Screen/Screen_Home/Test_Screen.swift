@@ -77,6 +77,8 @@ struct Test_Screen: View {
                                 Text("finaltest2")
                             case 6..<8:
                                 Text("finaltest3")
+                            case 8:
+                                Text("finaltest3")
                             default:
                                 Text("error")
                             }
