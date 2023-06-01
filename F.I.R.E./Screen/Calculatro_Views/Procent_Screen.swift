@@ -233,7 +233,7 @@ struct Procent_Screen: View {
                             .presentationDetents([.height(500)])
                     }.padding(.horizontal,20)
                 }
-        }.toolbar(.hidden, for: .tabBar)
+        }
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()

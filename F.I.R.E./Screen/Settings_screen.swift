@@ -107,6 +107,8 @@ struct Settings_screen: View {
         }
         .animation(.spring(), value: anim)
         .animation(.spring(), value: anim1)
+        .navigationTitle("setLang")
+        .navigationBarTitleDisplayMode(.inline)
     }
   
 }

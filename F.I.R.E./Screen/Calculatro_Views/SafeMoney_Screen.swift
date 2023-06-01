@@ -194,7 +194,7 @@ struct SafeMoney_Screen: View {
         
         
         
-        .toolbar(.hidden, for: .tabBar)
+        
         .toolbar {
             ToolbarItemGroup(placement: .keyboard) {
                 Spacer()

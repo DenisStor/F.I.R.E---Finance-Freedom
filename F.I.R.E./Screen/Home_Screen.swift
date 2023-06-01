@@ -205,7 +205,7 @@ struct Home_Screen: View {
                     .navigationTitle("main")
                     .navigationBarTitleDisplayMode(.inline)
             }
-        }
+        }.navigationTitle("меню")
     }
 }
 
