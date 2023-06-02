@@ -6,6 +6,7 @@ struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
   
     @AppStorage ("howMuch") var howmuch : Int = 0
+    @State private var spacing : CGFloat = 20
     var body: some View {
         
         
@@ -17,10 +18,13 @@ struct Home_Screen: View {
                     
                     
                     
-                    LazyVStack(spacing: 20){
+                    LazyVStack(spacing: spacing){
                         
                         
-                     
+                        RoundedRectangle(cornerRadius: 30)
+                            .frame(height: 50)
+                            .foregroundColor(Color("Color_font_1"))
+                            .opacity(0)
                         NavigationLink { Advice_Screen()}
                     label: {
                         ZStack{
@@ -126,34 +130,7 @@ struct Home_Screen: View {
                             
                         }
                     }
-                        NavigationLink { Test_Screen()}
-                    label: {
-                        ZStack{
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                
-                                    .frame(height: 120)
-                                    .foregroundColor(Color("Color_wgt"))
-                            HStack {
-                                VStack(alignment: .leading,spacing: 5){
-                                    HStack{
-                                        Text("Сегодня можно потратить")
-                                        Spacer()
-                                      
-                                        
-                                
-                                        
-                                    }
-                                    Text("293469364")
-                                   
-                                } .font(.system(size: 26,weight: .medium))
-                                    .foregroundColor(Color("Color_font_2"))
-                                Spacer()
-                            }.multilineTextAlignment(.leading)
-                                .padding(.horizontal,20)
-                            
-                        }
-                    }
+                    
                       
                         
                         NavigationLink { Famous_Screen()}
@@ -230,7 +207,23 @@ struct Home_Screen: View {
 
                         
                     }
+                    
                 }.padding(.horizontal,15)
+                    .refreshable {
+                        if spacing == 120 {
+                            
+                        } else {
+                            spacing = spacing + 10
+                            if spacing == 20 {
+                                
+                            }
+                            else {
+                                Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                                    spacing = spacing - 10
+                                }
+                            }
+                        }
+                    }.animation(.easeInOut(duration: 0.5), value: spacing)
                   
             }
         }

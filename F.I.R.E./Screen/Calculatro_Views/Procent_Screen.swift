@@ -55,6 +55,7 @@ struct Procent_Screen: View {
                                     .font(.system(size: 25))
                                     .frame(height: 45)
                                     .padding(.horizontal,15)
+                                    
                                     .foregroundColor(Color("Color_black"))
                                     .background{
                                         RoundedRectangle(cornerRadius: 15)
