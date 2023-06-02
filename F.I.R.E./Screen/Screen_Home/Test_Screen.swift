@@ -35,6 +35,11 @@ struct Test_Screen: View {
     @State private var trueee = Calculator()
     
     @AppStorage ("howMuch") var howmuch : Int = 0
+    
+    
+    
+    @State private var total : Float = 8
+    @State private var progress : Float = 0
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -97,7 +102,9 @@ struct Test_Screen: View {
                 }.padding(.horizontal,15)
             } else {
                 VStack(alignment: .leading,spacing: 20){
-                    
+                   
+                    bar_progress(progress: progress, total: total)
+                        .frame(height: 12)
                     HStack {
                         Text("\(lesson[IsCount])")
                             .foregroundColor(Color("Color_font_1"))
@@ -203,6 +210,7 @@ struct Test_Screen: View {
                                 IsCount += 1
                                 let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                 impactHeavy.impactOccurred()
+                                progress += 1
                                 if IsCount < 3 {
                                     
                                 }
