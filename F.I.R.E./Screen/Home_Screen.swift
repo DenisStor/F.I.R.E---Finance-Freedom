@@ -20,6 +20,7 @@ struct Home_Screen: View {
                     LazyVStack(spacing: 20){
                         
                         
+                     
                         NavigationLink { Advice_Screen()}
                     label: {
                         ZStack{
@@ -125,7 +126,35 @@ struct Home_Screen: View {
                             
                         }
                     }
-                        
+                        NavigationLink { Test_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            RoundedRectangle(cornerRadius: 30)
+                                
+                                    .frame(height: 120)
+                                    .foregroundColor(Color("Color_wgt"))
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        Text("Сегодня можно потратить")
+                                        Spacer()
+                                      
+                                        
+                                
+                                        
+                                    }
+                                    Text("293469364")
+                                   
+                                } .font(.system(size: 26,weight: .medium))
+                                    .foregroundColor(Color("Color_font_2"))
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
+                      
                         
                         NavigationLink { Famous_Screen()}
                     label: {
@@ -202,10 +231,9 @@ struct Home_Screen: View {
                         
                     }
                 }.padding(.horizontal,15)
-                    .navigationTitle("main")
-                    .navigationBarTitleDisplayMode(.inline)
+                  
             }
-        }.navigationTitle("меню")
+        }
     }
 }
 

@@ -19,7 +19,7 @@ struct SafeMoney_Screen: View {
     @State private var Total : Double = 0
     
     @State private var anim = false
-    
+   
     var body: some View {
         ZStack {
             Color("Color_back")
@@ -146,7 +146,7 @@ struct SafeMoney_Screen: View {
                         VStack ( spacing : anim ? 20 : 0) {
                             
                             HStack {
-                                
+                                @AppStorage ("totalspend") var totalSpend = formatCurrency(_: Total)
                                 Text("\(formatCurrency(_: Total))")
                                     .font(.system(size: 50, weight: .medium))
                                     .foregroundColor(Color("Color_font_1"))
@@ -166,7 +166,7 @@ struct SafeMoney_Screen: View {
                                                 anim = false
                                             }
                                         }
-                                
+                                        .textSelection(.enabled)
                                 
                                 Spacer()
                                 
