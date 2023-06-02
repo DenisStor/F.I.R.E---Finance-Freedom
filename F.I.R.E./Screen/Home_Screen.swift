@@ -18,11 +18,11 @@ struct Home_Screen: View {
                     
                     
                     
-                    LazyVStack(spacing: spacing){
+                    VStack(spacing: spacing){
                         
                         
                         RoundedRectangle(cornerRadius: 30)
-                            .frame(height: 50)
+                            .frame(height: 25)
                             .foregroundColor(Color("Color_font_1"))
                             .opacity(0)
                         NavigationLink { Advice_Screen()}
@@ -213,17 +213,17 @@ struct Home_Screen: View {
                         if spacing == 120 {
                             
                         } else {
-                            spacing = spacing + 10
+                            spacing = spacing + 15
                             if spacing == 20 {
                                 
                             }
                             else {
-                                Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
-                                    spacing = spacing - 10
+                                Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
+                                    spacing = spacing - 15
                                 }
                             }
                         }
-                    }.animation(.easeInOut(duration: 0.5), value: spacing)
+                    }.animation(.easeInOut, value: spacing)
                   
             }
         }

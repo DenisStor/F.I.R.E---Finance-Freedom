@@ -64,7 +64,7 @@ struct Famous_Screen: View {
                                         .edgesIgnoringSafeArea(.all)
                                     ScrollView{
                                         
-                                        LazyVStack(alignment: .leading){
+                                        VStack(alignment: .leading){
                                             Text(title[index])
                                                 .font(.system(size: 53, weight: .medium)).foregroundColor(Color("Color_font_1"))
                                                 .padding(.horizontal, 20)
