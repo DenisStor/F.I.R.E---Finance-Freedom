@@ -11,112 +11,123 @@ struct Settings_screen: View {
     @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
     @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
     @AppStorage ("howMuch") var howmuch : Int = 0
-    @AppStorage("theme") var selectedTheme: String = "system"
-    @Environment(\.colorScheme) var colorScheme
-    
-    @State private var anim = false
-    @State private var anim1 = false
+   
+    @State private var animation : Bool = false
+   
     var body: some View {
-        NavigationStack{
-            
-            ZStack {
-                Color("Color_back")
-                    .edgesIgnoringSafeArea(.all)
-                
-                VStack(alignment: .leading){
-                    
-                    
-                    
-                    
-                    
-                    Text("Почта для предложений и идей")
-                        .font(.system(size:  25, weight: .medium))
-                      .foregroundColor(Color("Color_font"))
-                      .padding(.top,4)
-                      .onTapGesture {
-                          anim1.toggle()
-                          Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { _ in
-                              anim1 = false
-                          }
-                      }
-                    Text("developerteam@test.ru")
-                        .font(.system(size: anim1 ? 40 : 25, weight: .medium))
-                      .foregroundColor(Color("Color_font_1"))
-                    
-                    
-                    
-                   Spacer()
-                    
-                    Text("set4")
-                       .font(.system(size: 24.5, weight: .medium))
-                      .foregroundColor(Color("Color_font"))
-                    
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 22)
-                           
-                            .frame(height: anim ? 70 : 60)
-                            .foregroundColor(Color(anim ? "Color_font_3" : "Color_font_1"))
-                           
-                        HStack {
-                            Text("set5")
-                            
-                                .font(.system(size: 30, weight: .medium))
-                            
-                            Image("Start_Image_1")
-                                .renderingMode(.template)
-                            Spacer()
-                        } .padding(20)
-                            .foregroundColor(Color("Color_font_2"))
+        ZStack{
+            Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
+            VStack(alignment: .leading,spacing: 20){
+                HStack {
+                    Text("О нас")
+                        .font(.system(size: 40,weight: .medium))
+                        .foregroundColor(Color("Color_font"))
+                    Spacer()
+                }
+                Divider()
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Denis Storozhev")
+                            .font(.system(size: 25,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                        Text("lead developer")
+                            .font(.system(size: 17,weight: .medium))
+                            .opacity(0.6)
+                            .foregroundColor(Color("Color_font"))
+                    }.multilineTextAlignment(.leading)
+                    Spacer()
+                }
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Nikita Malykhin")
+                            .font(.system(size: 25,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                        Text("chief UI/UX designer")
+                            .font(.system(size: 17,weight: .medium))
+                            .opacity(0.6)
+                            .foregroundColor(Color("Color_font"))
+                    }.multilineTextAlignment(.leading)
+                    Spacer()
+                }
+                Divider()
+                HStack{
+                    VStack(alignment: .leading){
+                        Text("Outsourcing")
+                            .font(.system(size: 14,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                        Text("Edward Mikityuk")
+                            .font(.system(size: 20,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                        Text("worker")
+                            .font(.system(size: 14,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
                         
-                        
+                    }.multilineTextAlignment(.leading)
+                        .opacity(0.6)
+                    Spacer()
+                }
+                Spacer()
+                VStack(spacing: 10) {
+                    HStack{
+                        Text("Mail for suggestions and \nfeedback")
+                            .font(.system(size: 20,weight: .medium))
+                            .foregroundColor(Color("Color_font"))
+                        Spacer()
                     }
-                    .onTapGesture {
+                    HStack{
+                        Text("firefeedback@mail.ru")
+                            .font(.system(size: 20,weight: .medium))
+                            .tint(Color("Color_font"))
+                            .overlay(
+                                Rectangle().frame(height: 2).offset(y: 4)
+                                , alignment: .bottom)
+                        
+                        Spacer()
+                    }
+                }
+                ZStack {
+                    RoundedRectangle(cornerRadius: 30)
+                        .frame(height: 60)
+                        .padding(.vertical,20)
+                        .foregroundColor(Color("Color_font_1"))
+                        .padding(.horizontal,animation ? 20 : 0)
+                       
+                    Text("сбросить данные")
+                        .font(.system(size: 25,weight: .medium))
+                        .foregroundColor(Color("Color_font_2"))
+                        
+                }.onTapGesture {
+                    if animation == true {
+                        
+                    } else {
                         let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
-                         impactHeavy.impactOccurred()
+                        impactHeavy.impactOccurred()
                         Start = 0
                         Year = 1
                         InMonth = 0
                         Rate = 4
                         earnMoney = ""
                         spendMoney = ""
-                        howmuch = 0
-                        anim.toggle()
-                        Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
-                            anim = false
+                        animation = true
+                        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                            animation = false
                         }
                     }
-                    Spacer()
-                        .frame(maxHeight: 25)
                 }
-                .padding(.horizontal, 15)
-                
-                .navigationTitle("setLang")
-                .navigationBarTitleDisplayMode(.inline)
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            }
+            }.multilineTextAlignment(.leading)
+                .padding(.horizontal,15)
             
-        }
-        .animation(.spring(), value: anim)
-        .animation(.spring(), value: anim1)
-        .navigationTitle("setLang")
-        .navigationBarTitleDisplayMode(.inline)
+        }.animation(.spring(), value: animation)
+     
     }
   
 }
     struct Settings_screen_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            Settings_screen()
                 .previewDevice("iPhone SE (3rd generation)")
-            ContentView()
+            Settings_screen()
                 .previewDevice("iPhone 14 Pro Max")
         }
     }
