@@ -50,7 +50,7 @@ struct info_Screen: View {
         NSLocalizedString("fam4text", comment: ""),
         NSLocalizedString("fam2text", comment: ""),
         NSLocalizedString("word_4", comment: ""),
-        ] // основной текст
+        ] // основной текст//
     
     var body: some View {
         
