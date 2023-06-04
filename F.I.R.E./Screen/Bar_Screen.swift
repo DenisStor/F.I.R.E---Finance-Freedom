@@ -19,7 +19,9 @@ struct Bar_Screen: View {
                     Calculator_Screen()
                         .tabItem {
                             Label("Calculator", systemImage: "function")
+                                
                         }
+                        
                     Settings_screen()
                     
                         .tabItem {

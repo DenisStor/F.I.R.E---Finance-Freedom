@@ -13,7 +13,7 @@ struct Settings_screen: View {
     @AppStorage ("howMuch") var howmuch : Int = 0
    
     @State private var animation : Bool = false
-   
+    @State private var alert1 : Bool = false
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -103,22 +103,31 @@ struct Settings_screen: View {
                     } else {
                         let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
                         impactHeavy.impactOccurred()
-                        Start = 0
-                        Year = 1
-                        InMonth = 0
-                        Rate = 4
-                        earnMoney = ""
-                        spendMoney = ""
-                        animation = true
-                        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
-                            animation = false
-                        }
+                       
+                       
+                        alert1 = true
+                        
                     }
                 }
+                .alert(isPresented: $alert1) {
+                            Alert(
+                                title: Text("Are you sure you want to reset?"),
+                                message: Text("This action cannot be undone."),
+                                primaryButton: .destructive(Text("Delete")) {
+                                    Start = 0
+                                    Year = 1
+                                    InMonth = 0
+                                    Rate = 4
+                                    earnMoney = ""
+                                    spendMoney = ""
+                                },
+                                secondaryButton: .cancel()
+                            )
+                        }
             }.multilineTextAlignment(.leading)
                 .padding(.horizontal,15)
             
-        }.animation(.spring(), value: animation)
+        }
      
     }
   
