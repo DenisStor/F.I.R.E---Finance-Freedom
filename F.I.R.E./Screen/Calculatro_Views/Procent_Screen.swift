@@ -52,7 +52,7 @@ struct Procent_Screen: View {
                                             }
                                            
                                         }
-                                        .keyboardType(.numberPad)
+                                      
                                     
                                     .font(.system(size: 25))
                                     .frame(height: 45)
@@ -99,7 +99,7 @@ struct Procent_Screen: View {
                                                 }
                                                
                                             }
-                                            .keyboardType(.numberPad)
+                                          
                                         .font(.system(size: 25))
                                         .padding(.horizontal,15)
                                         .frame(height: 45)
