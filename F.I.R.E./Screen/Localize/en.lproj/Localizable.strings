@@ -162,8 +162,8 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 "themeSettings3" = "Light";
 
 
-"calc1" = "Compound interest";
-"calc2" = "How much can be spent per day";
+"calc1" = "Compound\ninterest";
+"calc2" = "Spent per\nday";
 
 "safeMoney1" = "How much you earn";
 "safeMoney2" = "Enter number";

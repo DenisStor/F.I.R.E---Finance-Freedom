@@ -14,12 +14,17 @@ struct AboutFIRE_Screen: View {
                 Color("Color_back")
                     .edgesIgnoringSafeArea(.all)
                 ScrollView(showsIndicators: false){
+                  
                     
-                    HStack {
+                    ZStack{
                         
-                        
+                        HStack{
+                            Image("logoFire")
+                        }
+                        VStack{
+                            Text("FIRE как образ жизни")
+                        }
                     }
-                    
                     
                     
                     
