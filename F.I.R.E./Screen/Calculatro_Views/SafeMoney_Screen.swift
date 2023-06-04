@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SafeMoney_Screen: View {
     
@@ -42,27 +43,28 @@ struct SafeMoney_Screen: View {
                         }
                         
                         HStack {
-                            TextField("safeMoney2", text: Binding(
-                                get: {
-                                    self.earnMoney
-                                },
-                                set: { newValue in
-                                    let filtered = newValue.filter { "0123456789".contains($0) }
-                                    if filtered.count <= characterLimit {
-                                        self.earnMoney = filtered
+                            TextField("safeMoney2", text: $earnMoney)
+                                .onReceive(Just(earnMoney)) { index in
+                                    
+                                    if TextIs(earnMoney) {
+                                        limitDigits(characterLimit)
                                     }
+                                    else {
+                                        earnMoney = ""
+                                    }
+                                    
                                 }
-                            ))
-                            .font(.system(size: 25))
-                            .frame(height: 45)
-                            .padding(.horizontal,15)
-                            .foregroundColor(Color("Color_black"))
-                            .background{
-                                RoundedRectangle(cornerRadius: 15)
-                                    .foregroundColor(Color("Color_font_2"))
-                            }
-                            .keyboardType(.numberPad)
-                            .focused($isInputActive)
+                            
+                                .font(.system(size: 25))
+                                .frame(height: 45)
+                                .padding(.horizontal,15)
+                                .foregroundColor(Color("Color_black"))
+                                .background{
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(Color("Color_font_2"))
+                                }
+                                .keyboardType(.numberPad)
+                                .focused($isInputActive)
                             
                             
                             Text("valuta")
@@ -96,17 +98,17 @@ struct SafeMoney_Screen: View {
                         }
                         
                         HStack {
-                            TextField("Введите число", text: Binding(
-                                get: {
-                                    self.spendMoney
-                                },
-                                set: { newValue in
-                                    let filtered = newValue.filter { "0123456789".contains($0) }
-                                    if filtered.count <= characterLimit {
-                                        self.spendMoney = filtered
+                            TextField("Введите число", text: $spendMoney)
+                                .onReceive(Just(spendMoney)) { index in
+                                    
+                                    if TextIs1(spendMoney) {
+                                        limitDigits1(characterLimit)
                                     }
+                                    else {
+                                        spendMoney = ""
+                                    }
+                                    
                                 }
-                            ))
                             .font(.system(size: 25))
                             .frame(height: 45)
                             .padding(.horizontal,15)
@@ -152,21 +154,21 @@ struct SafeMoney_Screen: View {
                                     .foregroundColor(Color("Color_font_1"))
                                     .lineLimit(anim ? 2:1)
                                     .onChange(of: earnMoney) { _ in
-                                            updateTotal()
+                                        updateTotal()
+                                    }
+                                    .onChange(of: spendMoney) { _ in
+                                        updateTotal()
+                                    }
+                                    .onAppear {
+                                        updateTotal()
+                                    }
+                                    .onTapGesture {
+                                        anim.toggle()
+                                        Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { _ in
+                                            anim = false
                                         }
-                                        .onChange(of: spendMoney) { _ in
-                                            updateTotal()
-                                        }
-                                        .onAppear {
-                                            updateTotal()
-                                        }
-                                        .onTapGesture {
-                                            anim.toggle()
-                                            Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { _ in
-                                                anim = false
-                                            }
-                                        }
-                                        .textSelection(.enabled)
+                                    }
+                                    .textSelection(.enabled)
                                 
                                 Spacer()
                                 
@@ -174,7 +176,7 @@ struct SafeMoney_Screen: View {
                             }
                             ZStack {
                                 VStack {
-                                   
+                                    
                                     HStack {
                                         Text("safeMoney4")
                                             .font(.system(size: 34, weight: .medium))
@@ -211,6 +213,49 @@ struct SafeMoney_Screen: View {
         }
         
     }
+    
+    func TextIs(_ upper: String) -> Bool {
+        
+        for character in earnMoney {
+            if character.isLetter {
+                print("Ошибка: символ '\(character)' является буквой")
+                return false
+            } else if character.isNumber {
+                print("Символ '\(character)' является цифрой")
+                
+            }
+        }
+        return true
+    }
+
+    func limitDigits(_ upper: Int) {
+        let digitOnly = earnMoney.filter {$0.isNumber }
+        if digitOnly.count > upper {
+            earnMoney = String(digitOnly.prefix(upper))
+        }
+    }
+    func TextIs1(_ upper: String) -> Bool {
+        
+        for character in spendMoney {
+            if character.isLetter {
+                print("Ошибка: символ '\(character)' является буквой")
+                return false
+            } else if character.isNumber {
+                print("Символ '\(character)' является цифрой")
+                
+            }
+        }
+        return true
+    }
+
+    func limitDigits1(_ upper: Int) {
+        let digitOnly = spendMoney.filter {$0.isNumber }
+        if digitOnly.count > upper {
+            spendMoney = String(digitOnly.prefix(upper))
+        }
+    }
+    
+    
     func formatCurrency(_ number: Double) -> String {
         let formatforvalute = NumberFormatter()
         formatforvalute.numberStyle = .currency
