@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct Procent_Screen: View {
     
@@ -40,17 +41,18 @@ struct Procent_Screen: View {
                                     .font(.system(size: 30, weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
-                                    TextField("safeMoney2", text: Binding(
-                                        get: {
-                                            self.InMonth
-                                        },
-                                        set: { newValue in
-                                            let filtered = newValue.filter { "0123456789".contains($0) }
-                                            if filtered.count <= characterLimit {
-                                                self.InMonth = filtered
+                                    TextField("safeMoney2", text: $InMonth)
+                                        .onReceive(Just(InMonth)) { index in
+                                            
+                                            if TextIs(InMonth) {
+                                                limitDigits(characterLimit)
                                             }
+                                            else {
+                                                InMonth = ""
+                                            }
+                                           
                                         }
-                                    ))
+                                        .keyboardType(.numberPad)
                                     
                                     .font(.system(size: 25))
                                     .frame(height: 45)
@@ -86,17 +88,18 @@ struct Procent_Screen: View {
                                         .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
                                     HStack {
-                                        TextField("safeMoney2", text: Binding(
-                                            get: {
-                                                self.Start
-                                            },
-                                            set: { newValue in
-                                                let filtered = newValue.filter { "0123456789".contains($0) }
-                                                if filtered.count <= characterLimit {
-                                                    self.Start = filtered
+                                        TextField("safeMoney2", text: $Start)
+                                            .onReceive(Just(Start)) { index in
+                                                
+                                                if TextIs1(Start) {
+                                                    limitDigits1(characterLimit)
                                                 }
+                                                else {
+                                                    Start = ""
+                                                }
+                                               
                                             }
-                                        ))
+                                            .keyboardType(.numberPad)
                                         .font(.system(size: 25))
                                         .padding(.horizontal,15)
                                         .frame(height: 45)
@@ -251,6 +254,46 @@ struct Procent_Screen: View {
             }
         
         
+    }
+    func TextIs(_ upper: String) -> Bool {
+        
+        for character in InMonth {
+            if character.isLetter {
+                print("Ошибка: символ '\(character)' является буквой")
+                return false
+            } else if character.isNumber {
+                print("Символ '\(character)' является цифрой")
+                
+            }
+        }
+        return true
+    }
+
+    func limitDigits(_ upper: Int) {
+        let digitOnly = InMonth.filter {$0.isNumber }
+        if digitOnly.count > upper {
+            InMonth = String(digitOnly.prefix(upper))
+        }
+    }
+    func TextIs1(_ upper: String) -> Bool {
+        
+        for character in Start {
+            if character.isLetter {
+                print("Ошибка: символ '\(character)' является буквой")
+                return false
+            } else if character.isNumber {
+                print("Символ '\(character)' является цифрой")
+                
+            }
+        }
+        return true
+    }
+
+    func limitDigits1(_ upper: Int) {
+        let digitOnly = Start.filter {$0.isNumber }
+        if digitOnly.count > upper {
+            Start = String(digitOnly.prefix(upper))
+        }
     }
     func formatCurrency(_ number: Double) -> String {
         let formatforvalute = NumberFormatter()
