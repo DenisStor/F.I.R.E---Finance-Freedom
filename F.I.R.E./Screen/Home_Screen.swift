@@ -94,7 +94,7 @@ struct Home_Screen: View {
                                                 .font(.system(size: 13,weight: .medium))
                                                 .foregroundColor(Color("Color_font_2"))
                                                
-                                            Spacer()
+                                            //Spacer()
                                             
                                         }  .padding(10)
                                     }.frame(maxWidth: .infinity,maxHeight:55)
