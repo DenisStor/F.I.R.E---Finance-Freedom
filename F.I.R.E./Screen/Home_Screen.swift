@@ -28,10 +28,9 @@ struct Home_Screen: View {
                         NavigationLink { Advice_Screen()}
                     label: {
                         ZStack{
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .frame(height: 150)
-                                .foregroundColor(Color("Color_font_1"))
+                            Image("butone")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     Text("Createfinancialreserves")
@@ -49,7 +48,7 @@ struct Home_Screen: View {
                                     
                                     
                                         .foregroundColor(Color(white: 1, opacity: 0.5))
-                                    
+                                 
                                 }
                                 Spacer()
                             }.multilineTextAlignment(.leading)
@@ -86,12 +85,18 @@ struct Home_Screen: View {
                                         RoundedRectangle(cornerRadius: 14)
                                             .foregroundColor(Color("Color_font_1"))
                                         HStack{
+                                        
                                             Text("More")
                                                 .foregroundColor(Color("Color_font_2"))
-                                                .font(.system(size: 24,weight: .medium))
+                                                .font(.system(size: 20,weight: .medium))
+                                                
+                                            Image(systemName: "arrow.up.right")
+                                                .font(.system(size: 13,weight: .medium))
+                                                .foregroundColor(Color("Color_font_2"))
+                                               
+                                            Spacer()
                                             
-                                            
-                                        }
+                                        }  .padding(10)
                                     }.frame(maxWidth: .infinity,maxHeight:55)
                                         
                                     }
@@ -100,41 +105,6 @@ struct Home_Screen: View {
                             .padding(.horizontal,20)
                             
                         }
-                        
-                        NavigationLink { Test_Screen()}
-                    label: {
-                        ZStack{
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                
-                                    .frame(height: 100)
-                                    .foregroundColor(Color("Color_font_1"))
-                            HStack {
-                                VStack(alignment: .leading,spacing: 5){
-                                    HStack{
-                                        
-                                            Text("testgram")
-                                                
-                                        
-                                        Spacer()
-                                        HStack(spacing:0) {
-                                            Text("\(howmuch)")
-                                            Text("/8")
-                                        }
-                                        
-                                    //Spacer()
-                                        
-                                    }    .font(.system(size: 26,weight: .medium))
-                                        .foregroundColor(Color("Color_font_2"))
-                                }
-                                Spacer()
-                            }.multilineTextAlignment(.leading)
-                                .padding(.horizontal,20)
-                            
-                        }
-                    }
-                    
-                      
                         
                         NavigationLink { Famous_Screen()}
                     label: {
@@ -170,6 +140,42 @@ struct Home_Screen: View {
                             
                         }
                     }
+                        
+                        NavigationLink { Test_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            Image("buttest")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        
+                                            Text("testgram")
+                                                
+                                        
+                                        Spacer()
+//                                        HStack(spacing:0) {
+//                                            Text("\(howmuch)")
+//                                            Text("/8")
+                                        
+                                        
+                                    //Spacer()
+                                        
+                                    }    .font(.system(size: 26,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
+                    
+                      
+                        
+        
                         NavigationLink { info_Screen()}
                     label: {
                         ZStack{
@@ -181,13 +187,13 @@ struct Home_Screen: View {
                               
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
-                                    Text("Whatarethey")
+                                    Text("dsds")
                                         .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                     
                                     
                                     
-                                    Text("homeWord1")
+                                    Text("dsds")
                                         .font(.system(size: 22,weight: .medium))
                                         .foregroundColor(Color(white: 1, opacity: 0.5))
                                         .overlay(

@@ -116,9 +116,9 @@
 "$" = "$";
 "main" = "Home";
 "Settings" = "Settings";
-"Createfinancialreserves" = "Create financial reserves";
+"Createfinancialreserves" = "Create\nfinancial reserves";
 "Advice_home" = "Open Tips";
-"More" = "More";
+"More" = "Read more";
 "Whatarethey" = "What are they?";
 
 
@@ -230,10 +230,23 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 "textNalogi3" = "Tax-advantaged investment accounts: In the U.S., there are special investment accounts, such as individual retirement accounts (IRAs) and 401(k)";
 
 "menuStart" = "On the menu";
-"testgram" = "Financial literacy test";
+"testgram" = "Financial literacy\ntest";
 
 "finaltest1" = "You have decided wrong investment test It is necessary to analyze your mistakes and try to understand where you have made mistakes";
 "finaltest2" = "We still have to learn! But the results are good, you need to analyze your mistakes and try to understand where you made mistakes";
 "finaltest3" = "Congratulations on successfully completing your investment test! You have demonstrated your knowledge in this area, which is an important step in achieving your investment goals.";
 
 "prav8" = "correct of 8";
+
+
+"stockmenu" = "Stock";
+"cryptomenu" = "Cryptocurrency";
+"obligimenu" = "Bonds";
+"nedviga" = "Real estate";
+
+
+"key_stock1" = "What is stocks";
+
+
+"key_stock2" = "Stock - A stock is a security issued by a joint—stock company, in other words, an issuing company. All investors who bought shares became co-owners of the company. The promotion simply confirms that its owner has a stake in the company, even if it is very small";
+"key_stock3" = "What types of stocks are there?";

@@ -246,3 +246,13 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 "finaltest2" = "Wciąż musimy się uczyć! Ale wyniki są dobre, musisz przeanalizować swoje błędy i spróbować zrozumieć, gdzie je popełniłeś";
 "finaltest3" = "Gratulujemy pomyślnego zdania testu inwestycyjnego! Udowodniłeś swoją wiedzę w tym obszarze, co jest ważnym krokiem w osiąganiu celów inwestycyjnych";
 "prav8" = "correct of 8";
+
+
+"stockmenu" = "Akcje";
+"cryptomenu" = "Kryptowaluta";
+"obligimenu" = "Obligacje";
+"nedviga" = "Nieruchomości";
+
+"key_stock1" = "Co to są akcje";
+"key_stock2" = "Akcje to papiery wartościowe emitowane przez spółkę akcyjną, innymi słowy spółkę emitującą. Wszyscy inwestorzy, którzy kupili akcje, stali się współwłaścicielami firmy. Akcje po prostu potwierdzają, że ich właściciel ma udział w firmie, nawet jeśli jest bardzo mały";
+"key_stock3" = "jakie są rodzaje akcji?";

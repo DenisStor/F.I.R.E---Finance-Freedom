@@ -10,40 +10,78 @@
 import SwiftUI
 
 struct info_Screen: View {
+    //Заголовок
     @State private var name : [String] = [
-    NSLocalizedString("famous_name1", comment: ""), // облигации
-    NSLocalizedString("famous_name3", comment: ""), // акции
-    NSLocalizedString("famous_name4", comment: ""), // крипта
-    NSLocalizedString("famous_name2", comment: ""), // недвижимость
+    NSLocalizedString("stockmenu", comment: ""),
+    NSLocalizedString("cryptomenu", comment: ""),
+    NSLocalizedString("obligimenu", comment: ""),
+    NSLocalizedString("nedviga", comment: ""),
     
     ]
     
     
-    //их имена \n для разделения имени и фамилии
+    // Картинки главная
     @State private var Image_main : [String] = ["Baffet","Bill","Elon","Pitere"]
     
-    
+    //Цвет шрифтов
     @State private var Color1 : [String] = ["Color_font_2","Color_font","Color_font","Color_font"]
     
+    //Тайтл внутри
     @State private var title : [String] = [
-    NSLocalizedString("famous_name1", comment: ""),
-    NSLocalizedString("famous_name3", comment: ""),
-    NSLocalizedString("famous_name4", comment: ""),
-    NSLocalizedString("famous_name2", comment: ""),
+    NSLocalizedString("stockmenu", comment: ""),
+    NSLocalizedString("cryptomenu", comment: ""),
+    NSLocalizedString("obligimenu", comment: ""),
+    NSLocalizedString("nedviga", comment: ""),
     
     ]
     
     
     
-    //заголовок статьи
-    @State private var Image2 : [String] = ["baffet1scr","bill2scr","elon2scr","litch2scr"] // картинка
+    
+    
+    //картинка
+    @State private var Image2 : [String] = ["line","bill2scr","elon2scr","litch2scr"] //
+   
+    //подтайтл
+    @State private var undertitle : [String] = [
+    NSLocalizedString("key_stock1", comment: ""),
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    ]
+    
+    
+    // 1 текст
     @State private var Text1 : [String] = [
-        NSLocalizedString("famouse1text", comment: ""),
+        NSLocalizedString("key_stock2", comment: ""),
         NSLocalizedString("fam3text", comment: ""),
         NSLocalizedString("fam4text", comment: ""),
         NSLocalizedString("fam2text", comment: ""),
         NSLocalizedString("word_4", comment: ""),
-        ] // основной текст//
+        ]
+    
+    
+    
+    
+    //подтайтл 2
+    @State private var undertitletwo : [String] = [
+    NSLocalizedString("key_stock3", comment: ""),
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    ]
+    
+    //текст 2
+    @State private var Text2 : [String] = [
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    NSLocalizedString("", comment: ""),
+    ]
+    
+
+    
+    
     
     var body: some View {
         
@@ -56,7 +94,7 @@ struct info_Screen: View {
                 
                 ScrollView(showsIndicators: false){
                     
-                    LazyVStack(spacing: 15){
+                    LazyVStack(spacing: 10){
                         
                         ForEach(0..<4) { index in
                             NavigationLink {
@@ -67,27 +105,33 @@ struct info_Screen: View {
                                     ScrollView{
                                         
                                         VStack(alignment: .leading){
-                                            Text("Акции")
-                                                .font(.system(size: 20.4, weight: .medium))
-                                                .lineSpacing(10)
+                                            Text(title[index])
+                                                .font(.system(size: 50, weight: .medium))
+                                                .foregroundColor(Color("Color_font_1"))
                                                 .padding(20)
-                                            Text("Image")
+                                        
+                                            Image("line")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                              
+                                            HStack {
+                                                Text(undertitle[index])
+                                                    .font(.system(size: 36.4, weight: .semibold))
+                                                    
+                                                   
+                                                
+                                                Image("quest")
+                                                    
+                                            }.padding(20)
+                                            Text(Text1[index])
                                                 .font(.system(size: 20.4, weight: .medium))
                                                 .lineSpacing(10)
-                                                .padding(20)
-                                            
-                                            Text("Что такое акция")
-                                                .font(.system(size: 20.4, weight: .medium))
-                                                .lineSpacing(10)
-                                                .padding(20)
-                                            
-                                            Text("Акция — это ценная бумага, которую выпускает акционерное общество, другими словами — компания-эмитент. Все инвесторы, которые купили акции, стали совладельцами компании. Акция как раз и подтверждает, что у ее владельца есть доля в компании, пусть даже совсем маленькая.")
-                                                .font(.system(size: 20.4, weight: .medium))
-                                                .lineSpacing(10)
-                                                .padding(20)
-                                            Text("Какие бывают виды акций?")
-                                                .font(.system(size: 20.4, weight: .medium))
-                                                .lineSpacing(10)
+                                                .padding(.horizontal,20)
+                                            HStack {
+                                                Text(undertitletwo[index])
+                                                    .font(.system(size: 36.4, weight: .semibold))
+                                                Image("dollar")
+                                            }
                                                 .padding(20)
                                             Text("text")
                                                 .font(.system(size: 20.4, weight: .medium))
