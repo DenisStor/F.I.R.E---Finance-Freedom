@@ -42,7 +42,7 @@ struct Test_modi: View {
             else {
                 VStack(alignment: .leading,spacing:20){
                     bar_progress(progress: Float(index), total: Float(totalQwestion))
-                        .frame(height: 30)
+                        .frame(height: 15)
                         .padding(.top,20)
                     HStack {
                         Text("\(HowQwest)")
@@ -53,54 +53,56 @@ struct Test_modi: View {
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 45,weight: .medium))
                     }
-                   
+                  
                     Text("\(Text_info[index])")
                         .foregroundColor(Color("Color_font"))
                         .font(.system(size: 25,weight: .medium))
                         .multilineTextAlignment(.leading)
-                    
-                    HStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(TrueForModi == true ? Color("Color_font_1") : Color("Color_button"))
-                        Text("yes")
-                            .foregroundColor(Color("Color_font"))
-                            .font(.system(size: 24,weight: .medium))
-                        
+                    VStack(spacing:15){
+                        HStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(TrueForModi == true ? Color("Color_font_1") : Color("Color_button"))
+                            Text("yes")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 24,weight: .medium))
+                            
                             Spacer()
-                    }
-                    .onTapGesture {
-                        if TrueForModi == nil {
-                            TrueForModi = true
-                        } else {
-                            if TrueForModi == true {
-                                TrueForModi = nil
-                            } else {
+                        }
+                        .onTapGesture {
+                            if TrueForModi == nil {
                                 TrueForModi = true
-                            }
-                        }
-                }
-                    HStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .frame(width: 40, height: 40)
-                            .foregroundColor(TrueForModi == false ? Color("Color_font_1") : Color("Color_button"))
-                        Text("no")
-                            .foregroundColor(Color("Color_font"))
-                            .font(.system(size: 24,weight: .medium))
-                        Spacer()
-                       
-                    }
-                    .onTapGesture {
-                        if TrueForModi == nil {
-                            TrueForModi = false
-                        } else {
-                            if TrueForModi == false {
-                                TrueForModi = nil
                             } else {
-                                TrueForModi = false
+                                if TrueForModi == true {
+                                    TrueForModi = nil
+                                } else {
+                                    TrueForModi = true
+                                }
                             }
                         }
-                }
+                        HStack {
+                            RoundedRectangle(cornerRadius: 10)
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(TrueForModi == false ? Color("Color_font_1") : Color("Color_button"))
+                            Text("no")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 24,weight: .medium))
+                            Spacer()
+                            
+                        }
+                        .onTapGesture {
+                            if TrueForModi == nil {
+                                TrueForModi = false
+                            } else {
+                                if TrueForModi == false {
+                                    TrueForModi = nil
+                                } else {
+                                    TrueForModi = false
+                                }
+                            }
+                        }
+                    }
+                    .padding(.top,15)
                     Spacer()
                     VStack{
                         ZStack{
