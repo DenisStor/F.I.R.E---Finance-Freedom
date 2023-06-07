@@ -31,6 +31,7 @@ struct Home_Screen: View {
                             Image("butone")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                                .cornerRadius(30)
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     Text("Createfinancialreserves")
@@ -114,6 +115,7 @@ struct Home_Screen: View {
                             Image("FamousPeople")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                                .cornerRadius(30)
                               
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
@@ -176,7 +178,7 @@ struct Home_Screen: View {
                       
                         
         
-                        NavigationLink { info_Screen()}
+                        NavigationLink { InvestAgree_Screen()}
                     label: {
                         ZStack{
                             

@@ -56,10 +56,10 @@ struct Settings_screen: View {
                         Text("Outsourcing")
                             .font(.system(size: 14,weight: .medium))
                             .foregroundColor(Color("Color_font"))
-                        Text("Edward Mikityuk")
+                        Text("Nikita Vasilevsky")
                             .font(.system(size: 20,weight: .medium))
                             .foregroundColor(Color("Color_font"))
-                        Text("worker")
+                        Text("text editor")
                             .font(.system(size: 14,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                         
