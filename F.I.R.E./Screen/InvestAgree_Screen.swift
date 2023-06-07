@@ -92,17 +92,88 @@ struct InvestAgree_Screen: View {
                 
                     
                     //1 текст
-                    VStack(spacing:0) {
+                    VStack(spacing:15) {
                         if IsOn == 0 {
-                            Text("Акции")
-                            Text("Акции")
-                            Text("Акции")
-                            Text("Акции")
-                            Text("Акции")
-                            Text("Акции")
                             
+                            HStack{
+                                Text("Облигации — долговая расписка, ее выпускает эмитент, которому нужны средства. Покупая эти бумаги, инвестор дает свои деньги взаймы, за что получает доход")
+                                    .font(.system(size: 23, weight: .semibold))
+                                Spacer()
+                            }
                             
+                            HStack{
+                           
+                                Text("Шаг 1")
+                                    .font(.system(size: 40, weight: .semibold))
+                                    .foregroundColor(Color("Color_font_1"))
+                                    .padding(.top, 10)
+                                Spacer()
+                                    
+                                
+                            }
+                            HStack{
+                           
+                                Text("Прежде чем приобрести облигации того или иного эмитента, ознакомьтесь с кредитными рейтингами, которые ему присвоены.")
+                                    .font(.system(size: 23, weight: .medium))
+                                    .padding(.bottom,10)
+                                Spacer()
+                                
+                            }
                             
+                            HStack{
+                                VStack (alignment: .leading) {
+                                    Text("Кредитные рейтинги:")
+                                        .font(.system(size: 16.8, weight:.medium))
+                                        .foregroundColor(Color("Color_font_3"))
+                                    
+                                    Image("creditAa")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                    Text("чем ниже кредитный рейтинг, тем больше вероятность дефолта.")
+                                        .font(.system(size: 16.8, weight:.medium))
+                                        .foregroundColor(Color("Color_font_3"))
+                                }
+                                Spacer()
+                            }
+                            HStack{
+                           
+                                Text("Шаг 2")
+                                    .font(.system(size: 40, weight: .semibold))
+                                    .foregroundColor(Color("Color_font_1"))
+                                    .padding(.top, 10)
+                                Spacer()
+                                    
+                                
+                            }
+                            
+                            HStack{
+                           
+                                Text("Убедиться, что этому эмитенту можно доверить свои средства, помогут не только кредитные рейтинги, но и представление о его деятельности — основные сведения можно подчерпнуть из презентаций компании и регулярной отчетности.")
+                                    .font(.system(size: 23, weight: .medium))
+                                    .padding(.bottom,10)
+                                Spacer()
+                                
+                            }
+                            
+                            HStack{
+                           
+                                Text("Шаг 3")
+                                    .font(.system(size: 40, weight: .semibold))
+                                    .foregroundColor(Color("Color_font_1"))
+                                    .padding(.top, 10)
+                                Spacer()
+                                    
+                                
+                            }
+                            
+                            HStack{
+                           
+                                Text("Они изучают эмитента, могут предоставлять наглядные таблицы и графики, то есть экономят ваши усилия и время при поиске необходимой информации.")
+                                    .font(.system(size: 23, weight: .medium))
+                                    .padding(.bottom,10)
+                                Spacer()
+                                
+                            }
                             
                             
                             
