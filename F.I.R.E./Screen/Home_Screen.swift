@@ -149,7 +149,6 @@ struct Home_Screen: View {
                             
                             Image("buttest")
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
                                 .cornerRadius(15)
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
@@ -186,7 +185,6 @@ struct Home_Screen: View {
                             
                             Image("investagr")
                                 .resizable()
-                                .aspectRatio(contentMode: .fit)
                                 .cornerRadius(15)
                               
                             HStack {
