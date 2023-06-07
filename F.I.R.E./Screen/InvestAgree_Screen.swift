@@ -53,44 +53,24 @@ struct InvestAgree_Screen: View {
                                     )
                                     .padding(.leading,name[index] == "Акции" ? 15 : 5)
                                     .onTapGesture {
-                                        if name[index] == "Акции" {
-                                            IsOn = 0
-                                           clr[0] = true
+                                        IsOn = index
+                                      
+                                            clr[0] = false
                                             clr[1] = false
                                             clr[2] = false
                                             clr[3] = false
-                                        }
-                                        if name[index] == "Облигации" {
-                                            IsOn = 1
-                                            clr[0] = false
-                                             clr[1] = true
-                                             clr[2] = false
-                                             clr[3] = false
-                                        }
-                                        if name[index] == "Криптовалюта" {
-                                            IsOn = 2
-                                            clr[0] = false
-                                             clr[1] = false
-                                             clr[2] = true
-                                             clr[3] = false
-                                        }
-                                        if name[index] == "Недвижимость" {
-                                            IsOn = 3
-                                            clr[0] = false
-                                             clr[1] = false
-                                             clr[2] = false
-                                             clr[3] = true
-                                        }
+                                            clr[IsOn] = true
+                                            
+                                        
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    }
                                     }
                             }
-                            
-                           
-                                
                             }
-                            
-                        }
-                
-                    
                     //1 текст
                     VStack(spacing:15) {
                         if IsOn == 0 {
@@ -190,7 +170,7 @@ struct InvestAgree_Screen: View {
                     }.padding(.horizontal,15)
                     
                 }
-            }
+            }.animation(.spring())
         }
     }
     struct InvestAgree_Screen_Previews: PreviewProvider {
