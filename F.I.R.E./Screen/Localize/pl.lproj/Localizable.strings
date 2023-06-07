@@ -256,3 +256,72 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 "key_stock1" = "Co to są akcje";
 "key_stock2" = "Akcje to papiery wartościowe emitowane przez spółkę akcyjną, innymi słowy spółkę emitującą. Wszyscy inwestorzy, którzy kupili akcje, stali się współwłaścicielami firmy. Akcje po prostu potwierdzają, że ich właściciel ma udział w firmie, nawet jeśli jest bardzo mały";
 "key_stock3" = "jakie są rodzaje akcji?";
+
+
+"Investagree1" = "Inwestuj prawidłowo";
+"Bonds1" = "Obligacje";
+"Stocks1" = "Akcje";
+"Cryptocurrency1" = "Kryptowaluta";
+"Bonds2" = "Obligacje są skryptem dłużnym; są emitowane przez emitenta, który potrzebuje funduszy. Kupując te papiery wartościowe, inwestor pożycza swoje pieniądze, za które otrzymuje dochód.";
+"Step1" = "Krok 1";
+"Step1.1" = "Przed zakupem obligacji danego emitenta zapoznaj się z przypisanymi do niego ratingami kredytowymi.";
+"Creditratings1" = "Ratingi kredytowe:";
+"Creditratings2" = "Im niższy rating kredytowy, tym większe prawdopodobieństwo niewypłacalności.";
+"Step2" = "Krok 2";
+"Step2.1" = "Upewnienie się, że temu emitentowi można powierzyć swoje fundusze, pomoże nie tylko w ratingach kredytowych, ale także w wglądzie w jego działalność - podstawowe informacje można uzyskać z prezentacji firmy i regularnych raportów.";
+"Step3" = "Krok 3";
+"Step3.1" = "Dodatkowym kryterium wyboru może być analiza ekspercka od zaufanych specjalistów.";
+"Step 3.2" = "Badają emitenta, mogą dostarczyć wizualne tabele i wykresy, tj. oszczędzają wysiłek i czas na znalezienie potrzebnych informacji.";
+
+
+
+
+"Promotion1" = "Akcja jest papierem wartościowym emitowanym przez spółkę akcyjną, innymi słowy, spółkę emitującą. Wszyscy inwestorzy, którzy kupili akcje, stali się współwłaścicielami spółki. Akcja potwierdza tylko, że jej właściciel ma udział w spółce, nawet jeśli jest on niewielki.";
+"PromotionTypes1" = "Akcje występują jako zwykłe i uprzywilejowane. Te pierwsze są najbardziej powszechne i dają prawo do głosowania na walnym zgromadzeniu akcjonariuszy. Te drugie nie.";
+"TypesOfInvesting1" = "Przed wyborem akcji do handlu, zdecyduj o swoim celu inwestycyjnym i strategii. Istnieją dwa rodzaje inwestorów - konserwatywni i agresywni. Inwestor konserwatywny inwestuje długoterminowo i koncentruje się głównie na dywidendach. Nie oczekuje szybkiego zwrotu, ale jest bardziej zabezpieczony przed ryzykiem. Inwestor agresywny jest gotowy podjąć ryzyko w celu uzyskania wyższego zwrotu. Stawia na wzrost (a czasem spadek) cen akcji.";
+"Conservative1" = "Jak konserwatywny inwestor wybiera papiery wartościowe?";
+"ConservativeStep1" = "Krok 1";
+"ConservativeStep1.1" = "Pierwszym kryterium wyboru jest wiarygodność. Zwróć uwagę na duże firmy, które istnieją od dawna i przetrwały więcej niż jeden kryzys gospodarczy. Akcje takich spółek prawie nie zmieniają ceny.";
+"ConservativeStep2" = "Krok 2";
+"ConservativeStep2.1" = "Drugim kryterium są wysokie dywidendy. Można na nie liczyć, kupując akcje niektórych spółek. Spółki wypłacające wysokie dywidendy nie zawsze nadają się do inwestycji wieloletnich.";
+"Aggressive1" = "Jak wybrać akcje do zakupu dla agresywnego inwestora?";
+"AggressiveStep1" = "Krok 1";
+"AggressiveStep1.2" = "Dla agresywnego inwestora jest to bardziej skomplikowane: musisz przeanalizować gospodarkę, branżę, samą firmę. Jeśli biznes kwitnie, a firma osiąga duże zyski, jej akcje będą zyskiwać na wartości (ale istnieje również ryzyko).";
+"AggressiveStep2" = "Krok 2";
+"AggressiveStep2.2" = "Zwróć uwagę na wykres cen akcji, porównaj go ze zmianami w branży i samej firmie. Jeśli papiery wartościowe są tanie, a firma wykazuje wzrost, nie jest to zły moment na zakup. Gdy wartość akcji wzrośnie, można je sprzedać z zyskiem. Im wyższy potencjał wzrostowy akcji, tym więcej można zarobić.";
+"Analise1" = "Jak analizować akcje?";
+"AnaliseFactors1" = "Istnieje wiele czynników, które wpływają na to, które akcje kupić. Podzielmy je na dwie części:";
+"AnaliseFactors1.1" = "Czynniki zewnętrzne to wskaźniki makroekonomiczne, sytuacja gospodarcza i polityczna w kraju, stan branży. Kanały informacyjne, opinie ekspertów, analiza akcji podobnych spółek pomogą zrozumieć sytuację.";
+"AnaliseFactors1.2" = "Czynniki wewnętrzne to wyniki finansowe spółki - jej przychody i zysk netto, ich stosunek (rentowność), płynność aktywów. Płynność akcji (jak szybko można sprzedać papiery wartościowe) również ma znaczenie.";
+
+
+
+"Cryptocurrency2" = "Kryptowaluta to środek płatniczy, który istnieje tylko w Internecie. Nie ma formy papierowej, a jej wartość jest niezależna od państwa. Podstawową jednostką miary są monety lub monety.";
+"CryptoStep1" = "Krok 1";
+"CryptoStep1.1" = "Pierwszym i najważniejszym czynnikiem jest kapitalizacja. Konwencjonalna mądrość głosi, że inwestycje w 10 najlepszych kryptowalut pod względem kapitalizacji są stosunkowo bezpieczne. Są to projekty, w które wierzy już wiele osób. Nie powinniśmy jednak zapominać, że zawsze istnieje ryzyko, więc dywersyfikacja jest trendem przez cały czas.";
+"CryptoStep2" = "Krok 2";
+"CryptoStep2.1" = "Dodajmy również, że wybierając kryptowalutę, należy spojrzeć na takie czynniki, jak wykres monety lub to, jak bardzo wybrana kryptowaluta doświadczyła spadków i wzrostów w rankingach kapitalizacji";
+"CryptoObjectivesInvestments1" = "Czy wybór kryptowaluty zależy od Twoich celów inwestycyjnych?";
+"CryptoObjectivesInvestments2" = "Z pewnością tak. Aby uzyskać stabilność, warto przyjrzeć się sprawdzonym projektom. Bitcoin i ether najlepiej pasują do tego hasła. Aby uzyskać szybkie zyski, warto przyjrzeć się popularnym meta-uniwersom lub tokenom gier, a może nawet nowym sieciom lub monetom, które przyczyniają się do rozwoju branży. Ryzyko lub stabilność - wybór zawsze należy do Ciebie";
+
+
+
+"EstateInvestments1" = "Inwestowanie w nieruchomości to nie tylko inwestowanie w mieszkania, ale także w grunty, nieruchomości komercyjne i miejsca parkingowe.";
+"EstateStep1" = "Krok 1";
+"EstateStep1.1" = "Zbadaj sytuację na rynku - na jakie nieruchomości jest popyt, czego szukają kupujący, jakie są średnie ceny nieruchomości, gdzie są interesujące lokalizacje lub obszary z rozwijającą się infrastrukturą. ";
+"EstateStep2" = "Krok 2";
+"EstateStep2.1" = "Zweryfikuj wiarygodność sprzedawców, deweloperów, najemców i pośredników. Sprawdź dokumentację, recenzje, ocenę, reputację. Sprawdź spory sądowe, przestoje. Wybierz płynny obiekt do zakupu.";
+"EstateInvestments1.1" = " Istnieją dwa główne sposoby inwestowania w nieruchomości: wynajem lub odsprzedaż z marżą. Obie metody mają wady i zalety.";
+"RentResale1" = "Wynajem i odsprzedaż mają wiele odmian, więc przyjrzyjmy się najprostszym z nich.";
+"Rent1" = "Wynajem";
+"Rent2" = "Wynajem długoterminowy mieszkania. Plus to łatwy sposób na generowanie dochodu, ponieważ zawsze znajdą się chętni do wynajęcia mieszkania. Wystarczy znaleźć długoterminowych najemców w dobrej wierze, podpisać umowę i zarabiać co miesiąc. Minus - znalezienie dobrych najemców może być czasochłonne. Ponadto metoda ta ma niską marżę zysku. Jeśli kupiłeś mieszkanie jako inwestycję, minie dużo czasu, zanim odzyskasz zainwestowane środki. Zaciągnięcie kredytu hipotecznego na wynajem długoterminowy jest również nieopłacalne: dochód nie pokryje spłaty kredytu.";
+"Rent2" = "Wynajem mieszkania na doby. Plusem jest możliwość szybkiego zarobku. Minus - koszty pracy. Trzeba codziennie meldować i wymeldowywać najemców oraz sprzątać mieszkanie. Istnieje ryzyko uszkodzenia mebli i nieplanowanych wydatków na naprawy.";
+"Rent3" = "Wynajem garażu lub miejsca parkingowego. Zaletą jest to, że inwestycja nie wymaga dużych nakładów. Wadą jest niska rentowność. Aby osiągnąć zysk, trzeba kupić kilka garaży lub miejsc parkingowych.";
+"Odsprzedaż1" = "Odsprzedaż";
+"Odsprzedaż2" = "Odsprzedaż działki. Plusem jest to, że wystarczy kupić działkę i poczekać na wzrost ceny rynkowej. Działka nie wymaga dodatkowych inwestycji i utrzymania. Minus - czasami trzeba czekać latami.";
+"Odsprzedaż3" = "Kupno domu w złym stanie. Plusem jest duży zysk. Kupujesz tanio, inwestujesz w naprawę i sprzedajesz za dwukrotność ceny. Minus - znalezienie i naprawa takiego mieszkania zajmuje dużo czasu.";
+"EstateInvestments1.2" = "Jak zarobić więcej pieniędzy na nieruchomościach?";
+"EstateAdvice1" = "Podział dużego mieszkania na kawalerki. Bardziej opłacalne jest wynajęcie mieszkania wielu najemcom.";
+"EstateAdvice2" = "Przebudowa. Ta metoda nie tylko poprawia warunki życia, ale także zwiększa wartość nieruchomości.";
+"EstateAdvice3" = "Wysokiej jakości renowacja.";
+"EstateAdvice4" = "Konwersja z mieszkalnego na niemieszkalny i z powrotem. Zakup nieruchomości komercyjnej wymaga dużej inwestycji. Rozwiązaniem jest zakup mieszkania na parterze budynku mieszkalnego, a następnie przekształcenie go w lokal niemieszkalny.";

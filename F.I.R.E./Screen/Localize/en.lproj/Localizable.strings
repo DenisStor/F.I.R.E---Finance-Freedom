@@ -250,3 +250,78 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 
 "key_stock2" = "Stock - A stock is a security issued by a joint—stock company, in other words, an issuing company. All investors who bought shares became co-owners of the company. The promotion simply confirms that its owner has a stake in the company, even if it is very small";
 "key_stock3" = "What types of stocks are there?";
+
+
+
+"Investagree1" = "Invest correctly";
+"Bonds1" = "Bonds";
+"Stocks1" = "Stocks";
+"Cryptocurrency1" = "Cryptocurrency";
+"Bonds2" = "Bonds are a debenture, issued by an issuer who needs funds. When an investor buys these securities, he lends his money, for which he receives income.";
+"Step1" = "Step 1";
+"Step1.1" = "Before you buy bonds of a particular issuer, familiarize yourself with the credit ratings assigned to it.";
+"Creditratings1" = "Credit ratings:";
+"Creditratings2" = "The lower the credit rating, the more likely it is to default.";
+"Step2" = "Step 2.";
+"Step2.1" = "To make sure that this issuer can be trusted with your funds, not only the credit ratings will help, but also an insight into its operations - basic information can be gleaned from company presentations and regular reporting.";
+"Step3" = "Step 3";
+"Step3.1" = "An additional selection criterion can be expert analysis from professionals you trust.";
+"Step3.2" = "They study the issuer, can provide visual tables and graphs, that is, they save you effort and time in finding the information you need.";
+
+
+
+
+
+"Promotion1" = "A share is a security issued by a joint stock company, in other words, the issuing company. All investors who bought shares became co-owners of the company. A share just confirms that its owner has a stake in the company, however small.";
+"PromotionTypes1" = "Shares come in common and preferred. The first most common ones give the right to vote at the general meeting of shareholders. The latter do not.";
+"TypesOfInvesting1" = "Before choosing a stock to trade, decide on your investment objective and strategy. There are two types of investors - conservative and aggressive. A conservative investor makes long-term investments and focuses primarily on dividends. He does not expect quick profit, but is more protected against risks. An aggressive investor is willing to take risks for the sake of more income. He plays on increasing (and sometimes decreasing) stock prices.";
+"Conservative1" = "How do a conservative investor choose securities?";
+"ConservativeStep1" = "Step 1";
+"ConservativeStep1.1" = "The first selection criterion is reliability. Pay attention to the large ones that have existed for a long time and have survived more than one economic crisis. Shares of such companies almost do not change in price.";
+"ConservativeStep2" = "Step 2";
+"ConservativeStep2.1" = "The second criterion is high dividends. You can count on them when you buy stock in Some companies. Not always companies that pay high dividends are suitable for multi-year investments.";
+"Aggressive1" = "How do an aggressive investor choose a stock to buy?";
+"AggressiveStep1" = "Step 1";
+"AggressiveStep1.2" = "Aggressive investor has a harder time: you need to analyze the economy, the industry, the company itself. If business is booming and the company is making large profits, its shares will appreciate (but there are risks, too).";
+"AggressiveStep2" = "Step 2";
+"AggressiveStep2.2" = "Pay attention to the chart of stock prices, compare it to changes in the industry and the company itself. If the securities are cheap and the company is showing growth, it's not a bad time to buy. When the stock rises in value, you can sell it for a profit. The higher the upside potential of the stock, the more you can earn.";
+"Analise1" = "How do you analyze a stock?";
+"AnaliseFactors1" = "There are many factors that influence which stocks to buy. Let's split them into two parts:";
+"AnaliseFactors1.1" = "External factors are macroeconomic indicators, the economic and political situation in the country, the state of the industry. Newsfeeds, experts' opinions, analysis of shares of similar companies will help to understand the situation.";
+"AnaliseFactors1.2" = "Internal factors are a company's financial indicators - its revenue and net profit, their ratio (profitability), liquidity of assets. Stock liquidity (how quickly securities can be sold) also matters.";
+
+
+
+"Cryptocurrency2" = "Cryptocurrency is a means of payment that exists only on the Internet. It has no paper expression, and its value does not depend on the state. The basic unit of measurement is coins.";
+"CryptoStep1" = "Step 1";
+"CryptoStep1.1" = "The first and most important factor is capitalization. It is generally accepted that investments in the top 10 cryptocurrencies by capitalization are relatively safe. These are projects in which a lot of people have already believed. However, we should not forget that there is always risk, so diversification is a trend for all times.";
+"CryptoStep2" = "Step 2";
+"CryptoStep2.1" = "Also, let's add that when choosing a cryptocurrency, you should pay attention to such factors as\n The chart of the coin or what drops and rises the cryptocurrency of your choice has experienced\nThe place in the capitalization rating\nLook at the news agenda and forecasts";
+
+"CryptoObjectivesInvestments1" = "Does your choice of cryptocurrency depend on your investment objectives?";
+
+"CryptoObjectivesInvestments2" = "Of course it does. For stability, it's worth looking at time-tested projects. Bitcoin and ether fit this slogan best. For fast profits, it's worth looking at popular meta-universes or game tokens, maybe even new networks or coins that contribute to the development of the industry. Risk or stability, the choice is always yours.";
+
+
+
+
+
+"EstateInvestments1" = "Investing in real estate is not only investing in apartments, but also in land, commercial facilities, and parking spaces.";
+"EstateStep1" = "Step 1";
+"EstateStep1.1" = "Study the market situation - what kind of real estate there is demand for, what buyers are looking for, what the average prices of properties are, where there are interesting locations or neighborhoods with developing infrastructure. ";
+"EstateStep2" = "Step 2";
+"EstateStep2.1" = "Make sure sellers, developers, tenants, and brokers are reliable. Check the documentation, reviews, rating, reputation. Look for litigation, downtime. Select a liquid object for purchase.";
+"EstateInvestments1.1" = " There are two main ways to invest in real estate: renting or reselling with a markup. Both methods have pros and cons.";
+"RentResale1" = "Rent and resale have many variations, so let's look at the simplest ones.";
+"Rent1" = "Rent";
+"Rent2" = "Long-term rental apartment. Plus is an easy way to generate income, as there are always those willing to rent an apartment. It is enough to find bona fide tenants for a long term, sign a contract and get a monthly profit. Minus - the search for good tenants can be time-consuming. In addition, this method has a low profit margin. If you bought an apartment as an investment, it will take you a long time to recoup your investment. Taking out a mortgage for a long-term lease is also unprofitable: the income will not cover the loan payments.";
+"Rent2" = "Renting an apartment by the day. The plus - the opportunity to make a quick buck. Minus - the labor costs. You will have to check in and check out the tenants every day and clean the place. There is a risk of damage to furniture and unplanned expenditure on repairs.";
+"Rent3" = "Renting out a garage or parking space. The plus is that the investment does not require a large investment. Minus - low profitability. To make a profit, you have to buy several garages or parking spaces.";
+"Resale1" = "Resale";
+"Resale2" = "Resale of the land. The upside is that you only have to buy the land and wait for the market price to rise. The land does not require additional investment and maintenance. Minus - sometimes you have to wait years.";
+"Resale3" = "Buying a home in poor condition. The plus is a big profit. You buy the house cheap, invest in repairs and sell it for twice the price. Minus - it takes a lot of time to find and repair such an apartment.";
+"EstateInvestments1.2" = "How to make more money from real estate?";
+"EstateAdvice1" = "Dividing a large apartment into studios. It's more profitable to rent an apartment to multiple tenants.";
+"EstateAdvice2" = "Remodeling. This method not only improves living conditions, but also increases the value of the property.";
+"EstateAdvice3" = "Quality renovations.";
+"EstateAdvice4" = "Conversion from residential to non-residential and back. Buying commercial real estate requires a large investment. The way out is to buy a dwelling on the first floor of an apartment building and then convert it to non-residential.";
