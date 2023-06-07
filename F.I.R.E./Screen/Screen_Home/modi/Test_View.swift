@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct Test_modi: View {
+struct Test_View: View {
     var totalQwestion : Int //всего вопросов
    // вопрос сейчас
-    var Title : [String] // заголовок
+  
     var Text_info : [String] //основной текст
     var TrueQwestion : [Bool?] //правильные вопросы
     
@@ -167,6 +167,7 @@ struct Test_modi: View {
                         TrueForModi = nil
                     }
                 }.padding(.horizontal,15)
+                    .padding(.bottom,15)
             }
         }
     }
@@ -174,6 +175,6 @@ struct Test_modi: View {
 
 struct Test_modi_Previews: PreviewProvider {
     static var previews: some View {
-        Test_modi(totalQwestion: 3,Title: ["1","2","3"], Text_info: ["ds edthtys?", "levftnt?", "levftnt?"], TrueQwestion: [true, false,false])
+        Test_View(totalQwestion: 3,Text_info: ["ds edthtys?", "levftnt?", "levftnt?"], TrueQwestion: [true, false,false])
     }
 }
