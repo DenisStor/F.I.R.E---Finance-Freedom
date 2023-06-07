@@ -170,7 +170,7 @@ struct InvestAgree_Screen: View {
                     }.padding(.horizontal,15)
                     
                 }
-            }.animation(.spring())
+            }
         }
     }
     struct InvestAgree_Screen_Previews: PreviewProvider {
