@@ -93,6 +93,7 @@ struct Famous_Screen: View {
                                     Image(Image1[index])
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
+                                        .cornerRadius(15)
                                     VStack{
                                         HStack{
                                             

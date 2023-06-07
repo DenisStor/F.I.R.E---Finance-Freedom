@@ -30,7 +30,7 @@ struct SafeMoney_Screen: View {
                 
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 30)
+                    RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(Color("Color_font_1"))
                         .frame(height: 179)
                     VStack {
@@ -85,7 +85,7 @@ struct SafeMoney_Screen: View {
                 }
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 30)
+                    RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(Color("Color_Start"))
                         .frame(height: 233)
                     VStack {
@@ -140,7 +140,7 @@ struct SafeMoney_Screen: View {
                 }
                 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 30)
+                    RoundedRectangle(cornerRadius: 15)
                         .foregroundColor(Color("Color_Start"))
                         .frame(height: 250)
                     ZStack {

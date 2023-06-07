@@ -32,7 +32,7 @@ struct Procent_Screen: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing: 20){
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 15)
                             .frame(height: 180)
                             .foregroundColor(Color("Color_font_1"))
                         HStack{
@@ -78,7 +78,7 @@ struct Procent_Screen: View {
                         Spacer()
                     }
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 15)
                             .frame(height: 350)
                             .foregroundColor(Color("Color_Start"))
                         VStack{
@@ -120,7 +120,7 @@ struct Procent_Screen: View {
                                 }
                             }.padding(.horizontal,20)
                             
-                            RoundedRectangle(cornerRadius: 30)
+                            RoundedRectangle(cornerRadius: 15)
                                 .frame(height: 5)
                                 .foregroundColor(Color("Color_font_2"))
                                 .opacity(0.4)
@@ -150,7 +150,7 @@ struct Procent_Screen: View {
                         
                     }
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 15)
                             .frame(height: 300)
                             .foregroundColor(Color("Color_Start"))
                         VStack(alignment: .leading,spacing:10){
@@ -187,7 +187,7 @@ struct Procent_Screen: View {
                             .font(.system(size: 22,weight: .medium))
                     }
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 15)
                             .frame(height: 200)
                             .foregroundColor(Color("Color_Start"))
                         VStack(alignment: .leading,spacing: 15){

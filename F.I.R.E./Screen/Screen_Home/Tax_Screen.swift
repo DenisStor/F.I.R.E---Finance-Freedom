@@ -73,7 +73,7 @@ struct Tax_Screen: View {
                                 }
                             }    .padding(20)
                             .background(
-                                RoundedRectangle(cornerRadius: 30)
+                                RoundedRectangle(cornerRadius: 15)
                                     .foregroundColor(Color("Color_font_1"))
                                 
                                  
@@ -103,7 +103,7 @@ struct Tax_Screen: View {
                                 } .padding(20)
                         
                             .background(
-                                RoundedRectangle(cornerRadius: 30)
+                                RoundedRectangle(cornerRadius: 15)
                                     .foregroundColor(Color("Color_button"))
                                 
                                  
@@ -134,7 +134,7 @@ struct Tax_Screen: View {
                                 
                             } .padding(20)
                             .background(
-                                RoundedRectangle(cornerRadius: 30)
+                                RoundedRectangle(cornerRadius: 15)
                                     .foregroundColor(Color("Color_button"))
                                  
                             )      }

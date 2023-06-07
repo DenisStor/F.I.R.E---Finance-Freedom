@@ -21,7 +21,7 @@ struct Home_Screen: View {
                     VStack(spacing: spacing){
                         
                         
-                        RoundedRectangle(cornerRadius: 30)
+                        RoundedRectangle(cornerRadius: 15)
                             .frame(height: 25)
                             .foregroundColor(Color("Color_font_1"))
                             .opacity(0)
@@ -31,7 +31,7 @@ struct Home_Screen: View {
                             Image("butone")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .cornerRadius(30)
+                                .cornerRadius(15)
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     Text("Createfinancialreserves")
@@ -63,7 +63,7 @@ struct Home_Screen: View {
                         
                         
                         ZStack{
-                            RoundedRectangle(cornerRadius: 30)
+                            RoundedRectangle(cornerRadius: 15)
                                 .frame(height: 280)
                                 .foregroundColor(Color("Color_wgt"))
                             HStack{
@@ -115,7 +115,7 @@ struct Home_Screen: View {
                             Image("FamousPeople")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .cornerRadius(30)
+                                .cornerRadius(15)
                               
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
@@ -150,6 +150,7 @@ struct Home_Screen: View {
                             Image("buttest")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                                .cornerRadius(15)
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     HStack{
@@ -183,27 +184,19 @@ struct Home_Screen: View {
                         ZStack{
                             
                             
-                            Image("FamousPeople")
+                            Image("investagr")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                                .cornerRadius(15)
                               
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
-                                    Text("dsds")
+                                    Text("investagr1")
                                         .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                     
                                     
-                                    
-                                    Text("dsds")
-                                        .font(.system(size: 22,weight: .medium))
-                                        .foregroundColor(Color(white: 1, opacity: 0.5))
-                                        .overlay(
-                                            Rectangle().frame(height: 2).offset(y: 4)
-                                            , alignment: .bottom)
-                                    
-                                    
-                                        .foregroundColor(Color(white: 1, opacity: 0.5))
+                                  
                                     
                                 }
                                 Spacer()
@@ -220,7 +213,7 @@ struct Home_Screen: View {
                     label: {
                         ZStack{
                             
-                            RoundedRectangle(cornerRadius: 30)
+                            RoundedRectangle(cornerRadius: 15)
                                 
                                     .frame(height: 90)
                                     .foregroundColor(Color("Color_wgt"))

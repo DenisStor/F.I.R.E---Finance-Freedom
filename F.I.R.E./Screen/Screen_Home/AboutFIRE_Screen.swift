@@ -46,7 +46,7 @@ struct AboutFIRE_Screen: View {
                                 .foregroundColor(Color("Color_font_2"))
                                 .padding(20)
                                 .background(){
-                                    RoundedRectangle(cornerRadius: 30)
+                                    RoundedRectangle(cornerRadius: 15)
                                         .foregroundColor(Color("Color_font_1"))
                                 }
                             Spacer()
@@ -103,6 +103,7 @@ struct AboutFIRE_Screen: View {
                                         Image(ImageBook[index])
                                            // .resizable()
                                            // .aspectRatio(contentMode: ContentMode.fit)
+                                            .cornerRadius(10)
                                         VStack {
                                             Text(TextBook[index])
                                                 .font(.system(size: 21,weight: .semibold))

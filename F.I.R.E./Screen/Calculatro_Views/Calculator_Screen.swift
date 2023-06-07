@@ -25,6 +25,7 @@ struct Calculator_Screen: View {
                                 Image("Calcul_1")
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(15)
                                 
                                 HStack{
                                     
@@ -51,6 +52,7 @@ struct Calculator_Screen: View {
                             Image("Calcul_2")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
+                                .cornerRadius(15)
                             
                             HStack{
                                 

@@ -87,7 +87,7 @@ struct Settings_screen: View {
                     }
                 }
                 ZStack {
-                    RoundedRectangle(cornerRadius: 30)
+                    RoundedRectangle(cornerRadius: 15)
                         .frame(height: 60)
                         .padding(.vertical,20)
                         .foregroundColor(Color("Color_font_1"))
