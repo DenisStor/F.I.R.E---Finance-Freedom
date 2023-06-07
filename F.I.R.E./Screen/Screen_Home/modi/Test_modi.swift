@@ -25,19 +25,48 @@ struct Test_modi: View {
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
             if index >= totalQwestion {
-                VStack{
-                  Text("\(total)")
+                VStack(alignment: .leading){
+                    HStack {
+                        Text("\(total)")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 45,weight: .medium))
+                        .multilineTextAlignment(.leading)
+                        Text("prav8")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 45,weight: .medium))
+                        Spacer()
+                    }
                     switch total {
                     case 0...otvet[0]:
-                        Text("lh")
+                        HStack {
+                            Text("testbad")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 30,weight: .medium))
+                            .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
                     case otvet[0]...otvet[1]:
-                        Text("vef")
+                        HStack {
+                            Text("testcool")
+                                .foregroundColor(Color("Color_font_1"))
+                                .font(.system(size: 45,weight: .medium))
+                            .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
                     case otvet[1]...otvet[2]:
-                        Text("veve")
+                        HStack {
+                            Text("testbest")
+                                .foregroundColor(Color("Color_font_1"))
+                                .font(.system(size: 45,weight: .medium))
+                            .multilineTextAlignment(.leading)
+                            Spacer()
+                        }
                     default:
                         Text("Erore")
                     }
-                }
+                    Spacer()
+                }.padding(.horizontal,15)
+                    .padding(.top,20)
             }
             else {
                 VStack(alignment: .leading,spacing:20){
@@ -49,7 +78,7 @@ struct Test_modi: View {
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 45,weight: .medium))
                         .multilineTextAlignment(.leading)
-                        Text("lesson")
+                        Text("lessontrans")
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 45,weight: .medium))
                     }
@@ -137,9 +166,9 @@ struct Test_modi: View {
                         }
                         TrueForModi = nil
                     }
-                }
+                }.padding(.horizontal,15)
             }
-        }.padding(.horizontal,15)
+        }
     }
 }
 

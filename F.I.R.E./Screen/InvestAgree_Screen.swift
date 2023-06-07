@@ -26,7 +26,7 @@ struct InvestAgree_Screen: View {
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
             ScrollView(showsIndicators: false){
-                VStack (alignment: .leading, spacing: 20) {
+                VStack (alignment: .leading, spacing: 30) {
                     HStack{
                         Text("Investagree1")
                             .font(.system(size: 40, weight: .semibold))
@@ -394,7 +394,7 @@ struct InvestAgree_Screen: View {
 
                         }
                     }.padding(.horizontal,15)
-                    
+                        .padding(.top,20)
                 }
             }
         }
