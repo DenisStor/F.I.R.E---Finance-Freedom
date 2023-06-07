@@ -13,7 +13,7 @@ struct Test_modi: View {
     var Title : [String] // заголовок
     var Text_info : [String] //основной текст
     var TrueQwestion : [Bool?] //правильные вопросы
-    var otvet : [Int] //ответы
+    
     
     @State private var index : Int = 0
    // @State var F = TrueQwestion
@@ -37,27 +37,27 @@ struct Test_modi: View {
                         Spacer()
                     }
                     switch total {
-                    case 0...otvet[0]:
+                    case 0...totalQwestion/3:
                         HStack {
                             Text("testbad")
                                 .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 30,weight: .medium))
+                                .font(.system(size: 25,weight: .medium))
                             .multilineTextAlignment(.leading)
                             Spacer()
                         }
-                    case otvet[0]...otvet[1]:
+                    case totalQwestion/3...(totalQwestion/3)*2:
                         HStack {
                             Text("testcool")
-                                .foregroundColor(Color("Color_font_1"))
-                                .font(.system(size: 45,weight: .medium))
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 25,weight: .medium))
                             .multilineTextAlignment(.leading)
                             Spacer()
                         }
-                    case otvet[1]...otvet[2]:
+                    case (totalQwestion/3)*2...totalQwestion:
                         HStack {
                             Text("testbest")
-                                .foregroundColor(Color("Color_font_1"))
-                                .font(.system(size: 45,weight: .medium))
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 25,weight: .medium))
                             .multilineTextAlignment(.leading)
                             Spacer()
                         }
@@ -174,6 +174,6 @@ struct Test_modi: View {
 
 struct Test_modi_Previews: PreviewProvider {
     static var previews: some View {
-        Test_modi(totalQwestion: 3,Title: ["1","2","3"], Text_info: ["ds edthtys?", "levftnt?", "levftnt?"], TrueQwestion: [true, false,false], otvet: [1,2,3])
+        Test_modi(totalQwestion: 3,Title: ["1","2","3"], Text_info: ["ds edthtys?", "levftnt?", "levftnt?"], TrueQwestion: [true, false,false])
     }
 }
