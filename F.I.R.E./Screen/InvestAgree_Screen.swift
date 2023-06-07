@@ -22,8 +22,8 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("Криптовалюта", comment: ""),
     NSLocalizedString("Недвижимость", comment: ""),
     ]
-    
-    
+    @State private var IsOn : Int = 0
+    @State private var clr : [Bool] = [true , false , false , false]
     
     
     var body: some View {
@@ -37,7 +37,7 @@ struct InvestAgree_Screen: View {
                             .font(.system(size: 40, weight: .semibold))
                             .foregroundColor(Color("Color_font_1"))
                         Spacer()
-                    }
+                    }.padding(.horizontal,15)
                     
                     ScrollView (.horizontal, showsIndicators: false) {
                         HStack {
@@ -45,14 +45,46 @@ struct InvestAgree_Screen: View {
                                 Text(name[index])
                                     .padding(20)
                                     .font(.system(size: 18, weight: .medium))
-                                    .foregroundColor(Color("Color_font_2"))
+                                    .foregroundColor(clr[index] ? Color("Color_font_2") : Color("Color_font"))
                                     .background(
                                         RoundedRectangle(cornerRadius: 10)
-                                            .foregroundColor(Color("Color_font_1"))
+                                            .foregroundColor(clr[index] ? Color("Color_font_1") : Color("Color_button") )
                                         
                                     )
-                                
+                                    .padding(.leading,name[index] == "Акции" ? 15 : 5)
+                                    .onTapGesture {
+                                        if name[index] == "Акции" {
+                                            IsOn = 0
+                                           clr[0] = true
+                                            clr[1] = false
+                                            clr[2] = false
+                                            clr[3] = false
+                                        }
+                                        if name[index] == "Облигации" {
+                                            IsOn = 1
+                                            clr[0] = false
+                                             clr[1] = true
+                                             clr[2] = false
+                                             clr[3] = false
+                                        }
+                                        if name[index] == "Криптовалюта" {
+                                            IsOn = 2
+                                            clr[0] = false
+                                             clr[1] = false
+                                             clr[2] = true
+                                             clr[3] = false
+                                        }
+                                        if name[index] == "Недвижимость" {
+                                            IsOn = 3
+                                            clr[0] = false
+                                             clr[1] = false
+                                             clr[2] = false
+                                             clr[3] = true
+                                        }
+                                    }
                             }
+                            
+                           
                                 
                             }
                             
@@ -60,11 +92,33 @@ struct InvestAgree_Screen: View {
                 
                     
                     //1 текст
-                    HStack {
-                        Text("dsds")
-                    }
+                    VStack(spacing:0) {
+                        if IsOn == 0 {
+                            Text("Акции")
+                            Text("Акции")
+                            Text("Акции")
+                            Text("Акции")
+                            Text("Акции")
+                            Text("Акции")
+                            
+                            
+                            
+                            
+                            
+                            
+                        }
+                        if IsOn == 1 {
+                            Text("обилиги")
+                        }
+                        if IsOn == 2 {
+                            Text("крипта")
+                        }
+                        if IsOn == 3 {
+                            Text("недвига")
+                        }
+                    }.padding(.horizontal,15)
                     
-                } .padding(.horizontal,10)
+                }
             }
         }
     }
