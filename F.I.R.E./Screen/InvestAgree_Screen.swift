@@ -53,17 +53,21 @@ struct InvestAgree_Screen: View {
                                     )
                                     .padding(.leading,name[index] == "Акции" ? 15 : 5)
                                     .onTapGesture {
-                                        IsOn = index
-                                      
+                                        if IsOn == index {
+                                            print("Test")
+                                        }
+                                        else {
+                                            IsOn = index
+                                            
                                             clr[0] = false
                                             clr[1] = false
                                             clr[2] = false
                                             clr[3] = false
                                             clr[IsOn] = true
                                             
-                                        
-                                        
-                                        
+                                            
+                                            
+                                        }
                                         
                                         
                                         
