@@ -24,7 +24,7 @@ struct InvestAgree_Screen: View {
     ]
     @State private var IsOn : Int = 0
     @State private var clr : [Bool] = [true , false , false , false]
-    
+  
     
     var body: some View {
         ZStack {
@@ -51,7 +51,7 @@ struct InvestAgree_Screen: View {
                                             .foregroundColor(clr[index] ? Color("Color_font_1") : Color("Color_button") )
                                         
                                     )
-                                    .padding(.leading,name[index] == "Акции" ? 15 : 5)
+                                    .padding(.leading,index == 0 ? 15 : 5)
                                     .onTapGesture {
                                         if IsOn == index {
                                             print("Test")

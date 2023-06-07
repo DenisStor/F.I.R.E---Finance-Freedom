@@ -14,6 +14,7 @@ struct Test_modi: View {
     var Text_info : [String] //основной текст
     var TrueQwestion : [Bool?]
     
+    
     @State private var index : Int = 0
     
     var body: some View {
@@ -28,12 +29,13 @@ struct Test_modi: View {
             else {
                 VStack(alignment: .leading,spacing:20){
                     bar_progress(progress: Float(index), total: Float(totalQwestion))
+                        .frame(height: 40)
                     Text("\(Title[index])")
                     Text("да")
                         .onTapGesture {
                             if TrueQwestion[index] == nil {
                                 
-                        //       TrueQwestion[index] = true
+                          //     TrueQwestion[index] = true
                                 
                             }
                         }
@@ -43,15 +45,21 @@ struct Test_modi: View {
                             
                         }
                     VStack{
+                        
                         if totalQwestion-1 == index
                         {
                             Text("закончить")
                         } else {
-                            Text("Далее")
+                            ZStack{
+                                Text("Далее")
+                            }.opacity(TrueQwestion[index] == nil ? 0.5 : 1)
                         }
                     }.onTapGesture {
-                        index += 1
-                        
+                        if TrueQwestion[index] == nil {
+                            
+                        } else {
+                            index += 1
+                        }
                     }
                 }
             }
