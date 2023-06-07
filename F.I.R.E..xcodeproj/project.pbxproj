@@ -29,6 +29,7 @@
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
 		B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DECD942A22800400C0D5CA /* Test_Screen.swift */; };
+		D297796C2A30C3440067F57D /* InvestAgree_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		B7DECD942A22800400C0D5CA /* Test_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Screen.swift; sourceTree = "<group>"; };
+		D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestAgree_Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				B72893662A190A95003634D7 /* Settings_screen.swift */,
 				B72893622A190A76003634D7 /* Bar_Screen.swift */,
 				B72893682A190AF1003634D7 /* Start_Screen.swift */,
+				D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */,
 				B728936B2A1915D5003634D7 /* Home_Screen.swift */,
 				B728937A2A192D1C003634D7 /* Screen_Home */,
 				B728936F2A192363003634D7 /* Strings.swift */,
@@ -255,6 +258,7 @@
 				B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */,
 				B72893672A190A95003634D7 /* Settings_screen.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,
+				D297796C2A30C3440067F57D /* InvestAgree_Screen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
