@@ -111,9 +111,9 @@ struct Settings_screen: View {
                 }
                 .alert(isPresented: $alert1) {
                             Alert(
-                                title: Text("Are you sure you want to reset?"),
-                                message: Text("This action cannot be undone."),
-                                primaryButton: .destructive(Text("Delete")) {
+                                title: Text("1setd"),
+                                message: Text("2setd"),
+                                primaryButton: .destructive(Text("3setd")) {
                                     Start = 0
                                     Year = 1
                                     InMonth = 0
