@@ -20,7 +20,7 @@ struct Settings_screen: View {
                 .edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading,spacing: 20){
                 HStack {
-                    Text("О нас")
+                    Text("homeWord2")
                         .font(.system(size: 40,weight: .medium))
                         .foregroundColor(Color("Color_font"))
                     Spacer()
@@ -70,7 +70,7 @@ struct Settings_screen: View {
                 Spacer()
                 VStack(spacing: 10) {
                     HStack{
-                        Text("Mail for suggestions and \nfeedback")
+                        Text("mail1e")
                             .font(.system(size: 20,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                         Spacer()
@@ -93,7 +93,7 @@ struct Settings_screen: View {
                         .foregroundColor(Color("Color_font_1"))
                         .padding(.horizontal,animation ? 20 : 0)
                        
-                    Text("сбросить данные")
+                    Text("set5")
                         .font(.system(size: 25,weight: .medium))
                         .foregroundColor(Color("Color_font_2"))
                         

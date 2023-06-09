@@ -34,17 +34,12 @@ struct AboutFIRE_Screen: View {
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
                         }
-                        HStack{
-                            Text("«Время жизни ценнее материальных вещей»")
-                                .font(.system(size: 30,weight: .semibold))
-                                .foregroundColor(Color("Color_font"))
-                            Spacer()
-                        }
+                        
                         HStack{
                             Text("Чтобы скопить капитал и наконец перестать «работать ради жизни», авторы призывают быть бережливыми, контролировать расходы и помнить, что сбережения должны покрывать будущие расходы.")
-                                .font(.system(size: 22,weight: .semibold))
+                                .font(.system(size: 26,weight: .semibold))
                                 .foregroundColor(Color("Color_font_2"))
-                                .padding(20)
+                                .padding(25)
                                 .background(){
                                     RoundedRectangle(cornerRadius: 15)
                                         .foregroundColor(Color("Color_font_1"))
