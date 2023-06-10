@@ -16,6 +16,15 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("nedviga", comment: ""),
     ]
     
+    
+    @State private var bonds : [String] = [
+    NSLocalizedString("BondsQues1", comment: ""),
+    NSLocalizedString("BondsQues2", comment: ""),
+    NSLocalizedString("BondsQues3", comment: ""),
+    NSLocalizedString("BondsQues4", comment: ""),
+    NSLocalizedString("BondsQues5", comment: ""),
+    ]
+    @State private var bondsAns : [Bool] = [true , false ,true , false , true ]
 
     @State private var IsOn : Int = 0
     @State private var clr : [Bool] = [true , false , false , false]
@@ -138,8 +147,11 @@ struct InvestAgree_Screen: View {
                                 Spacer()
                                 
                             }
-                            
-                           // Test_View(totalQwestion: 10, Text_info: [], TrueQwestion: [])
+                            NavigationLink {
+                                Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns)
+                            } label: {
+                                Text("VEFKKE")
+                            }
                         }
                         
                 

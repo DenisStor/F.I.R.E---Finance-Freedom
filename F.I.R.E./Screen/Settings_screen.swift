@@ -14,6 +14,7 @@ struct Settings_screen: View {
    
     @State private var animation : Bool = false
     @State private var alert1 : Bool = false
+    @AppStorage ("currentPage") var currentPage : Int = 1
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -120,6 +121,8 @@ struct Settings_screen: View {
                                     Rate = 4
                                     earnMoney = ""
                                     spendMoney = ""
+                                    currentPage = 1
+                                    
                                 },
                                 secondaryButton: .cancel()
                             )
