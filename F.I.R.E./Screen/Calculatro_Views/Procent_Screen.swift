@@ -41,7 +41,9 @@ struct Procent_Screen: View {
                                     .font(.system(size: 30, weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
-                                    TextField("safeMoney2", text: $InMonth)
+                                    TextField("safeMoney2", text: $InMonth,
+                                              prompt: Text("safeMoney2")
+                                                  .foregroundColor(Color("textField")))
                                         
                                         .onReceive(Just(InMonth)) { index in
                                             
@@ -89,7 +91,9 @@ struct Procent_Screen: View {
                                         .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
                                     HStack {
-                                        TextField("safeMoney2", text: $Start)
+                                        TextField("safeMoney2", text: $Start,
+                                                  prompt: Text("safeMoney2")
+                                                      .foregroundColor(Color("textField")))
                                             .onReceive(Just(Start)) { index in
                                                 
                                                 if TextIs1(Start) {

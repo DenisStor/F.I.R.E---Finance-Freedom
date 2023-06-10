@@ -43,7 +43,8 @@ struct SafeMoney_Screen: View {
                         }
                         
                         HStack {
-                            TextField("safeMoney2", text: $earnMoney)
+                            TextField("safeMoney2", text: $earnMoney, prompt: Text("safeMoney2")
+                                .foregroundColor(Color("textField")))
                                 .onReceive(Just(earnMoney)) { index in
                                     
                                     if TextIs(earnMoney) {
@@ -98,7 +99,9 @@ struct SafeMoney_Screen: View {
                         }
                         
                         HStack {
-                            TextField("Введите число", text: $spendMoney)
+                            TextField("safeMoney2", text: $spendMoney,
+                                      prompt: Text("safeMoney2")
+                                          .foregroundColor(Color("textField")))
                                 .onReceive(Just(spendMoney)) { index in
                                     
                                     if TextIs1(spendMoney) {
