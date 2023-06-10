@@ -150,7 +150,7 @@ struct Home_Screen: View {
                             Image("buttest")
                                 .resizable()
                                 .cornerRadius(15)
-                                .aspectRatio(contentMode: .fit)
+                                .aspectRatio(contentMode: .fill)
                             HStack {
                                 VStack(alignment: .leading,spacing: 5){
                                     HStack{
