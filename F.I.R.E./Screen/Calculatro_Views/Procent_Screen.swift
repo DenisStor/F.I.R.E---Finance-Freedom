@@ -232,15 +232,27 @@ struct Procent_Screen: View {
                 }
             }.padding(.horizontal,15)
                 .sheet(isPresented: $Sheet) {
-                    VStack{
-                       
+                    ZStack{
                         Text("Риск-профиль или инвестиционный профиль участника рынка — это оценка его толерантности к риску. Со всем этим может помочь разобраться определение риск-профиля, которое, кстати, используется для того, чтобы затем выбрать подходящие именно для вас и реализации вашей цели финансовые инструменты и сформировать удобную для вас инвестстратегию.")
                             .font(.system(size: 22,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                             .multilineTextAlignment(.leading)
+                            .padding(.vertical,100)
+                        VStack {
+                            Text("Done")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity,alignment:.topTrailing)
+                                .font(.system(size: 22,weight: .medium))
+                                .foregroundColor(Color("Color_font_1"))
+                            .padding(.top,20)
+                            .onTapGesture {
+                                Sheet = false
+                            }
+                            Divider()
+                        }
                         
-                            .presentationDetents([.height(500)])
-                    }.padding(.horizontal,20)
+                    } .presentationDetents([.height(500)])
+                        .padding(.horizontal,15)
+                  
                 }
         }
             .toolbar {
