@@ -17,7 +17,7 @@ struct Start_Screen: View {
                     .aspectRatio(contentMode: .fit)
                     .padding(.top,140)
             }
-                VStack{
+            VStack(spacing:10){
                     HStack{
                         Image("logoFire")
                         Spacer()

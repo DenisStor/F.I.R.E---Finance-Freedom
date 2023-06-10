@@ -18,7 +18,7 @@ struct Test_Screen: View {
         NSLocalizedString("7q", comment: ""),
         NSLocalizedString("8q", comment: "")]
     
-    @State private var IsCount : Int = 0
+    
     
     @State private var TextInf : [String] = [
         NSLocalizedString("1a", comment: ""),
@@ -29,19 +29,17 @@ struct Test_Screen: View {
         NSLocalizedString("6a", comment: ""),
         NSLocalizedString("7a", comment: ""),
         NSLocalizedString("8a", comment: "")]
-   @State private var BoolCount : [Bool?] = [nil,nil,nil,nil,nil,nil,nil,nil] // не трогаем
+   
    @State private var Ideal : [Bool] = [false,false,false,false,false,false,false,false] //правильные ответы
-   @State private var tru : [Bool] = [false,false,false,false,false,false,false,false] //не трогать
-    @State private var trueee = Calculator()
-    
-    @AppStorage ("howMuch") var howmuch : Int = 0
+   
+  
     
     
     
     @State private var total : Float = 8
     @State private var progress : Float = 0
     var body: some View {
-        Test_View(totalQwestion: 8,Text_info: TextInf, TrueQwestion: tru)
+        Test_View(totalQwestion: 8,Text_info: TextInf, TrueQwestion: Ideal)
            
     }
    
