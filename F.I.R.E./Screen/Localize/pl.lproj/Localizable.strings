@@ -354,3 +354,73 @@ przesadą. Nie jest to zwykła proporcja 10-15% wynagrodzenia, ale 50%, a nawet 
 dochodu.";
 "FireRec1" = "Przydatna literatura";
 "FireRec2" = "Zespół FIRE poleca";
+
+
+//Облигации
+"BondsQues1" = "Czy obligacje państwowe są najmniej ryzykownymi papierami wartościowymi?";
+"BondsQues1.1" = "Tak";
+"BondsQues1.2" = "Nie";
+"BondsQues2" = "Jeśli cena rynkowa obligacji wynosi 98, a wartość nominalna to 1000 Zdlt, to czy papier można kupić za 9800?";
+"BondsQues2.1" = "Tak";
+"BondsQues2.2" = "Nie";
+"BondsQues3" = "Kiedy kluczowa stopa procentowa banku centralnego wzrasta, rentowność obligacji ma tendencję wzrostową?";
+"BondsQues3.1" = "Tak";
+"BondsQues3.2" = "Nie";
+"BondsQues4" = "Czy efektywna rentowność do terminu zapadalności uwzględnia reinwestycję kuponów?";
+"BondsQues4.1" = "Tak";
+"BondsQues4.2" = "Nie";
+"BondsQues5" = "Czy oferta przewiduje wcześniejszy wykup obligacji?";
+"BondsQues5.1" = "Tak";
+"BondsQues5.2" = "Nie";
+"TestResult" = "Wyniki testu";
+//Криптовалюта
+"KriptoQues1" = "Zacznijmy od rozgrzewki. Czy Bitcoin jest największą kryptowalutą pod względem kapitalizacji?";
+"KriptoQues1.1" = "Tak";
+"KriptoQues1.2" = "Nie";
+"Next1" = "DALEJ";
+"KriptoQues2" = "Zróbmy to trochę trudniej. Algorytm, na którym działa Ethereum, to Proof-of-Work?";
+"KriptoQues2.1" = "Tak";
+"KriptoQues2.2" = "Nie";
+"KriptoQues3" = "Czy kryptowaluta USDT, USDC, UST jest stablecoinem?";
+"KriptoQues3.1" = "Tak";
+"KriptoQues3.2" = "Nie";
+"KriptoQues4" = "Zajmujemy się stablecoinami. Czy kryptowaluty o niskiej kapitalizacji są bardziej zmienne?";
+"KriptoQues4.1" = "Tak";
+"KriptoQues4.1" = "Nie";
+"KriptoQues5" = "Porozmawiajmy o trendach. Move-to-Earn to aplikacje, które pozwalają zarabiać kryptowaluty grając w gry komputerowe?";
+"KriptoQues5.1" = "Tak";
+"KriptoQues5.2" = "Nie";
+//Акции
+"TestStocksQues1" = "Test na temat Inwestowania w akcje";
+"StocksQues1" = "Czy inwestowanie w akcje to kupowanie udziałów w spółkach?";
+"StocksQues1.1" = "Tak";
+"StocksQues1.2" = "Nie";
+"StocksQues2" = "Czy zaletą kupowania akcji jest wysoka stopa zwrotu i możliwość otrzymywania dywidend?";
+"StocksQues2.1" = "Tak";
+"StocksQues2.2" = "Nie";
+"StocksQues3" = "Czy wybierając akcje, w które chcesz zainwestować, powinieneś wziąć pod uwagę poziom wpływu rządu na spółkę?";
+"StocksQues3.1" = "Tak";
+"StocksQues3.2" = "Nie";
+ "StocksQues4" = "Czy inwestowanie w start-upy jest uważane za najbardziej ryzykowne?";
+"StocksQues4.1" = "Tak";
+"StocksQues4.2" = "Nie";
+ "StocksQues5" = "Czy podczas inwestowania w akcje zazwyczaj naliczany jest podatek od zysków firmy?";
+"StocksQues5.1" = "Tak";
+"StocksQues5.2" = "Nie";
+//Недвижимость
+"EstateQues1" = "Czy inwestowanie w nieruchomości to kupno domu w celu odsprzedaży czy wynajmu?";
+"EstateQues1.1" = "Tak";
+"EstateQues1.2" = "Nie";
+"EstateQues2" = "Jedną z zalet inwestowania w nieruchomości jest bezpieczeństwo kapitału?";
+"EstateQues2.1" = "Tak";
+"EstateQues2.2" = "Nie";
+"EstateQues3" = "Jednym z czynników decydujących o wyborze inwestycji w nieruchomość jest jej lokalizacja?";
+"EstateQues3.1" = "Tak";
+"EstateQues3.2" = "Nie";
+"EstateQues4" = "Czy zakup działki jest uważany za najbardziej ryzykowny rodzaj inwestycji?";
+"EstateQues4.1" = "Tak";
+"EstateQues4.2" = "Nie";
+"EstateQues5" = "Czy podatek od nieruchomości jest zwykle pobierany przez państwo przy inwestowaniu w nieruchomości?";
+"EstateQues5.1" = "Tak";
+"EstateQues5.2" = "Nie";
+
