@@ -23,13 +23,13 @@ struct AboutFIRE_Screen: View {
                             Spacer()
                         }
                         HStack{
-                            Text("FIRE как образ \nжизни")
+                            Text("Fire1")
                                 .font(.system(size: 38,weight: .medium))
                                 .foregroundColor(Color("Color_font_1"))
                             Spacer()
                         }
                         HStack{
-                            Text("Движение FIRE появилось в США в 90-х годах, а его основные идеи получили развитие благодаря книге 1992 года «Кошелек или жизнь»")
+                            Text("Fire2")
                                 .font(.system(size: 23,weight: .semibold))
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
@@ -44,14 +44,14 @@ struct AboutFIRE_Screen: View {
                   
                     VStack(spacing: 30){
                         HStack{
-                            Text("Драйвером FIRE стал резкий рост цен на недвижимость в США в 2000-х годах. Молодые люди поняли, что не потянут покупку квартиры.")
+                            Text("Fire3")
                                 .font(.system(size: 23,weight: .semibold))
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
                         }
                         
                         HStack{
-                            Text("Стоимость недвижимости")
+                            Text("EstateValue1")
                                 .font(.system(size: 17,weight: .semibold))
                                 .foregroundColor(Color("Color_font_3"))
                             Spacer()
@@ -63,26 +63,26 @@ struct AboutFIRE_Screen: View {
                                 .aspectRatio(contentMode: .fit)
                         }
                         HStack{
-                            Text("Высокая норма сбережений")
+                            Text("Fire4")
                                 .font(.system(size: 36,weight: .semibold))
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
                         }
                         HStack{
-                            Text("Является основным принципом FIRE. Говоря о высокой норме сбережений, мы не преувеличиваем.Это не привычная доля в 10—15% от зарплаты, а 50% и даже 75% от дохода.")
+                            Text("Fire5")
                                 .font(.system(size: 23,weight: .semibold))
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
                         }
                         VStack(spacing:10){
                             HStack{
-                                Text("Полезная \nлитература")
+                                Text("FireRec1")
                                     .font(.system(size: 36,weight: .semibold))
                                     .foregroundColor(Color("Color_font_1"))
                                 Spacer()
                             }
                             HStack{
-                                Text("Команда FIRE Рекомендует")
+                                Text("FireRec2")
                                     .font(.system(size: 21,weight: .semibold))
                                     .foregroundColor(Color("Color_font_3"))
                                 Spacer()
