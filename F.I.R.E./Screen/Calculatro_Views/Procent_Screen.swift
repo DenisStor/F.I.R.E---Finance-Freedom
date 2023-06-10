@@ -42,6 +42,7 @@ struct Procent_Screen: View {
                                     .foregroundColor(Color("Color_font_2"))
                                 HStack {
                                     TextField("safeMoney2", text: $InMonth)
+                                        
                                         .onReceive(Just(InMonth)) { index in
                                             
                                             if TextIs(InMonth) {
@@ -53,12 +54,12 @@ struct Procent_Screen: View {
                                            
                                         }
                                       
-                                    
+                                   
                                     .font(.system(size: 25))
                                     .frame(height: 45)
                                     .padding(.horizontal,15)
+                                    .tint(.red)
                                     
-                                    .foregroundColor(Color("Color_black"))
                                     .background{
                                         RoundedRectangle(cornerRadius: 15)
                                             .foregroundColor(Color("Color_font_2"))

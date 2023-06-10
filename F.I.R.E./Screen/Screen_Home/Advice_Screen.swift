@@ -35,7 +35,7 @@ struct Advice_Screen: View {
 
             
                 HStack{
-                    Text("read next")
+                    Text("readmore1")
                         .font(.system(size: 24,weight: .medium))
                         .overlay(
                             Rectangle().frame(height: 2).offset(y: 4)
