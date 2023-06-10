@@ -16,7 +16,15 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("nedviga", comment: ""),
     ]
     
-    
+    @State private var stocks : [String] = [
+    NSLocalizedString("StocksQues1", comment: ""),
+    NSLocalizedString("StocksQues2", comment: ""),
+    NSLocalizedString("StocksQues3", comment: ""),
+    NSLocalizedString("StocksQues4", comment: ""),
+    NSLocalizedString("StocksQues5", comment: ""),
+    ]
+    @State private var stoksAns : [Bool] = [true , false ,true , false , true ]
+
     @State private var bonds : [String] = [
     NSLocalizedString("BondsQues1", comment: ""),
     NSLocalizedString("BondsQues2", comment: ""),
@@ -26,6 +34,23 @@ struct InvestAgree_Screen: View {
     ]
     @State private var bondsAns : [Bool] = [true , false ,true , false , true ]
 
+    @State private var crypto : [String] = [
+    NSLocalizedString("KriptoQues1", comment: ""),
+    NSLocalizedString("KriptoQues2", comment: ""),
+    NSLocalizedString("KriptoQues3", comment: ""),
+    NSLocalizedString("KriptoQues4", comment: ""),
+    NSLocalizedString("KriptoQues5", comment: ""),
+    ]
+    @State private var cryproAns : [Bool] = [true , false ,true , false , true ]
+
+    @State private var realty : [String] = [
+    NSLocalizedString("EstateQues1", comment: ""),
+    NSLocalizedString("EstateQues2", comment: ""),
+    NSLocalizedString("EstateQues3", comment: ""),
+    NSLocalizedString("EstateQues4", comment: ""),
+    NSLocalizedString("EstateQues5", comment: ""),
+    ]
+    @State private var realtyAns : [Bool] = [true , false ,true , false , true ]
     @State private var IsOn : Int = 0
     @State private var clr : [Bool] = [true , false , false , false]
   
@@ -148,9 +173,16 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns)
+                                Test_View(totalQwestion: 5, Text_info: stocks, TrueQwestion: stoksAns)
                             } label: {
-                                Text("VEFKKE")
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .frame(height: 60)
+                                    .foregroundColor(Color("Color_font_1"))
+                                    Text("Проверить знания")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                }
                             }
                         }
                         
@@ -247,7 +279,18 @@ struct InvestAgree_Screen: View {
                                 Spacer()
                                 
                             }
-                            
+                            NavigationLink {
+                                Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns)
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .frame(height: 60)
+                                    .foregroundColor(Color("Color_font_1"))
+                                    Text("Проверить знания")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                }
+                            }
                         }
                         if IsOn == 2 {
                             HStack{
@@ -315,30 +358,20 @@ struct InvestAgree_Screen: View {
                                 Spacer()
                                 
                             }
-                            
+                            NavigationLink {
+                                Test_View(totalQwestion: 5, Text_info: crypto, TrueQwestion: cryproAns)
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .frame(height: 60)
+                                    .foregroundColor(Color("Color_font_1"))
+                                    Text("Проверить знания")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                }
+                            }
                   
                         }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
                         if IsOn == 3 {
                             HStack{
                                 Text("EstateInvestments1")
@@ -405,7 +438,18 @@ struct InvestAgree_Screen: View {
                                 Spacer()
                                 
                             }
-                            
+                            NavigationLink {
+                                Test_View(totalQwestion: 5, Text_info: realty, TrueQwestion: realtyAns)
+                            } label: {
+                                ZStack {
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .frame(height: 60)
+                                    .foregroundColor(Color("Color_font_1"))
+                                    Text("Проверить знания")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                }
+                            }
 
                         }
                     }.padding(.horizontal,15)
