@@ -27,15 +27,21 @@ struct Test_View: View {
             if index >= totalQwestion {
                 VStack(alignment: .leading){
                     HStack {
+                        
                         Text("\(total)")
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 45,weight: .medium))
                         .multilineTextAlignment(.leading)
-                        Text("prav8")
+                        Text("/")
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 45,weight: .medium))
+                        Text("\(index)")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 45,weight: .medium))
+                        .multilineTextAlignment(.leading)
                         Spacer()
-                    }
+                    }.padding(.top,50)
+                        .padding(.bottom,20)
                     switch total {
                     case 0...totalQwestion/3:
                         HStack {
@@ -64,6 +70,7 @@ struct Test_View: View {
                     default:
                         Text("Erore")
                     }
+                   
                     Spacer()
                 }.padding(.horizontal,15)
                     .padding(.top,20)
