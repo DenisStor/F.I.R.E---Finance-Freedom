@@ -139,8 +139,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             
-                            
-                            
+                           // Test_View(totalQwestion: 10, Text_info: [], TrueQwestion: [])
                         }
                         
                 
