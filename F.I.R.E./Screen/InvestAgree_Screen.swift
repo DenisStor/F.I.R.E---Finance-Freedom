@@ -142,6 +142,12 @@ struct InvestAgree_Screen: View {
                             
                             
                         }
+                        
+                        
+                        HStack {
+                            Text("Проверить знания")
+                            
+                        }.background()
                         if IsOn == 1 {
                             
                             HStack{

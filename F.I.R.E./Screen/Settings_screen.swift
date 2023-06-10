@@ -76,7 +76,7 @@ struct Settings_screen: View {
                         Spacer()
                     }
                     HStack{
-                        Text("firefeedback@mail.ru")
+                        Text("fireapp@inbox.ru")
                             .font(.system(size: 20,weight: .medium))
                             .tint(Color("Color_font"))
                             .overlay(

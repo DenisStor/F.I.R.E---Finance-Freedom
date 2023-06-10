@@ -33,20 +33,15 @@ struct AboutFIRE_Screen: View {
                                 .font(.system(size: 23,weight: .semibold))
                                 .foregroundColor(Color("Color_font"))
                             Spacer()
-                        }
+                          
                         
-                        HStack{
-                            Text("Чтобы скопить капитал и наконец перестать «работать ради жизни», авторы призывают быть бережливыми, контролировать расходы и помнить, что сбережения должны покрывать будущие расходы.")
-                                .font(.system(size: 26,weight: .semibold))
-                                .foregroundColor(Color("Color_font_2"))
-                                .padding(25)
-                                .background(){
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .foregroundColor(Color("Color_font_1"))
-                                }
-                            Spacer()
+                    
                         }
+                        Divider()
+                            .frame(height: 2)
+                            .overlay(Color("Color_button"))
                     }
+                  
                     VStack(spacing: 30){
                         HStack{
                             Text("Драйвером FIRE стал резкий рост цен на недвижимость в США в 2000-х годах. Молодые люди поняли, что не потянут покупку квартиры.")
