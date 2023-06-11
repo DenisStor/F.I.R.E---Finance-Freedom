@@ -15,7 +15,7 @@ struct Start_Screen: View {
                 Image("Start_Image")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding(.top,140)
+                    .padding(.top,100)
             }
             VStack(spacing:10){
                     HStack{
@@ -24,7 +24,7 @@ struct Start_Screen: View {
                     }
                     HStack{
                         Text("Что такое\nFIRE?")
-                            .font(.system(size: 66, weight: .medium)).foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 45, weight: .medium)).foregroundColor(Color("Color_font_1"))
                         Spacer()
                         
                     }
@@ -42,8 +42,9 @@ struct Start_Screen: View {
                                 , alignment: .bottom)
                         
                         Image("Start_Image_1")
+                            .renderingMode(.template)
                         Spacer()
-                    }
+                    }.font(.system(size: 22, weight: .medium)).foregroundColor(Color("Color_font_1"))
                     .onTapGesture {
                     currentPage = 2
                     }
