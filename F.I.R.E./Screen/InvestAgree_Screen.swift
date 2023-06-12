@@ -23,7 +23,7 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("StocksQues4", comment: ""),
     NSLocalizedString("StocksQues5", comment: ""),
     ]
-    @State private var stoksAns : [Bool] = [true , false ,true , false , true ]
+    @State private var stoksAns : [Bool] = [true , true ,true , true , true ]
 
     @State private var bonds : [String] = [
     NSLocalizedString("BondsQues1", comment: ""),
@@ -32,7 +32,7 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("BondsQues4", comment: ""),
     NSLocalizedString("BondsQues5", comment: ""),
     ]
-    @State private var bondsAns : [Bool] = [true , false ,true , false , true ]
+    @State private var bondsAns : [Bool] = [true , false ,true , true , true ]
 
     @State private var crypto : [String] = [
     NSLocalizedString("KriptoQues1", comment: ""),
@@ -41,7 +41,7 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("KriptoQues4", comment: ""),
     NSLocalizedString("KriptoQues5", comment: ""),
     ]
-    @State private var cryproAns : [Bool] = [true , false ,true , false , true ]
+    @State private var cryproAns : [Bool] = [true , true ,true , true , false ]
 
     @State private var realty : [String] = [
     NSLocalizedString("EstateQues1", comment: ""),
@@ -50,7 +50,7 @@ struct InvestAgree_Screen: View {
     NSLocalizedString("EstateQues4", comment: ""),
     NSLocalizedString("EstateQues5", comment: ""),
     ]
-    @State private var realtyAns : [Bool] = [true , false ,true , false , true ]
+    @State private var realtyAns : [Bool] = [true , true ,true , true , true ]
     @State private var IsOn : Int = 0
     @State private var clr : [Bool] = [true , false , false , false]
   
@@ -179,7 +179,7 @@ struct InvestAgree_Screen: View {
                                     RoundedRectangle(cornerRadius: 15)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
-                                    Text("Проверить знания")
+                                    Text("testznania")
                                         .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                 }
