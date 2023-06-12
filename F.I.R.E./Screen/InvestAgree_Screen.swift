@@ -438,19 +438,31 @@ struct InvestAgree_Screen: View {
                                 Spacer()
                                 
                             }
-                            Image("dirt")
-                               
-                            HStack{
-                           
-                                Text("EstateStep2")
-                                    .font(.system(size: 40, weight: .semibold))
-                                    .foregroundColor(Color("Color_font_1"))
-                                    .padding(.top, 10)
-                                Spacer()
+                            Group {
+                                HStack{
+                                    Text("EstateValue1")
+                                        .font(.system(size: 17,weight: .semibold))
+                                        .foregroundColor(Color("Color_font_3"))
+                                    Spacer()
                                     
+                                }
+                                HStack{
+                                    Image("grafik")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                }
                                 
+                                HStack{
+                                    
+                                    Text("EstateStep2")
+                                        .font(.system(size: 40, weight: .semibold))
+                                        .foregroundColor(Color("Color_font_1"))
+                                        .padding(.top, 10)
+                                    Spacer()
+                                    
+                                    
+                                }
                             }
-                            
                             HStack{
                            
                                 Text("EstateStep2.1")

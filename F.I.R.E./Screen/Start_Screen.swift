@@ -50,7 +50,7 @@ struct Start_Screen: View {
                             .font(.system(size: 25,weight: .medium))
                             .foregroundColor(Color("Color_black"))
                         
-                    }.frame(height: g.height / 10 )
+                    }.frame(height: g.height / 12 )
                     .onTapGesture {
                         currentPage = 2
                         }
