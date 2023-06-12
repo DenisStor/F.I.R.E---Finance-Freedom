@@ -40,31 +40,55 @@ struct Test_View: View {
                             .font(.system(size: 45,weight: .medium))
                         .multilineTextAlignment(.leading)
                         Spacer()
-                    }.padding(.top,50)
-                        .padding(.bottom,20)
+                    }.padding(.bottom,20)
                     switch total {
                     case 0...totalQwestion/3:
-                        HStack {
-                            Text("testbad")
-                                .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 25,weight: .medium))
-                            .multilineTextAlignment(.leading)
+                        VStack{
+                           
+                            HStack {
+                                Text("testbad")
+                                    .foregroundColor(Color("Color_font"))
+                                    .font(.system(size: 25,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                            Spacer()
+                            Image("nedoneimage")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 200)
                             Spacer()
                         }
                     case totalQwestion/3...(totalQwestion/3)*2:
-                        HStack {
-                            Text("testcool")
-                                .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 25,weight: .medium))
-                            .multilineTextAlignment(.leading)
+                        VStack{
+                            HStack {
+                                Text("testcool")
+                                    .foregroundColor(Color("Color_font"))
+                                    .font(.system(size: 25,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                            Spacer()
+                            Image("doneimage")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 200)
                             Spacer()
                         }
                     case (totalQwestion/3)*2...totalQwestion:
-                        HStack {
-                            Text("testbest")
-                                .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 25,weight: .medium))
-                            .multilineTextAlignment(.leading)
+                        VStack {
+                            HStack {
+                                Text("testbest")
+                                    .foregroundColor(Color("Color_font"))
+                                    .font(.system(size: 25,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                            Spacer()
+                            Image("doneimage")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 200)
                             Spacer()
                         }
                     default:
