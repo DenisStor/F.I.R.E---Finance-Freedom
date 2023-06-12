@@ -438,8 +438,8 @@ struct InvestAgree_Screen: View {
                                 Spacer()
                                 
                             }
-                            
-                 
+                            Image("dirt")
+                               
                             HStack{
                            
                                 Text("EstateStep2")
