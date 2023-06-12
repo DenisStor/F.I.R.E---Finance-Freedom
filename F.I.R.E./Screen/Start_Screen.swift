@@ -29,13 +29,13 @@ struct Start_Screen: View {
                     Spacer()
                     VStack(spacing:5){
                         HStack {
-                            Text("Что такое \nFire?")
+                            Text("Fire_3")
                                 .font(.system(size: 60,weight: .medium))
                                 .foregroundColor(Color("Color_font_2"))
                             Spacer()
                         }
                         HStack {
-                            Text("FIRE это мощное приложение, разработанное для тех, кто стремится достичь финансовой независимости и свободы.")
+                            Text("F.I.R.E.1")
                                 .font(.system(size: 22,weight: .medium))
                                 .foregroundColor(Color("Color_font_2"))
                                 .lineSpacing(3)
@@ -46,7 +46,7 @@ struct Start_Screen: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 15)
                             .foregroundColor(Color("Color_font_2"))
-                        Text("Продолжить")
+                        Text("menuStart")
                             .font(.system(size: 25,weight: .medium))
                             .foregroundColor(Color("Color_black"))
                         

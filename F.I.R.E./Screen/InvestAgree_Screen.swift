@@ -111,27 +111,39 @@ struct InvestAgree_Screen: View {
                             HStack{
                                 Text("Promotion1")
                                     .font(.system(size: 23, weight: .semibold))
+                                    .lineSpacing(4)
                                 Spacer()
                             }
                             
                             HStack{
                            
                                 Text("ConservativeStep1")
+                                
                                     .font(.system(size: 40, weight: .semibold))
+                                
                                     .foregroundColor(Color("Color_font_1"))
                                     .padding(.top, 10)
+                                  
                                 Spacer()
                                     
                                 
                             }
+                            
+                         
+                            
                             HStack{
                            
                                 Text("ConservativeStep1.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
+                            
+                            Image("aapl")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                   
                             HStack{
                            
@@ -139,6 +151,7 @@ struct InvestAgree_Screen: View {
                                     .font(.system(size: 40, weight: .semibold))
                                     .foregroundColor(Color("Color_font_1"))
                                     .padding(.top, 10)
+                                   
                                 Spacer()
                                     
                                 
@@ -149,6 +162,7 @@ struct InvestAgree_Screen: View {
                                 Text("ConservativeStep2.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -169,6 +183,7 @@ struct InvestAgree_Screen: View {
                                 Text("AggressiveStep2.2")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -189,64 +204,75 @@ struct InvestAgree_Screen: View {
                 
                         
                         
+                        
                         if IsOn == 1 {
+                            
                             
                             HStack{
                                 Text("Bonds2")
                                     .font(.system(size: 23, weight: .semibold))
+                                    .lineSpacing(4)
                                 Spacer()
                             }
                             
                             HStack{
-                           
+                                
                                 Text("Step1")
                                     .font(.system(size: 40, weight: .semibold))
                                     .foregroundColor(Color("Color_font_1"))
                                     .padding(.top, 10)
                                 Spacer()
-                                    
+                                
                                 
                             }
                             HStack{
-                           
+                                
                                 Text("Step1.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
                             
-                            HStack{
-                                VStack (alignment: .leading) {
-                                    Text("Creditratings1")
-                                        .font(.system(size: 16.8, weight:.medium))
-                                        .foregroundColor(Color("Color_font_3"))
-                                    
-                                    Image("creditAa")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                    Text("Creditratings2")
-                                        .font(.system(size: 16.8, weight:.medium))
-                                        .foregroundColor(Color("Color_font_3"))
+                          
+                            
+                            Group {
+                                HStack{
+                                    VStack (alignment: .leading) {
+                                        Text("Creditratings1")
+                                            .font(.system(size: 16.8, weight:.medium))
+                                            .foregroundColor(Color("Color_font_3"))
+                                        
+                                        Image("creditAa")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                        Text("Creditratings2")
+                                            .font(.system(size: 16.8, weight:.medium))
+                                            .foregroundColor(Color("Color_font_3"))
+                                    }
+                                    Spacer()
                                 }
-                                Spacer()
-                            }
-                            HStack{
-                           
-                                Text("Step2")
-                                    .font(.system(size: 40, weight: .semibold))
-                                    .foregroundColor(Color("Color_font_1"))
-                                    .padding(.top, 10)
-                                Spacer()
+                                HStack{
+                               
+                                    Text("Step2")
+                                        .font(.system(size: 40, weight: .semibold))
+                                        .foregroundColor(Color("Color_font_1"))
+                                        .padding(.top, 10)
+                                    Spacer()
+                                        
                                     
-                                
+                                }
                             }
+                            
+                          
                             
                             HStack{
                            
                                 Text("Step2.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -257,6 +283,7 @@ struct InvestAgree_Screen: View {
                                     .font(.system(size: 40, weight: .semibold))
                                     .foregroundColor(Color("Color_font_1"))
                                     .padding(.top, 10)
+                                
                                 Spacer()
                                     
                                 
@@ -267,6 +294,7 @@ struct InvestAgree_Screen: View {
                                 Text("Step3.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -276,9 +304,11 @@ struct InvestAgree_Screen: View {
                                 Text("Step3.2")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
+                            
                             NavigationLink {
                                 Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns)
                             } label: {
@@ -286,9 +316,10 @@ struct InvestAgree_Screen: View {
                                     RoundedRectangle(cornerRadius: 15)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
-                                    Text("Проверить знания")
+                                    Text("testznania")
                                         .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
+                                
                                 }
                             }
                         }
@@ -296,6 +327,7 @@ struct InvestAgree_Screen: View {
                             HStack{
                                 Text("Cryptocurrency2")
                                     .font(.system(size: 23, weight: .semibold))
+                                    .lineSpacing(4)
                                 Spacer()
                             }
                             
@@ -314,10 +346,14 @@ struct InvestAgree_Screen: View {
                                 Text("CryptoStep1.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
                             
+                            Image("BTC")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
                  
                             HStack{
                            
@@ -335,6 +371,7 @@ struct InvestAgree_Screen: View {
                                 Text("CryptoStep2.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -345,6 +382,7 @@ struct InvestAgree_Screen: View {
                                     .font(.system(size: 30, weight: .semibold))
                                     .foregroundColor(Color("Color_font_3"))
                                     .padding(.top, 10)
+                                    .lineSpacing(4)
                                 Spacer()
                                     
                                 
@@ -355,6 +393,7 @@ struct InvestAgree_Screen: View {
                                 Text("CryptoObjectivesInvestments2")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -365,7 +404,7 @@ struct InvestAgree_Screen: View {
                                     RoundedRectangle(cornerRadius: 15)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
-                                    Text("Проверить знания")
+                                    Text("testznania")
                                         .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                 }
@@ -376,6 +415,7 @@ struct InvestAgree_Screen: View {
                             HStack{
                                 Text("EstateInvestments1")
                                     .font(.system(size: 23, weight: .semibold))
+                                    .lineSpacing(4)
                                 Spacer()
                             }
                             
@@ -394,6 +434,7 @@ struct InvestAgree_Screen: View {
                                 Text("EstateStep1.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -415,6 +456,7 @@ struct InvestAgree_Screen: View {
                                 Text("EstateStep2.1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -424,6 +466,7 @@ struct InvestAgree_Screen: View {
                                 Text("EstateInvestments1.2")
                                     .font(.system(size: 30, weight: .semibold))
                                     .foregroundColor(Color("Color_font_3"))
+                                    .lineSpacing(4)
                                     .padding(.top, 10)
                                 Spacer()
                                     
@@ -435,6 +478,7 @@ struct InvestAgree_Screen: View {
                                 Text("EstateAdvice1")
                                     .font(.system(size: 23, weight: .medium))
                                     .padding(.bottom,10)
+                                    .lineSpacing(4)
                                 Spacer()
                                 
                             }
@@ -445,7 +489,7 @@ struct InvestAgree_Screen: View {
                                     RoundedRectangle(cornerRadius: 15)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
-                                    Text("Проверить знания")
+                                    Text("testznania")
                                         .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                 }
