@@ -21,10 +21,7 @@ struct Home_Screen: View {
                     VStack(spacing: spacing){
                         
                         
-                        RoundedRectangle(cornerRadius: 15)
-                            .frame(height: 25)
-                            .foregroundColor(Color("Color_font_1"))
-                            .opacity(0)
+                      
                         NavigationLink { Advice_Screen()}
                     label: {
                         ZStack{
@@ -126,11 +123,15 @@ struct Home_Screen: View {
                                     
                                     
                                     Text("homeWord1")
-                                        .font(.system(size: 22,weight: .medium))
+                                    
+                                        .font(.system(size: 26,weight: .medium))
                                         .foregroundColor(Color(white: 1, opacity: 0.5))
                                         .overlay(
                                             Rectangle().frame(height: 2).offset(y: 4)
                                             , alignment: .bottom)
+                                    
+                                    
+                                        .foregroundColor(Color(white: 1, opacity: 0.5))
                                     
                                     
                                         .foregroundColor(Color(white: 1, opacity: 0.5))

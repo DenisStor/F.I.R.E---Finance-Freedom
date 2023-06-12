@@ -90,7 +90,7 @@ struct Settings_screen: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 15)
                         .frame(height: 60)
-                        .padding(.vertical,20)
+                        .padding(.vertical,10)
                         .foregroundColor(Color("Color_font_1"))
                         .padding(.horizontal,animation ? 20 : 0)
                        
