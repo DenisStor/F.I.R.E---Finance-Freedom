@@ -41,7 +41,7 @@ struct Home_Screen: View {
                                                     .font(.system(size: 0.03 * screen.height ,weight: .medium))
                                                 Spacer()
                                             }
-                                        }.frame(width: screen.height / 3.5, height: screen.height / 4)
+                                        }.frame(width: screen.height / 3.7, height: screen.height / 4)
                                     }
                                 }.onAppear(){
                                    
