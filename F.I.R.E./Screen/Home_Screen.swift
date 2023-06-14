@@ -82,7 +82,7 @@ struct Home_Screen: View {
                                                     .foregroundColor(Color("Color_font_1"))
                                                 HStack{
                                                     
-                                                    Text("Mor")
+                                                    Text("More")
                                                         .foregroundColor(Color("Color_font_2"))
                                                         .font(.system(size: 24 ,weight: .medium))
                                                     
