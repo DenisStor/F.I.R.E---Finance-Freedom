@@ -30,7 +30,7 @@ struct Calculator_Screen: View {
                                     HStack{
                                         
                                         Text("calc1")
-                                            .font(.system(size: 35,weight: .medium))
+                                            .font(.system(size: 30,weight: .medium))
                                             .foregroundColor(Color("Color_font_1"))
                                             .multilineTextAlignment(.leading)
                                             .lineSpacing(0)
@@ -65,11 +65,11 @@ struct Calculator_Screen: View {
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .cornerRadius(30)
-                            VStack(spacing:10){
+                            VStack(spacing:5){
                                 HStack{
                                     
                                     Text("Траты в\nдень")
-                                        .font(.system(size: 35,weight: .medium))
+                                        .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                         .multilineTextAlignment(.leading)
                                         .lineSpacing(0)
