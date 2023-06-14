@@ -15,7 +15,7 @@ struct ContentView: View {
                 .offset(x: currentPage == 2 ? 0 :  500)
         
         
-        }.animation(.spring(), value: currentPage )
+        }.animation(.easeInOut, value: currentPage )
         
    }
 }
