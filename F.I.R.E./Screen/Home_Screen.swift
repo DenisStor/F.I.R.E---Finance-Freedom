@@ -8,9 +8,9 @@ struct Home_Screen: View {
     
     @State private var spacing : CGFloat = 20
     @State private var imageforqwes : [String] = [
-        "Image_test",
-        "banana_Image",
-        "Image_test",
+        "s",
+        "g",
+        "d",
         "banana_Image"
     ]
     @State private var textforqwes : [String] = [
@@ -26,9 +26,9 @@ struct Home_Screen: View {
         "4 мин чтения"
     ]
     @State private var Image1 : [String] = [
-        "Как распознать недооценённые акции?",
-        "234424",
-        "3t3",
+        "one",
+        "two",
+        "three",
         "rbbrbr"
     ]
     @State private var Text1 : [String] = [
@@ -92,7 +92,23 @@ struct Home_Screen: View {
                                             Color("Color_back")
                                                 .edgesIgnoringSafeArea(.all)
                                             VStack{
-                                               Text("")
+                                                HStack{
+                                                    Image("str")
+                                                      //  .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                    Text("\(TextTime[index])")
+                                                        .font(.system(size: 18,weight: .medium))
+                                                        .foregroundColor(Color("Color_font"))
+                                                }
+                                                Text("Title")
+                                                    .font(.system(size: 35,weight: .medium))
+                                                Image("\(Image1[random[index]])")
+                                                    .cornerRadius(30)
+                                                Text("text")
+                                                Text("text")
+                                                Text("text")
+                                                Text("text")
+                                                Text("text")
                                             }
                                         }
                                     } label: {
