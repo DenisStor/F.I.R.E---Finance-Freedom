@@ -7,11 +7,72 @@ struct Home_Screen: View {
     
     
     @State private var spacing : CGFloat = 20
-    @State private var imageforqwes : [String] = ["Image_test","Image_test","Image_test","Image_test"]
-    @State private var textforqwes : [String] = ["Как распознать недооценённые акции?","234424","3t3","rbbrbr"]
-   
-
-   
+    @State private var imageforqwes : [String] = [
+        "Image_test",
+        "banana_Image",
+        "Image_test",
+        "banana_Image"
+    ]
+    @State private var textforqwes : [String] = [
+        "Как распознать недооценённые акции?",
+        "234424",
+        "3t3",
+        "rbbrbr"
+    ]
+    @State private var TextTime : [String] = [
+        "4 мин чтения",
+        "4 мин чтения",
+        "4 мин чтения",
+        "4 мин чтения"
+    ]
+    @State private var Image1 : [String] = [
+        "Как распознать недооценённые акции?",
+        "234424",
+        "3t3",
+        "rbbrbr"
+    ]
+    @State private var Text1 : [String] = [
+        "Как распознать недооценённые акции?",
+        "Как распознать недооценённые акции?",
+        "Как распознать недооценённые акции?",
+        "Как распознать недооценённые акции?"
+    ]
+    @State private var Text2 : [String] = [
+        "Как распознать недооценённые акции?",
+        "234424",
+        "3t3",
+        "rbbrbr"
+    ]
+    @State private var Text3 : [String] = [
+        "Image_test",
+        "banana_Image",
+        "Image_test",
+        "banana_Image"
+    ]
+    @State private var Text4 : [String] = [
+        "Как распознать недооценённые акции?",
+        "234424",
+        "3t3",
+        "rbbrbr"
+    ]
+    @State private var Text5 : [String] = [
+        "Как распознать недооценённые акции?",
+        "234424",
+        "3t3",
+        "rbbrbr"
+    ]
+    @State private var random : [Int] = [
+        0,
+        0,
+        0,
+        0,
+    ]
+    @State private var maxSize : Int  = 4
+    
+    
+    let words = strings()
+    @State private var currentword = ""
+    
     var body: some View {
         
         
@@ -26,25 +87,35 @@ struct Home_Screen: View {
                         ScrollView(.horizontal,showsIndicators: false){
                             HStack{
                                 ForEach(0..<4) { index in
-                                    ZStack{
-                                        Image(imageforqwes[index])
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: screen.height / 3, height: screen.height / 3)
-                                            .padding(.leading, index == 0 ? 15 : 10)
-                                            .cornerRadius(30)
-                                        VStack{
-                                            Spacer()
-                                            HStack{
-                                                Text("\(textforqwes[index])")
-                                                    .foregroundColor(Color("Color_font_2"))
-                                                    .font(.system(size: 0.03 * screen.height ,weight: .medium))
-                                                Spacer()
+                                    NavigationLink {
+                                        ZStack{
+                                            Color("Color_back")
+                                                .edgesIgnoringSafeArea(.all)
+                                            VStack{
+                                               Text("")
                                             }
-                                        }.frame(width: screen.height / 3.7, height: screen.height / 4)
+                                        }
+                                    } label: {
+                                        
+                                        
+                                        ZStack{
+                                            Image(imageforqwes[random[index]])
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .frame(width: screen.height / 3, height: screen.height / 3)
+                                                .padding(.leading, index == 0 ? 15 : 10)
+                                                .cornerRadius(30)
+                                            VStack{
+                                                Spacer()
+                                                HStack{
+                                                    Text("\(textforqwes[random[index]])")
+                                                        .foregroundColor(Color("Color_font_2"))
+                                                        .font(.system(size: 0.03 * screen.height ,weight: .medium))
+                                                    Spacer()
+                                                }
+                                            }.frame(width: screen.height / 3.7, height: screen.height / 4)
+                                        }
                                     }
-                                }.onAppear(){
-                                   
                                 }
                             }
                         }
@@ -84,7 +155,7 @@ struct Home_Screen: View {
                                                     
                                                     Text("More")
                                                         .foregroundColor(Color("Color_font_2"))
-                                                        .font(.system(size: 24 ,weight: .medium))
+                                                        .font(.system(size: 20 ,weight: .medium))
                                                     
                                                    
                                                     
@@ -99,38 +170,7 @@ struct Home_Screen: View {
                             }
                             
                             
-                            NavigationLink { Advice_Screen()}
-                        label: {
-                            ZStack{
-                                Image("butone")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .cornerRadius(30)
-                                HStack {
-                                    VStack(alignment: .leading,spacing: 5){
-                                        Text("Createfinancialreserves")
-                                            .font(.system(size: 26,weight: .medium))
-                                            .foregroundColor(Color("Color_font_2"))
-                                        
-                                        
-                                        
-                                        Text("Advice_home")
-                                            .font(.system(size: 26,weight: .medium))
-                                            .foregroundColor(Color(white: 1, opacity: 0.5))
-                                            .overlay(
-                                                Rectangle().frame(height: 2)
-                                                , alignment: .bottom)
-                                        
-                                        
-                                            .foregroundColor(Color(white: 1, opacity: 0.5))
-                                        
-                                    }
-                                    Spacer()
-                                }.multilineTextAlignment(.leading)
-                                    .padding(.horizontal,20)
-                                
-                            }
-                        }
+                        
                             
                             
                             
@@ -151,14 +191,14 @@ struct Home_Screen: View {
                                 HStack {
                                     VStack(alignment: .leading,spacing: 5){
                                         Text("Whatarethey")
-                                            .font(.system(size: 26,weight: .medium))
+                                            .font(.system(size: 25,weight: .medium))
                                             .foregroundColor(Color("Color_font_2"))
                                         
                                         
                                         
                                         Text("homeWord1")
                                         
-                                            .font(.system(size: 26,weight: .medium))
+                                            .font(.system(size: 20,weight: .medium))
                                             .foregroundColor(Color(white: 1, opacity: 0.5))
                                             .overlay(
                                                 Rectangle().frame(height: 2).offset(y: 4)
@@ -193,8 +233,8 @@ struct Home_Screen: View {
                                             HStack {
                                                 Text("Какие активы\nвам подойдут")
                                                     .foregroundColor(Color("Color_font"))
-                                                .font(.system(size: 30 ,weight: .medium))
-                                                Spacer()
+                                                .font(.system(size: 25 ,weight: .medium))
+                                               // Spacer()
                                             }
                                             HStack {
                                                 Text("homeWord1")
@@ -209,22 +249,6 @@ struct Home_Screen: View {
                                                     , alignment: .bottom)
                                                 Spacer()
                                             }
-                                            
-                                            
-                                                
-                                            
-                                            
-                                               
-                                            //Spacer()
-                                            //                                        HStack(spacing:0) {
-                                            //                                            Text("\(howmuch)")
-                                            //                                            Text("/8")
-                                            
-                                            
-                                            //Spacer()
-                                            
-                                          //.font(.system(size: 26,weight: .medium))
-                                           // .foregroundColor(Color("Color_font_2"))
                                     }
                                     Spacer()
                                 }.multilineTextAlignment(.leading)
@@ -248,7 +272,7 @@ struct Home_Screen: View {
                                 HStack {
                                     VStack(alignment: .leading,spacing: 5){
                                         Text("investagr1")
-                                            .font(.system(size: 26,weight: .medium))
+                                            .font(.system(size: 25,weight: .medium))
                                             .foregroundColor(Color("Color_font_2"))
                                         
                                         
@@ -276,7 +300,7 @@ struct Home_Screen: View {
                                     VStack(alignment: .leading,spacing: 5){
                                         HStack{
                                             Text("tax")
-                                                .font(.system(size: 0.04 * screen.height ,weight: .medium))
+                                                .font(.system(size: 25 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_1"))
                                             
                                             
@@ -293,7 +317,47 @@ struct Home_Screen: View {
                         }
                             
                             
-                            
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 30)
+                                    .frame(height: 150)
+                                    .foregroundColor(Color("Color_font_1"))
+                                VStack(spacing:0){
+                                    HStack{
+                                       Text("Советы")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .multilineTextAlignment(.leading)
+                                            .foregroundColor(Color("Color_font_2"))
+                                        Spacer()
+                                    }.padding(.top,15)
+                                        .padding(.bottom,5)
+                                    
+                                    HStack{
+                                       Text("\(currentword)")
+                                            
+                                            .font(.system(size: 20,weight: .medium))
+                                            .multilineTextAlignment(.leading)
+                                            .foregroundColor(Color("Color_font_2"))
+                                        Spacer()
+                                    }
+                                    Spacer()
+                                }.frame(height: 140)
+                                .padding(.horizontal,20)
+                            }
+                            .onTapGesture {
+                                currentword = words.word.randomElement() ?? ""
+                                let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                impactHeavy.impactOccurred()
+                            }
+                            .onAppear{
+                                                    
+                                                    if currentword.isEmpty {
+                                                        currentword = words.word.randomElement() ?? ""
+                                                    }
+                                                    Timer.scheduledTimer(withTimeInterval: 30, repeats: true) { _ in
+                                                        currentword = words.word.randomElement() ?? ""
+                                                    }
+                                                    
+                                                }
                             
                             
                             
@@ -304,6 +368,7 @@ struct Home_Screen: View {
                     }
                     .refreshable {
                         
+                        random = randomInt(maxCurrentSize: maxSize)
                         
                         if spacing == 120 {
                             
@@ -321,7 +386,16 @@ struct Home_Screen: View {
                     }.animation(.easeInOut, value: spacing)
                 }
             }
+        }.onAppear(){
+            random = [Int](randomInt(maxCurrentSize: 4))
         }
+        
+    }
+    func randomInt(maxCurrentSize: Int) -> [Int] {
+        let rangeValue : Range<Int> = 0..<maxCurrentSize
+        let random = Set.init(rangeValue)
+        let randomArr : [Int] = [Int](random)
+        return randomArr
     }
 }
 
