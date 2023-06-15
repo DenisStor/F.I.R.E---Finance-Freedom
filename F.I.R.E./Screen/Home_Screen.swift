@@ -8,66 +8,74 @@ struct Home_Screen: View {
     
     @State private var spacing : CGFloat = 20
     @State private var imageforqwes : [String] = [
-        "s",
+        "stockagree",
         "g",
         "d",
-        "banana_Image"
+       
     ]
     @State private var textforqwes : [String] = [
         "Как распознать недооценённые акции?",
-        "234424",
-        "3t3",
-        "rbbrbr"
+        "Разбираемся в терминах: Что такое IPO?",
+        "Диверсификация: Снижению риска в портфеле акций",
+       
     ]
+    
+    @State private var colormain : [String] = [
+    "Color_bl",
+    "Color_black",
+    "Color_black",
+    ]
+    
+    
     @State private var TextTime : [String] = [
         "4 мин чтения",
         "4 мин чтения",
         "4 мин чтения",
-        "4 мин чтения"
+      
     ]
     @State private var Image1 : [String] = [
         "one",
         "two",
         "three",
-        "rbbrbr"
+       
     ]
     @State private var Text1 : [String] = [
         "Как распознать недооценённые акции?",
         "Как распознать недооценённые акции?",
         "Как распознать недооценённые акции?",
-        "Как распознать недооценённые акции?"
+       
     ]
     @State private var Text2 : [String] = [
         "Как распознать недооценённые акции?",
         "234424",
         "3t3",
-        "rbbrbr"
+      
     ]
     @State private var Text3 : [String] = [
         "Image_test",
         "banana_Image",
         "Image_test",
-        "banana_Image"
+    
     ]
     @State private var Text4 : [String] = [
         "Как распознать недооценённые акции?",
         "234424",
         "3t3",
-        "rbbrbr"
+      
     ]
     @State private var Text5 : [String] = [
         "Как распознать недооценённые акции?",
         "234424",
         "3t3",
-        "rbbrbr"
+     
     ]
     @State private var random : [Int] = [
         0,
         0,
         0,
-        0,
+        
     ]
-    @State private var maxSize : Int  = 4
+    @State private var maxSize : Int  = 3
     
     
     let words = strings()
@@ -86,7 +94,7 @@ struct Home_Screen: View {
                         
                         ScrollView(.horizontal,showsIndicators: false){
                             HStack{
-                                ForEach(0..<4) { index in
+                                ForEach(0..<3) { index in
                                     NavigationLink {
                                         ZStack{
                                             Color("Color_back")
@@ -94,16 +102,18 @@ struct Home_Screen: View {
                                             VStack{
                                                 HStack{
                                                     Image("str")
-                                                      //  .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                     Text("\(TextTime[index])")
+                                                      
                                                         .font(.system(size: 18,weight: .medium))
                                                         .foregroundColor(Color("Color_font"))
+                                                
+                                                       
                                                 }
                                                 Text("Title")
                                                     .font(.system(size: 35,weight: .medium))
                                                 Image("\(Image1[random[index]])")
-                                                    .cornerRadius(30)
+                                                .cornerRadius(30)
                                                 Text("text")
                                                 Text("text")
                                                 Text("text")
@@ -117,16 +127,20 @@ struct Home_Screen: View {
                                         ZStack{
                                             Image(imageforqwes[random[index]])
                                                 .resizable()
-                                                .aspectRatio(contentMode: .fit)
+                                                
                                                 .frame(width: screen.height / 3, height: screen.height / 3)
-                                                .padding(.leading, index == 0 ? 15 : 10)
                                                 .cornerRadius(30)
+                                                .padding(.leading, index == 0 ? 15 : 10)
+                                           
                                             VStack{
                                                 Spacer()
                                                 HStack{
+                                                    
                                                     Text("\(textforqwes[random[index]])")
-                                                        .foregroundColor(Color("Color_font_2"))
+                                                        .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color(colormain[random[index]]))
                                                         .font(.system(size: 0.03 * screen.height ,weight: .medium))
+                                                    
                                                     Spacer()
                                                 }
                                             }.frame(width: screen.height / 3.7, height: screen.height / 4)
@@ -403,7 +417,7 @@ struct Home_Screen: View {
                 }
             }
         }.onAppear(){
-            random = [Int](randomInt(maxCurrentSize: 4))
+            random = [Int](randomInt(maxCurrentSize: 3))
         }
         
     }

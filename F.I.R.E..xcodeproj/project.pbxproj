@@ -28,6 +28,7 @@
 		B7B62DD62A30D22D00D9A786 /* Test_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B62DD52A30D22D00D9A786 /* Test_View.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
 		B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DECD942A22800400C0D5CA /* Test_Screen.swift */; };
+		D2519CF62A3B9C8E007783A5 /* termins.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2519CF52A3B9C8E007783A5 /* termins.swift */; };
 		D297796C2A30C3440067F57D /* InvestAgree_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		B7B62DD52A30D22D00D9A786 /* Test_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_View.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		B7DECD942A22800400C0D5CA /* Test_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Screen.swift; sourceTree = "<group>"; };
+		D2519CF52A3B9C8E007783A5 /* termins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = termins.swift; sourceTree = "<group>"; };
 		D26B5C022A33E60E00CFD4C5 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D26B5C032A33E6BF00CFD4C5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestAgree_Screen.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		B72893482A1908EA003634D7 = {
 			isa = PBXGroup;
 			children = (
+				D2519CF52A3B9C8E007783A5 /* termins.swift */,
 				B72893532A1908EA003634D7 /* F.I.R.E. */,
 				B72893522A1908EA003634D7 /* Products */,
 			);
@@ -250,6 +253,7 @@
 				B72893692A190AF1003634D7 /* Start_Screen.swift in Sources */,
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
 				B7B62DD62A30D22D00D9A786 /* Test_View.swift in Sources */,
+				D2519CF62A3B9C8E007783A5 /* termins.swift in Sources */,
 				B72893652A190A89003634D7 /* Calculator_Screen.swift in Sources */,
 				B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */,
 				B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */,
