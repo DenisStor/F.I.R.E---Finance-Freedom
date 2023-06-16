@@ -3,36 +3,71 @@
 import SwiftUI
 
 struct Bar_Screen: View {
-   
+    @State private var PageBar : Int = 0
     var body: some View {
-        NavigationStack{
-            ZStack{
-                
-                TabView {
-                    Home_Screen()
-                        
-                        .tabItem {
+        GeometryReader { g in
+            let screen = g.size
+            NavigationStack{
+                ZStack{
+                    if PageBar == 0 {
+                        Home_Screen()
+                    }
+                    if PageBar == 1 {
+                        Calculator_Screen()
+                    }
+                    if PageBar == 2 {
+                        Settings_screen()
+                    }
+                    VStack (spacing:0) {
+                        Spacer()
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundColor(Color("Color_button"))
+                                .frame(height: screen.height/9)
+                                .shadow(color: Color("Color_shadow"), radius: 20)
                             
-                            Label("main", systemImage: "house")
-                            
+                            HStack(spacing:50){
+                                Image(systemName: "house")
+                                    .font(.system(size:PageBar == 0 ? 30 : 25))
+                                    .foregroundColor(PageBar == 0 ? Color("Color_font_1") : Color("Color_bar"))
+                                    .onTapGesture {
+                                        PageBar = 0
+                                        let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                        impactHeavy.impactOccurred()
+                                    }
+                                Image(systemName: "function")
+                                    .font(.system(size:PageBar == 1 ? 30 : 25))
+                                    .foregroundColor(PageBar == 1 ? Color("Color_font_1") : Color("Color_bar"))
+                                    .onTapGesture {
+                                        PageBar = 1
+                                        let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                        impactHeavy.impactOccurred()
+                                    }
+                                Image(systemName: "gear")
+                                    .font(.system(size:PageBar == 2 ? 30 : 25))
+                                    .foregroundColor(PageBar == 2 ? Color("Color_font_1") : Color("Color_bar"))
+                                    .onTapGesture {
+                                        PageBar = 2
+                                        if PageBar == 2 {
+                                            
+                                        } else {
+                                            
+                                            
+                                            let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                            impactHeavy.impactOccurred()
+                                        }
+                                    }
+                            }.animation(.spring(), value: PageBar)
                         }
-                    Calculator_Screen()
-                        .tabItem {
-                            Label("Calculator", systemImage: "function")
-                                
-                        }
-                        
-                    Settings_screen()
+                    }.padding(.horizontal,50)
+                        .padding(.bottom,15)
+                        .ignoresSafeArea()
                     
-                        .tabItem {
-                            Label("Settings", systemImage: "gear")
-                        }
+                    
+                    
                 }
-                
-                
-                
-            }
-        }.tint(.red)
+            }.tint(.red)
+        }
     }
 }
 
