@@ -16,6 +16,9 @@ struct Bar_Screen: View {
                         Calculator_Screen()
                     }
                     if PageBar == 2 {
+                      Termis_Screen()
+                    }
+                    if PageBar == 3 {
                         Settings_screen()
                     }
                     VStack (spacing:0) {
@@ -26,7 +29,7 @@ struct Bar_Screen: View {
                                 .frame(height: screen.height/9)
                                 .shadow(color: Color("Color_shadow"), radius: 20)
                             
-                            HStack(spacing:50){
+                            HStack(spacing:40){
                                 Image(systemName: "house")
                                     .font(.system(size:PageBar == 0 ? 30 : 25))
                                     .foregroundColor(PageBar == 0 ? Color("Color_font_1") : Color("Color_bar"))
@@ -35,6 +38,7 @@ struct Bar_Screen: View {
                                         let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                         impactHeavy.impactOccurred()
                                     }
+                                
                                 Image(systemName: "function")
                                     .font(.system(size:PageBar == 1 ? 30 : 25))
                                     .foregroundColor(PageBar == 1 ? Color("Color_font_1") : Color("Color_bar"))
@@ -43,12 +47,20 @@ struct Bar_Screen: View {
                                         let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                         impactHeavy.impactOccurred()
                                     }
-                                Image(systemName: "gear")
+                                Image(systemName: PageBar == 2 ? "book" : "book.closed")
                                     .font(.system(size:PageBar == 2 ? 30 : 25))
                                     .foregroundColor(PageBar == 2 ? Color("Color_font_1") : Color("Color_bar"))
                                     .onTapGesture {
                                         PageBar = 2
-                                        if PageBar == 2 {
+                                        let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                        impactHeavy.impactOccurred()
+                                    }
+                                Image(systemName: "gear")
+                                    .font(.system(size:PageBar == 3 ? 30 : 25))
+                                    .foregroundColor(PageBar == 3 ? Color("Color_font_1") : Color("Color_bar"))
+                                    .onTapGesture {
+                                        PageBar = 3
+                                        if PageBar == 3 {
                                             
                                         } else {
                                             
