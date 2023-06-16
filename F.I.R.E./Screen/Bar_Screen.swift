@@ -26,9 +26,15 @@ struct Bar_Screen: View {
                         ZStack{
                             RoundedRectangle(cornerRadius: 30)
                                 .foregroundColor(Color("Color_button"))
+                               
+                                
+                                
                                 .frame(height: screen.height/9)
                                 .shadow(color: Color("Color_shadow"), radius: 20)
-                            
+                                .overlay {
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke(Color.black, lineWidth: 0.2)
+                                }
                             HStack(spacing:40){
                                 Image(systemName: "house")
                                     .font(.system(size:PageBar == 0 ? 30 : 25))
