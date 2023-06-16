@@ -110,6 +110,13 @@ struct Settings_screen: View {
                         
                     }
                 }
+                
+                RoundedRectangle (cornerRadius: 0)
+                    .frame(height: 80)
+                    .opacity(0)
+                
+                
+                
                 .alert(isPresented: $alert1) {
                             Alert(
                                 title: Text("1setd"),

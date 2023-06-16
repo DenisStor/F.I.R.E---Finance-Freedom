@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "bil1.png",
+      "filename" : "Mask group-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "bil2x.png",
+      "filename" : "Mask group-2 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "bil3x.png",
+      "filename" : "Mask group-2 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

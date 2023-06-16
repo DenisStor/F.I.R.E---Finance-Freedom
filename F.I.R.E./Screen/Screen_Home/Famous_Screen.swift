@@ -21,7 +21,6 @@ struct Famous_Screen: View {
     @State private var Image1 : [String] = ["Baffet","Bill","Elon","Pitere"]
     
     
-    @State private var Color1 : [String] = ["Color_font_2","Color_font","Color_font","Color_font"]
     
     @State private var title : [String] = [
     NSLocalizedString("famous_name1", comment: ""),
@@ -66,28 +65,45 @@ struct Famous_Screen: View {
                                     GeometryReader { g in
                                         let screen = g.size
                                         ScrollView{
-                                            
-                                            VStack(alignment: .leading){
-                                                Text(title[index])
-                                                    .font(.system(size: 53, weight: .medium)).foregroundColor(Color("Color_font_1"))
-                                                    .padding(.horizontal, 20)
-                                                Image(Image2[index])
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
+                                         
+                                            VStack{
+                                              
+                                                ZStack {
+                                                    Image(Image2[index])
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fill)
+                                                        .cornerRadius(30)
+                                                    VStack {
+                                                        Spacer()
+                                                        Text("Питер\nЛитч")
+                                                            .multilineTextAlignment(.center)
+                                                            .font(.system(size: 25, weight: .medium))
+                                                            .foregroundColor(Color("Color_bl"))
+                                                            .padding(.bottom,1)
+                                                          
+                                                        Text ("Предприниматель")
+                                                        .font(.system(size: 15, weight: .medium))
+                                                        .foregroundColor(Color("textField"))
+                                                        .padding(.bottom,15)
+                                                       
+                                                    }
+                                                    
+                                                    
+                                                }
                                                 
                                                 Text(Text1[index])
-                                                    .font(.system(size: 20.4, weight: .medium))
+                                                    
+                                                    .font(.system(size: 20, weight: .medium))
                                                     .lineSpacing(10)
-                                                    .padding(20)
+                                                    .padding(.top,15)
                                                 
                                                 
                                                 
                                                 
-                                            }
+                                            }  .padding(.horizontal, 20)
                                         }
-                                        .onAppear(){
-                                            UIScrollView.appearance().bounces = false
-                                        }
+                                       
+                                        
                                         
                                     }
                                  
@@ -101,20 +117,22 @@ struct Famous_Screen: View {
                                     
                                     Image(Image1[index])
                                         .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .cornerRadius(15)
+                                        .aspectRatio(contentMode: .fill)
+                                        .cornerRadius(30)
                                     VStack{
+                                        Spacer()
                                         HStack{
                                             
                                             Text(name[index])
                                              
-                                            .font(.system(size: 43.4, weight: .medium))
-                                            .foregroundColor(Color(Color1[index]))
+                                            .font(.system(size: 30, weight: .medium))
+                                            .foregroundColor(Color("Color_bl"))
                                             .multilineTextAlignment(.leading)
                                             Spacer()
                                         }
-                                    }.padding(.horizontal,20)
-                                }.frame(height: 200)
+                                    }.padding(.horizontal, 25)
+                                        .padding(.vertical, 20)
+                                }
                                     
                             }
                         }
