@@ -38,8 +38,12 @@ struct Test_Screen: View {
     
     @State private var total : Float = 8
     @State private var progress : Float = 0
+    
+    @AppStorage ("Final") var finaleefor1 : Int = 0
+    @AppStorage ("Final") var finaleefor2 : Int = 0
+    
     var body: some View {
-        Test_View(totalQwestion: 8,Text_info: TextInf, TrueQwestion: Ideal)
+        Test_View(totalQwestion: 8,Text_info: TextInf, TrueQwestion: Ideal,IsFin1: $finaleefor1,IsFin2: $finaleefor2)
            
     }
    

@@ -188,7 +188,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                Test_View(totalQwestion: 5, Text_info: stocks, TrueQwestion: stoksAns)
+                                Test_View(totalQwestion: 5, Text_info: stocks, TrueQwestion: stoksAns, IsFin: <#Binding<Int>#>)
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 15)

@@ -20,6 +20,9 @@ struct Test_View: View {
     @State private var total : Int = 0
     @State private var TrueForModi : Bool? = nil
     @State private var HowQwest : Int = 1
+    
+    @Binding var IsFin1 : Int
+    @Binding var IsFin2 : Int
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -67,6 +70,7 @@ struct Test_View: View {
                                     .font(.system(size: 25,weight: .medium))
                                     .multilineTextAlignment(.leading)
                                 Spacer()
+                                
                             }
                             Spacer()
                             Image("doneimage")
@@ -74,6 +78,8 @@ struct Test_View: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 200)
                             Spacer()
+                        }.onAppear(){
+                            IsFin1 += 1
                         }
                     case (totalQwestion/3)*2...totalQwestion:
                         VStack {
@@ -90,6 +96,9 @@ struct Test_View: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 200)
                             Spacer()
+                        }
+                        .onAppear(){
+                            IsFin2 += 1
                         }
                     default:
                         Text("Erore")
@@ -204,8 +213,3 @@ struct Test_View: View {
     }
 }
 
-struct Test_modi_Previews: PreviewProvider {
-    static var previews: some View {
-        Test_View(totalQwestion: 3,Text_info: ["ds edthtys?", "levftnt?", "levftnt?"], TrueQwestion: [true, false,false])
-    }
-}
