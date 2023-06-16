@@ -24,7 +24,7 @@
 		B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */; };
 		B74F39E92A2A401700284ADF /* bar_progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F39E82A2A401700284ADF /* bar_progress.swift */; };
 		B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */; };
-		B793C61B2A3CD164003C4585 /* Test_Binding_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B793C61A2A3CD164003C4585 /* Test_Binding_Model.swift */; };
+		B793C61D2A3CE224003C4585 /* Medalki_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */; };
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
 		B7B62DD62A30D22D00D9A786 /* Test_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B62DD52A30D22D00D9A786 /* Test_View.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
@@ -54,7 +54,7 @@
 		B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeMoney_Screen.swift; sourceTree = "<group>"; };
 		B74F39E82A2A401700284ADF /* bar_progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bar_progress.swift; sourceTree = "<group>"; };
 		B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Screen.swift; sourceTree = "<group>"; };
-		B793C61A2A3CD164003C4585 /* Test_Binding_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Binding_Model.swift; sourceTree = "<group>"; };
+		B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medalki_Screen.swift; sourceTree = "<group>"; };
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
 		B7B62DD52A30D22D00D9A786 /* Test_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_View.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
@@ -120,6 +120,7 @@
 				B72893622A190A76003634D7 /* Bar_Screen.swift */,
 				B7FD86A12A3CB1E700959BAA /* Termis_Screen.swift */,
 				B72893682A190AF1003634D7 /* Start_Screen.swift */,
+				B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */,
 				D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */,
 				B728936B2A1915D5003634D7 /* Home_Screen.swift */,
 				B728937A2A192D1C003634D7 /* Screen_Home */,
@@ -156,7 +157,6 @@
 			children = (
 				B74F39E82A2A401700284ADF /* bar_progress.swift */,
 				B7B62DD52A30D22D00D9A786 /* Test_View.swift */,
-				B793C61A2A3CD164003C4585 /* Test_Binding_Model.swift */,
 			);
 			path = modi;
 			sourceTree = "<group>";
@@ -253,6 +253,7 @@
 				B72893572A1908EA003634D7 /* ContentView.swift in Sources */,
 				B72893702A192363003634D7 /* Strings.swift in Sources */,
 				B728936C2A1915D5003634D7 /* Home_Screen.swift in Sources */,
+				B793C61D2A3CE224003C4585 /* Medalki_Screen.swift in Sources */,
 				B74F39E92A2A401700284ADF /* bar_progress.swift in Sources */,
 				B72893692A190AF1003634D7 /* Start_Screen.swift in Sources */,
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
@@ -262,7 +263,6 @@
 				B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */,
 				B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */,
 				B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */,
-				B793C61B2A3CD164003C4585 /* Test_Binding_Model.swift in Sources */,
 				B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */,
 				B72893672A190A95003634D7 /* Settings_screen.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,

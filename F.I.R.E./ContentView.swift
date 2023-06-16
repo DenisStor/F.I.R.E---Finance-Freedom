@@ -1,7 +1,4 @@
-
-
 import SwiftUI
-
 
 struct ContentView: View {
     @AppStorage ("currentPage") var currentPage : Int = 1

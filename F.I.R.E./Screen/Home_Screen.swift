@@ -143,7 +143,7 @@ struct Home_Screen: View {
                                                     
                                                     Spacer()
                                                 }
-                                            }.frame(width: screen.height / 3.7, height: screen.height / 4)
+                                            }.frame(width: screen.height / 3.7, height: screen.height / 3.7)
                                         }
                                     }
                                 }
