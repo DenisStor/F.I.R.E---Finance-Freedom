@@ -22,8 +22,8 @@ struct Home_Screen: View {
     
     @State private var colormain : [String] = [
     "Color_bl",
-    "Color_black",
-    "Color_black",
+    "Color_font",
+    "Color_font",
     ]
     
     
@@ -348,28 +348,23 @@ struct Home_Screen: View {
                             
                             
                             ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(height: 150)
-                                    .foregroundColor(Color("Color_font_1"))
+                             Image("soviety")
+                                    .resizable()
+                                    .cornerRadius(30)
+                                    
+                                
                                 VStack(spacing:0){
-                                    HStack{
-                                       Text("Советы")
-                                            .font(.system(size: 25,weight: .medium))
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(Color("Color_font_2"))
-                                        Spacer()
-                                    }.padding(.top,15)
-                                        .padding(.bottom,5)
+                                 
                                     
                                     HStack{
                                        Text("\(currentword)")
                                             
-                                            .font(.system(size: 20,weight: .medium))
+                                            .font(.system(size: 23,weight: .medium))
                                             .multilineTextAlignment(.leading)
                                             .foregroundColor(Color("Color_font_2"))
                                         Spacer()
                                     }
-                                    Spacer()
+                                
                                 }.frame(height: 140)
                                 .padding(.horizontal,20)
                             }
