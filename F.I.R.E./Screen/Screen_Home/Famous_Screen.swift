@@ -42,7 +42,8 @@ struct Famous_Screen: View {
         NSLocalizedString("fam2text", comment: ""),
         NSLocalizedString("word_4", comment: ""),
         ] // основной текст
-    
+   
+
     var body: some View {
         
         ZStack{
@@ -62,26 +63,34 @@ struct Famous_Screen: View {
                                 ZStack{
                                     Color("Color_back")
                                         .edgesIgnoringSafeArea(.all)
-                                    ScrollView{
-                                        
-                                        VStack(alignment: .leading){
-                                            Text(title[index])
-                                                .font(.system(size: 53, weight: .medium)).foregroundColor(Color("Color_font_1"))
-                                                .padding(.horizontal, 20)
-                                            Image(Image2[index])
-                                                .resizable()
-                                                .aspectRatio(contentMode: .fit)
+                                    GeometryReader { g in
+                                        let screen = g.size
+                                        ScrollView{
                                             
-                                            Text(Text1[index])
-                                                .font(.system(size: 20.4, weight: .medium))
-                                                .lineSpacing(10)
-                                                .padding(20)
-                                     
+                                            VStack(alignment: .leading){
+                                                Text(title[index])
+                                                    .font(.system(size: 53, weight: .medium)).foregroundColor(Color("Color_font_1"))
+                                                    .padding(.horizontal, 20)
+                                                Image(Image2[index])
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
                                                 
-                                            
-                                            
+                                                Text(Text1[index])
+                                                    .font(.system(size: 20.4, weight: .medium))
+                                                    .lineSpacing(10)
+                                                    .padding(20)
+                                                
+                                                
+                                                
+                                                
+                                            }
                                         }
+                                        .onAppear(){
+                                            UIScrollView.appearance().bounces = false
+                                        }
+                                        
                                     }
+                                 
                                 }
                                 
                             } label: {
@@ -106,12 +115,13 @@ struct Famous_Screen: View {
                                         }
                                     }.padding(.horizontal,20)
                                 }.frame(height: 200)
+                                    
                             }
                         }
                         
                     }
                 } .padding(.horizontal,15)
-    
+                   
                 
             }
             
