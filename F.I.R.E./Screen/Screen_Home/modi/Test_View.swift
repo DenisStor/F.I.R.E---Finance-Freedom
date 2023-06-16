@@ -21,8 +21,9 @@ struct Test_View: View {
     @State private var TrueForModi : Bool? = nil
     @State private var HowQwest : Int = 1
     
-    @Binding var IsFin1 : Int
-    @Binding var IsFin2 : Int
+  
+    @Binding var IsFinish : Int?
+    
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -78,8 +79,12 @@ struct Test_View: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 200)
                             Spacer()
-                        }.onAppear(){
-                            IsFin1 += 1
+                        }.onAppear{
+                            if IsFinish == nil {
+                                
+                            } else {
+                                IsFinish = 1
+                            }
                         }
                     case (totalQwestion/3)*2...totalQwestion:
                         VStack {
@@ -96,10 +101,14 @@ struct Test_View: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 200)
                             Spacer()
+                        }.onAppear(){
+                            if IsFinish == nil {
+                                
+                            } else {
+                                IsFinish = 2
+                            }
                         }
-                        .onAppear(){
-                            IsFin2 += 1
-                        }
+                        
                     default:
                         Text("Erore")
                     }

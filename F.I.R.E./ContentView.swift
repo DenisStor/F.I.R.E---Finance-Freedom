@@ -5,6 +5,9 @@ import SwiftUI
 
 struct ContentView: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
+    
+   
+
     var body: some View {
         ZStack{
         
@@ -16,7 +19,7 @@ struct ContentView: View {
         
         
         }.animation(.easeInOut, value: currentPage )
-        
+            
    }
 }
 
