@@ -539,3 +539,177 @@ trading on the stock exchange.";
 banks, preparing financial documentation, conducting road shows, and valuing the company.
 When the IPO is complete, the company's stock is offered to investors through an initial public
 offering.";
+
+
+
+
+"InvTerm1" = "Investor";
+"InvTerm1.1" = "This is a person who invests money to generate income or preserve capital.";
+
+"InvTerm2" = "Issuer";
+"InvTerm2.1" = "It is a company that wishes to attract investment and places securities on the
+stock exchange to do so. In addition to business entities, the issuer may be a region, city, or
+state. For an issuer to be admitted to trading, it must undergo a vetting process and
+subsequently meet the requirements.";
+
+"InvTerm3" = "Broker";
+"InvTerm3.1" = "This is a professional bidder. In essence, brokers are intermediaries who
+provide interaction between investors and issuers.";
+
+"InvTerm4" = "Trustee";
+"InvTerm4.1" = "This is an intermediary to whom an investor transfers his funds for subsequent
+investment. Trustees are used by those who do not have enough time or experience to trade on
+their own.";
+
+"InvTerm5" = "Registrar";
+"InvTerm5.1" = "This is a licensed company that maintains registers with full records of all
+security holders.";
+
+"InvTerm6" = "Depositary";
+"InvTerm6.1" = "It is a professional securities market participant that holds securities and
+maintains records of rights thereunder.";
+
+"InvTerm7" = "Clearing or settlement center";
+"InvTerm7.1" = "It is a company that provides settlement services to participants in the
+organized securities market and identifies their positions based on the results of the
+transactions concluded, that is, it handles the transfer of money from the buyer of securities to
+the seller.";
+
+"InvTerm8" = "Auction Exchange.";
+"InvTerm8.1" = "On such exchanges, traders and brokers are physically in the exchange room
+and work directly with each other, making buy and sell orders verbally. This has historically
+been the primary way most exchanges operate, and a number of venues still hold auctions
+where sellers and buyers are physically present.";
+
+"InvTerm9" = "Electronic Exchange";
+"InvTerm9.1" = "Recently, electronic trading has become the most common method of
+exchange transactions. There are no traders and no physical trading activity. Instead, trading
+takes place on a computerized platform through which buyers and sellers communicate. These
+exchanges are considered more efficient and faster than traditional exchanges. Today, many
+exchanges that used to rely solely on a physical trading platform offer trading through
+automated systems, using both methods simultaneously. However, there are also exchanges
+that trade exclusively through Internet terminals.";
+
+"InvTerm10" = "Eurobonds";
+"InvTerm10.1" = "These are debt securities that are issued in a currency that is foreign to the
+issuer - the state or company that issued the securities. Such bonds can circulate both on
+foreign exchanges and on the markets of the issuer's country. The principal difference is only in
+the currency of the issue, which is not limited to the euro. The prefix in the name remained, so
+to say, historically.";
+
+"InvTerm11" = "Underwriter";
+"InvTerm11.1" = "This is the party that issues bonds on behalf of the borrower. The underwriter
+manages the issuance and distribution of the securities and guarantees the issuer's placement
+in the primary market - for a certain fee and under specified conditions. He may agree to buy all
+the securities of a company which it puts on the market, and thus assumes all the risks of
+unsold securities.";
+
+"InvTerm12" = "Euronotes";
+"InvTerm12.1" = "This is a registered bill. They also differ in that they are issued by issuers from
+developed economies and have some form of tangible collateral. The notes are short-term
+obligations (3-8 months) and have a floating interest rate, which means they can change.";
+
+"InvTerm13" = "Listing";
+"InvTerm13.1" = "This is the admission of an issued security to the exchanges.";
+
+"InvTerm14" = "Brokerage Account";
+"InvTerm14.1" = "This is a special account for trading securities and currency on an exchange.
+It is opened with a broker - a professional securities market participant. The broker acts as an
+intermediary between a private investor and the stock exchange.";
+
+"InvTerm15" = "Dividends";
+"InvTerm15.1" = "This is the portion of profit or free cash flow that a company pays to
+shareholders.";
+
+"InvTerm17" = "Investment Portfolio";
+"InvTerm17.1" = "It is a collection of different types of investments that belong to one person or
+company.";
+
+"InvTerm18" = "Liquidity";
+"InvTerm18.1" = "It is the ability to sell an asset quickly at close to market value. In terms of
+liquidity, any property that a person or company owns can be valued, including securities.";
+
+"InvTerm19" = "Securities";
+"InvTerm19.1" = "These are documents that confer property or monetary rights on their owner.";
+
+"InvTerm20" = "Exchange";
+"InvTerm20.1" = "This is an authorized trading place for securities, commodities, financial
+instruments and services, where market participants buy and sell corresponding assets, as well
+as standardized contracts and services either from their own property or by acting in the
+interests of their customers.";
+
+"InvTerm21" = "Stock Exchange";
+"InvTerm21.1" = "This is a centralized floor where the necessary conditions for trading in
+securities are created.";
+
+"InvTerm22" = "Margin Trading";
+"InvTerm22.1" = "This is a transaction in which an investor takes a loan against collateral from a
+broker to buy an asset. The collateral will be his own funds on his brokerage account - they are
+locked in as a kind of security deposit. This amount is called a margin. The margin is
+recalculated every time the trader opens a position.";
+
+"InvTerm23" = "Liquid Portfolio";
+"InvTerm23.1" = "This is the total value of currency and liquid securities in your brokerage
+account. Shares of foreign companies, currencies and Eurobonds are accounted in rubles at the
+current exchange rate.";
+
+"InvTerm24" = "Initial margin";
+"InvTerm24.1" = "This is the initial margin for executing a new deal. It is calculated by
+multiplying the value of the asset by the risk rate.";
+
+"InvTerm25" = "Minimum margin";
+"InvTerm25.1" = "This is the minimum margin to maintain the position you have already opened.
+Normally, the minimum margin for one liquid asset is equal to half the initial margin.";
+
+"InvTerm26" = "Long position";
+"InvTerm26.1" = "This is a deal counting on the quotes increase. The point of a long position is
+to buy a stock when it is cheap and sell it when it is up. Traders can engage in long trades not
+only with their own funds, but also with borrowed funds - that is, funds provided by a broker.";
+
+"InvTerm27" = "Market Value";
+"InvTerm27.1" = "This is the price of goods and services formed under competitive market
+conditions according to supply and demand.";
+
+"InvTerm28" = "Short trading";
+"InvTerm28.1" = "You can make money not only on rising stock prices, but also on falling stock
+prices. Let's imagine the situation: Microsoft shares are trading at $200, but we believe that they
+are overvalued and are about to fall, but we do not own these shares in our portfolio.
+
+Then we borrow the shares from a broker against cash, and he sells them on the market. Then
+we wait for the stock to fall to $180, for example, and we buy it. When we buy, the stock will
+automatically go back to the broker (remember, we borrowed it), and the difference between
+selling and buying will be our profit, in this case $20.";
+
+"InvTerm29" = "Stock Market Capitalization";
+"InvTerm29.1" = "This is the total value of securities multiplied by the number of those securities
+traded. This figure can be expressed as a percentage of the market capitalization level.";
+
+"InvTerm30" = "Futures";
+"InvTerm30.1" = "This is a contract whereby the seller undertakes to deliver the underlying
+asset to the buyer at a specified price and date, and the buyer is obligated to redeem the
+subject of the transaction. Imagine you want to buy a car in six months, but anything can
+happen to prices and you don't want to rely on chance.";
+
+"InvTerm31" = "Issue";
+"InvTerm31.1" = "This is the statutory sequence of actions by an issuer to place equity
+securities in financial markets; the issuance of securities into circulation, including the sale of
+securities to their first owners - citizens or legal entities.";
+
+"InvTerm32" = "Deposit";
+"InvTerm32.1" = "This is the deposit of money or other valuables with financial institutions under
+specified conditions.";
+
+"InvTerm33" = "Volatility";
+"InvTerm33.1" = "This is an indicator that characterizes the volatility of the price. If the price
+changes quickly, irregularly and with a large spread in a certain period, the volatility is high. And
+vice versa.";
+
+"InvTerm34" = "Stock market";
+"InvTerm34.1" = "This is where stocks, bonds, currencies and other assets are traded. The
+notion of a market affects not only the transfer function of securities, but also other securities
+transactions, such as issuance and taxation. It also enables fair pricing.";
+
+"InvTerm35" = "Clearing";
+"InvTerm35.1" = "This is a technical break during which the exchange calculates the financial
+result of a transaction and charges or debits the account. The amount received or deducted is
+called variation margin.";

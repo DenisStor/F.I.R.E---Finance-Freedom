@@ -540,3 +540,190 @@ przyszłości.";
 warunki rynkowe. Trendy gospodarcze, stabilność polityczna, stopy procentowe i inne czynniki
 mogą mieć znaczący wpływ na akcje. Należy zwracać uwagę na globalne wydarzenia i
 trendy, które mogą mieć wpływ na rynek jako całość.";
+
+
+
+"InvTerm1" = "Inwestor";
+"InvTerm1.1" = "Jest to osoba, która inwestuje pieniądze w celu generowania dochodu lub
+zachowania kapitału.";
+
+"InvTerm2" = "Emitent";
+"InvTerm2.1" = "Jest to firma, która chce przyciągnąć inwestycje i w tym celu umieszcza
+papiery wartościowe na giełdzie. Oprócz organizacji komercyjnych emitentem może być
+region, miasto lub państwo. Aby zostać dopuszczonym do obrotu, emitent musi przejść
+procedurę weryfikacji, a następnie spełnić wymogi kwalifikacyjne.";
+
+"InvTerm3" = "Broker";
+"InvTerm3.1" = "Jest to profesjonalny oferent. Zasadniczo brokerzy są pośrednikami, którzy
+zapewniają interfejs między inwestorami a emitentami.";
+
+"InvTerm4" = "Powiernik";
+"InvTerm4.1" = "Jest to pośrednik, do którego inwestor przekazuje swoje fundusze w celu
+późniejszej inwestycji. Powiernicy są wykorzystywani przez tych, którzy nie mają
+wystarczająco dużo czasu lub doświadczenia, aby samodzielnie handlować.";
+
+"InvTerm5" = "Rejestrator";
+"InvTerm5.1" = "Jest to licencjonowana firma, która prowadzi rejestry z pełną ewidencją
+wszystkich posiadaczy papierów wartościowych.";
+
+"InvTerm6" = "Depozytariusz";
+"InvTerm6.1" = "Jest to profesjonalny uczestnik rynku papierów wartościowych, który
+przechowuje papiery wartościowe i prowadzi rejestry praw z nich wynikających.";
+
+"InvTerm7" = "Centrum rozliczeniowe lub rozrachunkowe";
+"InvTerm7.1" = "Jest to spółka, która świadczy usługi rozliczeniowe dla uczestników
+zorganizowanego rynku papierów wartościowych i identyfikuje ich pozycje na podstawie
+wyników zawartych transakcji, czyli obsługuje transfer środków pieniężnych od nabywcy
+papierów wartościowych do sprzedawcy.";
+
+"InvTerm8" = "Giełda Aukcyjna";
+"InvTerm8.1" = "Na takich giełdach handlowcy i maklerzy znajdują się fizycznie w hali
+giełdowej i współpracują ze sobą bezpośrednio, składając ustnie zlecenia kupna i
+sprzedaży. W przeszłości był to podstawowy sposób działania większości giełd, a wiele
+systemów nadal organizuje aukcje, na których sprzedający i kupujący są fizycznie obecni.";
+
+"InvTerm9" = "Giełda elektroniczna";
+"InvTerm9.1" = "Ostatnio handel elektroniczny stał się najbardziej powszechną metodą
+transakcji giełdowych. Nie ma traderów ani fizycznej aktywności handlowej. Zamiast tego
+handel odbywa się na skomputeryzowanej platformie, za pośrednictwem której komunikują się
+kupujący i sprzedający. Giełdy te są uważane za bardziej wydajne i szybsze niż giełdy
+tradycyjne. Obecnie wiele giełd, które wcześniej opierały się wyłącznie na fizycznej
+platformie handlowej, oferuje handel za pośrednictwem zautomatyzowanych systemów,
+wykorzystujących obie metody jednocześnie. Istnieją jednak również giełdy, które handlują
+wyłącznie za pośrednictwem terminali internetowych.";
+
+"InvTerm10" = "Euroobligacje";
+"InvTerm10.1" = "Są to dłużne papiery wartościowe emitowane w walucie obcej dla emitenta
+- państwa lub spółki, która wyemitowała papiery wartościowe. Takie obligacje mogą być
+przedmiotem obrotu na giełdach zagranicznych, jak również na rynku kraju emitenta. Jedyną
+zasadniczą różnicą jest waluta emisji, która nie ogranicza się do euro. Przedrostek w nazwie
+pozostał, że tak powiem, historyczny.";
+
+"InvTerm11" = "Subemitent";
+"InvTerm11.1" = "Jest to strona, która emituje obligacje w imieniu pożyczkobiorcy. Subemitent
+zarządza emisją i dystrybucją papierów wartościowych oraz gwarantuje plasowanie emitenta
+na rynku pierwotnym - za określoną opłatą i na uzgodnionych warunkach. Może on zgodzić
+się na zakup wszystkich papierów wartościowych spółki, która wprowadza je na rynek, a tym
+samym przejmuje całe ryzyko związane z niesprzedanymi papierami wartościowymi.";
+
+"InvTerm12" = "Euronotes";
+"InvTerm12.1" = "To jest weksel imienny. Różnią się one również tym, że są emitowane
+przez emitentów z rozwiniętych gospodarek i mają pewną formę materialnego
+zabezpieczenia. Obligacje są krótkoterminowe (3-8 miesięcy) i mają zmienną stopę
+procentową, tj. mogą się zmieniać.";
+
+"InvTerm13" = "Listing";
+"InvTerm13.1" = "Jest to dopuszczenie wyemitowanego papieru wartościowego do obrotu
+giełdowego.";
+
+"InvTerm14" = "Rachunek maklerski";
+"InvTerm14.1" = "Jest to specjalne konto do obrotu papierami wartościowymi i walutą na
+giełdzie. Jest ono otwierane u brokera - profesjonalnego uczestnika rynku papierów
+wartościowych. Broker działa jako pośrednik między prywatnym inwestorem a giełdą.";
+
+"InvTerm15" = "Dywidendy";
+"InvTerm15.1" = "Jest to część zysku lub wolnych przepływów pieniężnych, które spółka
+wypłaca akcjonariuszom.";
+
+"InvTerm17" = "Portfel inwestycyjny";
+"InvTerm17.1" = "Jest to zbiór różnych rodzajów inwestycji, które należą do jednej osoby lub
+firmy.";
+
+"InvTerm18" = "Płynność";
+"InvTerm18.1" = "Jest to zdolność do szybkiej sprzedaży aktywów po cenie zbliżonej do ceny
+rynkowej. Pod względem płynności można wycenić dowolną nieruchomość posiadaną
+przez osobę lub firmę, w tym papiery wartościowe.";
+
+"InvTerm19" = "Papiery wartościowe";
+"InvTerm19.1" = "Są to dokumenty nadające ich właścicielowi prawa majątkowe lub
+pieniężne."; "InvTerm20" = "Papiery wartościowe.";
+
+"InvTerm20" = "Wymiana";
+"InvTerm20. 1" = "Jest to autoryzowane miejsce obrotu papierami wartościowymi, towarami,
+instrumentami finansowymi i usługami, gdzie uczestnicy rynku kupują i sprzedają
+odpowiednie aktywa, a także standardowe kontrakty i usługi - z własnej własności lub
+działając na rzecz swoich klientów.";
+
+"InvTerm21" = "Giełda Papierów Wartościowych";
+"InvTerm21.1" = "Jest to scentralizowany rynek, który zapewnia niezbędne udogodnienia do
+obrotu papierami wartościowymi.";
+
+"InvTerm22" = "Margin Trading";
+"InvTerm22.1" = "Jest to transakcja, w której inwestor pożycza pod zastaw od brokera, aby
+kupić aktywa. Zabezpieczeniem będą jego własne środki na rachunku maklerskim - są one
+zablokowane jako rodzaj depozytu zabezpieczającego. Kwota ta nazywana jest depozytem
+zabezpieczającym. Depozyt zabezpieczający jest przeliczany za każdym razem, gdy inwestor
+otwiera pozycję.";
+
+"InvTerm23" = "Płynny portfel";
+"InvTerm23.1" = "Jest to całkowita wartość waluty i płynnych papierów wartościowych na
+rachunku maklerskim. Akcje zagranicznych spółek, waluty i euroobligacje są uwzględniane w
+rublach po bieżącym kursie wymiany.";
+
+"InvTerm24" = "Początkowy depozyt zabezpieczający";
+"InvTerm24.1" = "Jest to początkowy depozyt zabezpieczający dla nowej transakcji. Jest on
+obliczany poprzez pomnożenie wartości aktywów przez stopę ryzyka.";
+
+"InvTerm25" = "Minimalny depozyt zabezpieczający";
+"InvTerm25.1" = "Jest to minimalny depozyt zabezpieczający do utrzymania już otwartej
+pozycji. Zwykle minimalny depozyt zabezpieczający dla pojedynczego płynnego aktywa jest
+równy połowie początkowego depozytu zabezpieczającego.";
+
+"InvTerm26" = "Długa pozycja";
+"InvTerm26.1" = "To jest pozycja długa. Celem długiej pozycji jest kupno akcji, gdy są tanie i
+sprzedaż, gdy ich cena wzrośnie. Inwestorzy mogą angażować się w długie transakcje nie
+tylko z własnymi środkami, ale także z pożyczonymi środkami - czyli tymi dostarczonymi
+przez brokera.";
+
+"InvTerm27" = "Wartość rynkowa";
+"InvTerm27.1" = "Jest to cena towarów i usług ukształtowana w konkurencyjnych warunkach
+rynkowych zgodnie z podażą i popytem.";
+
+"InvTerm28" = "Krótki obrót";
+"InvTerm28.1" = "Możliwe jest zarabianie pieniędzy nie tylko na rosnących cenach akcji, ale
+także na spadających cenach akcji. Wyobraźmy sobie sytuację: akcje Microsoft są
+sprzedawane po 200 USD, ale uważamy, że cena jest zbyt wysoka i wkrótce spadną, ale nie
+posiadamy tych akcji w naszym portfelu.
+
+Następnie pożyczamy akcje od brokera za gotówkę, a on sprzedaje je na rynku. Następnie
+czekamy, aż cena akcji spadnie na przykład do 180 USD i kupujemy je. Kiedy kupimy, akcje
+automatycznie wrócą do brokera (pamiętaj, że je pożyczyliśmy), a różnica między
+sprzedażą a kupnem będzie naszym zyskiem, w tym przypadku 20 USD.";
+
+"InvTerm29" = "Kapitalizacja rynku akcji";
+"InvTerm29.1" = "Jest to całkowita wartość papierów wartościowych pomnożona przez
+liczbę tych papierów wartościowych będących przedmiotem obrotu. Liczba ta może być
+wyrażona jako procent poziomu kapitalizacji rynkowej.";
+
+"InvTerm30" = "Futures";
+"InvTerm30.1" = "Jest to kontrakt, w którym sprzedający zobowiązuje się do dostarczenia
+kupującemu instrumentu bazowego po uzgodnionej cenie i w uzgodnionym terminie, a
+kupujący jest zobowiązany do odkupienia przedmiotu transakcji. Wyobraź sobie, że chcesz
+kupić samochód za sześć miesięcy, ale wszystko może się zdarzyć z cenami i nie chcesz
+polegać na przypadku.";
+
+"InvTerm31" = "Issue";
+"InvTerm31.1" = "Jest to ustawowa sekwencja działań emitenta w celu wprowadzenia
+kapitałowych papierów wartościowych na rynki finansowe; emisja papierów wartościowych do
+obiegu, w tym sprzedaż papierów wartościowych ich pierwszym posiadaczom - obywatelom
+lub osobom prawnym.";
+
+"InvTerm32" = "Depozyt";
+"InvTerm32.1" = "Jest to depozyt pieniędzy lub innych kosztowności w instytucjach
+finansowych na określonych warunkach.";
+
+"InvTerm33" = "Zmienność";
+"InvTerm33.1" = "Jest to wskaźnik opisujący zmienność ceny. Jeśli cena zmienia się szybko,
+nieregularnie i z dużą rozpiętością w pewnym okresie, oznacza to, że zmienność jest
+wysoka. I odwrotnie.";
+
+"InvTerm34" = "Rynek akcji";
+"InvTerm34.1" = "Jest to miejsce, w którym handluje się akcjami, obligacjami, walutami i innymi
+aktywami. Pojęcie rynku obejmuje nie tylko funkcję transferu papierów wartościowych, ale
+także inne transakcje dotyczące papierów wartościowych, takie jak emisja i opodatkowanie.
+Pozwala również na uczciwą wycenę.";
+
+"InvTerm35" = "clearing";
+"InvTerm35.1" = "Jest to przerwa techniczna, podczas której giełda oblicza wynik finansowy
+transakcji i uznaje lub obciąża rachunek. Otrzymana lub odjęta kwota nazywana jest
+zmiennym depozytem zabezpieczającym.";
