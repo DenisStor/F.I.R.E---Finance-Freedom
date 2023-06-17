@@ -211,9 +211,13 @@ struct Home_Screen: View {
                                     VStack(alignment: .leading,spacing: 15){
                                         HStack{
                                             Image("logoFire")
+                                                .renderingMode(.template)
                                                 .resizable()
+                                                .foregroundColor(Color("Color_font_1"))
                                                 .frame(width: 0.25 * screen.height / 8, height: 0.4 * screen.height / 8 )
+                                                
                                             Spacer()
+                                                
                                         }
                                         HStack {
                                             Text("Движение F.I.R.E. расшифровывается как").foregroundColor(Color("Color_font")) +

@@ -53,7 +53,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 6, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
+                                Test_View(totalQwestion: 2, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
                                 
                             } label: {
                                 
@@ -85,7 +85,7 @@ struct Medalki_Screen: View {
                         .padding(.top,15)
                     VStack{
                         VStack(spacing:25){
-                            switch test1 {
+                            switch test2 {
                             case 0:
                                 Image("medalki_nil")
                             case 1:

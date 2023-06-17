@@ -19,7 +19,7 @@ struct Bar_Screen: View {
                       Termis_Screen()
                     }
                     if PageBar == 3 {
-                        Settings_screen()
+                       settings_Screen()
                     }
                     VStack (spacing:0) {
                         Spacer()

@@ -100,7 +100,7 @@ struct Termis_Screen: View {
                             VStack(spacing:10){
                                 HStack{
                                     Text("\(Title[index])")
-                                        .font(.system(size: 30,weight: .medium))
+                                        .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font_1"))
                                         .multilineTextAlignment(.leading)
                                     
@@ -108,7 +108,7 @@ struct Termis_Screen: View {
                                 }
                                 HStack{
                                     Text(TextIN[index])
-                                        .font(.system(size: 25,weight: .medium))
+                                        .font(.system(size: 20,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
                                         .multilineTextAlignment(.leading)
                                     

@@ -28,7 +28,7 @@ struct Procent_Screen: View {
         var minValue: Double = 0
         var maxValue: Double = 50
 
-    
+    @AppStorage ("money.localize") var selected: String = "USD"
     var body: some View {
         
         ZStack{
@@ -79,10 +79,32 @@ struct Procent_Screen: View {
                             .overlay {
                                 HStack{
                                     Spacer()
-                                    Text("$")
-                                        .font(.system(size: 25,weight: .medium))
-                                        .foregroundColor(Color("Color_black"))
-                                        .opacity(0.5)
+                                    switch selected {
+                                    case "USD":
+                                        Text("$")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "EUR":
+                                        Text("€")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "ZLT":
+                                        Text("zł")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "RUB":
+                                        Text("₽")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    default:
+                                        Text("erore")
+                                    }
+                                    
+                                        
                                 }.padding(.horizontal,15)
                             }
                             .keyboardType(.numberPad)
@@ -132,10 +154,30 @@ struct Procent_Screen: View {
                             .overlay {
                                 HStack{
                                     Spacer()
-                                    Text("$")
-                                        .font(.system(size: 25,weight: .medium))
-                                        .foregroundColor(Color("Color_black"))
-                                        .opacity(0.5)
+                                    switch selected {
+                                    case "USD":
+                                        Text("$")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "EUR":
+                                        Text("€")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "ZLT":
+                                        Text("zł")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "RUB":
+                                        Text("₽")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    default:
+                                        Text("erore")
+                                    }
                                 }.padding(.horizontal,15)
                             }
                             .keyboardType(.numberPad)
@@ -244,7 +286,7 @@ struct Procent_Screen: View {
                             Spacer()
                         }
                         HStack{
-                            Text("\(formatCurrency(_:Total))")
+                            Text("\(currencyText(_string:String(Total)))")
                                 .foregroundColor(Color("Color_font_1"))
                                 .font(.system(size: 45,weight: .medium))
                                 .onChange(of: InMonth) { _ in
@@ -315,17 +357,19 @@ struct Procent_Screen: View {
             Start = String(digitOnly.prefix(upper))
         }
     }
-    func formatCurrency(_ number: Double) -> String {
-        let formatforvalute = NumberFormatter()
-        formatforvalute.numberStyle = .currency
+    func currencyText ( _string: String) -> String {
+       
+            let ammo: Double = Double(_string)!
+            let formatt = NumberFormatter()
+            
+            formatt.numberStyle = .currency
+            formatt.currencyCode = selected
+            if let formattammo = formatt.string(from: NSNumber(value: ammo)) {
+                return formattammo
+            } else {
+                return "Erorre"
+            }
         
-        
-        let locale = Locale.current
-        
-        
-        formatforvalute.locale = locale
-        
-        return formatforvalute.string(from: NSNumber(value: number)) ?? ""
     }
     func updateTotal() {
         Total = Double(data.calculate(capital: Float(Start) ?? 0, rate: Float(Rate), monthlyDeposit: Float(InMonth) ?? 0, numberOfYears: Int(year)))

@@ -21,6 +21,7 @@
 		B72BFE162A1CEBDA000CDE1D /* Famous_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BFE152A1CEBDA000CDE1D /* Famous_Screen.swift */; };
 		B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989012A1A731400D887CC /* Procent_Screen.swift */; };
 		B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */; };
+		B749C0A12A3E6CE9001C447A /* settings_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B749C0A02A3E6CE9001C447A /* settings_Screen.swift */; };
 		B74F39E92A2A401700284ADF /* bar_progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F39E82A2A401700284ADF /* bar_progress.swift */; };
 		B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */; };
 		B793C61D2A3CE224003C4585 /* Medalki_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */; };
@@ -50,6 +51,7 @@
 		B72BFE152A1CEBDA000CDE1D /* Famous_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Famous_Screen.swift; sourceTree = "<group>"; };
 		B73989012A1A731400D887CC /* Procent_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Procent_Screen.swift; sourceTree = "<group>"; };
 		B73989032A1A9C4D00D887CC /* SafeMoney_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeMoney_Screen.swift; sourceTree = "<group>"; };
+		B749C0A02A3E6CE9001C447A /* settings_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settings_Screen.swift; sourceTree = "<group>"; };
 		B74F39E82A2A401700284ADF /* bar_progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bar_progress.swift; sourceTree = "<group>"; };
 		B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Screen.swift; sourceTree = "<group>"; };
 		B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medalki_Screen.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		B749C09F2A3E6765001C447A /* settings */ = {
 			isa = PBXGroup;
 			children = (
+				B749C0A02A3E6CE9001C447A /* settings_Screen.swift */,
 			);
 			path = settings;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				B728936E2A1920C1003634D7 /* Advice_Screen.swift in Sources */,
 				B72893572A1908EA003634D7 /* ContentView.swift in Sources */,
 				B72893702A192363003634D7 /* Strings.swift in Sources */,
+				B749C0A12A3E6CE9001C447A /* settings_Screen.swift in Sources */,
 				B728936C2A1915D5003634D7 /* Home_Screen.swift in Sources */,
 				B793C61D2A3CE224003C4585 /* Medalki_Screen.swift in Sources */,
 				B74F39E92A2A401700284ADF /* bar_progress.swift in Sources */,

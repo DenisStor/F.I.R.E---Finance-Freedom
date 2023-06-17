@@ -20,7 +20,7 @@ struct SafeMoney_Screen: View {
     @State private var Total : Double = 0
     
     @State private var anim = false
-   
+    @AppStorage ("money.localize") var selected: String = "USD"
     var body: some View {
         ZStack {
             Color("Color_back")
@@ -70,10 +70,30 @@ struct SafeMoney_Screen: View {
                                 .overlay {
                                     HStack{
                                         Spacer()
-                                        Text("$")
-                                            .font(.system(size: 25,weight: .medium))
-                                            .foregroundColor(Color("Color_black"))
-                                            .opacity(0.5)
+                                        switch selected {
+                                        case "USD":
+                                            Text("$")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        case "EUR":
+                                            Text("€")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        case "ZLT":
+                                            Text("zł")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        case "RUB":
+                                            Text("₽")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        default:
+                                            Text("erore")
+                                        }
                                     }.padding(.horizontal,15)
                                 }
                                 .keyboardType(.numberPad)
@@ -123,10 +143,30 @@ struct SafeMoney_Screen: View {
                                 .overlay {
                                     HStack{
                                         Spacer()
-                                        Text("$")
-                                            .font(.system(size: 25,weight: .medium))
-                                            .foregroundColor(Color("Color_black"))
-                                            .opacity(0.5)
+                                        switch selected {
+                                        case "USD":
+                                            Text("$")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        case "EUR":
+                                            Text("€")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        case "ZLT":
+                                            Text("zł")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        case "RUB":
+                                            Text("₽")
+                                                .font(.system(size: 25,weight: .medium))
+                                                .foregroundColor(Color("Color_black"))
+                                                .opacity(0.5)
+                                        default:
+                                            Text("erore")
+                                        }
                                     }.padding(.horizontal,15)
                                 }
                                 .keyboardType(.numberPad)
@@ -145,7 +185,7 @@ struct SafeMoney_Screen: View {
                             Spacer()
                         }
                         HStack{
-                            Text("\(formatCurrency(_:Total))")
+                            Text("\(currencyText(_string: String(Total)))")
                                 .foregroundColor(Color("Color_font_1"))
                                 .font(.system(size: 45,weight: .medium))
                                 .onChange(of: earnMoney) { _ in
@@ -222,6 +262,20 @@ struct SafeMoney_Screen: View {
     }
     func updateTotal() {
         Total = Double(data.spendEarn(earn: Float(earnMoney) ?? 0, spend: Float(spendMoney) ?? 0))
+    }
+    func currencyText ( _string: String) -> String {
+       
+            let ammo: Double = Double(_string)!
+            let formatt = NumberFormatter()
+            
+            formatt.numberStyle = .currency
+            formatt.currencyCode = selected
+            if let formattammo = formatt.string(from: NSNumber(value: ammo)) {
+                return formattammo
+            } else {
+                return "Erorre"
+            }
+        
     }
 }
     
