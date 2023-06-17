@@ -22,7 +22,7 @@ struct Test_View: View {
     @State private var HowQwest : Int = 1
     
   
-    @Binding var IsFinish : Int?
+    @Binding var IsFinish : Int
     
     var body: some View {
         ZStack{
@@ -62,7 +62,11 @@ struct Test_View: View {
                                 .aspectRatio(contentMode: .fit)
                                 .frame(height: 200)
                             Spacer()
-                        }
+                        }.onAppear(){
+                            
+                            IsFinish = 1
+                        
+                    }
                     case totalQwestion/3...(totalQwestion/3)*2:
                         VStack{
                             HStack {
@@ -80,11 +84,9 @@ struct Test_View: View {
                                 .frame(height: 200)
                             Spacer()
                         }.onAppear{
-                            if IsFinish == nil {
-                                
-                            } else {
-                                IsFinish = 1
-                            }
+                            
+                                IsFinish = 2
+                            
                         }
                     case (totalQwestion/3)*2...totalQwestion:
                         VStack {
@@ -102,11 +104,9 @@ struct Test_View: View {
                                 .frame(height: 200)
                             Spacer()
                         }.onAppear(){
-                            if IsFinish == nil {
-                                
-                            } else {
-                                IsFinish = 2
-                            }
+                            
+                                IsFinish = 3
+                            
                         }
                         
                     default:

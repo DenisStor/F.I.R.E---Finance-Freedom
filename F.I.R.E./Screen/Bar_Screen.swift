@@ -24,15 +24,15 @@ struct Bar_Screen: View {
                     VStack (spacing:0) {
                         Spacer()
                         ZStack{
-                            RoundedRectangle(cornerRadius: 30)
-                                .foregroundColor(Color("Color_button"))
-                                .frame(height:  80)
+                            RoundedRectangle(cornerRadius: 45)
+                                .strokeBorder(.black,lineWidth: 0.5)
+                                .frame(width: screen.width*0.8, height: screen.width*0.2,alignment: .center)
                                 .shadow(color: Color("Color_shadow"), radius: 20)
-                                .overlay {
-                                    RoundedRectangle(cornerRadius: 30)
-                                        .stroke(Color.black, lineWidth: 0.2)
-                                }
-                            HStack(spacing:20){
+                                .background(
+                                                   .ultraThinMaterial,
+                                                   in: RoundedRectangle(cornerRadius: 45, style: .continuous)
+                                               )
+                            HStack(spacing:screen.width*0.07){
                                 Image(systemName: "house")
                                     .font(.system(size:PageBar == 0 ? 30 : 25))
                                     .foregroundColor(PageBar == 0 ? Color("Color_font_1") : Color("Color_bar"))
@@ -40,7 +40,7 @@ struct Bar_Screen: View {
                                         PageBar = 0
                                         let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                         impactHeavy.impactOccurred()
-                                    }.padding(.horizontal,10)
+                                    }
                                 
                                 Image(systemName: "function")
                                     .font(.system(size:PageBar == 1 ? 30 : 25))
@@ -49,7 +49,7 @@ struct Bar_Screen: View {
                                         PageBar = 1
                                         let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                         impactHeavy.impactOccurred()
-                                    }.padding(.horizontal,10)
+                                    }
                                 Image(systemName:  "book" )
                                     .font(.system(size:PageBar == 2 ? 30 : 25))
                                     .foregroundColor(PageBar == 2 ? Color("Color_font_1") : Color("Color_bar"))
@@ -57,7 +57,7 @@ struct Bar_Screen: View {
                                         PageBar = 2
                                         let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                         impactHeavy.impactOccurred()
-                                    }.padding(.horizontal,10)
+                                    }
                                 Image(systemName: "gear")
                                     .font(.system(size:PageBar == 3 ? 30 : 25))
                                     .foregroundColor(PageBar == 3 ? Color("Color_font_1") : Color("Color_bar"))
@@ -71,10 +71,10 @@ struct Bar_Screen: View {
                                             let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                             impactHeavy.impactOccurred()
                                         }
-                                    }.padding(.horizontal,10)
+                                    }
                             }.animation(.spring(), value: PageBar)
                         }
-                    }.padding(.horizontal,50)
+                    }
                         .padding(.bottom,15)
                         .ignoresSafeArea()
                     

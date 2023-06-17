@@ -385,7 +385,7 @@ struct Home_Screen: View {
                                                 }
                             
                             RoundedRectangle (cornerRadius: 0)
-                                .frame(height: 80)
+                                .frame(height: 50)
                                 .opacity(0)
                             
                             

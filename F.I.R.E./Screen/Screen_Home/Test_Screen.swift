@@ -39,7 +39,7 @@ struct Test_Screen: View {
     @State private var total : Float = 8
     @State private var progress : Float = 0
     
-    @State private var nill : Int? = nil
+    @State private var nill : Int = 0
     var body: some View {
         Test_View(totalQwestion: 8,Text_info: TextInf, TrueQwestion: Ideal, IsFinish: $nill)
            

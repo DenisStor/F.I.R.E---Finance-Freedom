@@ -53,7 +53,7 @@ struct InvestAgree_Screen: View {
     @State private var realtyAns : [Bool] = [true , true ,true , true , true ]
     @State private var IsOn : Int = 0
     @State private var clr : [Bool] = [true , false , false , false]
-    @State private var null : Int? = nil
+    @State private var null : Int = 0
     
     var body: some View {
         ZStack {
