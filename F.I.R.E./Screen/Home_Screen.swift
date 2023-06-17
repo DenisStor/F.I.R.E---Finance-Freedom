@@ -81,6 +81,13 @@ struct Home_Screen: View {
     let words = strings()
     @State private var currentword = ""
     
+    
+    
+    
+    
+    @AppStorage ("test1")  var test1 : Int = 0
+    @AppStorage ("test2")  var test2 : Int = 0
+    
     var body: some View {
         
         
@@ -396,31 +403,94 @@ struct Home_Screen: View {
                             
                             
                             ZStack{
-                             Image("soviety")
-                                    .resizable()
-                                    .cornerRadius(30)
-                                    
-                                
-                                VStack(spacing:0){
+                             RoundedRectangle(cornerRadius: 30)
+                                    .foregroundColor(Color("Color_font_1"))
+                                VStack(spacing:10){
                                  
                                     
                                     HStack{
                                        Text("\(currentword)")
                                             
-                                            .font(.system(size: 23,weight: .medium))
+                                            .font(.system(size: 20,weight: .medium))
                                             .multilineTextAlignment(.leading)
                                             .foregroundColor(Color("Color_font_2"))
                                         Spacer()
                                     }
+                                    HStack{
+                                      Image(systemName: "hand.tap")
+                                            
+                                            .font(.system(size: 18,weight: .medium))
+                                            .multilineTextAlignment(.leading)
+                                            .foregroundColor(Color("Color_font_2"))
+                                        Text("Нажмите чтобы поменять")
+                                              
+                                              .font(.system(size: 18,weight: .medium))
+                                              .multilineTextAlignment(.leading)
+                                              .foregroundColor(Color("Color_font_2"))
+                                        Spacer()
+                                    }.opacity(0.5)
+                                        .animation(.easeInOut, value: currentword)
+                                    //Spacer()
+                                   
                                 
-                                }.frame(height: 140)
+                                }.frame(height: 160)
                                 .padding(.horizontal,20)
+                                .onTapGesture {
+                                    currentword = words.word.randomElement() ?? ""
+                                    let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                                    impactHeavy.impactOccurred()
+                                }
+                               
                             }
-                            .onTapGesture {
-                                currentword = words.word.randomElement() ?? ""
-                                let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
-                                impactHeavy.impactOccurred()
+                            NavigationLink {
+                                Medalki_Screen()
+                            } label: {
+                                ZStack{
+                                    Image("testImage")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .cornerRadius(30)
+                                    VStack{
+                                        HStack{
+                                            Text("Тест")
+                                                .font(.system(size: 25 ,weight: .medium))
+                                                .foregroundColor(Color("Color_font"))
+                                            
+                                            Spacer()
+                                            
+                                            
+                                            
+                                        }
+                                        HStack{
+                                            Text("\(test1+test2)")
+                                                .font(.system(size: 20 ,weight: .medium))
+                                                .foregroundColor(Color("Color_font_3"))
+                                            +
+                                            Text(" из ")
+                                                .font(.system(size: 20 ,weight: .medium))
+                                                .foregroundColor(Color("Color_font_3"))
+                                            +
+                                            Text("2")
+                                                .font(.system(size: 20 ,weight: .medium))
+                                                .foregroundColor(Color("Color_font_3"))
+                                            +
+                                            Text(" тестов")
+                                                .font(.system(size: 20 ,weight: .medium))
+                                                .foregroundColor(Color("Color_font_3"))
+                                            
+                                            Spacer()
+                                        }
+                                        HStack{
+                                            
+                                            bar_progress(progress:Float(test1+test2), total: Float(2))
+                                                .frame(width:200)
+                                            Spacer()
+                                            
+                                        }.frame(height: 12)
+                                    }.padding(.horizontal,20)
+                                }
                             }
+                            
                             .onAppear{
                                                     
                                                     if currentword.isEmpty {
