@@ -15,7 +15,7 @@ struct Home_Screen: View {
     ]
     @State private var textforqwes : [String] = [
         NSLocalizedString("RecognizeStock1", comment: ""),
-        "Разбираемся в терминах: Что такое IPO?",
+        NSLocalizedString("IPO1", comment: ""),
         "Диверсификация: Снижению риска в портфеле акций",
        
     ] // делать
@@ -41,31 +41,31 @@ struct Home_Screen: View {
     @State private var Text1 : [String] = [
         NSLocalizedString("RecognizeStock2", comment: ""),
         
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("IPO2", comment: ""),
         "Как распознать недооценённые акции?",
        
     ] // делать
     @State private var Text2 : [String] = [
         NSLocalizedString("RecognizeStock3", comment: ""),
-        "234424",
+        NSLocalizedString("IPO3", comment: ""),
         "3t3",
       
     ] // делать
     @State private var Text3 : [String] = [
         NSLocalizedString("RecognizeStock4", comment: ""),
-        "banana_Image",
+        NSLocalizedString("IPO4", comment: ""),
         "Image_test",
     
     ] // делать
     @State private var Text4 : [String] = [
         NSLocalizedString("RecognizeStock5", comment: ""),
-        "234424",
+        NSLocalizedString("IPO5", comment: ""),
         "3t3",
       
     ] // делать
     @State private var Text5 : [String] = [
         NSLocalizedString("RecognizeStock6", comment: ""),
-        "234424",
+        NSLocalizedString("IPO6", comment: ""),
         "3t3",
      
     ] // делать
