@@ -26,25 +26,25 @@ struct SafeMoney_Screen: View {
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
             
-            ScrollView(showsIndicators: false) {
-                
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(Color("Color_font_1"))
-                        .frame(height: 179)
-                    VStack {
-                        HStack {
-                            Text("safeMoney1")
-                                .font(.system(size: 30, weight: .medium))
-                                .foregroundColor(Color("Color_font_2"))
-                            
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            TextField("safeMoney2", text: $earnMoney, prompt: Text("safeMoney2")
-                                .foregroundColor(Color("textField")))
+          
+                VStack(spacing:0){
+                    VStack(spacing:20){
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundColor(Color("Color_font_1"))
+                                .frame(height: 180)
+                            VStack(spacing: 10){
+                                HStack{
+                                    Text("Сколько вы готовы откладывать")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                    
+                                    Spacer()
+                                }
+                                TextField("safeMoney2", text: $earnMoney,
+                                          prompt: Text("safeMoney2")
+                                    .foregroundColor(Color("textField")))
+                                .foregroundColor(Color("Color_black"))
                                 .onReceive(Just(earnMoney)) { index in
                                     
                                     if TextIs(earnMoney) {
@@ -55,53 +55,49 @@ struct SafeMoney_Screen: View {
                                     }
                                     
                                 }
-                            
-                                .font(.system(size: 25))
+                                
+                                
+                                .font(.system(size: 25,weight: .medium))
                                 .frame(height: 45)
                                 .padding(.horizontal,15)
-                                .foregroundColor(Color("Color_black"))
+                                .tint(.red)
+                                
                                 .background{
                                     RoundedRectangle(cornerRadius: 15)
                                         .foregroundColor(Color("Color_font_2"))
+                                    
+                                }
+                                .overlay {
+                                    HStack{
+                                        Spacer()
+                                        Text("$")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    }.padding(.horizontal,15)
                                 }
                                 .keyboardType(.numberPad)
                                 .focused($isInputActive)
-                            
-                            
-                            Text("valuta")
-                                .font(.system(size: 30,weight: .medium))
-                                .foregroundColor(Color("Color_font_2"))
-                            Spacer()
-                            
-                            
+                            }.padding(.vertical,15)
+                                .padding(.horizontal,15)
                             
                         }
-                        
-                        
-                        
-                        
-                    }  .padding(.horizontal,15) // 1 колонка
-                    
-                    
-                }
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(Color("Color_Start"))
-                        .frame(height: 233)
-                    VStack {
-                        HStack {
-                            Text("safeMoney3")
-                                .font(.system(size: 30, weight: .medium))
-                                .foregroundColor(Color("Color_font"))
-                            
-                            Spacer()
-                        }
-                        
-                        HStack {
-                            TextField("safeMoney2", text: $spendMoney,
-                                      prompt: Text("safeMoney2")
-                                          .foregroundColor(Color("textField")))
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundColor(Color("Color_button"))
+                                .frame(height: 180)
+                            VStack(spacing: 10){
+                                HStack{
+                                    Text("Ваш стартовый\nкапитал")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                    
+                                    Spacer()
+                                }
+                                TextField("safeMoney2", text: $spendMoney,
+                                          prompt: Text("safeMoney2")
+                                    .foregroundColor(Color("textField")))
+                                .foregroundColor(Color("Color_black"))
                                 .onReceive(Just(spendMoney)) { index in
                                     
                                     if TextIs1(spendMoney) {
@@ -112,51 +108,47 @@ struct SafeMoney_Screen: View {
                                     }
                                     
                                 }
-                            .font(.system(size: 25))
-                            .frame(height: 45)
-                            .padding(.horizontal,15)
-                            .foregroundColor(Color("Color_black"))
-                            .background{
-                                RoundedRectangle(cornerRadius: 15)
-                                    .foregroundColor(Color("Color_font_2"))
                                 
-                            }
-                            .keyboardType(.numberPad)
-                            .focused($isInputActive)
-                            
-                            
-                            Text("valuta")
-                                .font(.system(size: 30,weight: .medium))
-                                .foregroundColor(Color("Color_font"))
-                            Spacer()
-                            
+                                
+                                .font(.system(size: 25,weight: .medium))
+                                .frame(height: 45)
+                                .padding(.horizontal,15)
+                                .tint(.red)
+                                
+                                .background{
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .foregroundColor(Color("Color_font_2"))
+                                    
+                                }
+                                .overlay {
+                                    HStack{
+                                        Spacer()
+                                        Text("$")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    }.padding(.horizontal,15)
+                                }
+                                .keyboardType(.numberPad)
+                                .focused($isInputActive)
+                            }.padding(.vertical,15)
+                                .padding(.horizontal,15)
                             
                         }
-                        
-                        
-                        
-                        
-                    }  .padding(.horizontal,15) // 1 колонка
-                    
-                    
-                    
-                }
-                
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .foregroundColor(Color("Color_Start"))
-                        .frame(height: 250)
-                    ZStack {
-                        
-                        VStack ( spacing : anim ? 20 : 0) {
-                            
-                            HStack {
-                                @AppStorage ("totalspend") var totalSpend = formatCurrency(_: Total)
-                                Text("\(formatCurrency(_: Total))")
-                                    .font(.system(size: 50, weight: .medium))
-                                    .foregroundColor(Color("Color_font_1"))
-                                    .lineLimit(anim ? 2:1)
-                                    .onChange(of: earnMoney) { _ in
+                    }
+                    Spacer()
+                    VStack(spacing:10){
+                        HStack{
+                            Text("Вы можете\nпотратить")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 30,weight: .medium))
+                            Spacer()
+                        }
+                        HStack{
+                            Text("\(formatCurrency(_:Total))")
+                                .foregroundColor(Color("Color_font_1"))
+                                .font(.system(size: 45,weight: .medium))
+                                .onChange(of: earnMoney) { _ in
                                         updateTotal()
                                     }
                                     .onChange(of: spendMoney) { _ in
@@ -165,58 +157,29 @@ struct SafeMoney_Screen: View {
                                     .onAppear {
                                         updateTotal()
                                     }
-                                    .onTapGesture {
-                                        anim.toggle()
-                                        Timer.scheduledTimer(withTimeInterval: 10, repeats: false) { _ in
-                                            anim = false
-                                        }
-                                    }
                                     .textSelection(.enabled)
-                                
-                                Spacer()
-                                
-                                
-                            }
-                            ZStack {
-                                VStack {
-                                    
-                                    HStack {
-                                        Text("safeMoney4")
-                                            .font(.system(size: 34, weight: .medium))
-                                            .foregroundColor(Color("Color_font"))
-                                        
-                                        Spacer()
-                                        
-                                        
-                                    }
-                                }
-                            }
-                        }  .padding(.horizontal,15)
-                    }.animation(.spring(), value: anim)
-                }
-            }.padding(.horizontal,15)
-        }
-        
-        
-        
-        
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                Spacer()
-                if isInputActive {
-                    Button("Done") {
-                        isInputActive = false
+                                    .lineLimit(1)
+                            Spacer()
+                        }
+                        
                     }
-                } else {
-                    Button("Done") {
-                        isInputActive_1 = false
-                    }
-                }
-            }
+                
+                }.padding(.horizontal,15)
+            
         }
-        
     }
-    
+    func formatCurrency(_ number: Double) -> String {
+        let formatforvalute = NumberFormatter()
+        formatforvalute.numberStyle = .currency
+        
+        
+        let locale = Locale.current
+        
+        
+        formatforvalute.locale = locale
+        
+        return formatforvalute.string(from: NSNumber(value: number)) ?? ""
+    }
     func TextIs(_ upper: String) -> Bool {
         
         for character in earnMoney {
@@ -257,24 +220,9 @@ struct SafeMoney_Screen: View {
             spendMoney = String(digitOnly.prefix(upper))
         }
     }
-    
-    
-    func formatCurrency(_ number: Double) -> String {
-        let formatforvalute = NumberFormatter()
-        formatforvalute.numberStyle = .currency
-        
-        
-        let locale = Locale.current
-        
-        
-        formatforvalute.locale = locale
-        
-        return formatforvalute.string(from: NSNumber(value: number)) ?? ""
-    }
     func updateTotal() {
         Total = Double(data.spendEarn(earn: Float(earnMoney) ?? 0, spend: Float(spendMoney) ?? 0))
     }
-
 }
     
     

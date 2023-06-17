@@ -99,7 +99,7 @@ struct Procent_Screen: View {
                             HStack{
                                 Text("Ваш стартовый\nкапитал")
                                     .font(.system(size: 25,weight: .medium))
-                                    .foregroundColor(Color("Color_black"))
+                                    .foregroundColor(Color("Color_font"))
                                 
                                 Spacer()
                             }
@@ -148,11 +148,11 @@ struct Procent_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                             .frame(height: 180)
-                        VStack(spacing: 0){
+                        VStack(spacing: 5){
                             HStack{
                                 Text("Количество\nлет")
                                     .font(.system(size: 25,weight: .medium))
-                                    .foregroundColor(Color("Color_black"))
+                                    .foregroundColor(Color("Color_font"))
                                 
                                 Spacer()
                             }
@@ -163,7 +163,7 @@ struct Procent_Screen: View {
                              
                             
                         }.padding(.horizontal,15)
-                            .padding(.vertical,15)
+                            //.padding(.vertical,15)
                             .tint(Color("Color_font_1"))
                         
                     }
@@ -175,7 +175,7 @@ struct Procent_Screen: View {
                             HStack{
                                 Text("Риск профиль")
                                     .font(.system(size: 25,weight: .medium))
-                                    .foregroundColor(Color("Color_black"))
+                                    .foregroundColor(Color("Color_font"))
                                 
                                 Spacer()
                             }
@@ -239,7 +239,7 @@ struct Procent_Screen: View {
                     VStack(spacing:10){
                         HStack{
                             Text("Ваш капитал\nсоставит")
-                                .foregroundColor(Color("Color_black"))
+                                .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
                             Spacer()
                         }
