@@ -166,16 +166,21 @@ struct Home_Screen: View {
                                             Spacer()
                                         }
                                         HStack {
-                                            Text("Движение F.I.R.E. расшифровывается как Financial Independence Retire Early")
-                                                .font(.system(size: 25 ,weight: .medium))
-                                                .foregroundColor(Color("Color_font"))
-                                                .multilineTextAlignment(.leading)
+                                            Text("Движение F.I.R.E. расшифровывается как").foregroundColor(Color("Color_font")) +
+                                            Text(" Financial Independence Retire Early").foregroundColor(Color("Color_font_1"))
+                                               
                                             Spacer()
-                                        }
+                                        } .font(.system(size: 25 ,weight: .medium))
+                                            
+                                            .multilineTextAlignment(.leading)
                                         
                                       
                                         
-                                        NavigationLink {AboutFIRE_Screen()}label: {
+                                        NavigationLink {
+                                            AboutFIRE_Screen()
+                                            
+                                        }
+                                    label: {
                                             
                                             
                                             ZStack{
