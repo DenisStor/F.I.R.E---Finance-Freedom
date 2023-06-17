@@ -14,12 +14,11 @@ struct Home_Screen: View {
        
     ]
     @State private var textforqwes : [String] = [
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("RecognizeStock1", comment: ""),
         "Разбираемся в терминах: Что такое IPO?",
         "Диверсификация: Снижению риска в портфеле акций",
        
-    ]
-    
+    ] // делать
     @State private var colormain : [String] = [
     "Color_bl",
     "Color_font",
@@ -28,11 +27,11 @@ struct Home_Screen: View {
     
     
     @State private var TextTime : [String] = [
-        "4 мин чтения",
-        "4 мин чтения",
-        "4 мин чтения",
+        NSLocalizedString("ReadTime1", comment: ""),
+        NSLocalizedString("ReadTime2", comment: ""),
+        NSLocalizedString("ReadTime3", comment: ""),
       
-    ]
+    ] // делать
     @State private var Image1 : [String] = [
         "one",
         "two",
@@ -40,35 +39,36 @@ struct Home_Screen: View {
        
     ]
     @State private var Text1 : [String] = [
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("RecognizeStock2", comment: ""),
+        
         "Как распознать недооценённые акции?",
         "Как распознать недооценённые акции?",
        
-    ]
+    ] // делать
     @State private var Text2 : [String] = [
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("RecognizeStock3", comment: ""),
         "234424",
         "3t3",
       
-    ]
+    ] // делать
     @State private var Text3 : [String] = [
-        "Image_test",
+        NSLocalizedString("RecognizeStock4", comment: ""),
         "banana_Image",
         "Image_test",
     
-    ]
+    ] // делать
     @State private var Text4 : [String] = [
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("RecognizeStock5", comment: ""),
         "234424",
         "3t3",
       
-    ]
+    ] // делать
     @State private var Text5 : [String] = [
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("RecognizeStock6", comment: ""),
         "234424",
         "3t3",
      
-    ]
+    ] // делать
     @State private var random : [Int] = [
         0,
         0,
@@ -99,26 +99,69 @@ struct Home_Screen: View {
                                         ZStack{
                                             Color("Color_back")
                                                 .edgesIgnoringSafeArea(.all)
-                                            VStack{
-                                                HStack{
-                                                    Image("str")
-                                                        .aspectRatio(contentMode: .fit)
-                                                    Text("\(TextTime[index])")
-                                                      
-                                                        .font(.system(size: 18,weight: .medium))
+                                            ScrollView {
+                                                VStack(spacing:30){
+                                                    VStack(spacing:10){
+                                                        HStack{
+                                                            Image("str")
+                                                                .aspectRatio(contentMode: .fit)
+                                                            Text(TextTime[random[index]])
+                                                            
+                                                                .font(.system(size: 20,weight: .medium))
+                                                                .multilineTextAlignment(.center)
+                                                                .foregroundColor(Color("Color_font"))
+                                                            
+                                                            
+                                                        }
+                                                        
+                                                        Text(textforqwes[random[index]])
+                                                            .font(.system(size: 35,weight: .medium))
+                                                            .multilineTextAlignment(.center)
+                                                    }
+                                                        Image("\(Image1[random[index]])")
+                                                            .cornerRadius(30)
+                                                    
+                                                    HStack {
+                                                        Text(Text1[random[index]])
+                                                            .font(.system(size: 20,weight: .medium))
+                                                            .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color("Color_font"))
-                                                
-                                                       
-                                                }
-                                                Text("Title")
-                                                    .font(.system(size: 35,weight: .medium))
-                                                Image("\(Image1[random[index]])")
-                                                .cornerRadius(30)
-                                                Text("text")
-                                                Text("text")
-                                                Text("text")
-                                                Text("text")
-                                                Text("text")
+                                                        .lineSpacing(12)
+                                                        Spacer()
+                                                    }
+                                                    HStack {
+                                                        Text(Text2[random[index]])
+                                                            .font(.system(size: 20,weight: .medium))
+                                                            .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font"))
+                                                        .lineSpacing(12)
+                                                        Spacer()
+                                                    }
+                                                    HStack {
+                                                        Text(Text3[random[index]])
+                                                            .font(.system(size: 20,weight: .medium))
+                                                            .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font"))
+                                                        .lineSpacing(12)
+                                                        Spacer()
+                                                    }
+                                                    HStack {
+                                                        Text(Text4[random[index]])
+                                                            .font(.system(size: 20,weight: .medium))
+                                                            .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font"))
+                                                        .lineSpacing(12)
+                                                        Spacer()
+                                                    }
+                                                    HStack {
+                                                        Text(Text5[random[index]])
+                                                            .font(.system(size: 20,weight: .medium))
+                                                            .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font"))
+                                                        .lineSpacing(12)
+                                                        Spacer()
+                                                    }
+                                                }.padding(.horizontal,15)
                                             }
                                         }
                                     } label: {
