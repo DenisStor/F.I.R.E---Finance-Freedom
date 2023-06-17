@@ -289,15 +289,7 @@ struct Home_Screen: View {
                                         
                                             .font(.system(size: 20,weight: .medium))
                                             .foregroundColor(Color(white: 1, opacity: 0.5))
-                                            .overlay(
-                                                Rectangle().frame(height: 2).offset(y: 4)
-                                                , alignment: .bottom)
-                                        
-                                        
-                                            .foregroundColor(Color(white: 1, opacity: 0.5))
-                                        
-                                        
-                                            .foregroundColor(Color(white: 1, opacity: 0.5))
+                                            
                                         
                                     }
                                     Spacer()
@@ -331,11 +323,7 @@ struct Home_Screen: View {
                                                     .font(.system(size: 20 ,weight: .medium))
                                                     .foregroundColor(Color("Color_font"))
                                                     .opacity(0.5)
-                                                    .overlay(
-                                                        Rectangle().frame(height: 2).offset(y: 4)
-                                                            .foregroundColor(Color("Color_font"))
-                                                            .opacity(0.5)
-                                                    , alignment: .bottom)
+                                                    
                                                 Spacer()
                                             }
                                     }
