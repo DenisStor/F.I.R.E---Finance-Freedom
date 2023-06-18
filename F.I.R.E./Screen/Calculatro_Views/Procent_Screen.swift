@@ -22,13 +22,12 @@ struct Procent_Screen: View {
     
     let characterLimit : Int = 8
     @State private var Total : Double = 0
-    
-    
-
-        var minValue: Double = 0
-        var maxValue: Double = 50
-
     @AppStorage ("money.localize") var selected: String = "USD"
+    enum Field: Hashable {
+        case email
+        case text
+      }
+    @FocusState private var focus: Field?
     var body: some View {
         
         ZStack{
@@ -64,7 +63,7 @@ struct Procent_Screen: View {
                                 }
                                 
                             }
-                            
+                            .focused($focus, equals: .email)
                             
                             .font(.system(size: 25,weight: .medium))
                             .frame(height: 45)
@@ -139,6 +138,7 @@ struct Procent_Screen: View {
                                 }
                                 
                             }
+                            .focused($focus, equals: .text)
                             
                             
                             .font(.system(size: 25,weight: .medium))

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct settings_Screen: View {
     @AppStorage ("money.localize") var selected: String = "USD"
