@@ -12,6 +12,16 @@ struct settings_Screen: View {
     @AppStorage ("money.localize") var selected: String = "USD"
    
     let currencies = ["USD", "EUR", "ZLT", "RUB"]
+    @State private var isAlert : Bool = false
+    @State private var isSheet1 : Bool = false
+    
+      @AppStorage ("Start") var Start : Double = 0
+      @AppStorage ("InMonth") var InMonth : Double = 0
+      @AppStorage ("year") var year : Double = 1
+      @AppStorage ("Rate") var Rate : Int = 4
+      @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
+      @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
+      @AppStorage ("howMuch") var howmuch : Int = 0
     
     var body: some View {
         ZStack{
@@ -91,6 +101,9 @@ struct settings_Screen: View {
                                 )
                         }.padding(.horizontal,15)
                     }.frame(height: 90)
+                        .onTapGesture {
+                            isSheet1 = true
+                        }
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
@@ -167,12 +180,97 @@ struct settings_Screen: View {
                             .font(.system(size: 20,weight: .medium))
                     }.frame(height: 60)
                         .onTapGesture {
-                            
+                            isAlert = true
                         }
                     RoundedRectangle (cornerRadius: 0)
                         .frame(height: 100)
                         .opacity(0)
                 }.padding(.horizontal,15)
+            }.alert(isPresented: $isAlert) {
+                Alert(
+                    title: Text("1setd"),
+                    message: Text("2setd"),
+                    primaryButton: .destructive(Text("3setd")) {
+                     
+                        Start = 0
+                        InMonth = 0
+                        spendMoney = ""
+                        earnMoney = ""
+                        year = 1
+                        Rate = 4
+                        
+                    },
+                    secondaryButton: .cancel()
+                )
+            }
+            .sheet(isPresented: $isSheet1) {
+                VStack(spacing:15){
+                    HStack{
+                        Text("Мы в соцсетях")
+                            .font(.system(size: 30,weight: .medium))
+                            .multilineTextAlignment(.leading)
+                    Spacer()
+                    }
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                        HStack {
+                            Text("Вконтакте")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font"))
+                            Spacer()
+                            Image("vk")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font_2"))
+                                
+                                
+                                
+                                
+                        }.padding(.horizontal,20)
+                    }.frame(height: 90)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                        HStack {
+                            Text("Вконтакте")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font"))
+                            Spacer()
+                            Image("tg")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font_2"))
+                                
+                                
+                                
+                                
+                        }.padding(.horizontal,20)
+                    }.frame(height: 90)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                        HStack {
+                            Text("Вконтакте")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font"))
+                            Spacer()
+                            Image("you")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font_2"))
+                                
+                                
+                                
+                                
+                        }.padding(.horizontal,20)
+                    }.frame(height: 90)
+                    Spacer()
+                }.padding(.horizontal,15)
+                    .padding(.top,50)
             }
         }
     }
