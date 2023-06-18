@@ -24,8 +24,8 @@ struct Procent_Screen: View {
     @State private var Total : Double = 0
     @AppStorage ("money.localize") var selected: String = "USD"
     enum Field: Hashable {
-        case email
-        case text
+        case month
+        case start
       }
     @FocusState private var focus: Field?
     var body: some View {
@@ -63,7 +63,7 @@ struct Procent_Screen: View {
                                 }
                                 
                             }
-                            .focused($focus, equals: .email)
+                            .focused($focus, equals: .month)
                             
                             .font(.system(size: 25,weight: .medium))
                             .frame(height: 45)
@@ -138,7 +138,7 @@ struct Procent_Screen: View {
                                 }
                                 
                             }
-                            .focused($focus, equals: .text)
+                            .focused($focus, equals: .start)
                             
                             
                             .font(.system(size: 25,weight: .medium))
@@ -317,6 +317,8 @@ struct Procent_Screen: View {
             .onTapGesture {
                 focus = nil
               }
+            .scrollDismissesKeyboard(.immediately)
+
         }
         
     }

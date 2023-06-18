@@ -21,6 +21,11 @@ struct SafeMoney_Screen: View {
     
     @State private var anim = false
     @AppStorage ("money.localize") var selected: String = "USD"
+    enum Field: Hashable {
+        case month
+        case start
+      }
+    @FocusState private var focus: Field?
     var body: some View {
         ZStack {
             Color("Color_back")
@@ -55,7 +60,7 @@ struct SafeMoney_Screen: View {
                                     }
                                     
                                 }
-                                
+                                .focused($focus, equals: .month)
                                 
                                 .font(.system(size: 25,weight: .medium))
                                 .frame(height: 45)
@@ -128,7 +133,7 @@ struct SafeMoney_Screen: View {
                                     }
                                     
                                 }
-                                
+                                .focused($focus, equals: .start)
                                 
                                 .font(.system(size: 25,weight: .medium))
                                 .frame(height: 45)
@@ -205,7 +210,11 @@ struct SafeMoney_Screen: View {
                     }.padding(.bottom,10)
                 
                 }.padding(.horizontal,15)
-            
+                .onTapGesture {
+                    focus = nil
+                  }
+                .scrollDismissesKeyboard(.immediately)
+                .ignoresSafeArea(.keyboard)
         }
     }
     func formatCurrency(_ number: Double) -> String {
