@@ -10,7 +10,7 @@ import SwiftUI
 struct Famous_Screen: View {
     @State private var name : [String] = [
     NSLocalizedString("famous_name1", comment: ""),
-    NSLocalizedString("famous_name3", comment: ""),
+    NSLocalizedString("tyt", comment: ""),
     NSLocalizedString("famous_name4", comment: ""),
 
 
@@ -32,7 +32,7 @@ struct Famous_Screen: View {
     
     
     //заголовок статьи
-    @State private var Image2 : [String] = ["baffet1scr","bill2scr","elon2scr",] // картинка
+    @State private var Image2 : [String] = ["testimage","bill2scr","elon2scr",] // сюда картинки
     @State private var Text1 : [String] = [
         NSLocalizedString("famouse1text", comment: ""),
         NSLocalizedString("fam3text", comment: ""),
@@ -74,7 +74,7 @@ struct Famous_Screen: View {
                                                         .cornerRadius(30)
                                                     VStack {
                                                         Spacer()
-                                                        Text("Питер\nЛитч")
+                                                        Text(title[index])
                                                             .multilineTextAlignment(.center)
                                                             .font(.system(size: 25, weight: .medium))
                                                             .foregroundColor(Color("Color_bl"))
