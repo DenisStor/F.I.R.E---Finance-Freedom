@@ -16,7 +16,7 @@ struct Home_Screen: View {
     @State private var textforqwes : [String] = [
         NSLocalizedString("RecognizeStock1", comment: ""),
         NSLocalizedString("IPO1", comment: ""),
-        "Диверсификация: Снижению риска в портфеле акций",
+        NSLocalizedString("Cqq", comment: ""),
        
     ] // делать
     @State private var colormain : [String] = [
@@ -39,10 +39,10 @@ struct Home_Screen: View {
        
     ]
     @State private var Text1 : [String] = [
-        NSLocalizedString("RecognizeStock2", comment: ""),
-        
+     
+        NSLocalizedString("RecognizeStock1", comment: ""),
         NSLocalizedString("IPO2", comment: ""),
-        "Как распознать недооценённые акции?",
+        NSLocalizedString("RecognizeStock2", comment: ""),
        
     ] // делать
     @State private var Text2 : [String] = [
@@ -220,7 +220,7 @@ struct Home_Screen: View {
                                                 
                                         }
                                         HStack {
-                                            Text("Движение F.I.R.E. расшифровывается как").foregroundColor(Color("Color_font")) +
+                                            Text("sS").foregroundColor(Color("Color_font")) +
                                             Text(" Financial Independence Retire Early").foregroundColor(Color("Color_font_1"))
                                                
                                             Spacer()
@@ -312,13 +312,13 @@ struct Home_Screen: View {
                                         
                                             
                                             HStack {
-                                                Text("Какие активы\nвам подойдут")
+                                                Text("RWW")
                                                     .foregroundColor(Color("Color_font"))
                                                 .font(.system(size: 25 ,weight: .medium))
                                                // Spacer()
                                             }
                                             HStack {
-                                                Text("homeWord1")
+                                                Text("FW")
                                                 
                                                     .font(.system(size: 20 ,weight: .medium))
                                                     .foregroundColor(Color("Color_font"))
@@ -414,7 +414,7 @@ struct Home_Screen: View {
                                             .font(.system(size: 18,weight: .medium))
                                             .multilineTextAlignment(.leading)
                                             .foregroundColor(Color("Color_font_2"))
-                                        Text("Нажмите чтобы поменять")
+                                        Text("GT2")
                                               
                                               .font(.system(size: 18,weight: .medium))
                                               .multilineTextAlignment(.leading)
@@ -444,7 +444,7 @@ struct Home_Screen: View {
                                         .cornerRadius(30)
                                     VStack{
                                         HStack{
-                                            Text("Тест")
+                                            Text("KW1")
                                                 .font(.system(size: 25 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font"))
                                             
@@ -458,15 +458,15 @@ struct Home_Screen: View {
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
-                                            Text(" из ")
+                                            Text("vt1")
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
-                                            Text("2")
+                                            Text("2 ")
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
-                                            Text(" тестов")
+                                            Text("bg")
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             

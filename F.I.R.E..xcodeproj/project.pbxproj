@@ -61,7 +61,6 @@
 		B7DECD942A22800400C0D5CA /* Test_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Screen.swift; sourceTree = "<group>"; };
 		B7FD86A12A3CB1E700959BAA /* Termis_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Termis_Screen.swift; sourceTree = "<group>"; };
 		D26B5C022A33E60E00CFD4C5 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
-		D26B5C032A33E6BF00CFD4C5 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestAgree_Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,7 +223,6 @@
 				ru,
 				pl,
 				uk,
-				de,
 			);
 			mainGroup = B72893482A1908EA003634D7;
 			productRefGroup = B72893522A1908EA003634D7 /* Products */;
@@ -288,7 +286,6 @@
 				B72893772A1923F6003634D7 /* pl */,
 				B72893782A1923FA003634D7 /* ru */,
 				D26B5C022A33E60E00CFD4C5 /* uk */,
-				D26B5C032A33E6BF00CFD4C5 /* de */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
