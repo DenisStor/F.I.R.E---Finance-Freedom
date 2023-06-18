@@ -18,7 +18,7 @@ struct Home_Screen: View {
         NSLocalizedString("IPO1", comment: ""),
         NSLocalizedString("Cqq", comment: ""),
        
-    ] // делать
+    ]
     @State private var colormain : [String] = [
     "Color_bl",
     "Color_font",
@@ -31,7 +31,7 @@ struct Home_Screen: View {
         NSLocalizedString("ReadTime2", comment: ""),
         NSLocalizedString("ReadTime3", comment: ""),
       
-    ] // делать
+    ]
     @State private var Image1 : [String] = [
         "one",
         "two",
@@ -40,35 +40,35 @@ struct Home_Screen: View {
     ]
     @State private var Text1 : [String] = [
      
-        NSLocalizedString("RecognizeStock1", comment: ""),
-        NSLocalizedString("IPO2", comment: ""),
         NSLocalizedString("RecognizeStock2", comment: ""),
+        NSLocalizedString("IPO2", comment: ""),
+        NSLocalizedString("Divers3", comment: ""),
        
-    ] // делать
+    ]
     @State private var Text2 : [String] = [
         NSLocalizedString("RecognizeStock3", comment: ""),
         NSLocalizedString("IPO3", comment: ""),
-        "3t3",
+        NSLocalizedString("Divers4", comment: ""),
       
-    ] // делать
+    ]
     @State private var Text3 : [String] = [
         NSLocalizedString("RecognizeStock4", comment: ""),
         NSLocalizedString("IPO4", comment: ""),
-        "Image_test",
+        NSLocalizedString("Divers5", comment: ""),
     
-    ] // делать
+    ]
     @State private var Text4 : [String] = [
         NSLocalizedString("RecognizeStock5", comment: ""),
         NSLocalizedString("IPO5", comment: ""),
-        "3t3",
+        NSLocalizedString("Divers6", comment: ""),
       
-    ] // делать
+    ]
     @State private var Text5 : [String] = [
         NSLocalizedString("RecognizeStock6", comment: ""),
         NSLocalizedString("IPO6", comment: ""),
-        "3t3",
+        NSLocalizedString("Divers7", comment: ""),
      
-    ] // делать
+    ]
     @State private var random : [Int] = [
         0,
         0,
@@ -107,7 +107,7 @@ struct Home_Screen: View {
                                             Color("Color_back")
                                                 .edgesIgnoringSafeArea(.all)
                                             ScrollView {
-                                                VStack(spacing:30){
+                                                VStack(spacing:50){
                                                     VStack(spacing:10){
                                                         HStack{
                                                             Image("str")
@@ -168,7 +168,7 @@ struct Home_Screen: View {
                                                         .lineSpacing(12)
                                                         Spacer()
                                                     }
-                                                }.padding(.horizontal,15)
+                                                }.padding(.horizontal,20)
                                             }
                                         }
                                     } label: {

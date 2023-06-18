@@ -515,7 +515,7 @@ and make informed decisions. Real estate is a stable asset that can generate inc
 Real estate investing requires patience, skill and continuous learning, but can be a lucrative and
 successful way to make money in the real estate market.";
 
-"ReadTime1" = "4 min read";
+
 "RecognizeStock1" = "How do I recognize undervalued stocks?";
 "RecognizeStock2" = "Initially, cheap stocks may seem attractive because of their low price.However, a low price alone does not guarantee that a stock is promising. In order to make a meaningful decision, an investor needs to do a fundamental analysis and consider several key aspects.";
 "RecognizeStock3" = "First of all, it is worthwhile to examine the financial condition of the company. Stocks in companies with strong finances and a steady stream of earnings are often safe investments. Look at the company's income statements, balance sheet, and cash flow statements to assess its financial stability.";
@@ -752,3 +752,28 @@ provide investors with opportunities for significant returns in the future.";
 be considered. Economic trends, political stability, interest rates and other factors can have a
 significant impact on stocks. Be alert to global events and trends that may affect the overall
 market.";
+
+
+"ReadTime3" = "3 min read";
+
+
+
+"Divers1" = "Diversification: Reducing risk in an equity portfolio.";
+"Divers2" = "Diversification is the process of allocating investments to different assets,
+sectors, or regions in order to reduce the concentration of risk. In the context of an equity
+portfolio, it means investing in different companies from different sectors with different market
+characteristics.";
+"Divers3" = "One of the main benefits of diversification is to reduce the risk associated with
+particular companies or industries. If an entire portfolio consists of stocks in one company or
+one industry, negative events related to that company or industry can significantly affect the
+stock price and result in substantial losses.";
+"Divers4" = "However, spreading investments across different companies and sectors allows
+losses to be evened out because a drop in the value of one stock can be offset by gains in
+others. Diversification also allows an investor to participate in different sources of income.";
+"Divers5" = "Different companies and sectors have their own cyclical and structural
+characteristics, and therefore may have different periods of growth and decline. Investing in
+different stocks allows for different sources of income and reduces dependence on one
+particular event or company.";
+"Divers6" = "However, it is important to note that diversification does not guarantee complete
+risk protection. Markets can be linked, and certain events can affect most companies regardless
+of their industry.";
