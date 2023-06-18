@@ -314,6 +314,9 @@ struct Procent_Screen: View {
                 .padding(.horizontal,15)
                
             }
+            .onTapGesture {
+                focus = nil
+              }
         }
         
     }
