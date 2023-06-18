@@ -10,7 +10,7 @@ import SwiftUI
 struct Famous_Screen: View {
     @State private var name : [String] = [
     NSLocalizedString("famous_name1", comment: ""),
-    NSLocalizedString("tyt", comment: ""),
+    NSLocalizedString("qB1", comment: ""),
     NSLocalizedString("famous_name4", comment: ""),
 
 
