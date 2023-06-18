@@ -126,7 +126,10 @@ struct Home_Screen: View {
                                                             .multilineTextAlignment(.center)
                                                     }
                                                         Image("\(Image1[random[index]])")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
                                                             .cornerRadius(30)
+                                                            
                                                     
                                                     HStack {
                                                         Text(Text1[random[index]])

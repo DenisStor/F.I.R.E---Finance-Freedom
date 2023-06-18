@@ -75,7 +75,7 @@ struct Bar_Screen: View {
                             }.animation(.spring(), value: PageBar)
                         }
                     }
-                        .padding(.bottom,15)
+                        .padding(.bottom,25)
                         .ignoresSafeArea()
                     
                     

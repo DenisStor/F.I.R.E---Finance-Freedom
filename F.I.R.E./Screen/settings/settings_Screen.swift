@@ -11,7 +11,7 @@ import StoreKit
 struct settings_Screen: View {
     @AppStorage ("money.localize") var selected: String = "USD"
    
-    let currencies = ["USD", "EUR", "ZLT", "RUB"]
+    let currencies = ["USD", "EUR", "ZLT", "RUB","UAH"]
     @State private var isAlert : Bool = false
     @State private var isSheet1 : Bool = false
     
