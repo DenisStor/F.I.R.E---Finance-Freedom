@@ -27,8 +27,7 @@ struct Medalki_Screen: View {
     
     
     var body: some View {
-        GeometryReader { g in
-            let screen = g.size
+        
             ZStack{
                 Color("Color_back")
                     .edgesIgnoringSafeArea(.all)
@@ -62,8 +61,9 @@ struct Medalki_Screen: View {
                                 
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
+                                        .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
-                                        .frame(width: screen.width * 0.8,height: screen.width*0.15, alignment: .center)
+                                        .padding(.horizontal,30)
                                     if test1 >= 1 {
                                         Text("Перепройти тест")
                                             .multilineTextAlignment(.center)
@@ -113,8 +113,10 @@ struct Medalki_Screen: View {
                                 
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
+                                        .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
-                                        .frame(width: screen.width * 0.8,height: screen.width*0.15, alignment: .center)
+                                        .padding(.horizontal,30)
+                                       
                                     Text("Пройти тест")
                                         .multilineTextAlignment(.center)
                                         .font(.system(size: 20,weight: .medium))
@@ -131,7 +133,7 @@ struct Medalki_Screen: View {
                     }.padding(.horizontal,15)
                         .padding(.top,15)
                 }
-            }
+            
         }
     }
 }
