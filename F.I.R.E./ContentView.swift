@@ -19,7 +19,7 @@ struct ContentView: View {
             
    }
 }
-
+ // true, true, true , false ,false , true
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

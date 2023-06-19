@@ -17,6 +17,9 @@ struct Medalki_Screen: View {
         NSLocalizedString("word_0", comment: ""),
         NSLocalizedString("word_1", comment: ""),
         NSLocalizedString("word_2", comment: ""),
+        NSLocalizedString("word_0", comment: ""),
+        NSLocalizedString("word_1", comment: ""),
+        NSLocalizedString("word_2", comment: ""),
     ]
     @State private var testtruee : [Bool] = [ true, true, true , false ,false , true
     ]
@@ -24,8 +27,7 @@ struct Medalki_Screen: View {
     
     
     var body: some View {
-        GeometryReader { g in
-            let screen = g.size
+        
             ZStack{
                 Color("Color_back")
                     .edgesIgnoringSafeArea(.all)
@@ -53,14 +55,15 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 2, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
+                                Test_View(totalQwestion: 6, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
                                 
                             } label: {
                                 
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
+                                        .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
-                                        .frame(width: screen.width * 0.8,height: screen.width*0.15, alignment: .center)
+                                        .padding(.horizontal,30)
                                     if test1 >= 1 {
                                         Text("Перепройти тест")
                                             .multilineTextAlignment(.center)
@@ -110,8 +113,10 @@ struct Medalki_Screen: View {
                                 
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
+                                        .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
-                                        .frame(width: screen.width * 0.8,height: screen.width*0.15, alignment: .center)
+                                        .padding(.horizontal,30)
+                                       
                                     Text("Пройти тест")
                                         .multilineTextAlignment(.center)
                                         .font(.system(size: 20,weight: .medium))
@@ -128,7 +133,7 @@ struct Medalki_Screen: View {
                     }.padding(.horizontal,15)
                         .padding(.top,15)
                 }
-            }
+            
         }
     }
 }

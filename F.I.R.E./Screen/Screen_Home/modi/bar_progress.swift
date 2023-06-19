@@ -22,13 +22,13 @@ struct bar_progress: View {
                     .frame(height: 12)
                     .foregroundColor(Color("Color_font_1"))
                     .frame(width: screen.size.width * CGFloat(progress) / CGFloat(total))
-            }.animation(.easeInOut(duration: 0.5), value: progress)
+            }.animation(.spring(), value: progress)
         }
     }
 }
 
 struct bar_progress_Previews: PreviewProvider {
     static var previews: some View {
-        bar_progress(progress: 0, total: 8)
+        bar_progress(progress: 3, total: 8)
     }
 }

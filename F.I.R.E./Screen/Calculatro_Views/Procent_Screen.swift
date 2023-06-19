@@ -99,6 +99,11 @@ struct Procent_Screen: View {
                                             .font(.system(size: 25,weight: .medium))
                                             .foregroundColor(Color("Color_black"))
                                             .opacity(0.5)
+                                    case "UAH":
+                                        Text("₴")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
                                     default:
                                         Text("erore")
                                     }
@@ -172,6 +177,11 @@ struct Procent_Screen: View {
                                             .opacity(0.5)
                                     case "RUB":
                                         Text("₽")
+                                            .font(.system(size: 25,weight: .medium))
+                                            .foregroundColor(Color("Color_black"))
+                                            .opacity(0.5)
+                                    case "UAH":
+                                        Text("₴")
                                             .font(.system(size: 25,weight: .medium))
                                             .foregroundColor(Color("Color_black"))
                                             .opacity(0.5)
