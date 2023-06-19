@@ -17,6 +17,9 @@ struct Medalki_Screen: View {
         NSLocalizedString("word_0", comment: ""),
         NSLocalizedString("word_1", comment: ""),
         NSLocalizedString("word_2", comment: ""),
+        NSLocalizedString("word_0", comment: ""),
+        NSLocalizedString("word_1", comment: ""),
+        NSLocalizedString("word_2", comment: ""),
     ]
     @State private var testtruee : [Bool] = [ true, true, true , false ,false , true
     ]
@@ -53,7 +56,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 2, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
+                                Test_View(totalQwestion: 6, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
                                 
                             } label: {
                                 

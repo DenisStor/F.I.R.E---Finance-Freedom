@@ -398,38 +398,43 @@ struct Home_Screen: View {
                             
                             
                             ZStack{
-                             RoundedRectangle(cornerRadius: 30)
-                                    .foregroundColor(Color("Color_font_1"))
-                                VStack(spacing:10){
+                             
+                                VStack(){
                                  
-                                    
-                                    HStack{
-                                       Text("\(currentword)")
+                                    VStack(spacing:10){
+                                        HStack{
+                                            Text("\(currentword)")
                                             
-                                            .font(.system(size: 20,weight: .medium))
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(Color("Color_font_2"))
-                                        Spacer()
-                                    }
-                                    HStack{
-                                      Image(systemName: "hand.tap")
+                                                .font(.system(size: 20,weight: .medium))
+                                                .multilineTextAlignment(.leading)
+                                                .foregroundColor(Color("Color_font_2"))
+                                            Spacer()
+                                        }
+                                        HStack{
+                                            Image(systemName: "hand.tap")
                                             
-                                            .font(.system(size: 18,weight: .medium))
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(Color("Color_font_2"))
-                                        Text("GT2")
-                                              
-                                              .font(.system(size: 18,weight: .medium))
-                                              .multilineTextAlignment(.leading)
-                                              .foregroundColor(Color("Color_font_2"))
-                                        Spacer()
-                                    }.opacity(0.5)
-                                        .animation(.easeInOut, value: currentword)
-                                    //Spacer()
+                                                
+                                            Text("GT2")
+                                            
+                                                
+                                            Spacer()
+                                        }.font(.system(size: 18,weight: .medium))
+                                         .multilineTextAlignment(.leading)
+                                         .foregroundColor(Color("Color_font_2"))
+                                         .opacity(0.5)
+                                    } .padding(.horizontal,20)
+                                        .padding(.vertical,20)
+                                        .background (
+                                            RoundedRectangle(cornerRadius: 30)
+                                                   .foregroundColor(Color("Color_font_1"))
+                                                 
+                                        )
+                                 
                                    
                                 
-                                }.frame(height: 160)
-                                .padding(.horizontal,20)
+                                }
+                                .animation(.spring(), value: currentword)
+                               
                                 .onTapGesture {
                                     currentword = words.word.randomElement() ?? ""
                                     let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
@@ -506,6 +511,7 @@ struct Home_Screen: View {
                         .padding(.horizontal,15)
                         .padding(.top,spacing)
                     }
+                    
                     .refreshable {
                         
                         random = randomInt(maxCurrentSize: maxSize)
@@ -523,7 +529,9 @@ struct Home_Screen: View {
                                 }
                             }
                         }
-                    }.animation(.easeInOut, value: spacing)
+                    }
+                    .animation(.spring(), value: spacing)
+                    .animation(.spring(), value: currentword)
                 }
             }
         }.onAppear(){
