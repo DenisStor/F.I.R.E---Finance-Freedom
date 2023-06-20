@@ -86,52 +86,7 @@ struct Medalki_Screen: View {
                         
                     }.padding(.horizontal,15)
                         .padding(.top,15)
-                    VStack{
-                        VStack(spacing:25){
-                            switch test2 {
-                            case 0:
-                                Image("medalki_nil")
-                            case 1:
-                                Image("medalki")
-                            case 2:
-                                Image("medalki_2")
-                            default:
-                                Text("Erorre")
-                            }
-                            Text("Медаль\nза прохождение")
-                                .multilineTextAlignment(.center)
-                                .font(.system(size: 20,weight: .medium))
-                                .foregroundColor(Color("Color_font_3"))
-                            Text("Какой ты инвестор?")
-                                .multilineTextAlignment(.center)
-                                .font(.system(size: 25,weight: .medium))
-                                .foregroundColor(Color("Color_font"))
-                            NavigationLink {
-                                Test_View(totalQwestion: 6, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
-                                
-                            } label: {
-                                
-                                ZStack {
-                                    RoundedRectangle(cornerRadius: 30)
-                                        .padding(.vertical,-15)
-                                        .foregroundColor(Color("Color_font_1"))
-                                        .padding(.horizontal,30)
-                                       
-                                    Text("Пройти тест")
-                                        .multilineTextAlignment(.center)
-                                        .font(.system(size: 20,weight: .medium))
-                                        .foregroundColor(Color("Color_font_2"))
-                                    
-                                }
-                            }.padding(.bottom,15)
-                            Divider()
-                                
-                        } //test nomer z1
-                       
-                        
-                        
-                    }.padding(.horizontal,15)
-                        .padding(.top,15)
+                    
                 }
             
         }

@@ -61,8 +61,7 @@ struct Famous_Screen: View {
                                 ZStack{
                                     Color("Color_back")
                                         .edgesIgnoringSafeArea(.all)
-                                    GeometryReader { g in
-                                        let screen = g.size
+                                    
                                         ScrollView{
                                          
                                             VStack{
@@ -104,7 +103,7 @@ struct Famous_Screen: View {
                                        
                                         
                                         
-                                    }
+                                    
                                  
                                 }
                                 

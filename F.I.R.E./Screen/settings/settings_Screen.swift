@@ -22,7 +22,7 @@ struct settings_Screen: View {
       @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
       @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
       @AppStorage ("howMuch") var howmuch : Int = 0
-    
+    @Environment (\.requestReview) var requestReview : RequestReviewAction
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -148,6 +148,9 @@ struct settings_Screen: View {
                                 )
                         }.padding(.horizontal,15)
                     }.frame(height: 90)
+                        .onTapGesture {
+                            requestReview()
+                        }
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
