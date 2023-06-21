@@ -7,22 +7,27 @@ struct Home_Screen: View {
     
     
     @State private var spacing : CGFloat = 20
+    
+    
     @State private var imageforqwes : [String] = [
         "stockagree",
         "g",
         "d",
+        
        
     ]
     @State private var textforqwes : [String] = [
         NSLocalizedString("RecognizeStock1", comment: ""),
         NSLocalizedString("IPO1", comment: ""),
         NSLocalizedString("Cqq", comment: ""),
+        
        
     ]
     @State private var colormain : [String] = [
     "Color_bl",
     "Color_font",
     "Color_font",
+    
     ]
     
     
@@ -181,7 +186,7 @@ struct Home_Screen: View {
                                             Image(imageforqwes[random[index]])
                                                 .resizable()
                                                 
-                                                .frame(width: screen.height / 3, height: screen.height / 3)
+                                                .frame(width: screen.height / 3.3, height: screen.height / 3.3)
                                                 .cornerRadius(30)
                                                 .padding(.leading, index == 0 ? 15 : 10)
                                            
@@ -192,11 +197,11 @@ struct Home_Screen: View {
                                                     Text("\(textforqwes[random[index]])")
                                                         .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color(colormain[random[index]]))
-                                                        .font(.system(size: 0.03 * screen.height ,weight: .medium))
+                                                        .font(.system(size: 0.025 * screen.height ,weight: .medium))
                                                     
                                                     Spacer()
                                                 }
-                                            }.frame(width: screen.height / 3.7, height: screen.height / 3.7)
+                                            }.frame(width: screen.height / 4.5, height: screen.height / 4.2)
                                         }
                                     }
                                 }
@@ -241,7 +246,7 @@ struct Home_Screen: View {
                                             
                                             
                                             ZStack{
-                                                RoundedRectangle(cornerRadius: 14)
+                                                RoundedRectangle(cornerRadius: 30)
                                                     .foregroundColor(Color("Color_font_1"))
                                                 HStack{
                                                     

@@ -14,7 +14,8 @@ struct settings_Screen: View {
     let currencies = ["USD", "EUR", "ZLT", "RUB","UAH"]
     @State private var isAlert : Bool = false
     @State private var isSheet1 : Bool = false
-    
+    @State private var isSheet2 : Bool = false
+    @State private var isSheet3 : Bool = false
       @AppStorage ("Start") var Start : Double = 0
       @AppStorage ("InMonth") var InMonth : Double = 0
       @AppStorage ("year") var year : Double = 1
@@ -78,7 +79,9 @@ struct settings_Screen: View {
                                 )
                                 
                         }.padding(.horizontal,15)
-                    }.frame(height: 90)
+                    }.frame(height: 90).onTapGesture {
+                        isSheet2 = true
+                    }
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
@@ -126,6 +129,9 @@ struct settings_Screen: View {
                                 )
                         }.padding(.horizontal,15)
                     }.frame(height: 90)
+                        .onTapGesture {
+                            isSheet3 = true
+                        }
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
@@ -151,29 +157,7 @@ struct settings_Screen: View {
                         .onTapGesture {
                             requestReview()
                         }
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_button"))
-                        HStack {
-                            Text("Поделиться")
-                                .font(.system(size: 20,weight: .medium))
-                                .multilineTextAlignment(.leading)
-                                .foregroundColor(Color("Color_font"))
-                            Spacer()
-                            Image(systemName: "square.and.arrow.up")
-                                .font(.system(size: 20,weight: .medium))
-                                .multilineTextAlignment(.leading)
-                                .foregroundColor(Color("Color_font_2"))
-                                .padding(10)
-                                
-                                .background(
-                                Circle()
-                                    .foregroundColor(Color("Color_font_1"))
-                                
-                                
-                                )
-                        }.padding(.horizontal,15)
-                    }.frame(height: 90)
+                    
                     ZStack{
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_font_1"))
@@ -271,6 +255,101 @@ struct settings_Screen: View {
                                 
                         }.padding(.horizontal,20)
                     }.frame(height: 90)
+                    Spacer()
+                }.padding(.horizontal,15)
+                    .padding(.top,50)
+            }
+            .sheet(isPresented: $isSheet2) {
+                VStack(spacing:30){
+                    
+                   Image("Logo_o_us")
+                        
+                        .padding(.horizontal,40)
+                        .aspectRatio(contentMode: .fit)
+                      
+                    VStack(spacing:20){
+                        Text("F.I.R.E")
+                            .foregroundColor(Color("Color_font"))
+                            .font(.system(size: 30,weight: .semibold))
+                        VStack(spacing:20){
+                            Text("Данная информация не является индивидуальной инвестиционной рекомендацией,\nи финансовые инструменты либо операции, упомянутые в ней, могут\nне соответствовать вашему инвестиционному\nпрофилю и\nинвестиционным целям (ожиданиям).")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 15,weight: .medium))
+                                .multilineTextAlignment(.center)
+                            Text("ver 1.0")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 16,weight: .medium))
+                                .multilineTextAlignment(.center)
+                        }.opacity(0.5)
+                            .padding(.horizontal,20)
+                    }.padding(.bottom,40)
+                    
+                    VStack(spacing:20){
+                        Image("logo_machine")
+                        Text("Okay Machine")
+                            .foregroundColor(Color("Color_font"))
+                            .font(.system(size: 15,weight: .medium))
+                            .multilineTextAlignment(.center)
+                            .opacity(0.5)
+                    }
+                  
+                }.padding(.horizontal,15)
+                    .padding(.vertical,5)
+            }
+            .sheet(isPresented: $isSheet3) {
+                VStack(spacing:15){
+                    HStack{
+                        Text("Мы в соцсетях")
+                            .font(.system(size: 30,weight: .medium))
+                            .multilineTextAlignment(.leading)
+                    Spacer()
+                    }
+                  
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                        HStack {
+                            Text("Вконтакте")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font"))
+                            Spacer()
+                            Image("tg")
+                                .font(.system(size: 20,weight: .medium))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font_2"))
+                                
+                                
+                                
+                                
+                        }.padding(.horizontal,20)
+                    }.frame(height: 90)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                        VStack (spacing:5) {
+                            HStack {
+                                Text("Рабочая почта")
+                                    .font(.system(size: 15,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("Color_font"))
+                                .opacity(0.5)
+                                Spacer()
+                            }
+                         
+                            HStack {
+                                Text("fireapp@inbox.ru")
+                                    .font(.system(size: 25,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                .tint(Color("Color_font_1"))
+                                Spacer()
+                            }
+                                
+                                
+                                
+                        }.multilineTextAlignment(.leading)
+                        .padding(.horizontal,20)
+                    }.frame(height: 100)
                     Spacer()
                 }.padding(.horizontal,15)
                     .padding(.top,50)
