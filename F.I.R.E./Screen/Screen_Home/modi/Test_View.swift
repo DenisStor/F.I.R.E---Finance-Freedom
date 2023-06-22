@@ -9,113 +9,177 @@ import SwiftUI
 
 struct Test_View: View {
     var totalQwestion : Int //всего вопросов
-   // вопрос сейчас
+   
   
     var Text_info : [String] //основной текст
     var TrueQwestion : [Bool?] //правильные вопросы
+    var isMedal : Bool // медаль ли это
+    var titleTest : String //название текста
     
-    
-    @State private var index : Int = 0
-   // @State var F = TrueQwestion
-    @State private var total : Int = 0
+    @State private var index : Int = 0 //вопрос сейчас
+    @State private var total : Int = 0 //тотал ответов
     @State private var TrueForModi : Bool? = nil
     @State private var HowQwest : Int = 1
     
-  
-    @Binding var IsFinish : Int
+    @Binding var testIsFinish : Int
+    @Binding var testFinishHow : Int
     
     var body: some View {
         ZStack{
             Color("Color_back")
                 .edgesIgnoringSafeArea(.all)
             if index >= totalQwestion {
-                VStack(alignment: .leading){
-                    HStack {
-                        
+                if isMedal {
+                    VStack(spacing: 20){
+                        Spacer()
+                        switch total {
+                        case 0...totalQwestion/3:
+                            Image("medalki_nil")
+                                .onAppear {
+                                    
+                                    testFinishHow = 1
+                                    testIsFinish = 0
+                                }
+                        case totalQwestion/3...totalQwestion/2:
+                            Image("medalki")
+                                .onAppear {
+                                    testFinishHow = 2
+                                    testIsFinish = 1
+                                }
+                        case totalQwestion/2...totalQwestion:
+                            Image("medalki_2")
+                                .onAppear {
+                                    testFinishHow = 3
+                                   testIsFinish = 1
+                                    
+                                   
+                                }
+                        default :
+                            Text("Erore")
+                        }
+                        Text("\(titleTest)")
+                            .foregroundColor(Color("Color_font"))
+                            .font(.system(size: 30,weight: .medium))
+                        switch total {
+                        case 0...totalQwestion/3:
+                            Text("Вы не прошли\nтест")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        case totalQwestion/3...totalQwestion/2:
+                            Text("вы получили медаль")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        case totalQwestion/2...totalQwestion:
+                            Text("вы получили медаль")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        default :
+                            Text("Erore")
+                        }
+                        Spacer()
                         Text("\(total)")
                             .foregroundColor(Color("Color_font_1"))
-                            .font(.system(size: 45,weight: .medium))
-                        .multilineTextAlignment(.leading)
-                        Text("/")
+                            .font(.system(size: 30,weight: .medium))
+                        +
+                        Text(" правильных\nиз ")
                             .foregroundColor(Color("Color_font_1"))
-                            .font(.system(size: 45,weight: .medium))
-                        Text("\(index)")
+                            .font(.system(size: 30,weight: .medium))
+                            
+                        +
+                        Text("\(totalQwestion)")
                             .foregroundColor(Color("Color_font_1"))
-                            .font(.system(size: 45,weight: .medium))
-                        .multilineTextAlignment(.leading)
+                            .font(.system(size: 30,weight: .medium))
+                        switch total {
+                        case 0...totalQwestion/3:
+                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        case totalQwestion/3...totalQwestion/2:
+                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        case totalQwestion/2...totalQwestion:
+                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        default :
+                            Text("Erore")
+                        }
+                    }.padding(.horizontal,25)
+                        .padding(.top,5)
+                        .multilineTextAlignment(.center)
+                        
+                } else {
+                    VStack(spacing: 20){
                         Spacer()
-                    }.padding(.bottom,20)
-                    switch total {
-                    case 0...totalQwestion/3:
-                        VStack{
-                           
-                            HStack {
-                                Text("testbad")
-                                    .foregroundColor(Color("Color_font"))
-                                    .font(.system(size: 25,weight: .medium))
-                                    .multilineTextAlignment(.leading)
-                                Spacer()
-                            }
-                            Spacer()
-                            Image("nedoneimage")
+                        switch total {
+                        case 0...totalQwestion/3:
+                            Image(systemName: "xmark.seal.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 200)
-                            Spacer()
-                        }.onAppear(){
-                            
-                            IsFinish = 1
-                        
-                    }
-                    case totalQwestion/3...(totalQwestion/3)*2:
-                        VStack{
-                            HStack {
-                                Text("testcool")
-                                    .foregroundColor(Color("Color_font"))
-                                    .font(.system(size: 25,weight: .medium))
-                                    .multilineTextAlignment(.leading)
-                                Spacer()
-                                
-                            }
-                            Spacer()
-                            Image("doneimage")
+                                .foregroundColor(Color("Color_font_1"))
+                                .padding(.horizontal,5)
+                        case totalQwestion/3...totalQwestion/2:
+                            Image(systemName: "checkmark.seal.fill")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .frame(height: 200)
-                            Spacer()
-                        }.onAppear{
-                            
-                                IsFinish = 2
-                            
+                                .foregroundColor(Color("Color_font_1"))
+                                .padding(.horizontal,5)
+                        case totalQwestion/2...totalQwestion:
+                            Image(systemName: "checkmark.seal.fill")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(Color("Color_font_1"))
+                                .padding(.horizontal,5)
+                        default :
+                            Text("Erore")
                         }
-                    case (totalQwestion/3)*2...totalQwestion:
-                        VStack {
-                            HStack {
-                                Text("testbest")
-                                    .foregroundColor(Color("Color_font"))
-                                    .font(.system(size: 25,weight: .medium))
-                                    .multilineTextAlignment(.leading)
-                                Spacer()
-                            }
-                            Spacer()
-                            Image("doneimage")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(height: 200)
-                            Spacer()
-                        }.onAppear(){
+                       
+                       
+                        Spacer()
+                        Text("\(total)")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 35,weight: .medium))
+                        +
+                        Text(" правильных\nиз ")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 35,weight: .medium))
                             
-                                IsFinish = 3
-                            
+                        +
+                        Text("\(totalQwestion)")
+                            .foregroundColor(Color("Color_font_1"))
+                            .font(.system(size: 35,weight: .medium))
+                        Spacer()
+                        switch total {
+                        case 0...totalQwestion/3:
+                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        case totalQwestion/3...totalQwestion/2:
+                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        case totalQwestion/2...totalQwestion:
+                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 20,weight: .medium))
+                                .opacity(0.5)
+                        default :
+                            Text("Erore")
                         }
+                    }.padding(.horizontal,25)
+                        .padding(.bottom,10)
+                        .multilineTextAlignment(.center)
                         
-                    default:
-                        Text("Erore")
-                    }
-                   
-                    Spacer()
-                }.padding(.horizontal,15)
-                    .padding(.top,20)
+                }
             }
             else {
                 VStack(alignment: .leading,spacing:20){

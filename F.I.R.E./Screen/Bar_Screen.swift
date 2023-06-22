@@ -30,7 +30,7 @@ struct Bar_Screen: View {
                                 .shadow(color: Color("Color_shadow"), radius: 20)
                                 .background(
                                                    .ultraThinMaterial,
-                                                   in: RoundedRectangle(cornerRadius: 45, style: .continuous)
+                                                   in: RoundedRectangle(cornerRadius: 45)
                                                )
                             HStack(spacing:screen.width*0.07){
                                 Image(systemName: "house")

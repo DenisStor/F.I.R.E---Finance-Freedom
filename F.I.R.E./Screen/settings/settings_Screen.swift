@@ -23,6 +23,8 @@ struct settings_Screen: View {
       @AppStorage ("earnMoney") var earnMoney : String = "" // строка зарабаток
       @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
       @AppStorage ("howMuch") var howmuch : Int = 0
+    @AppStorage ("test1")  var test1 : Int = 0
+    @AppStorage ("test_1")  var test_1 : Int = 0
     @Environment (\.requestReview) var requestReview : RequestReviewAction
     @Environment(\.openURL) var openURL
     var body: some View {
@@ -186,6 +188,8 @@ struct settings_Screen: View {
                         earnMoney = ""
                         year = 1
                         Rate = 4
+                        test1 = 0
+                        test_1 = 0
                         
                     },
                     secondaryButton: .cancel()

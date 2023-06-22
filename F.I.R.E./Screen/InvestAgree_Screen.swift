@@ -188,7 +188,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                Test_View(totalQwestion: 5, Text_info: stocks, TrueQwestion: stoksAns, IsFinish: $null)
+                                
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
@@ -310,7 +310,7 @@ struct InvestAgree_Screen: View {
                             }
                             
                             NavigationLink {
-                                Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns, IsFinish: $null)
+                                
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
@@ -398,7 +398,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                Test_View(totalQwestion: 5, Text_info: crypto, TrueQwestion: cryproAns, IsFinish: $null)
+                               
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
@@ -495,7 +495,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                Test_View(totalQwestion: 5, Text_info: realty, TrueQwestion: realtyAns, IsFinish: $null)
+                                
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)

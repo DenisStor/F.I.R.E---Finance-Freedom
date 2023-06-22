@@ -91,7 +91,7 @@ struct Home_Screen: View {
     
     
     @AppStorage ("test1")  var test1 : Int = 0
-    @AppStorage ("test2")  var test2 : Int = 0
+    @AppStorage ("test_1")  var test_1 : Int = 0
     
     var body: some View {
         
@@ -467,7 +467,7 @@ struct Home_Screen: View {
                                             
                                         }
                                         HStack{
-                                            Text("\(test1+test2)")
+                                            Text("\(test1)")
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
@@ -487,7 +487,7 @@ struct Home_Screen: View {
                                         }
                                         HStack{
                                             
-                                            bar_progress(progress:Float(test1+test2), total: Float(2))
+                                            bar_progress(progress:Float(test1), total: Float(2))
                                                 .frame(width:200)
                                             Spacer()
                                             

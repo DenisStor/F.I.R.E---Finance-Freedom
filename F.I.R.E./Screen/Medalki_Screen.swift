@@ -10,6 +10,7 @@ import SwiftUI
 struct Medalki_Screen: View {
     
     @AppStorage ("test1")  var test1 : Int = 0
+    @AppStorage ("test_1")  var test_1 : Int = 0
     @AppStorage ("test2")  var test2 : Int = 0
     
     
@@ -34,7 +35,7 @@ struct Medalki_Screen: View {
                 ScrollView {
                     VStack{
                         VStack(spacing:25){
-                            switch test1 {
+                            switch test_1 {
                             case 0:
                                 Image("medalki_nil")
                             case 1:
@@ -55,7 +56,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 6, Text_info: testtext1, TrueQwestion: testtruee, IsFinish: $test1)
+                                Test_View(totalQwestion: 6, Text_info: testtext1, TrueQwestion: testtruee, isMedal: true, titleTest: "Тест1", testIsFinish: $test1, testFinishHow: $test_1)
                                 
                             } label: {
                                 
@@ -64,7 +65,7 @@ struct Medalki_Screen: View {
                                         .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
                                         .padding(.horizontal,30)
-                                    if test1 >= 1 {
+                                    if test_1 >= 1 {
                                         Text("Перепройти тест")
                                             .multilineTextAlignment(.center)
                                             .font(.system(size: 20,weight: .medium))
