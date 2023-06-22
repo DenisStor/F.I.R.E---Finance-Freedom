@@ -97,8 +97,7 @@ struct Home_Screen: View {
         
         
         NavigationStack{
-            GeometryReader { g in
-                let screen = g.size
+           
                 ZStack{
                     Color("Color_back")
                         .edgesIgnoringSafeArea(.all)
@@ -185,11 +184,10 @@ struct Home_Screen: View {
                                         ZStack{
                                             Image(imageforqwes[random[index]])
                                                 .resizable()
-                                                
-                                                .frame(width: screen.height / 3.3, height: screen.height / 3.3)
+                                                .aspectRatio(contentMode: .fit)
                                                 .cornerRadius(30)
                                                 .padding(.leading, index == 0 ? 15 : 10)
-                                           
+                                                .overlay (
                                             VStack{
                                                 Spacer()
                                                 HStack{
@@ -197,11 +195,14 @@ struct Home_Screen: View {
                                                     Text("\(textforqwes[random[index]])")
                                                         .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color(colormain[random[index]]))
-                                                        .font(.system(size: 0.025 * screen.height ,weight: .medium))
+                                                        .font(.system(size: 20 ,weight: .medium))
                                                     
                                                     Spacer()
-                                                }
-                                            }.frame(width: screen.height / 4.5, height: screen.height / 4.2)
+                                                }.padding(.leading,30)
+                                                .padding(.bottom,20)
+                                            }
+                                         )
+                                                .frame(height: 250)
                                         }
                                     }
                                 }
@@ -212,30 +213,30 @@ struct Home_Screen: View {
                             
                             
                             ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .frame(height: 280)
-                                    .foregroundColor(Color("Color_for_home"))
-                                HStack{
-                                    VStack(alignment: .leading,spacing: 15){
-                                        HStack{
-                                            Image("logoFire")
-                                                .renderingMode(.template)
-                                                .resizable()
-                                                .foregroundColor(Color("Color_font_1"))
-                                                .frame(width: 0.25 * screen.height / 8, height: 0.4 * screen.height / 8 )
+                               
+                                
+                                    VStack(alignment: .leading,spacing: 20){
+                                        VStack(spacing:5) {
+                                            HStack{
+                                                Image("logoFire")
+                                                    .renderingMode(.template)
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .foregroundColor(Color("Color_font_1"))
+                                                    .frame(height: 50)
                                                 
-                                            Spacer()
+                                                Spacer()
                                                 
-                                        }
-                                        HStack {
-                                            Text("sS").foregroundColor(Color("Color_font")) +
-                                            Text(" Financial Independence Retire Early").foregroundColor(Color("Color_font_1"))
-                                               
-                                            Spacer()
-                                        } .font(.system(size: 25 ,weight: .medium))
+                                            }
+                                            HStack {
+                                                Text("sS").foregroundColor(Color("Color_font")) +
+                                                Text(" Financial Independence Retire Early").foregroundColor(Color("Color_font_1"))
+                                                
+                                                Spacer()
+                                            } .font(.system(size: 25 ,weight: .medium))
                                             
-                                            .multilineTextAlignment(.leading)
-                                        
+                                                .multilineTextAlignment(.leading)
+                                        }
                                       
                                         
                                         NavigationLink {
@@ -261,8 +262,13 @@ struct Home_Screen: View {
                                             
                                         }
                                     }
-                                }
                                 .padding(.horizontal,20)
+                                .padding(.vertical,20)
+                                .background (
+                                    RoundedRectangle(cornerRadius: 30)
+                                       
+                                        .foregroundColor(Color("Color_for_home"))
+                                )
                                 
                             }
                             
@@ -539,7 +545,7 @@ struct Home_Screen: View {
                     .animation(.spring(), value: spacing)
                     .animation(.spring(), value: currentword)
                 }
-            }
+            
         }.onAppear(){
             random = [Int](randomInt(maxCurrentSize: 3))
         }

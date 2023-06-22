@@ -38,10 +38,8 @@ struct Procent_Screen: View {
             ScrollView {
                 VStack(spacing:20){
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_font_1"))
-                            .frame(height: 180)
-                        VStack(spacing: 10){
+                       
+                        VStack(spacing: 20){
                             HStack{
                                 Text("pxx")
                                     .font(.system(size: 25,weight: .medium))
@@ -113,15 +111,21 @@ struct Procent_Screen: View {
                             }
                             .keyboardType(.numberPad)
                             .focused($isInputActive)
-                        }.padding(.vertical,15)
-                            .padding(.horizontal,15)
+                        }
+                        .padding(.vertical,15)
+                        .padding(.horizontal,15)
                         
                     }
-                    ZStack{
+                    .padding(.vertical,20)
+                    .background(
                         RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_button"))
-                            .frame(height: 180)
-                        VStack(spacing: 10){
+                            .foregroundColor(Color("Color_font_1"))
+                            
+                    
+                    )
+                    ZStack{
+                       
+                        VStack(spacing: 20){
                             HStack{
                                 Text("tvw")
                                     .font(.system(size: 25,weight: .medium))
@@ -192,15 +196,21 @@ struct Procent_Screen: View {
                             }
                             .keyboardType(.numberPad)
                             .focused($isInputActive)
-                        }.padding(.vertical,15)
-                            .padding(.horizontal,15)
+                        }
+                        .padding(.vertical,15)
+                        .padding(.horizontal,15)
                         
                     }
+                    .padding(.vertical,20)
+                        .background(
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundColor(Color("Color_button"))
+                                
+                        
+                        )
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_button"))
-                            .frame(height: 180)
-                        VStack(spacing: 5){
+                      
+                        VStack(spacing: 20){
                             HStack{
                                 Text("tew")
                                     .font(.system(size: 25,weight: .medium))
@@ -208,22 +218,27 @@ struct Procent_Screen: View {
                                 
                                 Spacer()
                             }
-                            
-                            Slider(value: $year,in: 1...50,step:1)
-                            Text("\(Int(year))")
-       
+                            VStack{
+                                Slider(value: $year,in: 1...50,step:1)
+                                Text("\(Int(year))")
+                            }
                              
                             
                         }.padding(.horizontal,15)
-                            //.padding(.vertical,15)
+                            .padding(.vertical,15)
                             .tint(Color("Color_font_1"))
                         
                     }
+                    .padding(.vertical,20)
+                        .background(
+                            RoundedRectangle(cornerRadius: 30)
+                                .foregroundColor(Color("Color_button"))
+                                
+                        
+                        )
                     ZStack{
-                        RoundedRectangle(cornerRadius: 30)
-                            .foregroundColor(Color("Color_button"))
-                            .frame(height: 190)
-                        VStack(spacing: 30){
+                     
+                        VStack(spacing: 20){
                             HStack{
                                 Text("yww")
                                     .font(.system(size: 25,weight: .medium))
@@ -284,10 +299,19 @@ struct Procent_Screen: View {
                                 }.frame(height: 60)
                             
                           
-                        }.padding(.vertical,15)
+                        }
+                        
+                        .padding(.vertical,15)
                             .padding(.horizontal,15)
                         
                     }
+                    .padding(.vertical,20)
+                    .background(
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                            
+                    
+                    )
                     VStack(spacing:10){
                         HStack{
                             Text("bez")
