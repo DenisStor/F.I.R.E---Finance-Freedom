@@ -24,6 +24,7 @@ struct settings_Screen: View {
       @AppStorage ("spendMoney") var spendMoney : String = "" // строка трат
       @AppStorage ("howMuch") var howmuch : Int = 0
     @Environment (\.requestReview) var requestReview : RequestReviewAction
+    @Environment(\.openURL) var openURL
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -217,6 +218,9 @@ struct settings_Screen: View {
                                 
                         }.padding(.horizontal,20)
                     }.frame(height: 90)
+                        .onTapGesture {
+                            openURL(URL(string: NSLocalizedString("https://vk.com/freefinapp", comment: "VK"))!)
+                        }
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
@@ -236,6 +240,9 @@ struct settings_Screen: View {
                                 
                         }.padding(.horizontal,20)
                     }.frame(height: 90)
+                        .onTapGesture {
+                            openURL(URL(string: NSLocalizedString("https://t.me/financefire", comment: "TG"))!)
+                        }
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
@@ -255,6 +262,9 @@ struct settings_Screen: View {
                                 
                         }.padding(.horizontal,20)
                     }.frame(height: 90)
+                        .onTapGesture {
+                            openURL(URL(string: NSLocalizedString("https://www.youtube.com/channel/UC8EuiXpG9JPQN1kdXAAujxA", comment: "YOUTUBE"))!)
+                        }
                     Spacer()
                 }.padding(.horizontal,15)
                     .padding(.top,50)
@@ -303,6 +313,8 @@ struct settings_Screen: View {
                             .font(.system(size: 30,weight: .medium))
                             .multilineTextAlignment(.leading)
                     Spacer()
+                    } .onTapGesture {
+                        openURL(URL(string: NSLocalizedString("https://www.youtube.com/channel/UC8EuiXpG9JPQN1kdXAAujxA", comment: "YOUTUBE"))!)
                     }
                   
                     ZStack {
