@@ -40,7 +40,7 @@ struct SafeMoney_Screen: View {
                                 .frame(height: 180)
                             VStack(spacing: 10){
                                 HStack{
-                                    Text("Сколько вы готовы откладывать")
+                                    Text("qwt")
                                         .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                     
@@ -118,7 +118,7 @@ struct SafeMoney_Screen: View {
                                 .frame(height: 180)
                             VStack(spacing: 10){
                                 HStack{
-                                    Text("Ваш стартовый\nкапитал")
+                                    Text("tbw")
                                         .font(.system(size: 25,weight: .medium))
                                         .foregroundColor(Color("Color_font"))
                                     
@@ -194,7 +194,7 @@ struct SafeMoney_Screen: View {
                     Spacer()
                     VStack(spacing:10){
                         HStack{
-                            Text("Вы можете\nпотратить")
+                            Text("uyr")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
                             Spacer()

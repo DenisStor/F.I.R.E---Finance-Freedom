@@ -39,7 +39,7 @@ struct Calculator_Screen: View {
                                     }
                                     HStack{
                                         
-                                        Text("Это процент, который \nначисляется на начальную \nсумму вложений")
+                                        Text("Jor1")
                                             .font(.system(size: 15,weight: .medium))
                                             .foregroundColor(Color("Color_font_3"))
                                             
@@ -68,7 +68,7 @@ struct Calculator_Screen: View {
                             VStack(spacing:5){
                                 HStack{
                                     
-                                    Text("Траты в\nдень")
+                                    Text("Wvn")
                                         .font(.system(size: 30,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                         .multilineTextAlignment(.leading)
@@ -78,7 +78,7 @@ struct Calculator_Screen: View {
                                 }.padding(.top,10)
                                 HStack{
                                     
-                                    Text("Укажите свою зарплату \nи обязательные \nтраты, и калькулятор \nрассчитает ваш \nежедневный бюджет.")
+                                    Text("rfv")
                                         .font(.system(size: 15,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
                                         .opacity(0.5)

@@ -43,7 +43,7 @@ struct Procent_Screen: View {
                             .frame(height: 180)
                         VStack(spacing: 10){
                             HStack{
-                                Text("Сколько вы готовы откладывать")
+                                Text("pxx")
                                     .font(.system(size: 25,weight: .medium))
                                     .foregroundColor(Color("Color_font_2"))
                                 
@@ -123,7 +123,7 @@ struct Procent_Screen: View {
                             .frame(height: 180)
                         VStack(spacing: 10){
                             HStack{
-                                Text("Ваш стартовый\nкапитал")
+                                Text("tvw")
                                     .font(.system(size: 25,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 
@@ -202,7 +202,7 @@ struct Procent_Screen: View {
                             .frame(height: 180)
                         VStack(spacing: 5){
                             HStack{
-                                Text("Количество\nлет")
+                                Text("tew")
                                     .font(.system(size: 25,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 
@@ -225,7 +225,7 @@ struct Procent_Screen: View {
                             .frame(height: 190)
                         VStack(spacing: 30){
                             HStack{
-                                Text("Риск профиль")
+                                Text("yww")
                                     .font(.system(size: 25,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
                                 
@@ -290,7 +290,7 @@ struct Procent_Screen: View {
                     }
                     VStack(spacing:10){
                         HStack{
-                            Text("Ваш капитал\nсоставит")
+                            Text("bez")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
                             Spacer()
