@@ -191,7 +191,7 @@ struct InvestAgree_Screen: View {
                                 Test_View(totalQwestion: 5, Text_info: stocks, TrueQwestion: stoksAns, IsFinish: $null)
                             } label: {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 15)
+                                    RoundedRectangle(cornerRadius: 30)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
                                     Text("testznania")
@@ -313,7 +313,7 @@ struct InvestAgree_Screen: View {
                                 Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns, IsFinish: $null)
                             } label: {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 15)
+                                    RoundedRectangle(cornerRadius: 30)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
                                     Text("testznania")
@@ -401,7 +401,7 @@ struct InvestAgree_Screen: View {
                                 Test_View(totalQwestion: 5, Text_info: crypto, TrueQwestion: cryproAns, IsFinish: $null)
                             } label: {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 15)
+                                    RoundedRectangle(cornerRadius: 30)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
                                     Text("testznania")
@@ -498,7 +498,7 @@ struct InvestAgree_Screen: View {
                                 Test_View(totalQwestion: 5, Text_info: realty, TrueQwestion: realtyAns, IsFinish: $null)
                             } label: {
                                 ZStack {
-                                    RoundedRectangle(cornerRadius: 15)
+                                    RoundedRectangle(cornerRadius: 30)
                                         .frame(height: 60)
                                     .foregroundColor(Color("Color_font_1"))
                                     Text("testznania")

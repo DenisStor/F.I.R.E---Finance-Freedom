@@ -8,7 +8,7 @@
 import Foundation
 
 
-class strings :ObservableObject {
+final class strings :ObservableObject {
     let word = [
             NSLocalizedString("word_0", comment: ""),
             NSLocalizedString("word_1", comment: ""),

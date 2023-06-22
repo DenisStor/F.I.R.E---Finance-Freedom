@@ -17,6 +17,7 @@
       "scale" : "1x"
     },
     {
+      "filename" : "stockhisotry 4.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -27,10 +28,12 @@
           "value" : "dark"
         }
       ],
+      "filename" : "stockhisotry 2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "stockhisotry 5.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -41,6 +44,7 @@
           "value" : "dark"
         }
       ],
+      "filename" : "stockhisotry 3.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
