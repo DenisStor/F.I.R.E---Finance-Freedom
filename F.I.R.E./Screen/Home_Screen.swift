@@ -488,10 +488,11 @@ struct Home_Screen: View {
                                         HStack{
                                             
                                             bar_progress(progress:Float(test1), total: Float(2))
-                                                .frame(width:200)
-                                            Spacer()
+                                                .frame(alignment: .leading)
+                                           
                                             
                                         }.frame(height: 12)
+                                            .padding(.trailing,150)
                                     }.padding(.horizontal,20)
                                 }
                             }
