@@ -13,6 +13,7 @@ struct settings_Screen: View {
    
     let currencies = ["USD", "EUR", "ZLT", "RUB","UAH"]
     @State private var isAlert : Bool = false
+    @State private var isAlert1 : Bool = false
     @State private var isSheet1 : Bool = false
     @State private var isSheet2 : Bool = false
     @State private var isSheet3 : Bool = false
@@ -58,7 +59,7 @@ struct settings_Screen: View {
                             }.tint(Color("Color_font_1"))
                             .pickerStyle(.menu)
                             
-                        }.padding(.horizontal,15)
+                        }.padding(.horizontal,20)
                     }.frame(height: 90)
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)
@@ -81,7 +82,7 @@ struct settings_Screen: View {
                                 
                                 )
                                 
-                        }.padding(.horizontal,15)
+                        }.padding(.horizontal,20)
                     }.frame(height: 90).onTapGesture {
                         isSheet2 = true
                     }
@@ -105,7 +106,7 @@ struct settings_Screen: View {
                                 
                                 
                                 )
-                        }.padding(.horizontal,15)
+                        }.padding(.horizontal,20)
                     }.frame(height: 90)
                         .onTapGesture {
                             isSheet1 = true
@@ -130,7 +131,7 @@ struct settings_Screen: View {
                                 
                                 
                                 )
-                        }.padding(.horizontal,15)
+                        }.padding(.horizontal,20)
                     }.frame(height: 90)
                         .onTapGesture {
                             isSheet3 = true
@@ -155,7 +156,7 @@ struct settings_Screen: View {
                                 
                                 
                                 )
-                        }.padding(.horizontal,15)
+                        }.padding(.horizontal,20)
                     }.frame(height: 90)
                         .onTapGesture {
                             requestReview()
@@ -190,11 +191,15 @@ struct settings_Screen: View {
                         Rate = 4
                         test1 = 0
                         test_1 = 0
-                        
+                        selected = "USD"
+                         isAlert1 = true
                     },
                     secondaryButton: .cancel()
                 )
             }
+            .alert("Данные удалены", isPresented: $isAlert1) {
+                        Button("OK", role: .cancel) { }
+                    }
             .sheet(isPresented: $isSheet1) {
                 VStack(spacing:15){
                     HStack{
