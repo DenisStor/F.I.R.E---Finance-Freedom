@@ -55,6 +55,8 @@ struct InvestAgree_Screen: View {
     @State private var clr : [Bool] = [true , false , false , false]
     @State private var null : Int = 0
     
+    @State private var testnot : Int = 0
+    @State private var testnod : Int = 0
     var body: some View {
         ZStack {
             Color("Color_back")
@@ -188,7 +190,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                
+                                Test_View(totalQwestion: 5, Text_info: stocks, TrueQwestion: stoksAns, isMedal: false, titleTest: "", testIsFinish: $testnot, testFinishHow: $testnod)
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
@@ -310,7 +312,7 @@ struct InvestAgree_Screen: View {
                             }
                             
                             NavigationLink {
-                                
+                                Test_View(totalQwestion: 5, Text_info: bonds, TrueQwestion: bondsAns, isMedal: false, titleTest: "", testIsFinish: $testnot, testFinishHow: $testnod)
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
@@ -398,7 +400,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                               
+                                Test_View(totalQwestion: 5, Text_info: crypto, TrueQwestion: cryproAns, isMedal: false, titleTest: "", testIsFinish: $testnot, testFinishHow: $testnod)
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)
@@ -495,7 +497,7 @@ struct InvestAgree_Screen: View {
                                 
                             }
                             NavigationLink {
-                                
+                                Test_View(totalQwestion: 5, Text_info: realty, TrueQwestion: realtyAns, isMedal: false, titleTest: "", testIsFinish: $testnot, testFinishHow: $testnod)
                             } label: {
                                 ZStack {
                                     RoundedRectangle(cornerRadius: 30)

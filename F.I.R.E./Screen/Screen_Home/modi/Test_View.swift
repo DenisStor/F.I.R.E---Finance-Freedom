@@ -30,7 +30,7 @@ struct Test_View: View {
                 .edgesIgnoringSafeArea(.all)
             if index >= totalQwestion {
                 if isMedal {
-                    VStack(spacing: 20){
+                    VStack(spacing: 10){
                         Spacer()
                         switch total {
                         case 0...totalQwestion/3:
@@ -112,11 +112,11 @@ struct Test_View: View {
                             Text("Erore")
                         }
                     }.padding(.horizontal,25)
-                        .padding(.top,5)
+                        .padding(.bottom,5)
                         .multilineTextAlignment(.center)
                         
                 } else {
-                    VStack(spacing: 20){
+                    VStack(spacing: 10){
                         Spacer()
                         switch total {
                         case 0...totalQwestion/3:
@@ -176,7 +176,7 @@ struct Test_View: View {
                             Text("Erore")
                         }
                     }.padding(.horizontal,25)
-                        .padding(.bottom,10)
+                        .padding(.bottom,5)
                         .multilineTextAlignment(.center)
                         
                 }
@@ -248,7 +248,7 @@ struct Test_View: View {
                     Spacer()
                     VStack{
                         ZStack{
-                            RoundedRectangle(cornerRadius: 15)
+                            RoundedRectangle(cornerRadius: 30)
                                 .frame(height: 60)
                                 .foregroundColor(Color("Color_font_1"))
                             if totalQwestion-1 == index

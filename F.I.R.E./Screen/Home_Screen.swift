@@ -249,6 +249,7 @@ struct Home_Screen: View {
                                             ZStack{
                                                 RoundedRectangle(cornerRadius: 30)
                                                     .foregroundColor(Color("Color_font_1"))
+                                                
                                                 HStack{
                                                     
                                                     Text("More")
@@ -257,8 +258,8 @@ struct Home_Screen: View {
                                                     
                                                    
                                                     
-                                                }  .padding(10)
-                                            }.frame(maxWidth: .infinity,maxHeight:55)
+                                                }  .padding(.vertical,15)
+                                            }.frame(maxWidth: .infinity)
                                             
                                         }
                                     }

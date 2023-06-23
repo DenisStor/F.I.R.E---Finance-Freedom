@@ -35,10 +35,11 @@ struct Bar_Screen: View {
                                     .font(.system(size:PageBar == 0 ? 30 : 25))
                                     .foregroundColor(PageBar == 0 ? Color("Color_font_1") : Color("Color_bar"))
                                     .onTapGesture {
-                                        PageBar = 0
+                                       
                                         if PageBar == 0 {
                                             
                                         } else {
+                                            PageBar = 0
                                             let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                             impactHeavy.impactOccurred()
                                         }
@@ -48,10 +49,11 @@ struct Bar_Screen: View {
                                     .font(.system(size:PageBar == 1 ? 30 : 25))
                                     .foregroundColor(PageBar == 1 ? Color("Color_font_1") : Color("Color_bar"))
                                     .onTapGesture {
-                                        PageBar = 1
+                                        
                                         if PageBar == 1 {
-                                             
+                                            
                                         } else {
+                                            PageBar = 1
                                             let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                             impactHeavy.impactOccurred()
                                         }
@@ -60,10 +62,10 @@ struct Bar_Screen: View {
                                     .font(.system(size:PageBar == 2 ? 30 : 25))
                                     .foregroundColor(PageBar == 2 ? Color("Color_font_1") : Color("Color_bar"))
                                     .onTapGesture {
-                                        PageBar = 2
                                         if PageBar == 2 {
                                             
                                         } else {
+                                            PageBar = 2
                                             let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                             impactHeavy.impactOccurred()
                                         }
@@ -72,12 +74,10 @@ struct Bar_Screen: View {
                                     .font(.system(size:PageBar == 3 ? 30 : 25))
                                     .foregroundColor(PageBar == 3 ? Color("Color_font_1") : Color("Color_bar"))
                                     .onTapGesture {
-                                        PageBar = 3
                                         if PageBar == 3 {
                                             
                                         } else {
-                                            
-                                            
+                                            PageBar = 3
                                             let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
                                             impactHeavy.impactOccurred()
                                         }
@@ -86,7 +86,7 @@ struct Bar_Screen: View {
                         }
                     }
                         .padding(.bottom,5)
-                     //   .ignoresSafeArea()
+                   
                     
                     
                     
