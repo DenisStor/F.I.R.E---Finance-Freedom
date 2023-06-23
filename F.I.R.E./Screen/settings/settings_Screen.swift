@@ -34,7 +34,7 @@ struct settings_Screen: View {
             ScrollView(showsIndicators: false) {
                 VStack(spacing:15){
                     HStack {
-                        Text("Настройки")
+                        Text("sb4")
                             .font(.system(size: 30,weight: .medium))
                             .multilineTextAlignment(.leading)
                             .foregroundColor(Color("Color_font"))
@@ -44,7 +44,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Выбор валюты")
+                            Text("svr")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -64,7 +64,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Версия приложения")
+                            Text("Fbq"  )
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -89,7 +89,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Мы в соцсетях")
+                            Text("vrr")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -114,7 +114,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Мы в соцсетях")
+                            Text("htw")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -139,7 +139,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Мы в соцсетях")
+                            Text("tgb")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -165,7 +165,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_font_1"))
                             
-                        Text("Сбросить кеш")
+                        Text("vow")
                             .foregroundColor(Color("Color_font_2"))
                             .font(.system(size: 20,weight: .medium))
                     }.frame(height: 60)
@@ -198,7 +198,7 @@ struct settings_Screen: View {
             .sheet(isPresented: $isSheet1) {
                 VStack(spacing:15){
                     HStack{
-                        Text("Мы в соцсетях")
+                        Text("cwq")
                             .font(.system(size: 30,weight: .medium))
                             .multilineTextAlignment(.leading)
                     Spacer()
@@ -207,7 +207,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Вконтакте")
+                            Text("bqcw")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -229,7 +229,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Вконтакте")
+                            Text("Huwy")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -251,7 +251,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Вконтакте")
+                            Text("wfawg")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -286,7 +286,7 @@ struct settings_Screen: View {
                             .foregroundColor(Color("Color_font"))
                             .font(.system(size: 30,weight: .semibold))
                         VStack(spacing:20){
-                            Text("Данная информация не является индивидуальной инвестиционной рекомендацией,\nи финансовые инструменты либо операции, упомянутые в ней, могут\nне соответствовать вашему инвестиционному\nпрофилю и\nинвестиционным целям (ожиданиям).")
+                            Text("verr")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 15,weight: .medium))
                                 .multilineTextAlignment(.center)
@@ -313,7 +313,7 @@ struct settings_Screen: View {
             .sheet(isPresented: $isSheet3) {
                 VStack(spacing:15){
                     HStack{
-                        Text("Мы в соцсетях")
+                        Text("wwtki")
                             .font(.system(size: 30,weight: .medium))
                             .multilineTextAlignment(.leading)
                     Spacer()
@@ -325,7 +325,7 @@ struct settings_Screen: View {
                         RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_button"))
                         HStack {
-                            Text("Вконтакте")
+                            Text("ebwww")
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
@@ -345,7 +345,7 @@ struct settings_Screen: View {
                             .foregroundColor(Color("Color_button"))
                         VStack (spacing:5) {
                             HStack {
-                                Text("Рабочая почта")
+                                Text("vewegh")
                                     .font(.system(size: 15,weight: .medium))
                                     .multilineTextAlignment(.leading)
                                 .foregroundColor(Color("Color_font"))
