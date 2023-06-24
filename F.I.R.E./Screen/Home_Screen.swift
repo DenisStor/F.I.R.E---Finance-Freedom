@@ -1,97 +1,97 @@
 
 
 import SwiftUI
-
+struct storisBar {
+    let imageStringTitle : String
+    let imageString : String
+    let textTime : String
+    let textTitle : String
+    let text1 : String
+    let text2 : String
+    let text3 : String
+    let text4 : String
+    let text5 : String
+}
 struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
+    @AppStorage ("test1")  var test1 : Int = 0
+    @AppStorage ("test_1")  var test_1 : Int = 0
     
-    
+    let words = strings()
+    @State private var currentword = ""
     @State private var spacing : CGFloat = 20
     
-    
-    @State private var imageforqwes : [String] = [
-        "stockagree",
-        "g",
-        "d",
-        
-       
+    let stories = [
+    storisBar(
+              imageStringTitle: "stockagree", //картинка которая видна с home screen
+              imageString : "", // внутренняя картинка
+              textTime : NSLocalizedString("1", comment: ""), // время чтения
+              textTitle: NSLocalizedString("1", comment: ""), //заголовок
+              text1:     NSLocalizedString("2", comment: ""), // текст 1
+              text2:     NSLocalizedString("3", comment: ""),// текст 2
+              text3:     NSLocalizedString("4", comment: ""),// текст 3
+              text4:     NSLocalizedString("5", comment: ""),// текст 4
+              text5:     NSLocalizedString("6", comment: "")),// текст 5
+    storisBar(
+              imageStringTitle: "stockagree",
+              imageString : "",
+              textTime : NSLocalizedString("1", comment: ""),
+              textTitle: NSLocalizedString("1", comment: ""),
+              text1:     NSLocalizedString("2", comment: ""),
+              text2:     NSLocalizedString("3", comment: ""),
+              text3:     NSLocalizedString("4", comment: ""),
+              text4:     NSLocalizedString("5", comment: ""),
+              text5:     NSLocalizedString("6", comment: "")),
+    storisBar(
+              imageStringTitle: "stockagree",
+              imageString : "",
+              textTime : NSLocalizedString("time", comment: ""),
+              textTitle: NSLocalizedString("title", comment: ""),
+              text1:     NSLocalizedString("1", comment: ""),
+              text2:     NSLocalizedString("2", comment: ""),
+              text3:     NSLocalizedString("3", comment: ""),
+              text4:     NSLocalizedString("4", comment: ""),
+              text5:     NSLocalizedString("5", comment: "")),
+    storisBar(
+              imageStringTitle: "stockagree",
+              imageString : "",
+              textTime : NSLocalizedString("time", comment: ""),
+              textTitle: NSLocalizedString("title", comment: ""),
+              text1:     NSLocalizedString("1", comment: ""),
+              text2:     NSLocalizedString("2", comment: ""),
+              text3:     NSLocalizedString("3", comment: ""),
+              text4:     NSLocalizedString("4", comment: ""),
+              text5:     NSLocalizedString("5", comment: "")),
+    storisBar(
+              imageStringTitle: "stockagree",
+              imageString : "",
+              textTime : NSLocalizedString("time", comment: ""),
+              textTitle: NSLocalizedString("умумумум", comment: ""),
+              text1:     NSLocalizedString("1", comment: ""),
+              text2:     NSLocalizedString("2", comment: ""),
+              text3:     NSLocalizedString("3", comment: ""),
+              text4:     NSLocalizedString("4", comment: ""),
+              text5:     NSLocalizedString("5", comment: "")),
     ]
-    @State private var textforqwes : [String] = [
-        NSLocalizedString("RecognizeStock1", comment: ""),
-        NSLocalizedString("IPO1", comment: ""),
-        NSLocalizedString("Cqq", comment: ""),
-        
-       
-    ]
+   
     @State private var colormain : [String] = [
     "Color_bl",
     "Color_font",
     "Color_font",
-    
+    "Color_font",
+    "Color_font",
     ]
-    
-    
-    @State private var TextTime : [String] = [
-        NSLocalizedString("ReadTime1", comment: ""),
-        NSLocalizedString("ReadTime2", comment: ""),
-        NSLocalizedString("ReadTime3", comment: ""),
-      
-    ]
-    @State private var Image1 : [String] = [
-        "one",
-        "two",
-        "three",
-       
-    ]
-    @State private var Text1 : [String] = [
-     
-        NSLocalizedString("RecognizeStock2", comment: ""),
-        NSLocalizedString("IPO2", comment: ""),
-        NSLocalizedString("Divers3", comment: ""),
-       
-    ]
-    @State private var Text2 : [String] = [
-        NSLocalizedString("RecognizeStock3", comment: ""),
-        NSLocalizedString("IPO3", comment: ""),
-        NSLocalizedString("Divers4", comment: ""),
-      
-    ]
-    @State private var Text3 : [String] = [
-        NSLocalizedString("RecognizeStock4", comment: ""),
-        NSLocalizedString("IPO4", comment: ""),
-        NSLocalizedString("Divers5", comment: ""),
-    
-    ]
-    @State private var Text4 : [String] = [
-        NSLocalizedString("RecognizeStock5", comment: ""),
-        NSLocalizedString("IPO5", comment: ""),
-        NSLocalizedString("Divers6", comment: ""),
-      
-    ]
-    @State private var Text5 : [String] = [
-        NSLocalizedString("RecognizeStock6", comment: ""),
-        NSLocalizedString("IPO6", comment: ""),
-        NSLocalizedString("Divers7", comment: ""),
-     
-    ]
+
     @State private var random : [Int] = [
         0,
         0,
         0,
-        
+        0,
+        0,
     ]
-    @State private var maxSize : Int  = 3
+    @State private var maxSize : Int  = 5
     
     
-    let words = strings()
-    @State private var currentword = ""
-    
-    
-    
-    
-    
-    @AppStorage ("test1")  var test1 : Int = 0
-    @AppStorage ("test_1")  var test_1 : Int = 0
     
     var body: some View {
         
@@ -105,7 +105,7 @@ struct Home_Screen: View {
                         
                         ScrollView(.horizontal,showsIndicators: false){
                             HStack{
-                                ForEach(0..<3) { index in
+                                ForEach(0..<5) { index in
                                     NavigationLink {
                                         ZStack{
                                             Color("Color_back")
@@ -116,7 +116,7 @@ struct Home_Screen: View {
                                                         HStack{
                                                             Image("str")
                                                                 .aspectRatio(contentMode: .fit)
-                                                            Text(TextTime[random[index]])
+                                                            Text(stories[random[index]].textTime)
                                                             
                                                                 .font(.system(size: 20,weight: .medium))
                                                                 .multilineTextAlignment(.center)
@@ -125,18 +125,18 @@ struct Home_Screen: View {
                                                             
                                                         }
                                                         
-                                                        Text(textforqwes[random[index]])
+                                                        Text(stories[random[index]].textTitle)
                                                             .font(.system(size: 35,weight: .medium))
                                                             .multilineTextAlignment(.center)
                                                     }
-                                                        Image("\(Image1[random[index]])")
+                                                        Image("\(stories[random[index]].imageString)")
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                             .cornerRadius(30)
                                                             
                                                     
                                                     HStack {
-                                                        Text(Text1[random[index]])
+                                                        Text(stories[random[index]].text1)
                                                             .font(.system(size: 20,weight: .medium))
                                                             .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color("Color_font"))
@@ -144,7 +144,7 @@ struct Home_Screen: View {
                                                         Spacer()
                                                     }
                                                     HStack {
-                                                        Text(Text2[random[index]])
+                                                        Text(stories[random[index]].text2)
                                                             .font(.system(size: 20,weight: .medium))
                                                             .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color("Color_font"))
@@ -152,7 +152,7 @@ struct Home_Screen: View {
                                                         Spacer()
                                                     }
                                                     HStack {
-                                                        Text(Text3[random[index]])
+                                                        Text(stories[random[index]].text3)
                                                             .font(.system(size: 20,weight: .medium))
                                                             .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color("Color_font"))
@@ -160,7 +160,7 @@ struct Home_Screen: View {
                                                         Spacer()
                                                     }
                                                     HStack {
-                                                        Text(Text4[random[index]])
+                                                        Text(stories[random[index]].text4)
                                                             .font(.system(size: 20,weight: .medium))
                                                             .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color("Color_font"))
@@ -168,7 +168,7 @@ struct Home_Screen: View {
                                                         Spacer()
                                                     }
                                                     HStack {
-                                                        Text(Text5[random[index]])
+                                                        Text(stories[random[index]].text5)
                                                             .font(.system(size: 20,weight: .medium))
                                                             .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color("Color_font"))
@@ -182,7 +182,7 @@ struct Home_Screen: View {
                                         
                                         
                                         ZStack{
-                                            Image(imageforqwes[random[index]])
+                                            Image(stories[random[index]].imageStringTitle)
                                                 .resizable()
                                                 .aspectRatio(contentMode: .fit)
                                                 .cornerRadius(30)
@@ -192,14 +192,14 @@ struct Home_Screen: View {
                                                 Spacer()
                                                 HStack{
                                                     
-                                                    Text("\(textforqwes[random[index]])")
+                                                    Text("\(stories[random[index]].textTitle)")
                                                         .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color(colormain[random[index]]))
                                                         .font(.system(size: 20 ,weight: .medium))
                                                     
                                                     Spacer()
-                                                }.padding(.leading,30)
-                                                .padding(.bottom,20)
+                                                }.padding(.leading,25)
+                                                .padding(.bottom,25)
                                             }
                                          )
                                                 .frame(height: 250)
@@ -548,7 +548,7 @@ struct Home_Screen: View {
                 }
             
         }.onAppear(){
-            random = [Int](randomInt(maxCurrentSize: 3))
+            random = [Int](randomInt(maxCurrentSize: maxSize))
         }
         
     }
