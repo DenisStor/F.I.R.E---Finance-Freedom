@@ -857,3 +857,40 @@ of their industry.";
 "qwdqwgtty" = "Retake the test";
 
 "bermn" = "Entrepreneur";
+
+"IndividQues1" = "How old are you?";
+"IndividQues1.1" = "Under 25";
+"IndividQues1.2" = "Between 25 and 50 years old";
+"IndividQues1.3" = "Over 50 years old";
+"IndividQues2" = "Which of your investment goals is closer to you?";
+"IndividQues2.1" = "Save money from inflation";
+"IndividQues2.2" = "Beat inflation";
+"IndividQues2.3" = "Maximize earnings";
+"IndividQues3" = "Your monthly salary?";
+"IndividQues3.1" = "Under $4,500";
+"IndividQues3.2" = "Between $4,500 and $10,000";
+"IndividQues3.3" = "More than $10,000";
+"IndividQues4" = "For how long are you willing to invest the money and not touch it?";
+"IndividQues4.1" = "One to three years";
+"IndividQues4.2" = "3 to 5 years";
+"IndividQues4.3" = "More than 5 years";
+"IndividQues5" = "Are you ready for your investment capital to decline?";
+"IndividQues5.1" = "Not ready";
+"IndividQues5.2" = "Allow a temporary decline of up to 10%";
+"IndividQues5.3" = "I am ready to reduce the capital by no more than 20%, I am sure that I will again go into plus.";
+"IndividQues6" = "Your investment portfolio has fallen in value.\nWhat will you do?";
+"IndividQues6.1" = "I will sell all the assets that have fallen in value and put the money on
+deposit";
+"IndividQues6.2" = "Just wait";
+"IndividQues6.3" = "I'll buy back what's gone down in price";
+"IndividQues7" = "Will you take more risk to achieve higher potential gains";
+"IndividQues7.1" = "Neutral";
+"IndividQues8" = "Which of the following most accurately reflects your personal investment
+goal?";
+"IndividQues8.1" = "Maximize capital gains as soon as possible";
+"IndividQues8.2" = "Stable, balanced income and capital growth";
+"IndividQues8.3" = "Earn an income that is slightly higher than the bank deposit rate";
+"IndividQues9" = "How would you rate your investment knowledge?";
+"IndividQues9.1" = "Weak";
+"IndividQues9.2" = "Satisfactory";
+"IndividQues9.3" = "Good";

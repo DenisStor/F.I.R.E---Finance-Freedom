@@ -120,6 +120,9 @@ struct Termis_Screen: View {
                         }
                         
                     }.padding(.horizontal,15)
+                    Rectangle()
+                        .frame(height: 120)
+                        .opacity(0)
                 }
             }
         }

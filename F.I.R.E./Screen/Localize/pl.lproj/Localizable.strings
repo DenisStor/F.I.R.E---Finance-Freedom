@@ -869,3 +869,42 @@ oferty publicznej.";
 "qwdqwgtty" = "Ponowne podejście do testu";
 
 "bermn" = "Przedsiębiorca";
+
+"IndividQues1" = "Ile masz lat?";
+"IndividQues1.1" = "Poniżej 25 lat";
+"IndividQues1.2" = "Między 25 a 50";
+"IndividQues1.3" = "Ponad 50 lat";
+"IndividQues2" = "Który z Twoich celów inwestycyjnych jest Ci bliższy?";
+"IndividQues2.1" = "Oszczędzanie pieniędzy przed inflacją";
+"IndividQues2.2" = "Pokonać inflację";
+"IndividQues2.3" = "Maksymalizuj zyski";
+"IndividQues3" = "Twoje miesięczne wynagrodzenie?";
+"IndividQues3.1" = "Mniej niż 6000 zł";
+"IndividQues3.2" = "Od 6 000 zł do 12 000 zł";
+"IndividQues3.3" = "Więcej niż 12 000 zł";
+"IndividQues4" = "Jak długo jesteś skłonny inwestować pieniądze i ich nie dotykać?";
+"IndividQues4.1" = "Od roku do 3 lat";
+"IndividQues4.2" = "3-5 lat";
+"IndividQues4.3" = "Ponad 5 lat";
+"IndividQues5" = "Czy jesteś gotowy na spadek kapitału inwestycyjnego?";
+"IndividQues5.1" = "Nie jestem gotowy";
+"IndividQues5.2" = "Pozwól na tymczasowy spadek do 10%";
+"IndividQues5.3" = "Gotowy na spadek kapitału o nie więcej niż 20%, mając pewność, że
+znów będę na plusie";
+"IndividQues6" = "Wartość twojego portfela inwestycyjnego spadła.\nCo zrobisz?";
+"IndividQues6.1" = "Sprzedaj wszystkie aktywa, których wartość spadła i zdeponuj
+pieniądze";
+"IndividQues6.2" = "Po prostu poczekaj";
+"IndividQues6.3" = "Odkupię to, co straciło na wartości";
+"IndividQues7" = "Czy podejmiesz wyższe ryzyko, aby osiągnąć wyższe potencjalne zyski";
+"IndividQues7.1" = "Neutralny";
+"IndividQues8" = "Które z poniższych stwierdzeń najdokładniej odzwierciedla Twój osobisty
+cel inwestycyjny?";
+"IndividQues8.1" = "Maksymalizacja zysków kapitałowych tak szybko, jak to możliwe";
+"IndividQues8.2" = "Stabilny, zrównoważony dochód i wzrost kapitału";
+"IndividQues8.3" = "Zarabiaj dochód, który jest nieco wyższy niż oprocentowanie depozytów
+bankowych";
+"IndividQues9" = "Jak oceniasz swoją wiedzę na temat inwestowania?";
+"IndividQues9.1" = "Słaba";
+"IndividQues9.2" = "Zadowalająca";
+"IndividQues9.3" = "Dobra";
