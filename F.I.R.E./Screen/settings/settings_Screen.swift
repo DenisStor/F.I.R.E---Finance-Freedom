@@ -197,7 +197,7 @@ struct settings_Screen: View {
                     secondaryButton: .cancel()
                 )
             }
-            .alert("Данные удалены", isPresented: $isAlert1) {
+            .alert("rehw", isPresented: $isAlert1) {
                         Button("OK", role: .cancel) { }
                     }
             .sheet(isPresented: $isSheet1) {

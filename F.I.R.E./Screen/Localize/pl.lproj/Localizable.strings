@@ -281,7 +281,7 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 "TypesOfInvesting1" = "Przed wyborem akcji do handlu, zdecyduj o swoim celu inwestycyjnym i strategii. Istnieją dwa rodzaje inwestorów - konserwatywni i agresywni. Inwestor konserwatywny inwestuje długoterminowo i koncentruje się głównie na dywidendach. Nie oczekuje szybkiego zwrotu, ale jest bardziej zabezpieczony przed ryzykiem. Inwestor agresywny jest gotowy podjąć ryzyko w celu uzyskania wyższego zwrotu. Stawia na wzrost (a czasem spadek) cen akcji.";
 "Conservative1" = "Jak konserwatywny inwestor wybiera papiery wartościowe?";
 "ConservativeStep1" = "Krok 1";
-"ConservativeStep1.1" = "Pierwszym kryterium wyboru jest wiarygodność. Zwróć uwagę na duże firmy, które istnieją od dawna i przetrwały więcej niż jeden kryzys gospodarczy. Akcje takich spółek prawie nie zmieniają ceny.";
+"ConservativeStep1.1" = "Pierwszym kryterium wyboru jest wiarygodność. Zwróć uwagę na duże firmy, które istnieją od dawna i przetrwały więcej niż jeden kryzys gospodarczy.";
 "ConservativeStep2" = "Krok 2";
 "ConservativeStep2.1" = "Drugim kryterium są wysokie dywidendy. Można na nie liczyć, kupując akcje niektórych spółek. Spółki wypłacające wysokie dywidendy nie zawsze nadają się do inwestycji wieloletnich.";
 "Aggressive1" = "Jak wybrać akcje do zakupu dla agresywnego inwestora?";
@@ -832,7 +832,7 @@ oferty publicznej.";
 
 "verr" = "Niniejsze informacje nie stanowią\nosobistej porady inwestycyjnej,\na instrumenty finansowe lub transakcje,\no których mowa w niniejszym dokumencie,\nmogą nie odpowiadać profilowi inwestycyjnemu i celom inwestycyjnym\n(oczekiwaniom).";
 
-"cwq" = "Jesteśmy w mediach społecznościowych";
+"cwq" = "Pomoc";
 
 "wwtki" = "Jesteśmy w mediach społecznościowych";
 
@@ -845,3 +845,27 @@ oferty publicznej.";
 "ebwww" = "Telegram";
 
 "vewegh" = "E-mail służbowy";
+
+"asdqq" = "Medal\nza zaliczenie";
+
+"Jowvv" = "Zdać test";
+
+"rehw" = "Dane usunięte";
+
+"dasww" = "Nie zdałeś\ntestu";
+
+"bern" = "Otrzymałeś medal";
+
+"bern2" = "Otrzymałeś medal";
+
+" qwrtw " = " te\nwłaściwe ";
+
+"rehnern" = "To już jest dobry wynik! Ale aby stać się prawdziwym ekspertem w tej dziedzinie, musisz się ciągle uczyć.";
+
+"weybb" = "To jest zły wynik! Powinieneś przeczytać więcej literatury i nauczyć się terminów !";
+
+"ernnq" = "To zadowalający wynik! Ale musisz się jeszcze wiele nauczyć !";
+
+"qwdqwgtty" = "Ponowne podejście do testu";
+
+"bermn" = "Przedsiębiorca";

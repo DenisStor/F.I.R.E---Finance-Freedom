@@ -79,7 +79,7 @@ struct Famous_Screen: View {
                                                             .foregroundColor(Color("Color_bl"))
                                                             .padding(.bottom,1)
                                                           
-                                                        Text ("Предприниматель")
+                                                        Text ("wwg")
                                                         .font(.system(size: 15, weight: .medium))
                                                         .foregroundColor(Color("textField"))
                                                         .padding(.bottom,15)

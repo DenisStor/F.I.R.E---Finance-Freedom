@@ -47,7 +47,7 @@ struct Medalki_Screen: View {
                             default:
                                 Text("Erorre")
                             }
-                            Text("Медаль\nза прохождение")
+                            Text("asdqq")
                                 .multilineTextAlignment(.center)
                                 .font(.system(size: 20,weight: .medium))
                                 .foregroundColor(Color("Color_font_3"))
@@ -66,12 +66,12 @@ struct Medalki_Screen: View {
                                         .foregroundColor(Color("Color_font_1"))
                                         .padding(.horizontal,30)
                                     if test_1 >= 1 {
-                                        Text("Перепройти тест")
+                                        Text("qwdqwgtty")
                                             .multilineTextAlignment(.center)
                                             .font(.system(size: 20,weight: .medium))
                                             .foregroundColor(Color("Color_font_2"))
                                     } else {
-                                        Text("Пройти тест")
+                                        Text("Jowvv")
                                             .multilineTextAlignment(.center)
                                             .font(.system(size: 20,weight: .medium))
                                             .foregroundColor(Color("Color_font_2"))

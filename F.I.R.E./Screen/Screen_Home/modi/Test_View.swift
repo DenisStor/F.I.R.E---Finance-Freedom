@@ -62,17 +62,17 @@ struct Test_View: View {
                             .font(.system(size: 30,weight: .medium))
                         switch total {
                         case 0...totalQwestion/3:
-                            Text("Вы не прошли\nтест")
+                            Text("dasww")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 20,weight: .medium))
                                 .opacity(0.5)
                         case totalQwestion/3...totalQwestion/2:
-                            Text("вы получили медаль")
+                            Text("bern")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 20,weight: .medium))
                                 .opacity(0.5)
                         case totalQwestion/2...totalQwestion:
-                            Text("вы получили медаль")
+                            Text("bern2")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 20,weight: .medium))
                                 .opacity(0.5)
@@ -84,7 +84,7 @@ struct Test_View: View {
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 30,weight: .medium))
                         +
-                        Text(" правильных\nиз ")
+                        Text(" qwrtw ")
                             .foregroundColor(Color("Color_font_1"))
                             .font(.system(size: 30,weight: .medium))
                             
@@ -94,17 +94,17 @@ struct Test_View: View {
                             .font(.system(size: 30,weight: .medium))
                         switch total {
                         case 0...totalQwestion/3:
-                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                            Text("weybb")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 20,weight: .medium))
                                 .opacity(0.5)
                         case totalQwestion/3...totalQwestion/2:
-                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                            Text("ernnq")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 20,weight: .medium))
                                 .opacity(0.5)
                         case totalQwestion/2...totalQwestion:
-                            Text("Это уже хороший результат! Но чтобы стать настоящим экспертом в этой области, вам нужно продолжать учиться.")
+                            Text("rehnern")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 20,weight: .medium))
                                 .opacity(0.5)

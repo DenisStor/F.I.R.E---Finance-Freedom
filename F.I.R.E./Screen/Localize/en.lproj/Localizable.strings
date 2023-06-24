@@ -277,7 +277,7 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 "TypesOfInvesting1" = "Before choosing a stock to trade, decide on your investment objective and strategy. There are two types of investors - conservative and aggressive. A conservative investor makes long-term investments and focuses primarily on dividends. He does not expect quick profit, but is more protected against risks. An aggressive investor is willing to take risks for the sake of more income. He plays on increasing (and sometimes decreasing) stock prices.";
 "Conservative1" = "How do a conservative investor choose securities?";
 "ConservativeStep1" = "Step 1";
-"ConservativeStep1.1" = "The first selection criterion is reliability. Pay attention to the large ones that have existed for a long time and have survived more than one economic crisis. Shares of such companies almost do not change in price.";
+"ConservativeStep1.1" = "The first selection criterion is reliability. Pay attention to the large ones that have existed for a long time and have survived more than one economic crisis.";
 "ConservativeStep2" = "Step 2";
 "ConservativeStep2.1" = "The second criterion is high dividends. You can count on them when you buy stock in Some companies. Not always companies that pay high dividends are suitable for multi-year investments.";
 "Aggressive1" = "How do an aggressive investor choose a stock to buy?";
@@ -820,7 +820,7 @@ of their industry.";
 
 "verr" = "This information does\nnot constitute personal investment advice,\nand the financial instruments\nor transactions mentioned herein may not match your investment profile\nand investment objectives\n(expectations).";
 
-"cwq" = "Social media";
+"cwq" = "Help";
 
 "wwtki" = "Social media";
 
@@ -833,3 +833,27 @@ of their industry.";
 "ebwww" = "Telegram";
 
 "vewegh" = "Work email";
+
+"asdqq" = "Medal\nfor passing";
+
+"Jowvv" = "Take the test";
+
+"rehw" = "Data deleted";
+
+"dasww" = "You did not pass\nthe test";
+
+"bern" = "You got a medal";
+
+"bern2" =  "You got a medal";
+
+" qwrtw " = " of the\nright ones ";
+
+"rehnern" = "That's already a good result! But to become a real expert in this field, you need to keep learning.";
+
+"weybb" = "This is a bad result ! You should read more literature and learn the terms !";
+
+"ernnq" = "It's a satisfactory result ! But you have a lot to learn !";
+
+"qwdqwgtty" = "Retake the test";
+
+"bermn" = "Entrepreneur";
