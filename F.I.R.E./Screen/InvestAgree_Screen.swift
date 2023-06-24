@@ -78,7 +78,7 @@ struct InvestAgree_Screen: View {
                                     .font(.system(size: 18, weight: .medium))
                                     .foregroundColor(clr[index] ? Color("Color_font_2") : Color("Color_font"))
                                     .background(
-                                        RoundedRectangle(cornerRadius: 15)
+                                        RoundedRectangle(cornerRadius: 30)
                                             .foregroundColor(clr[index] ? Color("Color_font_1") : Color("Color_button") )
                                         
                                     )
