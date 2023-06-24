@@ -22,9 +22,9 @@ struct Test_Screen: View {
 let textTest = [
   testStruct(
          mainText: NSLocalizedString("IndividQues1", comment: ""),
-         qwe1: 0,
+         qwe1: 2,
          qwe2: 1,
-         qwe3: 2,
+         qwe3: 0,
          qwe1Str: NSLocalizedString("IndividQues1.1", comment: ""),
          qwe2Str: NSLocalizedString("IndividQues1.2", comment: ""),
          qwe3Str: NSLocalizedString("IndividQues1.3", comment: "")
@@ -76,9 +76,9 @@ let textTest = [
   ),
   testStruct(
          mainText: NSLocalizedString("IndividQues7", comment: ""),
-         qwe1: 0,
+         qwe1: 2,
          qwe2: 1,
-         qwe3: 2,
+         qwe3: 0,
          qwe1Str: NSLocalizedString("yes", comment: ""),
          qwe2Str: NSLocalizedString("IndividQues7.1", comment: ""),
          qwe3Str: NSLocalizedString("no", comment: "")
@@ -86,27 +86,30 @@ let textTest = [
   testStruct(
          mainText: NSLocalizedString("IndividQues8", comment: ""),
          qwe1: 2,
-         qwe2: 0,
-         qwe3: 1,
+         qwe2: 1,
+         qwe3: 0,
          qwe1Str: NSLocalizedString("IndividQues8.1", comment: ""),
          qwe2Str: NSLocalizedString("IndividQues8.2", comment: ""),
          qwe3Str: NSLocalizedString("IndividQues8.3", comment: "")
   ),
   testStruct(
          mainText: NSLocalizedString("IndividQues9", comment: ""),
-         qwe1: 1,
-         qwe2: 2,
-         qwe3: 0,
+         qwe1: 0,
+         qwe2: 1,
+         qwe3: 2,
          qwe1Str: NSLocalizedString("IndividQues9.1", comment: ""),
          qwe2Str: NSLocalizedString("IndividQues9.2", comment: ""),
          qwe3Str: NSLocalizedString("IndividQues9.3", comment: "")
   ),
+  
 ]
     
     @State private var index : Int = 0
     @State private var drag : Int? = nil
     @State private var points = [Int]()
-  
+    @State private var finishForFirst = 0
+    @State private var finishForTwo = 0
+    @State private var finishForThree = 0
     var body: some View {
         ZStack{
             Color("Color_back")
@@ -121,21 +124,53 @@ let textTest = [
                                     .multilineTextAlignment(.leading)
                                 Spacer()
                             }
-                            HStack {
-                                Text("Умеренный\nИнвестор")
-                                    .font(.system(size: 40,weight: .semibold))
-                                    .foregroundColor(Color("Color_font_1"))
-                                    .multilineTextAlignment(.leading)
+                            HStack { // 1 2 5 6 7 8
+                                switch finishForFirst{
+                                case 9...12:
+                                    Text("Агрессивный\nинвестор")
+                                        .font(.system(size: 40,weight: .semibold))
+                                        .foregroundColor(Color("Color_font_1"))
+                                        .multilineTextAlignment(.leading)
+                                case 5...9:
+                                    Text("Умеренный\nинвестор")
+                                        .font(.system(size: 40,weight: .semibold))
+                                        .foregroundColor(Color("Color_font_1"))
+                                        .multilineTextAlignment(.leading)
+                                case 0...5:
+                                    Text("Консервативный\nинвестор")
+                                        .font(.system(size: 40,weight: .semibold))
+                                        .foregroundColor(Color("Color_font_1"))
+                                        .multilineTextAlignment(.leading)
+                                default:
+                                    Text("Erore")
+                                }
+                              
                                 Spacer()
                             }
                         }
                         Divider()
                         VStack(spacing:10){
                             HStack {
-                                Text("Вы готовы делать рискованные вложения ради потенциального дополнительного дохода, но его")
-                                    .font(.system(size: 25,weight: .medium))
-                                    .foregroundColor(Color("Color_font"))
-                                    .multilineTextAlignment(.leading)
+                                switch finishForFirst{
+                                case 9...12:
+                                    Text("Вы готовы делать рискованные вложения ради потенциального дополнительного дохода, но его")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                        .multilineTextAlignment(.leading)
+                                case 5...9:
+                                    Text("Вы готовы делать рискованные вложения ради потенциального дополнительного дохода, но его")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                        .multilineTextAlignment(.leading)
+                                case 0...5:
+                                    Text("Вы готовы делать рискованные вложения ради потенциального дополнительного дохода, но его")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                        .multilineTextAlignment(.leading)
+                                default:
+                                    Text("Erore")
+                                }
+                                
                                 Spacer()
                             }
                             .padding(.bottom,25)
@@ -147,6 +182,25 @@ let textTest = [
                                 Spacer()
                             }
                             HStack{
+                                switch finishForTwo{
+                                case 4...6:
+                                    Text("накопление капитала на горизонте в 15-20 лет")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                        .multilineTextAlignment(.leading)
+                                case 2...4:
+                                    Text("Вы готовы делать рискованные вложения ради потенциального дополнительного дохода, но его")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                        .multilineTextAlignment(.leading)
+                                case 0...2:
+                                    Text("Вы готовы делать рискованные вложения ради потенциального дополнительного дохода, но его")
+                                        .font(.system(size: 25,weight: .medium))
+                                        .foregroundColor(Color("Color_font"))
+                                        .multilineTextAlignment(.leading)
+                                default:
+                                    Text("Erore")
+                                }
                                 Text("накопление капитала на горизонте в 15-20 лет")
                                     .font(.system(size: 25,weight: .medium))
                                     .foregroundColor(Color("Color_font"))
@@ -236,8 +290,9 @@ let textTest = [
                         }
                     }.padding(.horizontal,15)
                         .onAppear(){
-                          // var results = points
-                          //  var b = results[0] + results [1]
+                           finishForFirst =  points[0] +  points[1] +  points[4] +  points[5] +  points[6] +  points[7]
+                           
+                            
                         }
                 }
             } else {
