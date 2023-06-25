@@ -23,50 +23,50 @@ struct Home_Screen: View {
     
     let stories = [
     storisBar(
-              imageStringTitle: "stockagree", //картинка которая видна с home screen
-              imageString : "", // внутренняя картинка
-              textTime : NSLocalizedString("1", comment: ""), // время чтения
-              textTitle: NSLocalizedString("1", comment: ""), //заголовок
-              text1:     NSLocalizedString("2", comment: ""), // текст 1
-              text2:     NSLocalizedString("3", comment: ""),// текст 2
-              text3:     NSLocalizedString("4", comment: ""),// текст 3
+              imageStringTitle: "Stor 1", //картинка которая видна с home screen
+              imageString : "Stor 1-2", // внутренняя картинка
+              textTime : NSLocalizedString("brgr", comment: ""), // время чтения
+              textTitle: NSLocalizedString("lwekjgh213", comment: ""), //заголовок
+              text1:     NSLocalizedString("q3tyh", comment: ""), // текст 1
+              text2:     NSLocalizedString("q3tyhbre", comment: ""),// текст 2
+              text3:     NSLocalizedString("vt4jerh", comment: ""),// текст 3
               text4:     NSLocalizedString("5", comment: ""),// текст 4
               text5:     NSLocalizedString("6", comment: "")),// текст 5
     storisBar(
-              imageStringTitle: "stockagree",
-              imageString : "",
+              imageStringTitle: "Stor 2",
+              imageString : "1",
               textTime : NSLocalizedString("1", comment: ""),
-              textTitle: NSLocalizedString("1", comment: ""),
+              textTitle: NSLocalizedString("dwqhb5", comment: ""),
               text1:     NSLocalizedString("2", comment: ""),
               text2:     NSLocalizedString("3", comment: ""),
               text3:     NSLocalizedString("4", comment: ""),
               text4:     NSLocalizedString("5", comment: ""),
               text5:     NSLocalizedString("6", comment: "")),
     storisBar(
-              imageStringTitle: "stockagree",
+              imageStringTitle: "Stor 3",
               imageString : "",
               textTime : NSLocalizedString("time", comment: ""),
-              textTitle: NSLocalizedString("title", comment: ""),
+              textTitle: NSLocalizedString("rejerh", comment: ""),
               text1:     NSLocalizedString("1", comment: ""),
               text2:     NSLocalizedString("2", comment: ""),
               text3:     NSLocalizedString("3", comment: ""),
               text4:     NSLocalizedString("4", comment: ""),
               text5:     NSLocalizedString("5", comment: "")),
     storisBar(
-              imageStringTitle: "stockagree",
+              imageStringTitle: "Stor 4",
               imageString : "",
               textTime : NSLocalizedString("time", comment: ""),
-              textTitle: NSLocalizedString("title", comment: ""),
+              textTitle: NSLocalizedString("ryteklwtaejrh", comment: ""),
               text1:     NSLocalizedString("1", comment: ""),
               text2:     NSLocalizedString("2", comment: ""),
               text3:     NSLocalizedString("3", comment: ""),
               text4:     NSLocalizedString("4", comment: ""),
               text5:     NSLocalizedString("5", comment: "")),
     storisBar(
-              imageStringTitle: "stockagree",
+              imageStringTitle: "Stor 5",
               imageString : "",
               textTime : NSLocalizedString("time", comment: ""),
-              textTitle: NSLocalizedString("умумумум", comment: ""),
+              textTitle: NSLocalizedString("nohiowrh", comment: ""),
               text1:     NSLocalizedString("1", comment: ""),
               text2:     NSLocalizedString("2", comment: ""),
               text3:     NSLocalizedString("3", comment: ""),

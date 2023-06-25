@@ -318,7 +318,7 @@ struct settings_Screen: View {
             .sheet(isPresented: $isSheet3) {
                 VStack(spacing:15){
                     HStack{
-                        Text("wwtki")
+                        Text("htw")
                             .font(.system(size: 30,weight: .medium))
                             .multilineTextAlignment(.leading)
                     Spacer()
