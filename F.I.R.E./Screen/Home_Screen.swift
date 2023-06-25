@@ -30,51 +30,73 @@ struct Home_Screen: View {
               text1:     NSLocalizedString("q3tyh", comment: ""), // текст 1
               text2:     NSLocalizedString("q3tyhbre", comment: ""),// текст 2
               text3:     NSLocalizedString("vt4jerh", comment: ""),// текст 3
-              text4:     NSLocalizedString("5", comment: ""),// текст 4
-              text5:     NSLocalizedString("6", comment: "")),// текст 5
+              text4:     NSLocalizedString("", comment: ""),// текст 4
+              text5:     NSLocalizedString("", comment: "")),// текст 5
     storisBar(
               imageStringTitle: "Stor 2",
-              imageString : "1",
-              textTime : NSLocalizedString("1", comment: ""),
+              imageString : "Stor 2-2",
+              textTime : NSLocalizedString("qerhjqer", comment: ""),
               textTitle: NSLocalizedString("dwqhb5", comment: ""),
-              text1:     NSLocalizedString("2", comment: ""),
-              text2:     NSLocalizedString("3", comment: ""),
-              text3:     NSLocalizedString("4", comment: ""),
-              text4:     NSLocalizedString("5", comment: ""),
-              text5:     NSLocalizedString("6", comment: "")),
+              text1:     NSLocalizedString("sgwioehn", comment: ""),
+              text2:     NSLocalizedString("", comment: ""),
+              text3:     NSLocalizedString("", comment: ""),
+              text4:     NSLocalizedString("", comment: ""),
+              text5:     NSLocalizedString("", comment: "")),
     storisBar(
               imageStringTitle: "Stor 3",
-              imageString : "",
-              textTime : NSLocalizedString("time", comment: ""),
+              imageString : "Stor 3-3",
+              textTime : NSLocalizedString("qerhjqer1", comment: ""),
               textTitle: NSLocalizedString("rejerh", comment: ""),
-              text1:     NSLocalizedString("1", comment: ""),
-              text2:     NSLocalizedString("2", comment: ""),
-              text3:     NSLocalizedString("3", comment: ""),
-              text4:     NSLocalizedString("4", comment: ""),
-              text5:     NSLocalizedString("5", comment: "")),
+              text1:     NSLocalizedString("bokwehg", comment: ""),
+              text2:     NSLocalizedString("", comment: ""),
+              text3:     NSLocalizedString("", comment: ""),
+              text4:     NSLocalizedString("", comment: ""),
+              text5:     NSLocalizedString("", comment: "")),
     storisBar(
               imageStringTitle: "Stor 4",
-              imageString : "",
-              textTime : NSLocalizedString("time", comment: ""),
+              imageString : "Stor 12",
+              textTime : NSLocalizedString("qerhjqer1", comment: ""),
               textTitle: NSLocalizedString("ryteklwtaejrh", comment: ""),
-              text1:     NSLocalizedString("1", comment: ""),
-              text2:     NSLocalizedString("2", comment: ""),
-              text3:     NSLocalizedString("3", comment: ""),
-              text4:     NSLocalizedString("4", comment: ""),
-              text5:     NSLocalizedString("5", comment: "")),
+              text1:     NSLocalizedString("birwebhn", comment: ""),
+              text2:     NSLocalizedString("", comment: ""),
+              text3:     NSLocalizedString("", comment: ""),
+              text4:     NSLocalizedString("", comment: ""),
+              text5:     NSLocalizedString("", comment: "")),
     storisBar(
               imageStringTitle: "Stor 5",
-              imageString : "",
-              textTime : NSLocalizedString("time", comment: ""),
+              imageString : "Stor 4-4",
+              textTime : NSLocalizedString("qerhjqer12", comment: ""),
               textTitle: NSLocalizedString("nohiowrh", comment: ""),
-              text1:     NSLocalizedString("1", comment: ""),
-              text2:     NSLocalizedString("2", comment: ""),
-              text3:     NSLocalizedString("3", comment: ""),
-              text4:     NSLocalizedString("4", comment: ""),
-              text5:     NSLocalizedString("5", comment: "")),
+              text1:     NSLocalizedString("inobern", comment: ""),
+              text2:     NSLocalizedString("", comment: ""),
+              text3:     NSLocalizedString("", comment: ""),
+              text4:     NSLocalizedString("", comment: ""),
+              text5:     NSLocalizedString("", comment: "")),
+    storisBar(
+              imageStringTitle: "Stor 6",
+              imageString : "Stor Gold",
+              textTime : NSLocalizedString("qerhjqer1267", comment: ""),
+              textTitle: NSLocalizedString("aoperhinoweh", comment: ""),
+              text1:     NSLocalizedString("renqerh", comment: ""),
+              text2:     NSLocalizedString("", comment: ""),
+              text3:     NSLocalizedString("", comment: ""),
+              text4:     NSLocalizedString("", comment: ""),
+              text5:     NSLocalizedString("", comment: "")),
+    storisBar(
+              imageStringTitle: "Stor 7",
+              imageString : "Stor 8-8",
+              textTime : NSLocalizedString("qerhjqer29", comment: ""),
+              textTitle: NSLocalizedString("nwrtm", comment: ""),
+              text1:     NSLocalizedString("gweghiewgno", comment: ""),
+              text2:     NSLocalizedString("", comment: ""),
+              text3:     NSLocalizedString("", comment: ""),
+              text4:     NSLocalizedString("", comment: ""),
+              text5:     NSLocalizedString("", comment: "")),
     ]
    
     @State private var colormain : [String] = [
+    "Color_bl",
+    "Color_bl",
     "Color_bl",
     "Color_bl",
     "Color_bl",
@@ -88,8 +110,10 @@ struct Home_Screen: View {
         0,
         0,
         0,
+        0,
+        0,
     ]
-    @State private var maxSize : Int  = 5
+    @State private var maxSize : Int  = 7
     
     
     
@@ -105,7 +129,7 @@ struct Home_Screen: View {
                         
                         ScrollView(.horizontal,showsIndicators: false){
                             HStack{
-                                ForEach(0..<5) { index in
+                                ForEach(0..<7) { index in
                                     NavigationLink {
                                         ZStack{
                                             Color("Color_back")
