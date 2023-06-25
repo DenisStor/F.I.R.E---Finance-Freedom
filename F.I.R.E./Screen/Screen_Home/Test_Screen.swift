@@ -330,11 +330,11 @@ let textTest = [
                         .padding(.bottom,10)
                     HStack{
                         Text("\(textTest[index].mainText)")
-                            .font(.system(size: 30,weight: .medium))
+                            .font(.system(size: 25,weight: .medium))
                             .foregroundColor(Color("Color_font"))
                             .multilineTextAlignment(.leading)
                         Spacer()
-                    } .padding(.bottom,20)
+                    } .padding(.bottom,10)
                     VStack(spacing:15){
                         HStack {
                            
@@ -346,6 +346,8 @@ let textTest = [
                                     .font(.system(size: 20,weight: .medium))
                                     .multilineTextAlignment(.leading)
                                     .padding(15)
+                                    .fixedSize(horizontal: false, vertical: true)
+                                    .lineLimit(10)
                                     .background(
                                     
                                     
@@ -373,6 +375,8 @@ let textTest = [
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .padding(15)
+                                .fixedSize(horizontal: false, vertical: true)
+                                .lineLimit(10)
                                 .background(
                                 
                                 
@@ -399,6 +403,8 @@ let textTest = [
                                 .font(.system(size: 20,weight: .medium))
                                 .multilineTextAlignment(.leading)
                                 .padding(15)
+                                .lineLimit(10)
+                                .fixedSize(horizontal: false, vertical: true)
                                 .background(
                                 
                                 
