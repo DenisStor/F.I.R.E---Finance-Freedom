@@ -76,10 +76,10 @@ struct Home_Screen: View {
    
     @State private var colormain : [String] = [
     "Color_bl",
-    "Color_font",
-    "Color_font",
-    "Color_font",
-    "Color_font",
+    "Color_bl",
+    "Color_bl",
+    "Color_bl",
+    "Color_bl",
     ]
 
     @State private var random : [Int] = [
