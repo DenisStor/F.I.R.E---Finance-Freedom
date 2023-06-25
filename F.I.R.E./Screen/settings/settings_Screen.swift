@@ -343,7 +343,10 @@ struct settings_Screen: View {
                                 
                                 
                                 
-                        }.padding(.horizontal,20)
+                        }.onTapGesture {
+                            openURL(URL(string: NSLocalizedString("https://t.me/Fireapp", comment: ""))!)
+                        }
+                        .padding(.horizontal,20)
                     }.frame(height: 90)
                     ZStack {
                         RoundedRectangle(cornerRadius: 30)

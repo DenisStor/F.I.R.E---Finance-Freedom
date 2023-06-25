@@ -7,10 +7,7 @@ struct storisBar {
     let textTime : String
     let textTitle : String
     let text1 : String
-    let text2 : String
-    let text3 : String
-    let text4 : String
-    let text5 : String
+   
 }
 struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
@@ -27,71 +24,50 @@ struct Home_Screen: View {
               imageString : "Stor 1-2", // внутренняя картинка
               textTime : NSLocalizedString("brgr", comment: ""), // время чтения
               textTitle: NSLocalizedString("lwekjgh213", comment: ""), //заголовок
-              text1:     NSLocalizedString("q3tyh", comment: ""), // текст 1
-              text2:     NSLocalizedString("q3tyhbre", comment: ""),// текст 2
-              text3:     NSLocalizedString("vt4jerh", comment: ""),// текст 3
-              text4:     NSLocalizedString("", comment: ""),// текст 4
-              text5:     NSLocalizedString("", comment: "")),// текст 5
+              text1:     NSLocalizedString("q3tyh", comment: "")
+              ),//,
     storisBar(
               imageStringTitle: "Stor 2",
               imageString : "Stor 2-2",
               textTime : NSLocalizedString("qerhjqer", comment: ""),
               textTitle: NSLocalizedString("dwqhb5", comment: ""),
-              text1:     NSLocalizedString("sgwioehn", comment: ""),
-              text2:     NSLocalizedString("", comment: ""),
-              text3:     NSLocalizedString("", comment: ""),
-              text4:     NSLocalizedString("", comment: ""),
-              text5:     NSLocalizedString("", comment: "")),
+              text1:     NSLocalizedString("sgwioehn", comment: "")
+             ),
     storisBar(
               imageStringTitle: "Stor 3",
               imageString : "Stor 3-3",
               textTime : NSLocalizedString("qerhjqer1", comment: ""),
               textTitle: NSLocalizedString("rejerh", comment: ""),
-              text1:     NSLocalizedString("bokwehg", comment: ""),
-              text2:     NSLocalizedString("", comment: ""),
-              text3:     NSLocalizedString("", comment: ""),
-              text4:     NSLocalizedString("", comment: ""),
-              text5:     NSLocalizedString("", comment: "")),
+              text1:     NSLocalizedString("bokwehg", comment: "")
+              ),
     storisBar(
               imageStringTitle: "Stor 4",
               imageString : "Stor 12",
               textTime : NSLocalizedString("qerhjqer1", comment: ""),
               textTitle: NSLocalizedString("ryteklwtaejrh", comment: ""),
-              text1:     NSLocalizedString("birwebhn", comment: ""),
-              text2:     NSLocalizedString("", comment: ""),
-              text3:     NSLocalizedString("", comment: ""),
-              text4:     NSLocalizedString("", comment: ""),
-              text5:     NSLocalizedString("", comment: "")),
+              text1:     NSLocalizedString("birwebhn", comment: "")
+              ),
     storisBar(
               imageStringTitle: "Stor 5",
               imageString : "Stor 4-4",
               textTime : NSLocalizedString("qerhjqer12", comment: ""),
               textTitle: NSLocalizedString("nohiowrh", comment: ""),
-              text1:     NSLocalizedString("inobern", comment: ""),
-              text2:     NSLocalizedString("", comment: ""),
-              text3:     NSLocalizedString("", comment: ""),
-              text4:     NSLocalizedString("", comment: ""),
-              text5:     NSLocalizedString("", comment: "")),
+              text1:     NSLocalizedString("inobern", comment: "")
+             ),
     storisBar(
               imageStringTitle: "Stor 6",
               imageString : "Stor Gold",
               textTime : NSLocalizedString("qerhjqer1267", comment: ""),
               textTitle: NSLocalizedString("aoperhinoweh", comment: ""),
-              text1:     NSLocalizedString("renqerh", comment: ""),
-              text2:     NSLocalizedString("", comment: ""),
-              text3:     NSLocalizedString("", comment: ""),
-              text4:     NSLocalizedString("", comment: ""),
-              text5:     NSLocalizedString("", comment: "")),
+              text1:     NSLocalizedString("renqerh", comment: "")
+             ),
     storisBar(
               imageStringTitle: "Stor 7",
               imageString : "Stor 8-8",
               textTime : NSLocalizedString("qerhjqer29", comment: ""),
               textTitle: NSLocalizedString("nwrtm", comment: ""),
-              text1:     NSLocalizedString("gweghiewgno", comment: ""),
-              text2:     NSLocalizedString("", comment: ""),
-              text3:     NSLocalizedString("", comment: ""),
-              text4:     NSLocalizedString("", comment: ""),
-              text5:     NSLocalizedString("", comment: "")),
+              text1:     NSLocalizedString("gweghiewgno", comment: "")
+             ),
     ]
    
     @State private var colormain : [String] = [
@@ -167,38 +143,7 @@ struct Home_Screen: View {
                                                         .lineSpacing(12)
                                                         Spacer()
                                                     }
-                                                    HStack {
-                                                        Text(stories[random[index]].text2)
-                                                            .font(.system(size: 20,weight: .medium))
-                                                            .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font"))
-                                                        .lineSpacing(12)
-                                                        Spacer()
-                                                    }
-                                                    HStack {
-                                                        Text(stories[random[index]].text3)
-                                                            .font(.system(size: 20,weight: .medium))
-                                                            .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font"))
-                                                        .lineSpacing(12)
-                                                        Spacer()
-                                                    }
-                                                    HStack {
-                                                        Text(stories[random[index]].text4)
-                                                            .font(.system(size: 20,weight: .medium))
-                                                            .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font"))
-                                                        .lineSpacing(12)
-                                                        Spacer()
-                                                    }
-                                                    HStack {
-                                                        Text(stories[random[index]].text5)
-                                                            .font(.system(size: 20,weight: .medium))
-                                                            .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font"))
-                                                        .lineSpacing(12)
-                                                        Spacer()
-                                                    }
+                                               
                                                 }.padding(.horizontal,20)
                                             }
                                         }
@@ -219,10 +164,10 @@ struct Home_Screen: View {
                                                     Text("\(stories[random[index]].textTitle)")
                                                         .multilineTextAlignment(.leading)
                                                         .foregroundColor(Color(colormain[random[index]]))
-                                                        .font(.system(size: 20 ,weight: .medium))
+                                                        .font(.system(size: 20 ,weight: .semibold))
                                                     
                                                     Spacer()
-                                                }.padding(.leading,25)
+                                                }.padding(.leading,30)
                                                 .padding(.bottom,25)
                                             }
                                          )
