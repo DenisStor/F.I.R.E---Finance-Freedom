@@ -310,6 +310,8 @@ struct settings_Screen: View {
                             .font(.system(size: 15,weight: .medium))
                             .multilineTextAlignment(.center)
                             .opacity(0.5)
+                    }.onTapGesture {
+                        openURL(URL(string: "https://appfire.ru/rules")!)
                     }
                   
                 }.padding(.horizontal,15)
@@ -374,6 +376,40 @@ struct settings_Screen: View {
                         }.multilineTextAlignment(.leading)
                         .padding(.horizontal,20)
                     }.frame(height: 100)
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_button"))
+                        VStack (spacing:5) {
+                            
+                            HStack {
+                                Text("Cайт")
+                                        .font(.system(size: 15,weight: .medium))
+                                        .multilineTextAlignment(.leading)
+                                    .foregroundColor(Color("Color_font"))
+                                .opacity(0.5)
+                                Spacer()
+                            }
+                                //Spacer()
+                            HStack {
+                                Text("https://appfire.ru/rules")
+                                        .tint(Color("Color_font_1"))
+                                        .font(.system(size: 25,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                Spacer()
+                            }
+                               
+                            
+                         
+                         
+                                
+                                
+                                
+                        }.multilineTextAlignment(.leading)
+                        .padding(.horizontal,20)
+                    }.frame(height: 100)
+                        .onTapGesture {
+                            openURL(URL(string: "https://appfire.ru/rules")!)
+                        }
                     Spacer()
                 }.padding(.horizontal,15)
                     .padding(.top,50)
