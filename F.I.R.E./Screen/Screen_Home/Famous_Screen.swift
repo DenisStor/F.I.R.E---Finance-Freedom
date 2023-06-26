@@ -6,7 +6,43 @@
 //
 
 import SwiftUI
+struct FamousStr {
+    let name : String
+    let title : String
+    let text : String
+    let whoIs : String
+    let imageTitle : String
+    let imageSecond : String
+    
+    
+}
+let FamousArray = [
+FamousStr(
+          name: NSLocalizedString("Уоррен\nБаффет", comment: ""),
+          title: NSLocalizedString("Уоррен\nБаффет", comment: ""),
+          text: NSLocalizedString("мумумукмуму", comment: ""),
+          whoIs: NSLocalizedString("мумумукмуму", comment: ""),
+          imageTitle: "Baffet" ,
+          imageSecond: "Baffet"
+),
+FamousStr(
+          name: NSLocalizedString("qB1", comment: ""),
+          title: NSLocalizedString("", comment: ""),
+          text: NSLocalizedString("", comment: ""),
+          whoIs: NSLocalizedString("мумумукмуму", comment: ""),
+          imageTitle: "famous_name1" ,
+          imageSecond: "famous_name1"
+),
+FamousStr(
+          name: NSLocalizedString("famous_name4", comment: ""),
+          title: NSLocalizedString("", comment: ""),
+          text: NSLocalizedString("", comment: ""),
+          whoIs: NSLocalizedString("мумумукмуму", comment: ""),
+          imageTitle: "qB1" ,
+          imageSecond: "qB1"
+),
 
+]
 struct Famous_Screen: View {
     @State private var name : [String] = [
     NSLocalizedString("famous_name1", comment: ""),
@@ -17,30 +53,7 @@ struct Famous_Screen: View {
     ]
     
     
-    //их имена \n для разделения имени и фамилии
-    @State private var Image1 : [String] = ["Baffet","Bill","Elon"]
-    
-    
-    
-    @State private var title : [String] = [
-    NSLocalizedString("famous_name1", comment: ""),
-    NSLocalizedString("famous_name3", comment: ""),
-    NSLocalizedString("famous_name4", comment: ""),
 
-    ]
-    
-    
-    
-    //заголовок статьи
-    @State private var Image2 : [String] = ["testimage","bill2scr","elon2scr",] // сюда картинки
-    @State private var Text1 : [String] = [
-        NSLocalizedString("famouse1text", comment: ""),
-        NSLocalizedString("fam3text", comment: ""),
-        NSLocalizedString("fam4text", comment: ""),
-
-
-        ] // основной текст
-   
 
     var body: some View {
         
@@ -55,7 +68,7 @@ struct Famous_Screen: View {
                     
                     LazyVStack(spacing: 15){
                         
-                        ForEach(0..<3) { index in
+                        ForEach(0..<FamousArray.count) { index in
                             NavigationLink {
                                 
                                 ZStack{
@@ -67,19 +80,19 @@ struct Famous_Screen: View {
                                             VStack{
                                               
                                                 ZStack {
-                                                    Image(Image2[index])
+                                                    Image(FamousArray[index].imageSecond)
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fill)
                                                         .cornerRadius(30)
                                                     VStack {
                                                         Spacer()
-                                                        Text(title[index])
+                                                        Text(FamousArray[index].title)
                                                             .multilineTextAlignment(.center)
                                                             .font(.system(size: 25, weight: .medium))
                                                             .foregroundColor(Color("Color_bl"))
                                                             .padding(.bottom,1)
                                                           
-                                                        Text ("wwg")
+                                                        Text (FamousArray[index].whoIs)
                                                         .font(.system(size: 15, weight: .medium))
                                                         .foregroundColor(Color("textField"))
                                                         .padding(.bottom,15)
@@ -89,7 +102,7 @@ struct Famous_Screen: View {
                                                     
                                                 }
                                                 
-                                                Text(Text1[index])
+                                                Text(FamousArray[index].text)
                                                     
                                                     .font(.system(size: 20, weight: .medium))
                                                     .lineSpacing(10)
@@ -113,7 +126,7 @@ struct Famous_Screen: View {
                                 ZStack{
                                     
                                     
-                                    Image(Image1[index])
+                                    Image(FamousArray[index].imageTitle)
                                         .resizable()
                                         .aspectRatio(contentMode: .fill)
                                         .cornerRadius(30)
@@ -121,7 +134,7 @@ struct Famous_Screen: View {
                                         Spacer()
                                         HStack{
                                             
-                                            Text(name[index])
+                                            Text(FamousArray[index].name)
                                              
                                             .font(.system(size: 30, weight: .medium))
                                             .foregroundColor(Color("Color_bl"))
