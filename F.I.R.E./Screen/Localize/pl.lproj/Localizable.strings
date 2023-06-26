@@ -932,7 +932,7 @@ Dochód pasywny to strumień pieniędzy, który wpływa na Twoje konto bez bezpo
 
 1. Stwórz plan finansowy: Zanim zaczniesz budować źródła pasywnego dochodu, ważne jest, aby opracować plan finansowy. Zdefiniuj swoje cele finansowe, rozważ dostępne możliwości i określ swój poziom komfortu w odniesieniu do ryzyka.
 
-Inwestowanie: Inwestycje mogą być skutecznym sposobem na tworzenie pasywnego dochodu. Zapoznaj się z różnymi możliwościami inwestycyjnymi i wybierz te, które odpowiadają Twoim celom i poziomowi ryzyka.
+2. Inwestowanie: Inwestycje mogą być skutecznym sposobem na tworzenie pasywnego dochodu. Zapoznaj się z różnymi możliwościami inwestycyjnymi i wybierz te, które odpowiadają Twoim celom i poziomowi ryzyka.
 
 3. Rozwijanie umiejętności i wiedzy specjalistycznej: Doskonalenie swoich umiejętności i zdobywanie nowej wiedzy może pomóc w stworzeniu źródła pasywnego dochodu. Na przykład, możesz zdobyć umiejętności w zakresie inwestowania, tworzenia stron internetowych, marketingu lub innych obszarów, które mogą generować dochód.
 
@@ -990,7 +990,7 @@ Jednym ze sposobów rozpoznawania sztuczek marketingowców jest studiowanie ró�
 2. Bądź krytycznym konsumentem:
 Nie przyjmuj reklam i obietnic marketingowych na wiarę. Zawsze bądź krytyczny i analityczny, zadawaj pytania i szukaj dodatkowych informacji. Oceniaj produkty lub usługi na podstawie ich rzeczywistej wartości i użyteczności, a nie tylko obietnic składanych przez marketerów.
 
-Bądź świadomy stosowania technik psychologicznych:
+3. Bądź świadomy stosowania technik psychologicznych:
 Marketerzy szeroko wykorzystują techniki psychologiczne, aby przekonać konsumentów. Mogą stosować takie techniki, jak afirmacja społeczna, poczucie pilności, tworzenie potrzeby i inne. Należy być świadomym tych technik i zadać sobie pytanie, czy są one prawdziwe i uzasadnione.
 
 4. badanie i porównywanie:
@@ -1090,3 +1090,55 @@ Aby skutecznie korzystać z dywersyfikacji, zaleca się przestrzeganie kilku klu
 Różnorodność aktywów: Stwórz portfel składający się z różnych aktywów, takich jak akcje, obligacje, gotówka, nieruchomości, towary i inne. Zwróć uwagę na różne klasy aktywów, które różnie reagują na zmiany warunków rynkowych.
 
 Różnorodność sektorów: alokuj swoje inwestycje pomiędzy różne sektory. Na przykład, jeśli posiadasz akcje, wybierz spółki z różnych sektorów, takich jak technologia, opieka zdrowotna, finanse itp. Pomoże to zmniejszyć ryzyko związane z poszczególnymi sektorami.";
+
+"reqhqerh" = "Agresywny\ninwestor";
+
+"qoierhp" = "Umiarkowany\ninwestor";
+
+"oiwhngewn" = "Konserwatywny\ninwestor";
+
+"wpieghbwne" = "Jest to inwestor, który preferuje strategię inwestycyjną charakteryzującą się wysokim poziomem ryzyka i koncentracją na generowaniu jak najwyższych zwrotów. Są skłonni inwestować w zmienne rynki i aktywa o wysokim potencjale wzrostu, nawet jeśli wiąże się to z możliwością poniesienia dużych strat.";
+
+"erhjbto" = "Jest to inwestor, który dąży do równowagi między ryzykiem a zwrotem, nie szuka nadmiernie wysokich zwrotów, ale jest skłonny zaakceptować pewien stopień ryzyka w swoich inwestycjach, aby osiągnąć umiarkowany poziom zwrotu.";
+
+"we09ghnm" = "Jest to inwestor, który preferuje niskie ryzyko i stabilność swoich inwestycji, z naciskiem na ochronę kapitału.";
+
+"wephgweng" = "Poniższe rozwiązania będą odpowiednie";
+
+"qer0bihnm" = "Akcje";
+
+"wegweg" = "Akcje: Około 70-80% portfela może zostać przeznaczone na inwestycje kapitałowe w spółki o wysokim potencjale wzrostu, spółki innowacyjne lub aktywa na rynkach wschodzących.";
+
+"weohnwegh" = "Akcje: Około 50% portfela może zostać przeznaczone na inwestycje kapitałowe w stabilne spółki o dobrych fundamentach i umiarkowanym wzroście.";
+
+"weoyjmg" = "Akcje dywidendowe: Około 5-10% portfela można przeznaczyć na inwestycje kapitałowe w spółki z solidną wypłatą dywidendy i długą historią stabilności finansowej.";
+
+"weignbr" = "Obligacje";
+
+"ewrpohbynb" = "Obligacje: Około 10-20% portfela można przeznaczyć na obligacje o wyższej rentowności, ale bardziej ryzykowne, takie jak obligacje korporacyjne o niskim ratingu lub obligacje rynków wschodzących.";
+
+"wei9ybvn" = "Obligacje: Około 30% portfela można przeznaczyć na obligacje średniej i wysokiej jakości, które zapewniają stabilny dochód i zmniejszają ryzyko.";
+
+"weryb" = "Obligacje: Około 60-70% portfela można przeznaczyć na inwestycje w wiarygodne i stabilne obligacje o wysokim ratingu kredytowym i niskim ryzyku.";
+
+"vr09ebhn" = "Fundusze inwestycyjne";
+
+"wer90yihibnm" = "Fundusze inwestycyjne: Około 5-10% portfela może być inwestowane w aktywnie zarządzane fundusze inwestycyjne, które koncentrują się na wysokich zyskach lub specjalizują się w określonych sektorach lub regionach.";
+
+"erwpoyghnbvm" = "Fundusze inwestycyjne: Około 10-15% portfela można zainwestować w różne fundusze inwestycyjne, takie jak fundusze mieszane lub fundusze indeksowe, aby uzyskać dodatkową dywersyfikację i dostęp do różnych rynków.";
+
+"erighbnm" = "Fundusze inwestycyjne: Około 5-10% portfela może być inwestowane w konserwatywne fundusze inwestycyjne, takie jak fundusze koncentrujące się na ochronie kapitału lub fundusze mieszane o umiarkowanym ryzyku.";
+
+"wthnmbewerw" = "Aktywa\nalternatywne";
+
+"weoygbnm43hg" = "Inwestycje alternatywne: Około 5-10% portfela można przeznaczyć na inwestycje alternatywne, takie jak nieruchomości, kapitał wysokiego ryzyka lub fundusze towarowe, aby uzyskać dodatkową dywersyfikację i potencjalnie wysokie zyski.";
+
+"weghbnrmeet" = "Inwestycje alternatywne: Około 5-10% portfela można przeznaczyć na inwestycje alternatywne, takie jak nieruchomości, towary lub private equity, aby zwiększyć stabilność i ochronę przed zmiennością rynku.";
+
+"qwigbnbth" = "Gotówka i oszczędności: Około 20-30% portfela może być przechowywane w aktywach wolnych od ryzyka, takich jak depozyty, rachunki oszczędnościowe lub fundusze rynku pieniężnego, aby zapewnić płynność i ochronę kapitału.";
+
+"weoytgbgnvm" = "Następny";
+
+"qwe0tybginm" = "Jesteś";
+
+"we0iyhgbnvew" = "Zakończenie";
