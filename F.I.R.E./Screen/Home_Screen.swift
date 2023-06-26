@@ -13,7 +13,10 @@ struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
     @AppStorage ("test1")  var test1 : Int = 0
     @AppStorage ("test_1")  var test_1 : Int = 0
-    
+    @AppStorage ("test2")  var test2 : Int = 0
+    @AppStorage ("test_2")  var test_2 : Int = 0
+    @AppStorage ("test3")  var test3 : Int = 0
+    @AppStorage ("test_3")  var test_3 : Int = 0
     let words = strings()
     @State private var currentword = ""
     @State private var spacing : CGFloat = 20
@@ -443,7 +446,7 @@ struct Home_Screen: View {
                                             
                                         }
                                         HStack{
-                                            Text("\(test1)")
+                                            Text("\(test1+test2+test3)")
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
@@ -451,7 +454,7 @@ struct Home_Screen: View {
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
-                                            Text("2 ")
+                                            Text("3 ")
                                                 .font(.system(size: 20 ,weight: .medium))
                                                 .foregroundColor(Color("Color_font_3"))
                                             +
@@ -463,7 +466,7 @@ struct Home_Screen: View {
                                         }
                                         HStack{
                                             
-                                            bar_progress(progress:Float(test1), total: Float(2))
+                                            bar_progress(progress:Float(test1+test2+test3), total: Float(3))
                                                 .frame(alignment: .leading)
                                            
                                             

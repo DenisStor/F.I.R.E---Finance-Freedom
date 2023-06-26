@@ -113,6 +113,7 @@ let textTest = [
     var body: some View {
         ZStack{
             Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
             if textTest.count == index {
                 ScrollView (showsIndicators: false) {
                     VStack{

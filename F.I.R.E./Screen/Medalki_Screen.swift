@@ -12,7 +12,9 @@ struct Medalki_Screen: View {
     @AppStorage ("test1")  var test1 : Int = 0
     @AppStorage ("test_1")  var test_1 : Int = 0
     @AppStorage ("test2")  var test2 : Int = 0
-    
+    @AppStorage ("test_2")  var test_2 : Int = 0
+    @AppStorage ("test3")  var test3 : Int = 0
+    @AppStorage ("test_3")  var test_3 : Int = 0
     
     @State private var testtext1 : [String] = [
         NSLocalizedString("SmartQues1.1", comment: ""),
@@ -113,7 +115,7 @@ struct Medalki_Screen: View {
                                 
                         } //test nomer z1
                         VStack(spacing:25){
-                            switch test_1 {
+                            switch test_2 {
                             case 0:
                                 Image("medalki_nil")
                             case 1:
@@ -134,7 +136,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 8, Text_info: testtext2, TrueQwestion: testtrue2, isMedal: true, titleTest: "SpendWisely1", testIsFinish: $test1, testFinishHow: $test_1)
+                                Test_View(totalQwestion: 8, Text_info: testtext2, TrueQwestion: testtrue2, isMedal: true, titleTest: "SpendWisely1", testIsFinish: $test2, testFinishHow: $test_2)
                                 
                             } label: {
                                 
@@ -143,7 +145,7 @@ struct Medalki_Screen: View {
                                         .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
                                         .padding(.horizontal,30)
-                                    if test_1 >= 1 {
+                                    if test_2 >= 1 {
                                         Text("qwdqwgtty")
                                             .multilineTextAlignment(.center)
                                             .font(.system(size: 20,weight: .medium))
@@ -161,7 +163,7 @@ struct Medalki_Screen: View {
                                 
                         } //test nomer z2
                         VStack(spacing:25){
-                            switch test_1 {
+                            switch test_3 {
                             case 0:
                                 Image("medalki_nil")
                             case 1:
@@ -182,7 +184,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 8, Text_info: testtext3, TrueQwestion: testtrue3, isMedal: true, titleTest: "AbilityMoney1", testIsFinish: $test1, testFinishHow: $test_1)
+                                Test_View(totalQwestion: 8, Text_info: testtext3, TrueQwestion: testtrue3, isMedal: true, titleTest: "AbilityMoney1", testIsFinish: $test3, testFinishHow: $test_3)
                                 
                             } label: {
                                 
@@ -191,7 +193,7 @@ struct Medalki_Screen: View {
                                         .padding(.vertical,-15)
                                         .foregroundColor(Color("Color_font_1"))
                                         .padding(.horizontal,30)
-                                    if test_1 >= 1 {
+                                    if test_3 >= 1 {
                                         Text("qwdqwgtty")
                                             .multilineTextAlignment(.center)
                                             .font(.system(size: 20,weight: .medium))
