@@ -7,39 +7,36 @@
 
 import Foundation
 
-struct NewsStruct: Codable , Hashable {
-    let titleRU : String
-    let textRU : String
-    let titleEN : String
-    let textEN : String
-    
- 
+struct News: Codable , Hashable {
+    let title: String
+    let text: String
 }
 
-
-final class API: ObservableObject {
-    @Published var newsVar: [NewsStruct] = []
-    func JsonDecode(from url: URL) {
+final class PostData: ObservableObject {
+    @Published var posts: [News] = []
+    
+    func fetchAndDecodeJSON(from url: URL) {
         let task = URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
+            
             if let error = error {
-                print("ошибка номер \(error)")
+                print("Error: \(error)")
                 return
             }
             
             guard let data = data else {
-                print("нет")
+                print("No data received")
                 return
             }
             
             let decoder = JSONDecoder()
             
             do {
-                let posts = try decoder.decode([NewsStruct].self, from: data)
+                let posts = try decoder.decode([News].self, from: data)
                 DispatchQueue.main.async {
-                    self?.newsVar = posts
+                    self?.posts = posts
                 }
             } catch {
-                print("поломалось , ошибка \(error)")
+                print("Error decoding JSON: \(error)")
             }
         }
         

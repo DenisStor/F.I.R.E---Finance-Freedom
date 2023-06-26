@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainNetwork: View {
-    @StateObject private var postData = API()
+    @ObservedObject private var postData = PostData()
     @State private var Time0 = Timer.TimerPublisher(interval: 2, runLoop: .current, mode: .common).autoconnect()
     @State private var Time1 = Timer.TimerPublisher(interval: 10, runLoop: .current, mode: .common).autoconnect()
     
@@ -17,33 +17,28 @@ struct MainNetwork: View {
             ZStack{
                 
                 VStack {
-                    if postData.newsVar.isEmpty {
+                    if postData.posts.isEmpty {
                         Text("Loading...")
                     } else {
                         ScrollView(showsIndicators: false) {
-                            ForEach(postData.newsVar, id: \.self) { post in
-                                NavigationLink {
-                                    VStack {
-                                        Text(post.titleRU)
-                                        Text(post.textRU)
-                                    }
-                                } label: {
-                                    NewsModel(title: post.titleRU, text: post.textRU)
-                                }
+                            ForEach(postData.posts, id: \.self) { post in
+                                
+                                    NewsModel(title: post.title, text: post.text)
+                                
                                 
                             }
                         }.padding(.horizontal,15)
                     }
                 }
-            }.onAppear {
+            } .onAppear {
                 if let url = URL(string: "https://appfire.ru/info.json") {
-                    postData.JsonDecode(from: url)
+                    postData.fetchAndDecodeJSON(from: url)
                 }
             }
             .onReceive(Time0) { _ in
-                if postData.newsVar.isEmpty {
+                if postData.posts.isEmpty {
                     if let url = URL(string: "https://appfire.ru/info.json") {
-                        postData.JsonDecode(from: url)
+                        postData.fetchAndDecodeJSON(from: url)
                     }
                 } else {
                     print("200")
@@ -51,7 +46,7 @@ struct MainNetwork: View {
             }
             .onReceive(Time1) { _ in
                 if let url = URL(string: "https://appfire.ru/info.json") {
-                    postData.JsonDecode(from: url)
+                    postData.fetchAndDecodeJSON(from: url)
                 }
         }
         }
