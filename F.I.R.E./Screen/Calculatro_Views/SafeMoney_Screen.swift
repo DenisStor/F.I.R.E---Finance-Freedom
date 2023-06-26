@@ -32,7 +32,7 @@ struct SafeMoney_Screen: View {
                 .edgesIgnoringSafeArea(.all)
             
           
-                VStack(spacing:0){
+                ScrollView(showsIndicators: false){
                     VStack(spacing:20){
                         ZStack{
                             RoundedRectangle(cornerRadius: 30)
@@ -191,7 +191,8 @@ struct SafeMoney_Screen: View {
                             
                         }
                     }
-                    Spacer()
+                    .padding(.bottom,20)
+                    
                     VStack(spacing:10){
                         HStack{
                             Text("uyr")
@@ -202,7 +203,34 @@ struct SafeMoney_Screen: View {
                         HStack{
                             Text("\(currencyText(_string: String(Total)))")
                                 .foregroundColor(Color("Color_font_1"))
-                                .font(.system(size: 45,weight: .medium))
+                                .font(.system(size: 30,weight: .medium))
+                                .onChange(of: earnMoney) { _ in
+                                        updateTotal()
+                                    }
+                                    .onChange(of: spendMoney) { _ in
+                                        updateTotal()
+                                    }
+                                    .onAppear {
+                                        updateTotal()
+                                    }
+                                    .textSelection(.enabled)
+                                    .lineLimit(1)
+                            Spacer()
+                        }
+                        
+                    }.padding(.bottom,20)
+                    Divider()
+                    VStack(spacing:10){
+                        HStack{
+                            Text("Если откладывать 5 лет, то вы накопите ")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 30,weight: .medium))
+                            Spacer()
+                        }
+                        HStack{
+                            Text("\(currencyText(_string: String(procent())))")
+                                .foregroundColor(Color("Color_font"))
+                                .font(.system(size: 30,weight: .medium))
                                 .onChange(of: earnMoney) { _ in
                                         updateTotal()
                                     }
@@ -226,6 +254,12 @@ struct SafeMoney_Screen: View {
                 .scrollDismissesKeyboard(.immediately)
                 .ignoresSafeArea(.keyboard)
         }
+    }
+    func procent() -> String {
+        var how = (Double.init(earnMoney) ?? 0) - (Double.init(spendMoney) ?? 0)
+        var procent = data.calculate(capital: Float(how) , rate: 12, monthlyDeposit: Float(how), numberOfYears: 5)
+        
+        return String.init(procent)
     }
     func formatCurrency(_ number: Double) -> String {
         let formatforvalute = NumberFormatter()
