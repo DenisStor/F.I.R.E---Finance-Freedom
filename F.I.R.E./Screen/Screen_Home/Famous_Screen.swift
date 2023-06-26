@@ -18,30 +18,48 @@ struct FamousStr {
 }
 let FamousArray = [
 FamousStr(
-          name: NSLocalizedString("Уоррен\nБаффет", comment: ""),
-          title: NSLocalizedString("Уоррен\nБаффет", comment: ""),
-          text: NSLocalizedString("мумумукмуму", comment: ""),
-          whoIs: NSLocalizedString("мумумукмуму", comment: ""),
+          name: NSLocalizedString("rpohnmbev", comment: ""),
+          title: NSLocalizedString("rpohnmbev", comment: ""),
+          text: NSLocalizedString("weyojnbm", comment: ""),
+          whoIs: NSLocalizedString("ewiutbg", comment: ""),
           imageTitle: "Baffet" ,
           imageSecond: "Baffet"
 ),
 FamousStr(
           name: NSLocalizedString("qB1", comment: ""),
-          title: NSLocalizedString("", comment: ""),
-          text: NSLocalizedString("", comment: ""),
-          whoIs: NSLocalizedString("мумумукмуму", comment: ""),
-          imageTitle: "famous_name1" ,
-          imageSecond: "famous_name1"
+          title: NSLocalizedString("qB1", comment: ""),
+          text: NSLocalizedString("4y5mwnrtqwe", comment: ""),
+          whoIs: NSLocalizedString("neithgnbm", comment: ""),
+          imageTitle: "RAY DALIO" ,
+          imageSecond: "RAY DALIO"
 ),
 FamousStr(
           name: NSLocalizedString("famous_name4", comment: ""),
-          title: NSLocalizedString("", comment: ""),
-          text: NSLocalizedString("", comment: ""),
-          whoIs: NSLocalizedString("мумумукмуму", comment: ""),
-          imageTitle: "qB1" ,
-          imageSecond: "qB1"
+          title: NSLocalizedString("famous_name4", comment: ""),
+          text: NSLocalizedString("rewnoigbn", comment: ""),
+          whoIs: NSLocalizedString("yeoigbgnm", comment: ""),
+          imageTitle: "elon2scr" ,
+          imageSecond: "elon2scr"
+          
 ),
-
+FamousStr(
+          name: NSLocalizedString("veoitbn", comment: ""),
+          title: NSLocalizedString("veoitbn", comment: ""),
+          text: NSLocalizedString("uthiebgnm", comment: ""),
+          whoIs: NSLocalizedString("yeoigbgnm", comment: ""),
+          imageTitle: "Bezos" ,
+          imageSecond: "Bezos"
+          
+),
+FamousStr(
+          name: NSLocalizedString("wei9ybn", comment: ""),
+          title: NSLocalizedString("wei9ybn", comment: ""),
+          text: NSLocalizedString("u9erwuhbngm", comment: ""),
+          whoIs: NSLocalizedString("yeoigbgnm", comment: ""),
+          imageTitle: "Chanpan" ,
+          imageSecond: "Chanpan"
+          
+),
 ]
 struct Famous_Screen: View {
 
