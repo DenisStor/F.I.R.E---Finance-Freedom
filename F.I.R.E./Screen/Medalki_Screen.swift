@@ -51,7 +51,7 @@ struct Medalki_Screen: View {
                                 .multilineTextAlignment(.center)
                                 .font(.system(size: 20,weight: .medium))
                                 .foregroundColor(Color("Color_font_3"))
-                            Text("Какой ты инвестор?")
+                            Text("eriyohnbm")
                                 .multilineTextAlignment(.center)
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))

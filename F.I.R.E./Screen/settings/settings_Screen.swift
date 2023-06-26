@@ -382,7 +382,7 @@ struct settings_Screen: View {
                         VStack (spacing:5) {
                             
                             HStack {
-                                Text("Cайт")
+                                Text("wietbgonmv")
                                         .font(.system(size: 15,weight: .medium))
                                         .multilineTextAlignment(.leading)
                                     .foregroundColor(Color("Color_font"))
