@@ -44,16 +44,6 @@ FamousStr(
 
 ]
 struct Famous_Screen: View {
-    @State private var name : [String] = [
-    NSLocalizedString("famous_name1", comment: ""),
-    NSLocalizedString("qB1", comment: ""),
-    NSLocalizedString("famous_name4", comment: ""),
-
-
-    ]
-    
-    
-
 
     var body: some View {
         
@@ -68,7 +58,7 @@ struct Famous_Screen: View {
                     
                     LazyVStack(spacing: 15){
                         
-                        ForEach(0..<FamousArray.count) { index in
+                        ForEach(0..<FamousArray.count,id:\.self) { index in
                             NavigationLink {
                                 
                                 ZStack{
