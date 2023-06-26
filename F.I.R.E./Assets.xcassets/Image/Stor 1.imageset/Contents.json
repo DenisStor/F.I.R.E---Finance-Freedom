@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "Frame 44.png",
+      "filename" : "Frame 60.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Frame 45.png",
+      "filename" : "Frame 61.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Frame 44@2x.png",
+      "filename" : "Frame 60@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -28,12 +28,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Frame 44@2x 1.png",
+      "filename" : "Frame 60@2x 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Frame 44@3x.png",
+      "filename" : "Frame 60@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -44,7 +44,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "Frame 44@3x 1.png",
+      "filename" : "Frame 60@3x 1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
