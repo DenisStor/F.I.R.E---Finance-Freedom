@@ -25,7 +25,7 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
             .previewDevice("iPhone SE (3rd generation)")
         ContentView()
-            .previewDevice("iPhone 14 Pro Max")
+            .previewDevice("iPhone 14 Pro")
     }
 }
 

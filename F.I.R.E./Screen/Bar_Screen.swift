@@ -85,7 +85,8 @@ struct Bar_Screen: View {
                             }.animation(.spring(), value: PageBar)
                         }
                     }
-                        .padding(.bottom,5)
+                  
+                       .padding(.bottom,2)
                    
                     
                     
