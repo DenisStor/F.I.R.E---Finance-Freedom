@@ -73,7 +73,7 @@ struct Medalki_Screen: View {
                             case 1:
                                 Image("medalki_nil")
                             case 2:
-                                Image("medalki")
+                                Image("Medalki")
                             case 3:
                                 Image("medalki_2")
                             default:
@@ -88,7 +88,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 8, Text_info: testtext1, TrueQwestion: testtruee, isMedal: true, titleTest: "SmartQues1", testIsFinish: $test1, testFinishHow: $test_1)
+                                Test_View(totalQwestion: 8, Text_info: testtext1, TrueQwestion: testtruee, isMedal: true, titleTest: NSLocalizedString("SmartQues1",comment: ""), testIsFinish: $test1, testFinishHow: $test_1)
                                 
                             } label: {
                                 
@@ -121,7 +121,7 @@ struct Medalki_Screen: View {
                             case 1:
                                 Image("medalki_nil")
                             case 2:
-                                Image("medalki")
+                                Image("Medalki")
                             case 3:
                                 Image("medalki_2")
                             default:
@@ -136,7 +136,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 8, Text_info: testtext2, TrueQwestion: testtrue2, isMedal: true, titleTest: "SpendWisely1", testIsFinish: $test2, testFinishHow: $test_2)
+                                Test_View(totalQwestion: 8, Text_info: testtext2, TrueQwestion: testtrue2, isMedal: true, titleTest: NSLocalizedString("SpendWisely1",comment: ""), testIsFinish: $test2, testFinishHow: $test_2)
                                 
                             } label: {
                                 
@@ -169,7 +169,7 @@ struct Medalki_Screen: View {
                             case 1:
                                 Image("medalki_nil")
                             case 2:
-                                Image("medalki")
+                                Image("Medalki")
                             case 3:
                                 Image("medalki_2")
                             default:
@@ -184,7 +184,7 @@ struct Medalki_Screen: View {
                                 .font(.system(size: 25,weight: .medium))
                                 .foregroundColor(Color("Color_font"))
                             NavigationLink {
-                                Test_View(totalQwestion: 8, Text_info: testtext3, TrueQwestion: testtrue3, isMedal: true, titleTest: "AbilityMoney1", testIsFinish: $test3, testFinishHow: $test_3)
+                                Test_View(totalQwestion: 8, Text_info: testtext3, TrueQwestion: testtrue3, isMedal: true, titleTest: NSLocalizedString("AbilityMoney1",comment: ""), testIsFinish: $test3, testFinishHow: $test_3)
                                 
                             } label: {
                                 

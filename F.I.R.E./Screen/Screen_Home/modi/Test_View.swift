@@ -41,11 +41,12 @@ struct Test_View: View {
                                     testIsFinish = 0
                                 }
                         case totalQwestion/3...totalQwestion/2:
-                            Image("medalki")
+                            Image("Medalki")
                                 .onAppear {
                                     testFinishHow = 2
                                     testIsFinish = 1
                                 }
+                     
                         case totalQwestion/2...totalQwestion:
                             Image("medalki_2")
                                 .onAppear {
