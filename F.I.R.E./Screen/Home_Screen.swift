@@ -7,7 +7,7 @@ struct storisBar {
     let textTime : String
     let textTitle : String
     let text1 : String
-   
+    let fontColor : String
 }
 struct Home_Screen: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
@@ -27,61 +27,60 @@ struct Home_Screen: View {
               imageString : "Stor 1-2", // внутренняя картинка
               textTime : NSLocalizedString("brgr", comment: ""), // время чтения
               textTitle: NSLocalizedString("lwekjgh213", comment: ""), //заголовок
-              text1:     NSLocalizedString("q3tyh", comment: "")
+              text1:     NSLocalizedString("q3tyh", comment: ""),
+              fontColor: "Color_font_2"
               ),//,
     storisBar(
               imageStringTitle: "Stor 2",
               imageString : "Stor 2-2",
               textTime : NSLocalizedString("qerhjqer", comment: ""),
               textTitle: NSLocalizedString("dwqhb5", comment: ""),
-              text1:     NSLocalizedString("sgwioehn", comment: "")
+              text1:     NSLocalizedString("sgwioehn", comment: ""),
+              fontColor: "Color_font_2"
              ),
     storisBar(
               imageStringTitle: "Stor 3",
               imageString : "Stor 3-3",
               textTime : NSLocalizedString("qerhjqer1", comment: ""),
               textTitle: NSLocalizedString("rejerh", comment: ""),
-              text1:     NSLocalizedString("bokwehg", comment: "")
+              text1:     NSLocalizedString("bokwehg", comment: ""),
+              fontColor: "Color_font"
               ),
     storisBar(
               imageStringTitle: "Stor 4",
               imageString : "Stor 12",
               textTime : NSLocalizedString("qerhjqer1", comment: ""),
               textTitle: NSLocalizedString("ryteklwtaejrh", comment: ""),
-              text1:     NSLocalizedString("birwebhn", comment: "")
+              text1:     NSLocalizedString("birwebhn", comment: ""),
+              fontColor: "Color_font_2"
               ),
     storisBar(
               imageStringTitle: "Stor 5",
               imageString : "Stor 4-4",
               textTime : NSLocalizedString("qerhjqer12", comment: ""),
               textTitle: NSLocalizedString("nohiowrh", comment: ""),
-              text1:     NSLocalizedString("inobern", comment: "")
+              text1:     NSLocalizedString("inobern", comment: ""),
+              fontColor: "Color_font"
              ),
     storisBar(
               imageStringTitle: "Stor 6",
               imageString : "Stor Gold",
               textTime : NSLocalizedString("qerhjqer1267", comment: ""),
               textTitle: NSLocalizedString("aoperhinoweh", comment: ""),
-              text1:     NSLocalizedString("renqerh", comment: "")
+              text1:     NSLocalizedString("renqerh", comment: ""),
+              fontColor: "Color_font"
              ),
     storisBar(
               imageStringTitle: "Stor 7",
               imageString : "Stor 8-8",
               textTime : NSLocalizedString("qerhjqer29", comment: ""),
               textTitle: NSLocalizedString("nwrtm", comment: ""),
-              text1:     NSLocalizedString("gweghiewgno", comment: "")
+              text1:     NSLocalizedString("gweghiewgno", comment: ""),
+              fontColor: "Color_font_2"
              ),
     ]
    
-    @State private var colormain : [String] = [
-    "Color_bl",
-    "Color_bl",
-    "Color_bl",
-    "Color_bl",
-    "Color_bl",
-    "Color_bl",
-    "Color_bl",
-    ]
+ 
 
     @State private var random : [Int] = [
         0,
@@ -166,7 +165,7 @@ struct Home_Screen: View {
                                                     
                                                     Text("\(stories[random[index]].textTitle)")
                                                         .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color(colormain[random[index]]))
+                                                        .foregroundColor(Color(stories[random[index]].fontColor))
                                                         .font(.system(size: 20 ,weight: .semibold))
                                                     
                                                     Spacer()

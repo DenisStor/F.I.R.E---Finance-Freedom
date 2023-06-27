@@ -44,7 +44,7 @@ struct Start_Screen: View {
                         .padding(.bottom,10)
                     }
                     ZStack {
-                        RoundedRectangle(cornerRadius: 15)
+                        RoundedRectangle(cornerRadius: 30)
                             .foregroundColor(Color("Color_font_2"))
                         Text("menuStart")
                             .font(.system(size: 25,weight: .medium))

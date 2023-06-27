@@ -256,10 +256,13 @@ struct SafeMoney_Screen: View {
         }
     }
     func procent() -> String {
-        var how = (Double.init(earnMoney) ?? 0) - (Double.init(spendMoney) ?? 0)
-        var procent = data.calculate(capital: Float(how) , rate: 12, monthlyDeposit: Float(how), numberOfYears: 5)
-        
-        return String.init(procent)
+        let how = (Double.init(earnMoney) ?? 0) - (Double.init(spendMoney) ?? 0)
+        let procent = data.calculate(capital: Float(how) , rate: 12, monthlyDeposit: Float(how), numberOfYears: 5)
+        if (Double.init(earnMoney) ?? 0) >= (Double.init(spendMoney) ?? 0) {
+            return String.init(procent)
+        } else {
+            return "0"
+        }
     }
     func formatCurrency(_ number: Double) -> String {
         let formatforvalute = NumberFormatter()
