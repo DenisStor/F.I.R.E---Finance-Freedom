@@ -26,6 +26,10 @@ struct settings_Screen: View {
       @AppStorage ("howMuch") var howmuch : Int = 0
     @AppStorage ("test1")  var test1 : Int = 0
     @AppStorage ("test_1")  var test_1 : Int = 0
+    @AppStorage ("test2")  var test2 : Int = 0
+    @AppStorage ("test_2")  var test_2 : Int = 0
+    @AppStorage ("test3")  var test3 : Int = 0
+    @AppStorage ("test_3")  var test_3 : Int = 0
     @Environment (\.requestReview) var requestReview : RequestReviewAction
     @Environment(\.openURL) var openURL
     var body: some View {
@@ -191,6 +195,10 @@ struct settings_Screen: View {
                         Rate = 4
                         test1 = 0
                         test_1 = 0
+                        test2 = 0
+                        test_2 = 0
+                        test3 = 0
+                        test_3 = 0
                         selected = "USD"
                          isAlert1 = true
                     },
