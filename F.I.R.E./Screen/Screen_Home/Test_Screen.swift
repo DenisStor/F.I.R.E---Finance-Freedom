@@ -298,12 +298,12 @@ let textTest = [
                                                 .foregroundColor(Color("Color_font"))
                                                 .multilineTextAlignment(.leading)
                                         case 5...9:
-                                            Text("weghbnrmeet")
+                                            Text("weuhnmb")
                                                 .font(.system(size: 20,weight: .medium))
                                                 .foregroundColor(Color("Color_font"))
                                                 .multilineTextAlignment(.leading)
                                         case 0...5:
-                                            Text("weoytgbgnvm")
+                                            Text("weuhnmb")
                                                 .font(.system(size: 20,weight: .medium))
                                                 .foregroundColor(Color("Color_font"))
                                                 .multilineTextAlignment(.leading)
