@@ -222,7 +222,7 @@ struct SafeMoney_Screen: View {
                     Divider()
                     VStack(spacing:10){
                         HStack{
-                            Text("Если откладывать 5 лет, то вы накопите ")
+                            Text("seygihnmeq")
                                 .foregroundColor(Color("Color_font"))
                                 .font(.system(size: 30,weight: .medium))
                             Spacer()

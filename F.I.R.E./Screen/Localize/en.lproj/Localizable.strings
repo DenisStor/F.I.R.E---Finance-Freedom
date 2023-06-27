@@ -284,7 +284,11 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 "AggressiveStep1" = "Step 1";
 "AggressiveStep1.2" = "Aggressive investor has a harder time: you need to analyze the economy, the industry, the company itself. If business is booming and the company is making large profits, its shares will appreciate (but there are risks, too).";
 "AggressiveStep2" = "Step 2";
-"AggressiveStep2.2" = "Pay attention to the chart of stock prices, compare it to changes in the industry and the company itself. If the securities are cheap and the company is showing growth, it's not a bad time to buy. When the stock rises in value, you can sell it for a profit. The higher the upside potential of the stock, the more you can earn.";
+"AggressiveStep2.2" = "The ideal company is one that has been growing its net income, revenues, and dividends for five years, while its liabilities and debts have been going down. These companies are few and far between and their stock price is high, but you have to know them.
+
+In addition to the ideal, there are intermediate options. If you find a company that has growing profits, revenue, equity, and debt, there is nothing wrong with that. You're looking at a growing business which is taking over the market and is willing to take out loans to do so.
+
+But if you find a company that has no dividends, growing debts, declining revenues, and declining net income, you are looking at an example of an inefficient business.";
 "Analise1" = "How do you analyze a stock?";
 "AnaliseFactors1" = "There are many factors that influence which stocks to buy. Let's split them into two parts:";
 "AnaliseFactors1.1" = "External factors are macroeconomic indicators, the economic and political situation in the country, the state of the industry. Newsfeeds, experts' opinions, analysis of shares of similar companies will help to understand the situation.";
@@ -352,12 +356,12 @@ Elon Musk is known for his vision of the future, his innovative thinking, and hi
 
 
 "Fire1" = "F.I.R.E as a way of life";
-"Fire2" = "The FIRE movement emerged in the U.S. in the 1990s, and its basic ideas were
+"Fire2" = "The F.I.R.E movement emerged in the U.S. in the 1990s, and its basic ideas were
 developed through the 1992 book «Trick or Treat»";
-"Fire3" = "The driver of FIRE was the surge in real estate prices in the US in the 2000s. Young people realized they couldnt afford to buy an apartment.";
+"Fire3" = "The driver of F.I.R.E was the surge in real estate prices in the US in the 2000s. Young people realized they couldnt afford to buy an apartment.";
 "EstateValue1" = "Property values";
 "Fire4" = "High savings rate";
-"Fire5" = "Is the basic principle of FIRE. Speaking of a high savings rate is not an exaggeration.
+"Fire5" = "Is the basic principle of F.I.R.E. Speaking of a high savings rate is not an exaggeration.
 It's not the usual 10-15% of salary, but 50% or even 75% of income.";
 "FireRec1" = "Useful literature";
 "FireRec2" = "Team FIRE Recommends";
@@ -1246,3 +1250,7 @@ on the amount including interest already earned.";
 saving.";
 
 "weuhnmb" = "Approximately 20-30% of the portfolio can be held in risk-free assets, such as deposits, savings accounts, or money market funds, to provide liquidity and capital preservation.";
+
+"seygihnmeq" = "If you save for 5 years, you will accumulate";
+
+"ewtibnmvewqr" = "This information does not constitute personal investment advice, and the financial instruments or transactions mentioned herein may not match your investment profile and investment objectives (expectations). It is your task to determine whether a financial instrument or transaction meets your interests, investment objectives, investment horizon and risk tolerance level";

@@ -288,7 +288,11 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 "AggressiveStep1" = "Krok 1";
 "AggressiveStep1.2" = "Dla agresywnego inwestora jest to bardziej skomplikowane: musisz przeanalizować gospodarkę, branżę, samą firmę. Jeśli biznes kwitnie, a firma osiąga duże zyski, jej akcje będą zyskiwać na wartości (ale istnieje również ryzyko).";
 "AggressiveStep2" = "Krok 2";
-"AggressiveStep2.2" = "Zwróć uwagę na wykres cen akcji, porównaj go ze zmianami w branży i samej firmie. Jeśli papiery wartościowe są tanie, a firma wykazuje wzrost, nie jest to zły moment na zakup. Gdy wartość akcji wzrośnie, można je sprzedać z zyskiem. Im wyższy potencjał wzrostowy akcji, tym więcej można zarobić.";
+"AggressiveStep2.2" = "Idealna spółka to taka, która od 5 lat zwiększa swój zysk netto, przychody i dywidendy, podczas gdy jej zobowiązania i długi maleją. Takich spółek jest niewiele, a ich cena akcji jest wysoka, ale trzeba je znać.
+
+Oprócz ideału istnieją również opcje pośrednie. Jeśli znalazłeś firmę z rosnącymi zyskami, przychodami, kapitałem własnym i długami, nie ma w tym nic złego. Patrzysz na rozwijającą się firmę, która przejmuje rynek i jest gotowa zaciągnąć pożyczki, aby to zrobić.
+
+Jeśli jednak znajdziesz spółkę, która nie wypłaca dywidend, ma rosnące zadłużenie, malejące przychody i zyski netto, to masz do czynienia z przykładem nieefektywnego biznesu.";
 "Analise1" = "Jak analizować akcje?";
 "AnaliseFactors1" = "Istnieje wiele czynników, które wpływają na to, które akcje kupić. Podzielmy je na dwie części:";
 "AnaliseFactors1.1" = "Czynniki zewnętrzne to wskaźniki makroekonomiczne, sytuacja gospodarcza i polityczna w kraju, stan branży. Kanały informacyjne, opinie ekspertów, analiza akcji podobnych spółek pomogą zrozumieć sytuację.";
@@ -343,13 +347,13 @@ Elon Musk jest znany ze swojej wizji przyszłości, innowacyjnego myślenia i ch
 
 
 "Fire1" = "F.I.R.E jako sposób na życie";
-"Fire2" = "Ruch FIRE pojawił się w Stanach Zjednoczonych w latach 90-tych, a jego główne
+"Fire2" = "Ruch F.I.R.E pojawił się w Stanach Zjednoczonych w latach 90-tych, a jego główne
 idee zostały opracowane w książce «Trick or Treat» z 1992 roku.";
-"Fire3" = "Motorem FIRE był gwałtowny wzrost cen nieruchomości w USA w 2000 roku.
+"Fire3" = "Motorem F.I.R.E był gwałtowny wzrost cen nieruchomości w USA w 2000 roku.
 Młodzi ludzie zdali sobie sprawę, że nie stać ich na zakup mieszkania.";
 "EstateValue1" = "Wartości nieruchomości";
 "Fire4" = "Wysoka stopa oszczędności";
-"Fire5" = "Jest podstawową zasadą FIRE. Mówienie o wysokiej stopie oszczędności nie jest
+"Fire5" = "Jest podstawową zasadą F.I.R.E. Mówienie o wysokiej stopie oszczędności nie jest
 przesadą. Nie jest to zwykła proporcja 10-15% wynagrodzenia, ale 50%, a nawet 75%
 dochodu.";
 "FireRec1" = "Przydatna literatura";
@@ -1263,3 +1267,7 @@ naliczanie odsetek od kwoty, w tym odsetek już zarobionych.";
 oszczędzania pieniędzy.";
 
 "weuhnmb" = "Około 20-30% portfela może być utrzymywane w aktywach wolnych od ryzyka, takich jak depozyty, rachunki oszczędnościowe lub fundusze rynku pieniężnego, aby zapewnić płynność i ochronę kapitału.";
+
+"seygihnmeq" = "Jeśli będziesz oszczędzać przez 5 lat, zgromadzisz";
+
+"ewtibnmvewqr" = "Niniejsze informacje nie stanowią osobistej porady inwestycyjnej, a instrumenty finansowe lub transakcje wymienione w niniejszym dokumencie mogą nie odpowiadać profilowi inwestycyjnemu i celom inwestycyjnym (oczekiwaniom) użytkownika. Zadaniem użytkownika jest określenie, czy dany instrument finansowy lub transakcja jest odpowiednia dla jego zainteresowań, celów inwestycyjnych, horyzontu inwestycyjnego i poziomu tolerancji ryzyka.";
