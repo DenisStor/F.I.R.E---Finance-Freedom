@@ -20,15 +20,15 @@ struct NewsView: View {
     @Environment(\.openURL) var openURL
     var body: some View {
         
-        NavigationStack {
-            ZStack{
+      
+            
                 if islong {
                     NavigationLink {
                         ZStack{
                             Color("Color_back")
                                 .edgesIgnoringSafeArea(.all)
                             ScrollView(showsIndicators: false){
-                                VStack{
+                                VStack(spacing:20){
                                     HStack(spacing:5) {
                                         Text(time)
                                             .font(.system(size: 15,weight: .medium))
@@ -81,11 +81,11 @@ struct NewsView: View {
                                             
                                             Spacer()
                                         }
-                                        .onTapGesture {
-                                            openURL(URL(string: NSLocalizedString(url, comment: "url"))!)
-                                        }
+                                        
                                     }.opacity(0.5)
-                                    
+                                    .onTapGesture {
+                                           openURL(URL(string: NSLocalizedString(url, comment: "url"))!)
+                                    }
                                 }
                             }.padding(.horizontal,15)
                             
@@ -182,7 +182,7 @@ struct NewsView: View {
                     )
                     
                 }
-            }
-        }
+            
+        
     }
 }

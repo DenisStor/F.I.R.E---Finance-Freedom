@@ -32,7 +32,7 @@ final class NetworkManager : ObservableObject {
             
             do {
                 let newsData = try decoder.decode([news].self, from: data)
-                DispatchQueue.main.sync {
+                DispatchQueue.main.async {
                     self?.newsData = newsData
                 }
             } catch {
