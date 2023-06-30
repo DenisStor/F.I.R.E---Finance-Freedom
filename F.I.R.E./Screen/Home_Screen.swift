@@ -15,7 +15,7 @@ struct Home_Screen: View {
    
     let words = strings()
     @State private var currentword = ""
-    @State private var spacingVs : CGFloat = 10
+    @State private var spacingVs : CGFloat = 15
     
     
     
@@ -81,10 +81,12 @@ struct Home_Screen: View {
              ),
     ]
    
+    
+    @State private var timerForNewsAndStories = Timer.TimerPublisher(interval: 15, runLoop: .current, mode: .common).autoconnect()
+    @State private var timerForNewsAndStoriesIsEmpty = Timer.TimerPublisher(interval: 1, runLoop: .current, mode: .common).autoconnect()
+    
  
-
- 
-    @Environment(\.openURL) var openURL
+  
     
     
     var body: some View {
@@ -230,8 +232,8 @@ struct Home_Screen: View {
                             
                         }
                         .padding(.top,spacingVs)
-                        ForEach(Array(StoriesAndNews.newsData.enumerated()), id: \.offset) { index, news in
-                            VStack(spacing:0){
+                        ForEach(StoriesAndNews.newsData, id: \.self) { news in
+                            VStack(spacing:5){
                               
                                 if news.islong {
                                     NavigationLink {
@@ -275,33 +277,37 @@ struct Home_Screen: View {
                                                         RoundedRectangle(cornerRadius: 30)
                                                             .foregroundColor(Color.white)
                                                             .opacity(0.5)
+                                                            .frame(height:100)
                                                     }
                                                     HStack{
                                                         Text(news.textin)
                                                             .font(.system(size: 20,weight: .medium))
                                                             .multilineTextAlignment(.leading)
                                                             .foregroundColor(Color("Color_font"))
+                                                            .lineSpacing(10)
                                                         Spacer()
                                                     }
                                                     VStack{
-                                                        HStack {
-                                                            Text("источник :")
+                                                        VStack {
+                                                            HStack {
+                                                                Text("Источник:")
+                                                                    .font(.system(size: 20,weight: .medium))
+                                                                    .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                                Spacer()
+                                                            }
+                                                            HStack {
+                                                                Link(news.urlname, destination: URL(string: news.url)!)
                                                                 .font(.system(size: 20,weight: .medium))
                                                                 .multilineTextAlignment(.leading)
-                                                                .foregroundColor(Color("Color_font"))
-                                                            
-                                                            Text(news.urlname)
-                                                                .font(.system(size: 20,weight: .medium))
-                                                                .multilineTextAlignment(.leading)
-                                                                .foregroundColor(Color("Color_font"))
-                                                            
-                                                            Spacer()
+                                                            .foregroundColor(Color("Color_font"))
+                                                                Spacer()
+                                                            }
+                                                           
                                                         }
                                                         
                                                     }.opacity(0.5)
-                                                        .onTapGesture {
-                                                            openURL(URL(string: NSLocalizedString(news.url, comment: "VK"))!)
-                                                        }
+                                                       
                                                     
                                                 }
                                             }.padding(.horizontal,15)
@@ -405,6 +411,7 @@ struct Home_Screen: View {
                                     
                                    
                             }
+                            .padding(.top,10)
                         }.animation(.spring(), value: StoriesAndNews.newsData)
                     }.padding(.horizontal,15)
                    
@@ -429,20 +436,30 @@ struct Home_Screen: View {
                        StoriesAndNews.fetchAndDecodeJSON_Stories(from: URL(string: "https://appfire.ru/news.json")!)
                         
             }
-        
+            .onReceive(timerForNewsAndStories) { i in
+                StoriesAndNews.fetchAndDecodeJSON_NEWS(from: URL(string: "https://appfire.ru/news.json")!)
+            }
+            .onReceive(timerForNewsAndStoriesIsEmpty) { i in
+                if StoriesAndNews.newsData.isEmpty {
+                    print("fetch")
+                    StoriesAndNews.fetchAndDecodeJSON_NEWS(from: URL(string: "https://appfire.ru/news.json")!)
+                } else {
+                    print("200")
+                }
+            }
         
     }
     func create () {
         if spacingVs == 120 {
             
         } else {
-            spacingVs = spacingVs + 10
+            spacingVs = spacingVs + 15
             if spacingVs == 20 {
                 
             }
             else {
                  Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
-                        spacingVs -= 10
+                        spacingVs -= 15
                     }
                 
             }
