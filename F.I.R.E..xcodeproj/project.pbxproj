@@ -24,6 +24,9 @@
 		B74F39E92A2A401700284ADF /* bar_progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74F39E82A2A401700284ADF /* bar_progress.swift */; };
 		B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */; };
 		B793C61D2A3CE224003C4585 /* Medalki_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */; };
+		B7A6BD892A4F180B00311E83 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6BD882A4F180B00311E83 /* NetworkModel.swift */; };
+		B7A6BD8B2A4F181E00311E83 /* NetworkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6BD8A2A4F181E00311E83 /* NetworkViewModel.swift */; };
+		B7A6BD8D2A4F1C2100311E83 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A6BD8C2A4F1C2100311E83 /* NewsView.swift */; };
 		B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */; };
 		B7B62DD62A30D22D00D9A786 /* Test_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B62DD52A30D22D00D9A786 /* Test_View.swift */; };
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
@@ -53,9 +56,13 @@
 		B74F39E82A2A401700284ADF /* bar_progress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bar_progress.swift; sourceTree = "<group>"; };
 		B76A7E912A22BA37000ADC09 /* Tax_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tax_Screen.swift; sourceTree = "<group>"; };
 		B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medalki_Screen.swift; sourceTree = "<group>"; };
+		B7A6BD882A4F180B00311E83 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		B7A6BD8A2A4F181E00311E83 /* NetworkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkViewModel.swift; sourceTree = "<group>"; };
+		B7A6BD8C2A4F1C2100311E83 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		B7AB587B2A19417C00ABF88D /* AboutFIRE_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutFIRE_Screen.swift; sourceTree = "<group>"; };
 		B7B62DD52A30D22D00D9A786 /* Test_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_View.swift; sourceTree = "<group>"; };
 		B7C862032A1A5BF80031BEE8 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		B7D917FB2A4DA60B004425A8 /* F-I-R-E--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "F-I-R-E--Info.plist"; sourceTree = SOURCE_ROOT; };
 		B7DECD942A22800400C0D5CA /* Test_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Screen.swift; sourceTree = "<group>"; };
 		B7FD86A12A3CB1E700959BAA /* Termis_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Termis_Screen.swift; sourceTree = "<group>"; };
 		D26B5C022A33E60E00CFD4C5 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 		B72893532A1908EA003634D7 /* F.I.R.E. */ = {
 			isa = PBXGroup;
 			children = (
+				B7D917FB2A4DA60B004425A8 /* F-I-R-E--Info.plist */,
 				B72893542A1908EA003634D7 /* F_I_R_E_App.swift */,
 				B72893562A1908EA003634D7 /* ContentView.swift */,
 				B728936A2A190AFD003634D7 /* Screen */,
@@ -120,6 +128,7 @@
 				B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */,
 				D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */,
 				B728936B2A1915D5003634D7 /* Home_Screen.swift */,
+				B7A6BD872A4F17CB00311E83 /* NetworkManager */,
 				B728937A2A192D1C003634D7 /* Screen_Home */,
 				B728936F2A192363003634D7 /* Strings.swift */,
 				B7C862032A1A5BF80031BEE8 /* Calculator.swift */,
@@ -163,6 +172,16 @@
 				B7B62DD52A30D22D00D9A786 /* Test_View.swift */,
 			);
 			path = modi;
+			sourceTree = "<group>";
+		};
+		B7A6BD872A4F17CB00311E83 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				B7A6BD882A4F180B00311E83 /* NetworkModel.swift */,
+				B7A6BD8A2A4F181E00311E83 /* NetworkViewModel.swift */,
+				B7A6BD8C2A4F1C2100311E83 /* NewsView.swift */,
+			);
+			path = NetworkManager;
 			sourceTree = "<group>";
 		};
 		B7C862052A1A62490031BEE8 /* Calculatro_Views */ = {
@@ -261,12 +280,15 @@
 				B72893692A190AF1003634D7 /* Start_Screen.swift in Sources */,
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
 				B7B62DD62A30D22D00D9A786 /* Test_View.swift in Sources */,
+				B7A6BD892A4F180B00311E83 /* NetworkModel.swift in Sources */,
+				B7A6BD8B2A4F181E00311E83 /* NetworkViewModel.swift in Sources */,
 				B72893652A190A89003634D7 /* Calculator_Screen.swift in Sources */,
 				B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */,
 				B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */,
 				B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */,
 				B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */,
 				B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */,
+				B7A6BD8D2A4F1C2100311E83 /* NewsView.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,
 				D297796C2A30C3440067F57D /* InvestAgree_Screen.swift in Sources */,
 			);
@@ -339,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -393,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -412,26 +434,30 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"F.I.R.E./Preview Content\"";
-				DEVELOPMENT_TEAM = CM2X6RAXCV;
+				DEVELOPMENT_TEAM = 4Q85NAVAP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "F-I-R-E--Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = malykhinnik;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.firefinance.myapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -444,26 +470,30 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"F.I.R.E./Preview Content\"";
-				DEVELOPMENT_TEAM = CM2X6RAXCV;
+				DEVELOPMENT_TEAM = 4Q85NAVAP3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "F-I-R-E--Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = malykhinnik;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.firefinance.myapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -15,7 +15,7 @@ struct Home_Screen: View {
    
     let words = strings()
     @State private var currentword = ""
-    @State private var spacingVs : CGFloat = 20
+    @State private var spacingVs : CGFloat = 10
     
     
     
@@ -84,7 +84,7 @@ struct Home_Screen: View {
  
 
  
-    
+    @Environment(\.openURL) var openURL
     
     
     var body: some View {
@@ -230,7 +230,7 @@ struct Home_Screen: View {
                             
                         }
                         .padding(.top,spacingVs)
-                        ForEach(StoriesAndNews.newsData, id: \.self) { news in
+                        ForEach(Array(StoriesAndNews.newsData.enumerated()), id: \.offset) { index, news in
                             VStack(spacing:0){
                               
                                 if news.islong {
@@ -285,8 +285,13 @@ struct Home_Screen: View {
                                                     }
                                                     VStack{
                                                         HStack {
+                                                            Text("источник :")
+                                                                .font(.system(size: 20,weight: .medium))
+                                                                .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                            
                                                             Text(news.urlname)
-                                                                .font(.system(size: 15,weight: .medium))
+                                                                .font(.system(size: 20,weight: .medium))
                                                                 .multilineTextAlignment(.leading)
                                                                 .foregroundColor(Color("Color_font"))
                                                             
@@ -294,6 +299,9 @@ struct Home_Screen: View {
                                                         }
                                                         
                                                     }.opacity(0.5)
+                                                        .onTapGesture {
+                                                            openURL(URL(string: NSLocalizedString(news.url, comment: "VK"))!)
+                                                        }
                                                     
                                                 }
                                             }.padding(.horizontal,15)
@@ -302,27 +310,42 @@ struct Home_Screen: View {
                                         }
                                     } label: {
                                         
-                                        
-                                        VStack(spacing:5){
-                                           
-                                            HStack(spacing:5) {
-                                                Text(news.time)
-                                                    .font(.system(size: 15,weight: .medium))
-                                                    .multilineTextAlignment(.leading)
-                                                    .foregroundColor(Color("Color_font_2"))
+                                        ZStack{
+                                            AsyncImage(url:  URL(string:news.img)) { Image in
+                                                Image
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .cornerRadius(30)
+                                                    .opacity(0.7)
+                                                    .background(Color("Color_black").cornerRadius(30))
+                                                    
+                                            } placeholder: {
+                                                RoundedRectangle(cornerRadius: 30)
+                                                    .foregroundColor(Color.white)
                                                     .opacity(0.5)
-                                                Text("•")
-                                                    .font(.system(size: 15,weight: .medium))
-                                                    .multilineTextAlignment(.leading)
-                                                    .foregroundColor(Color("Color_font_2"))
-                                                    .opacity(0.5)
-                                                Text(news.date)
-                                                    .font(.system(size: 15,weight: .medium))
-                                                    .multilineTextAlignment(.leading)
-                                                    .foregroundColor(Color("Color_font_2"))
-                                                    .opacity(0.5)
-                                                Spacer()
-                                            }.padding(.top,50)
+                                            }
+                                            .overlay (
+                                               
+                                                VStack(spacing:5){
+                                                    Spacer()
+                                                HStack(spacing:5) {
+                                                    Text(news.time)
+                                                        .font(.system(size: 15,weight: .medium))
+                                                        .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font_2"))
+                                                        .opacity(0.5)
+                                                    Text("•")
+                                                        .font(.system(size: 15,weight: .medium))
+                                                        .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font_2"))
+                                                        .opacity(0.5)
+                                                    Text(news.date)
+                                                        .font(.system(size: 15,weight: .medium))
+                                                        .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color("Color_font_2"))
+                                                        .opacity(0.5)
+                                                    Spacer()
+                                                }
                                                 HStack {
                                                     Text(news.title)
                                                         .font(.system(size: 25,weight: .medium))
@@ -330,29 +353,16 @@ struct Home_Screen: View {
                                                         .multilineTextAlignment(.leading)
                                                     Spacer()
                                                 }
-                                           
-                                        }.padding(.horizontal,15)
-                                        .padding(.vertical,30)
-                                        
-                                            .background(
                                                 
-                                                AsyncImage(url:  URL(string:news.img)) { Image in
-                                                    Image
-                                                        .resizable()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .cornerRadius(30)
-                                                } placeholder: {
-                                                    RoundedRectangle(cornerRadius: 30)
-                                                        .foregroundColor(Color.white)
-                                                        .opacity(0.5)
-                                                }
-                                                
-                                                
+                                            }.padding(.horizontal,15)
+                                                .padding(.vertical,30)
                                             )
+                                        }
+                                        
                                     
                                 }
                                 } else {
-                                    VStack(spacing:20){
+                                    VStack(spacing:5){
                                         HStack(spacing:5) {
                                             Image(systemName: "bolt.fill")
                                                 .font(.system(size: 15,weight: .medium))
@@ -409,22 +419,8 @@ struct Home_Screen: View {
                 StoriesAndNews.fetchAndDecodeJSON_NEWS(from: URL(string: "https://appfire.ru/news.json")!)
                 StoriesAndNews.fetchAndDecodeJSON_Stories(from: URL(string: "https://appfire.ru/news.json")!)
                 
+                create()
                 
-                if spacingVs == 120 {
-                    
-                } else {
-                    spacingVs = spacingVs + 15
-                    if spacingVs == 20 {
-                        
-                    }
-                    else {
-                       
-                            Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
-                                spacingVs -= 15
-                            }
-                        
-                    }
-                }
             }
             .animation(.spring(), value: spacingVs)
             .animation(.spring(), value: currentword)
@@ -435,6 +431,22 @@ struct Home_Screen: View {
             }
         
         
+    }
+    func create () {
+        if spacingVs == 120 {
+            
+        } else {
+            spacingVs = spacingVs + 10
+            if spacingVs == 20 {
+                
+            }
+            else {
+                 Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { _ in
+                        spacingVs -= 10
+                    }
+                
+            }
+        }
     }
    
 }
