@@ -43,13 +43,13 @@ struct Termis_Screen: View {
         NSLocalizedString("InvTerm33.1", comment: ""),
         NSLocalizedString("InvTerm34.1", comment: ""),
         NSLocalizedString("InvTerm35.1", comment: ""),
-    
-    
-    
-    
-    
-    
-    
+        
+        
+        
+        
+        
+        
+        
     ]
     @State private var Title : [String] = [
         NSLocalizedString("InvTerm1", comment: ""),
@@ -86,7 +86,7 @@ struct Termis_Screen: View {
         NSLocalizedString("InvTerm33", comment: ""),
         NSLocalizedString("InvTerm34", comment: ""),
         NSLocalizedString("InvTerm35", comment: ""),
- 
+        
         
     ]
     @AppStorage ("test1")  var test1 : Int = 0
@@ -378,6 +378,7 @@ struct Termis_Screen: View {
                                                     .font(.system(size: 20,weight: .medium))
                                                     .foregroundColor(Color("Color_font"))
                                                     .multilineTextAlignment(.leading)
+                                                    .lineSpacing(5)
                                                 
                                                 Spacer()
                                             }
@@ -393,17 +394,45 @@ struct Termis_Screen: View {
                             }
                         }
                     } label: {
-                        Text("hello")
+                        
+                        ZStack{
+                            
+                            Image("slovar")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        Text("slovartext")
+                                            .font(.system(size: 25 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font_2"))
+                                            .multilineTextAlignment(.leading)
+                                        Spacer()
+                                             
+                                    }   .padding(.horizontal,20)
+                                }
+                            }
+                        }
+                        
+                 
+                            
+                        
                     }
-                }
-            }.padding(.horizontal,15)
-        }
-            
-    }
-}
+                }.padding(.horizontal,15)
+               
+                Rectangle()
+                .foregroundColor(.clear)
+                .frame(height: 100)
 
-struct Termis_Screen_Previews: PreviewProvider {
-    static var previews: some View {
-        Termis_Screen()
+                    
+            }
+            
+        }
+    }
+    
+    struct Termis_Screen_Previews: PreviewProvider {
+        static var previews: some View {
+            Termis_Screen()
+        }
     }
 }

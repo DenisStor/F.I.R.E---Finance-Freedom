@@ -10,10 +10,6 @@
 	<dict>
 		<key>UIColorName</key>
 		<string>Color_font_1</string>
-		<key>UIImageName</key>
-		<string>name_name_name</string>
-		<key>UILaunchScreen</key>
-		<dict/>
 	</dict>
 </dict>
 </plist>

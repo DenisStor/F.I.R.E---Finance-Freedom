@@ -25,7 +25,7 @@ struct Bar_Screen: View {
                         Spacer()
                         ZStack{
                             RoundedRectangle(cornerRadius: 45)
-                                .strokeBorder(.black,lineWidth: 0.5)
+                                .strokeBorder(.black,lineWidth: 0.2)
                                 .frame(width: round(screen.width*0.8), height: 80)
                                 .shadow(color: Color("Color_shadow"), radius: 20)
                                 .background(
