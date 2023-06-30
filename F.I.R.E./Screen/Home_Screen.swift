@@ -1,6 +1,7 @@
 
 
 import SwiftUI
+import SDWebImageSwiftUI
 struct storisBar {
     let imageStringTitle : String
     let imageString : String
@@ -231,9 +232,10 @@ struct Home_Screen: View {
                             }
                             
                         }
+                        .padding(.top,10)
                         .padding(.top,spacingVs)
                         ForEach(StoriesAndNews.newsData, id: \.self) { news in
-                            VStack(spacing:5){
+                            VStack(spacing:spacingVs){
                               
                                 if news.islong {
                                     NavigationLink {
@@ -268,17 +270,26 @@ struct Home_Screen: View {
                                                             .foregroundColor(Color("Color_font"))
                                                         Spacer()
                                                     }
-                                                    AsyncImage(url:  URL(string:news.img)) { Image in
-                                                        Image
+                                                   
+                                                        WebImage(url: URL(string: news.img)!)
+                                                        
+                                                        
+                                                            .onSuccess { image, data, cacheType in
+                                                                
+                                                            }
                                                             .resizable()
+                                                        
+                                                        
+                                                            .placeholder {
+                                                                Rectangle().foregroundColor(.gray)
+                                                            }
+                                                            .indicator(.activity) // Activity Indicator
+                                                            .transition(.fade(duration: 0.5)) //
+                                                            .scaledToFit()
                                                             .aspectRatio(contentMode: .fit)
                                                             .cornerRadius(30)
-                                                    } placeholder: {
-                                                        RoundedRectangle(cornerRadius: 30)
-                                                            .foregroundColor(Color.white)
-                                                            .opacity(0.5)
-                                                            .frame(height:100)
-                                                    }
+                                                    
+                                                      
                                                     HStack{
                                                         Text(news.textin)
                                                             .font(.system(size: 20,weight: .medium))
@@ -317,21 +328,34 @@ struct Home_Screen: View {
                                     } label: {
                                         
                                         ZStack{
-                                            AsyncImage(url:  URL(string:news.img)) { Image in
-                                                Image
-                                                    .resizable()
+                                           
+                                                WebImage(url: URL(string: news.img)!)
+                                                // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
+                                                    .onSuccess { image, data, cacheType in
+                                                        // Success
+                                                        // Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data
+                                                    }
+                                                    .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
+                                                
+                                                    .placeholder(Image(systemName: "photo")) // Placeholder Image
+                                                // Supports ViewBuilder as well
+                                                    .placeholder {
+                                                        Rectangle().foregroundColor(.gray)
+                                                    }
+                                                    .indicator(.activity) // Activity Indicator
+                                                    .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                                                    .scaledToFit()
                                                     .aspectRatio(contentMode: .fit)
                                                     .cornerRadius(30)
-                                                    .opacity(0.7)
-                                                    .background(Color("Color_black").cornerRadius(30))
-                                                    
-                                            } placeholder: {
-                                                RoundedRectangle(cornerRadius: 30)
-                                                    .foregroundColor(Color.white)
-                                                    .opacity(0.5)
-                                            }
+                                                    .overlay (
+                                                        Color.black
+                                                            .cornerRadius(30)
+                                                            .opacity(0.4)
+                                                    )
                                             .overlay (
-                                               
+                                                
+                                                
+                                                
                                                 VStack(spacing:5){
                                                     Spacer()
                                                 HStack(spacing:5) {
@@ -411,8 +435,11 @@ struct Home_Screen: View {
                                     
                                    
                             }
-                            .padding(.top,10)
+                            //.padding(.top,10)
                         }.animation(.spring(), value: StoriesAndNews.newsData)
+                        Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(height: 100)
                     }.padding(.horizontal,15)
                    
                 

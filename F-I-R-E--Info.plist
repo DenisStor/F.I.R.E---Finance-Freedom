@@ -5,6 +5,7 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict/>
+		<dict/>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict>
