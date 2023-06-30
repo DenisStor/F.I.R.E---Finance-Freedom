@@ -222,6 +222,8 @@ struct Test_View: View {
                                     TrueForModi = true
                                 }
                             }
+                            let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                            impactHeavy.impactOccurred()
                         }
                         HStack {
                             RoundedRectangle(cornerRadius: 10)
@@ -243,6 +245,8 @@ struct Test_View: View {
                                     TrueForModi = false
                                 }
                             }
+                            let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                            impactHeavy.impactOccurred()
                         }
                     }
                     .padding(.top,15)
@@ -277,6 +281,8 @@ struct Test_View: View {
                             }
                             index += 1
                             HowQwest += 1
+                            let impactHeavy = UIImpactFeedbackGenerator(style: .rigid)
+                            impactHeavy.impactOccurred()
                         }
                         TrueForModi = nil
                     }

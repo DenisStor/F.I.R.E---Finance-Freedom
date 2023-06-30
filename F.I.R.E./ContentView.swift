@@ -9,10 +9,10 @@ struct ContentView: View {
         ZStack{
         
             Start_Screen()
-                .offset(x: currentPage == 1 ? 0 :  -500)
+                .offset(x: currentPage == 1 ? 0 :  -700)
         
             Bar_Screen()
-                .offset(x: currentPage == 2 ? 0 :  500)
+                .offset(x: currentPage == 2 ? 0 :  700)
         
         
         }.animation(.easeInOut, value: currentPage )
