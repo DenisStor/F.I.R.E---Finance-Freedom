@@ -10,13 +10,13 @@ import SwiftUI
 struct Loading_screen: View {
     let arrayFrame = [50,75,50,75]
     @State private var index = 0
-    @State private var timer = Timer.TimerPublisher(interval: 2, runLoop: .main, mode: .common).autoconnect()
+    @State private var timer = Timer.TimerPublisher(interval: 0.5, runLoop: .current, mode: .common).autoconnect()
     
     var body: some View {
-        ZStack{
+     
             
             
-            if index == arrayFrame.count {
+            if arrayFrame.count-1 == index {
                 ContentView()
             } else {
                 VStack{
@@ -31,7 +31,7 @@ struct Loading_screen: View {
                    index += 1
                 }
             }
-        }
+        
     }
 }
 
