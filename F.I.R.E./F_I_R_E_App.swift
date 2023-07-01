@@ -11,7 +11,7 @@ import SwiftUI
 struct F_I_R_E_App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Loading_screen()
         }
     }
     
