@@ -203,6 +203,7 @@ struct settings_Screen: View {
                         selected = "USD"
                          isAlert1 = true
                         SDImageCache.shared.clearMemory()
+                        SDImageCache.shared.clearDisk()
                     },
                     secondaryButton: .cancel()
                 )
