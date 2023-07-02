@@ -1,4 +1,5 @@
 import SwiftUI
+import Kingfisher
 
 struct ContentView: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
@@ -6,6 +7,8 @@ struct ContentView: View {
     @State private var IsLoading = false
     @State private var index = 0
     @State private var timer = Timer.TimerPublisher(interval: 0.5, runLoop: .current, mode: .common).autoconnect()
+    
+
     var body: some View {
         ZStack{
            
@@ -34,6 +37,9 @@ struct ContentView: View {
             
         
         }.animation(.easeInOut, value: currentPage )
+            .onAppear(){
+             
+            }
             
    }
 }

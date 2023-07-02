@@ -7,7 +7,8 @@
 
 import SwiftUI
 import StoreKit
-
+import SDWebImageSwiftUI
+import SDWebImage
 struct settings_Screen: View {
     @AppStorage ("money.localize") var selected: String = "USD"
    
@@ -201,6 +202,7 @@ struct settings_Screen: View {
                         test_3 = 0
                         selected = "USD"
                          isAlert1 = true
+                        SDImageCache.shared.clearMemory()
                     },
                     secondaryButton: .cancel()
                 )
