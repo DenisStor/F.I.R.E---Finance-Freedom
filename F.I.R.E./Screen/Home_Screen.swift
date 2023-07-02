@@ -90,456 +90,456 @@ struct Home_Screen: View {
  
   
     
-    
     var body: some View {
         
         
        
            
-            ZStack{
-                Color("Color_back")
-                    .edgesIgnoringSafeArea(.all)
-                ScrollView(showsIndicators: false){
-                    
-                    ScrollView(.horizontal,showsIndicators: false){
-                        HStack{
-                            ForEach(0..<4) { index in
-                                NavigationLink {
-                                    ZStack{
-                                        Color("Color_back")
-                                            .edgesIgnoringSafeArea(.all)
-                                        ScrollView {
-                                            VStack(spacing:50){
-                                                VStack(spacing:10){
-                                                    HStack{
-                                                        Image("str")
-                                                            .aspectRatio(contentMode: .fit)
-                                                        Text(stories[index].textTime)
-                                                        
-                                                            .font(.system(size: 20,weight: .medium))
-                                                            .multilineTextAlignment(.center)
-                                                            .foregroundColor(Color("Color_font"))
-                                                        
-                                                        
-                                                    }
+        ZStack{
+            Color("Color_back")
+                .edgesIgnoringSafeArea(.all)
+            ScrollView(showsIndicators: false){
+                
+                ScrollView(.horizontal,showsIndicators: false){
+                    HStack{
+                        ForEach(0..<7) { index in
+                            NavigationLink {
+                                ZStack{
+                                    Color("Color_back")
+                                        .edgesIgnoringSafeArea(.all)
+                                    ScrollView {
+                                        VStack(spacing:50){
+                                            VStack(spacing:10){
+                                                HStack{
+                                                    Image("str")
+                                                        .aspectRatio(contentMode: .fit)
+                                                    Text(stories[index].textTime)
                                                     
-                                                    Text(stories[index].textTitle)
-                                                        .font(.system(size: 35,weight: .medium))
-                                                        .multilineTextAlignment(.center)
-                                                }
-                                                Image("\(stories[index].imageString)")
-                                                    .resizable()
-                                                    .aspectRatio(contentMode: .fit)
-                                                    .cornerRadius(30)
-                                                
-                                                
-                                                HStack {
-                                                    Text(stories[index].text1)
                                                         .font(.system(size: 20,weight: .medium))
-                                                        .multilineTextAlignment(.leading)
+                                                        .multilineTextAlignment(.center)
                                                         .foregroundColor(Color("Color_font"))
-                                                        .lineSpacing(12)
-                                                    Spacer()
+                                                    
+                                                    
                                                 }
                                                 
-                                            }.padding(.horizontal,20)
-                                        }
+                                                Text(stories[index].textTitle)
+                                                    .font(.system(size: 35,weight: .medium))
+                                                    .multilineTextAlignment(.center)
+                                            }
+                                            Image("\(stories[index].imageString)")
+                                                .resizable()
+                                                .aspectRatio(contentMode: .fit)
+                                                .cornerRadius(30)
+                                            
+                                            
+                                            HStack {
+                                                Text(stories[index].text1)
+                                                    .font(.system(size: 20,weight: .medium))
+                                                    .multilineTextAlignment(.leading)
+                                                    .foregroundColor(Color("Color_font"))
+                                                    .lineSpacing(12)
+                                                Spacer()
+                                            }
+                                            
+                                        }.padding(.horizontal,20)
                                     }
-                                } label: {
-                                    
-                                    
-                                    ZStack{
-                                        Image(stories[index].imageStringTitle)
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .cornerRadius(30)
-                                            .padding(.leading, index == 0 ? 15 : 10)
-                                            .overlay (
-                                                VStack{
+                                }
+                            } label: {
+                                
+                                
+                                ZStack{
+                                    Image(stories[index].imageStringTitle)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .cornerRadius(30)
+                                        .padding(.leading, index == 0 ? 15 : 10)
+                                        .overlay (
+                                            VStack{
+                                                Spacer()
+                                                HStack{
+                                                    
+                                                    Text("\(stories[index].textTitle)")
+                                                        .multilineTextAlignment(.leading)
+                                                        .foregroundColor(Color(stories[index].fontColor))
+                                                        .font(.system(size: 20 ,weight: .semibold))
+                                                    
                                                     Spacer()
-                                                    HStack{
-                                                        
-                                                        Text("\(stories[index].textTitle)")
-                                                            .multilineTextAlignment(.leading)
-                                                            .foregroundColor(Color(stories[index].fontColor))
-                                                            .font(.system(size: 20 ,weight: .semibold))
-                                                        
-                                                        Spacer()
-                                                    }.padding(.leading,30)
-                                                        .padding(.bottom,25)
-                                                }
-                                            )
-                                            .frame(height: 250)
-                                    }
+                                                }.padding(.leading,30)
+                                                    .padding(.bottom,25)
+                                            }
+                                        )
+                                        .frame(height: 250)
                                 }
                             }
                         }
                     }
+                }
+                
+                VStack(spacing: spacingVs){
                     
-                    VStack(spacing: spacingVs){
+                    ZStack{
                         
-                        ZStack{
+                        VStack(){
                             
-                            VStack(){
-                                
-                                VStack(spacing:10){
-                                    HStack{
-                                        Text("\(currentword)")
-                                        
-                                            .font(.system(size: 20,weight: .medium))
-                                            .multilineTextAlignment(.leading)
-                                            .foregroundColor(Color("Color_font_2"))
-                                        Spacer()
-                                    }
-                                    HStack{
-                                        Image(systemName: "hand.tap")
-                                        
-                                        
-                                        Text("GT2")
-                                        
-                                        
-                                        Spacer()
-                                    }.font(.system(size: 18,weight: .medium))
+                            VStack(spacing:10){
+                                HStack{
+                                    Text("\(currentword)")
+                                    
+                                        .font(.system(size: 20,weight: .medium))
                                         .multilineTextAlignment(.leading)
                                         .foregroundColor(Color("Color_font_2"))
-                                        .opacity(0.5)
-                                } .padding(.horizontal,20)
-                                    .padding(.vertical,20)
-                                    .background (
-                                        RoundedRectangle(cornerRadius: 30)
-                                            .foregroundColor(Color("Color_font_1"))
-                                        
-                                    )
-                                
-                                
-                                
-                            }
-                            .animation(.spring(), value: currentword)
+                                    Spacer()
+                                }
+                                HStack{
+                                    Image(systemName: "hand.tap")
+                                    
+                                    
+                                    Text("GT2")
+                                    
+                                    
+                                    Spacer()
+                                }.font(.system(size: 18,weight: .medium))
+                                    .multilineTextAlignment(.leading)
+                                    .foregroundColor(Color("Color_font_2"))
+                                    .opacity(0.5)
+                            } .padding(.horizontal,20)
+                                .padding(.vertical,20)
+                                .background (
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .foregroundColor(Color("Color_font_1"))
+                                    
+                                )
                             
-                            .onTapGesture {
-                                currentword = words.word.randomElement() ?? ""
-                                let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
-                                impactHeavy.impactOccurred()
-                            }
                             
-                        }
-                        .onAppear{
-                            
-                            if currentword.isEmpty {
-                                currentword = words.word.randomElement() ?? ""
-                            }
-                            Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { _ in
-                                currentword = words.word.randomElement() ?? ""
-                            }
                             
                         }
-                        .padding(.top,10)
-                        .padding(.top,spacingVs)
-                        ZStack{
-                            
-                            LazyVStack {
-                                ForEach(StoriesAndNews.newsData, id: \.self) { news in
-                                    VStack(spacing:spacingVs){
-                                        
-                                        if news.islong {
-                                            NavigationLink {
-                                                ZStack{
-                                                    Color("Color_back")
-                                                        .edgesIgnoringSafeArea(.all)
-                                                    ScrollView(showsIndicators: false){
-                                                        VStack(spacing:20){
+                        .animation(.spring(), value: currentword)
+                        
+                        .onTapGesture {
+                            currentword = words.word.randomElement() ?? ""
+                            let impactHeavy = UIImpactFeedbackGenerator(style: .soft)
+                            impactHeavy.impactOccurred()
+                        }
+                        
+                    }
+                    .onAppear{
+                        
+                        if currentword.isEmpty {
+                            currentword = words.word.randomElement() ?? ""
+                        }
+                        Timer.scheduledTimer(withTimeInterval: 15, repeats: true) { _ in
+                            currentword = words.word.randomElement() ?? ""
+                        }
+                        
+                    }
+                    .padding(.top,10)
+                    .padding(.top,spacingVs)
+                    ZStack{
+                        
+                        VStack (spacing: spacingVs){
+                            ForEach(StoriesAndNews.newsData, id: \.self) { news in
+                                VStack(spacing:spacingVs){
+                                    
+                                    if news.islong {
+                                        NavigationLink {
+                                            ZStack{
+                                                Color("Color_back")
+                                                    .edgesIgnoringSafeArea(.all)
+                                                ScrollView(showsIndicators: false){
+                                                    VStack(spacing:20){
+                                                        HStack(spacing:5) {
+                                                            Text(news.time)
+                                                                .font(.system(size: 15,weight: .medium))
+                                                                .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                                .opacity(0.3)
+                                                            Text("•")
+                                                                .font(.system(size: 15,weight: .medium))
+                                                                .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                                .opacity(0.3)
+                                                            Text(news.date)
+                                                                .font(.system(size: 15,weight: .medium))
+                                                                .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                                .opacity(0.3)
+                                                            Spacer()
+                                                        }
+                                                        .padding(.top,50)
+                                                        HStack{
+                                                            Text(news.title)
+                                                                .font(.system(size: 25,weight: .medium))
+                                                                .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                            Spacer()
+                                                        }
+                                                        
+                                                        WebImage(url: URL(string: news.img)!)
+                                                        
+                                                        
+                                                            .onSuccess { image, data, cacheType in
+                                                                
+                                                            }
+                                                            .resizable()
+                                                        
+                                                        
+                                                            .placeholder {
+                                                                Rectangle().foregroundColor(.gray)
+                                                            }
+                                                            .indicator(.activity) // Activity Indicator
+                                                            .transition(.fade(duration: 0.5)) //
+                                                            .scaledToFit()
+                                                            .aspectRatio(contentMode: .fit)
+                                                            .cornerRadius(30)
+                                                        
+                                                        
+                                                        HStack{
+                                                            Text(news.textin)
+                                                                .font(.system(size: 20,weight: .medium))
+                                                                .multilineTextAlignment(.leading)
+                                                                .foregroundColor(Color("Color_font"))
+                                                                .lineSpacing(10)
+                                                            Spacer()
+                                                        }
+                                                        VStack{
+                                                            VStack {
+                                                                HStack {
+                                                                    Text("Источник:")
+                                                                        .font(.system(size: 20,weight: .medium))
+                                                                        .multilineTextAlignment(.leading)
+                                                                        .foregroundColor(Color("Color_font"))
+                                                                    Spacer()
+                                                                }
+                                                                HStack {
+                                                                    Link(news.urlname, destination: URL(string: news.url)!)
+                                                                    
+                                                                        .font(.system(size: 20,weight: .medium))
+                                                                        .multilineTextAlignment(.leading)
+                                                                        .foregroundColor(Color("Color_font"))
+                                                                    Spacer()
+                                                                }
+                                                                
+                                                            }
+                                                            
+                                                        }.opacity(0.5)
+                                                        
+                                                        
+                                                    }
+                                                }.padding(.horizontal,15)
+                                                
+                                                
+                                            }
+                                        } label: {
+                                            
+                                            ZStack{
+                                                
+                                                WebImage(url: URL(string: news.img)!)
+                                                // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
+                                                    .onSuccess { image, data, cacheType in
+                                                        // Success
+                                                        // Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data
+                                                    }
+                                                    .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
+                                                
+                                                    .placeholder(Image(systemName: "photo")) // Placeholder Image
+                                                // Supports ViewBuilder as well
+                                                    .placeholder {
+                                                        Rectangle().foregroundColor(.gray)
+                                                    }
+                                                    .indicator(.activity) // Activity Indicator
+                                                    .transition(.fade(duration: 0.5)) // Fade Transition with duration
+                                                    .scaledToFit()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .cornerRadius(30)
+                                                    .overlay (
+                                                        Color.black
+                                                            .cornerRadius(30)
+                                                            .opacity(0.5)
+                                                    )
+                                                    .overlay (
+                                                        
+                                                        
+                                                        
+                                                        VStack(spacing:5){
+                                                            Spacer()
                                                             HStack(spacing:5) {
                                                                 Text(news.time)
                                                                     .font(.system(size: 15,weight: .medium))
                                                                     .multilineTextAlignment(.leading)
-                                                                    .foregroundColor(Color("Color_font"))
-                                                                    .opacity(0.3)
+                                                                    .foregroundColor(Color("Color_font_2"))
+                                                                    .opacity(0.8)
                                                                 Text("•")
                                                                     .font(.system(size: 15,weight: .medium))
                                                                     .multilineTextAlignment(.leading)
-                                                                    .foregroundColor(Color("Color_font"))
-                                                                    .opacity(0.3)
+                                                                    .foregroundColor(Color("Color_font_2"))
+                                                                    .opacity(0.8)
                                                                 Text(news.date)
                                                                     .font(.system(size: 15,weight: .medium))
                                                                     .multilineTextAlignment(.leading)
-                                                                    .foregroundColor(Color("Color_font"))
-                                                                    .opacity(0.3)
+                                                                    .foregroundColor(Color("Color_font_2"))
+                                                                    .opacity(0.8)
                                                                 Spacer()
                                                             }
-                                                            .padding(.top,50)
-                                                            HStack{
+                                                            HStack {
                                                                 Text(news.title)
-                                                                    .font(.system(size: 25,weight: .medium))
+                                                                    .font(.system(size: 23,weight: .semibold))
+                                                                    .foregroundColor(Color("Color_font_2"))
                                                                     .multilineTextAlignment(.leading)
-                                                                    .foregroundColor(Color("Color_font"))
                                                                 Spacer()
                                                             }
                                                             
-                                                            WebImage(url: URL(string: news.img)!)
-                                                            
-                                                            
-                                                                .onSuccess { image, data, cacheType in
-                                                                    
-                                                                }
-                                                                .resizable()
-                                                            
-                                                            
-                                                                .placeholder {
-                                                                    Rectangle().foregroundColor(.gray)
-                                                                }
-                                                                .indicator(.activity) // Activity Indicator
-                                                                .transition(.fade(duration: 0.5)) //
-                                                                .scaledToFit()
-                                                                .aspectRatio(contentMode: .fit)
-                                                                .cornerRadius(30)
-                                                            
-                                                            
-                                                            HStack{
-                                                                Text(news.textin)
-                                                                    .font(.system(size: 20,weight: .medium))
-                                                                    .multilineTextAlignment(.leading)
-                                                                    .foregroundColor(Color("Color_font"))
-                                                                    .lineSpacing(10)
-                                                                Spacer()
-                                                            }
-                                                            VStack{
-                                                                VStack {
-                                                                    HStack {
-                                                                        Text("Источник:")
-                                                                            .font(.system(size: 20,weight: .medium))
-                                                                            .multilineTextAlignment(.leading)
-                                                                            .foregroundColor(Color("Color_font"))
-                                                                        Spacer()
-                                                                    }
-                                                                    HStack {
-                                                                        Link(news.urlname, destination: URL(string: news.url)!)
-                                                                        
-                                                                            .font(.system(size: 20,weight: .medium))
-                                                                            .multilineTextAlignment(.leading)
-                                                                            .foregroundColor(Color("Color_font"))
-                                                                        Spacer()
-                                                                    }
-                                                                    
-                                                                }
-                                                                
-                                                            }.opacity(0.5)
-                                                            
-                                                            
-                                                        }
-                                                    }.padding(.horizontal,15)
-                                                    
-                                                    
-                                                }
-                                            } label: {
-                                                
-                                                ZStack{
-                                                    
-                                                    WebImage(url: URL(string: news.img)!)
-                                                    // Supports options and context, like `.delayPlaceholder` to show placeholder only when error
-                                                        .onSuccess { image, data, cacheType in
-                                                            // Success
-                                                            // Note: Data exist only when queried from disk cache or network. Use `.queryMemoryData` if you really need data
-                                                        }
-                                                        .resizable() // Resizable like SwiftUI.Image, you must use this modifier or the view will use the image bitmap size
-                                                    
-                                                        .placeholder(Image(systemName: "photo")) // Placeholder Image
-                                                    // Supports ViewBuilder as well
-                                                        .placeholder {
-                                                            Rectangle().foregroundColor(.gray)
-                                                        }
-                                                        .indicator(.activity) // Activity Indicator
-                                                        .transition(.fade(duration: 0.5)) // Fade Transition with duration
-                                                        .scaledToFit()
-                                                        .aspectRatio(contentMode: .fit)
-                                                        .cornerRadius(30)
-                                                        .overlay (
-                                                            Color.black
-                                                                .cornerRadius(30)
-                                                                .opacity(0.4)
-                                                        )
-                                                        .overlay (
-                                                            
-                                                            
-                                                            
-                                                            VStack(spacing:5){
-                                                                Spacer()
-                                                                HStack(spacing:5) {
-                                                                    Text(news.time)
-                                                                        .font(.system(size: 15,weight: .medium))
-                                                                        .multilineTextAlignment(.leading)
-                                                                        .foregroundColor(Color("Color_font_2"))
-                                                                        .opacity(0.8)
-                                                                    Text("•")
-                                                                        .font(.system(size: 15,weight: .medium))
-                                                                        .multilineTextAlignment(.leading)
-                                                                        .foregroundColor(Color("Color_font_2"))
-                                                                        .opacity(0.8)
-                                                                    Text(news.date)
-                                                                        .font(.system(size: 15,weight: .medium))
-                                                                        .multilineTextAlignment(.leading)
-                                                                        .foregroundColor(Color("Color_font_2"))
-                                                                        .opacity(0.8)
-                                                                    Spacer()
-                                                                }
-                                                                HStack {
-                                                                    Text(news.title)
-                                                                        .font(.system(size: 23,weight: .semibold))
-                                                                        .foregroundColor(Color("Color_font_2"))
-                                                                        .multilineTextAlignment(.leading)
-                                                                    Spacer()
-                                                                }
-                                                                
-                                                            }.padding(.horizontal,15)
-                                                                .padding(.vertical,30)
-                                                        )
-                                                }
-                                                
-                                                
+                                                        }.padding(.horizontal,15)
+                                                            .padding(.vertical,30)
+                                                    )
                                             }
-                                        } else {
-                                            VStack(spacing:5){
-                                                HStack(spacing:5) {
-                                                    Image(systemName: "bolt.fill")
-                                                        .font(.system(size: 15,weight: .medium))
-                                                        .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font_1"))
-                                                    Text(news.time)
-                                                        .font(.system(size: 15,weight: .medium))
-                                                        .multilineTextAlignment(.leading)
-                                                        .opacity(0.8)
-                                                    Text("•")
-                                                        .font(.system(size: 15,weight: .medium))
-                                                        .multilineTextAlignment(.leading)
-                                                        .opacity(0.8)
-                                                    Text(news.date)
-                                                        .font(.system(size: 15,weight: .medium))
-                                                        .multilineTextAlignment(.leading)
-                                                        .opacity(0.8)
-                                                    Spacer()
-                                                }
-                                                HStack {
-                                                    Text(news.title)
-                                                        .font(.system(size: 23,weight: .semibold))
-                                                        .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font"))
-                                                    Spacer()
-                                                }
-                                            }.padding(.horizontal,15)
-                                                .padding(.vertical,30)
-                                            
-                                                .background(
-                                                    RoundedRectangle(cornerRadius: 30)
-                                                        .foregroundColor(Color("Color_button"))
-                                                    
-                                                    
-                                                    
-                                                )
                                             
                                             
                                         }
+                                    } else {
+                                        VStack(spacing:5){
+                                            HStack(spacing:5) {
+                                                Image(systemName: "bolt.fill")
+                                                    .font(.system(size: 15,weight: .medium))
+                                                    .multilineTextAlignment(.leading)
+                                                    .foregroundColor(Color("Color_font_1"))
+                                                Text(news.time)
+                                                    .font(.system(size: 15,weight: .medium))
+                                                    .multilineTextAlignment(.leading)
+                                                    .opacity(0.8)
+                                                Text("•")
+                                                    .font(.system(size: 15,weight: .medium))
+                                                    .multilineTextAlignment(.leading)
+                                                    .opacity(0.8)
+                                                Text(news.date)
+                                                    .font(.system(size: 15,weight: .medium))
+                                                    .multilineTextAlignment(.leading)
+                                                    .opacity(0.8)
+                                                Spacer()
+                                            }
+                                            HStack {
+                                                Text(news.title)
+                                                    .font(.system(size: 23,weight: .semibold))
+                                                    .multilineTextAlignment(.leading)
+                                                    .foregroundColor(Color("Color_font"))
+                                                Spacer()
+                                            }
+                                        }.padding(.horizontal,15)
+                                            .padding(.vertical,30)
                                         
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 30)
+                                                    .foregroundColor(Color("Color_button"))
+                                                
+                                                
+                                                
+                                            )
                                         
                                         
                                     }
-                                    //.padding(.top,10)
-                                }.animation(.spring(), value: StoriesAndNews.newsData)
-                            }
-                            RoundedRectangle(cornerRadius: 30)
-                                .foregroundColor(Color("Color_back"))
-                                .opacity(LoadingNews ? 0 : 1)
-                                .animation(.spring(),value: LoadingNews)
+                                    
+                                    
+                                    
+                                }
+                                //.padding(.top,10)
+                            }.animation(.spring(), value: StoriesAndNews.newsData)
                         }
-                        Divider()
-                            .frame(height: 2)
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_back"))
+                            .opacity(LoadingNews ? 0 : 1)
+                            .animation(.spring(),value: LoadingNews)
+                    }
+                    Divider()
+                        .frame(height: 2)
+                    
+                    
+                    ZStack{
                         
-            
-                        ZStack{
+                        HStack {
                             
-                            HStack {
-                                
-                                NavigationLink { Termin_Screen()}
-                            label: {
-                                ZStack{
-                                    Image("slmenu")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .cornerRadius(30)
-                                        .overlay (
-                                            VStack{
+                            NavigationLink { Termin_Screen()}
+                        label: {
+                            ZStack{
+                                Image("slmenu")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(30)
+                                    .overlay (
+                                        VStack{
+                                            Spacer()
+                                            HStack{
+                                                
+                                                Text("Словарь")
+                                                    .multilineTextAlignment(.leading)
+                                                    .foregroundColor(Color("Color_font_2"))
+                                                
+                                                    .font(.system(size: 25 ,weight: .semibold))
+                                                
                                                 Spacer()
-                                                HStack{
-                                                    
-                                                    Text("Словарь")
-                                                        .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font_2"))
-                                                    
-                                                        .font(.system(size: 25 ,weight: .semibold))
-                                                    
-                                                    Spacer()
-                                                }.padding(.leading,20)
-                                                    .padding(.bottom,25)
-                                            }
-                                        )
-                                        .frame(height: 200)
-                                }
+                                            }.padding(.leading,20)
+                                                .padding(.bottom,25)
+                                        }
+                                    )
+                                    .frame(height: 200)
                             }
-                                
-                                
-                                NavigationLink { AboutFIRE_Screen()}
-                            label: {
-                                ZStack{
-                                    Image("fimenu")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .cornerRadius(30)
-                                        .overlay (
-                                            VStack{
+                        }
+                            
+                            
+                            NavigationLink { AboutFIRE_Screen()}
+                        label: {
+                            ZStack{
+                                Image("fimenu")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(30)
+                                    .overlay (
+                                        VStack{
+                                            Spacer()
+                                            HStack{
+                                                
+                                                Text("История F.I.R.E")
+                                                    .multilineTextAlignment(.leading)
+                                                    .foregroundColor(Color("Color_font_1"))
+                                                
+                                                    .font(.system(size: 25 ,weight: .semibold))
+                                                
                                                 Spacer()
-                                                HStack{
-                                                    
-                                                    Text("История F.I.R.E")
-                                                        .multilineTextAlignment(.leading)
-                                                        .foregroundColor(Color("Color_font_1"))
-                                                    
-                                                        .font(.system(size: 25 ,weight: .semibold))
-                                                    
-                                                    Spacer()
-                                                }.padding(.leading,20)
-                                                    .padding(.bottom,25)
-                                            }
-                                        )
-                                        .frame(height: 200)
-                                }
+                                            }.padding(.leading,20)
+                                                .padding(.bottom,25)
+                                        }
+                                    )
+                                    .frame(height: 200)
                             }
-                                
-                                Spacer()
-                                
-                            }
+                        }
                             
-                            
-                            RoundedRectangle(cornerRadius: 30)
-                                .foregroundColor(Color("Color_back"))
-                                .opacity(LoadingNews ? 0 : 1)
-                                .animation(.spring(),value: LoadingNews)
-                            
+                            Spacer()
                             
                         }
-            
                         
                         
+                        RoundedRectangle(cornerRadius: 30)
+                            .foregroundColor(Color("Color_back"))
+                            .opacity(LoadingNews ? 0 : 1)
+                            .animation(.spring(),value: LoadingNews)
                         
                         
-                        Rectangle()
+                    }
+                    
+                    
+                    
+                    
+                    
+                    Rectangle()
                         .foregroundColor(.clear)
                         .frame(height: 100)
-                    }.padding(.horizontal,15)
-                   
-             
-                    }
-               
-                   
+                }.padding(.horizontal,15)
+                
                 
             }
+            
+           
+            
+            
+        }
             .refreshable {
                 LoadingNews = false
                 StoriesAndNews.fetchAndDecodeJSON_NEWS(from: URL(string: "https://appfire.ru/news.json")!)
@@ -548,9 +548,11 @@ struct Home_Screen: View {
                 create()
                 
             }
+        
             .animation(.spring(), value: spacingVs)
             .animation(.spring(), value: currentword)
             .onAppear(){
+                
                         StoriesAndNews.fetchAndDecodeJSON_NEWS(from: URL(string: "https://appfire.ru/news.json")!)
                        StoriesAndNews.fetchAndDecodeJSON_Stories(from: URL(string: "https://appfire.ru/news.json")!)
                         
@@ -569,7 +571,9 @@ struct Home_Screen: View {
             }
             .onReceive(timerForAnimation) { f in
                 LoadingNews = true
+                
             }
+            
         
     }
     func create () {

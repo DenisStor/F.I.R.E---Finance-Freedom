@@ -34,7 +34,7 @@ struct ContentView: View {
                         }
                 }
             }.offset(y: IsLoading ? 1000 : 0)
-                .animation(.easeIn, value: IsLoading)
+                .animation(.spring(), value: IsLoading)
             
         
         }.animation(.easeInOut, value: currentPage )
