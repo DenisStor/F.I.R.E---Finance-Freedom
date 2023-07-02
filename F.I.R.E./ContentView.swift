@@ -1,5 +1,6 @@
 import SwiftUI
-import Kingfisher
+import SDWebImage
+import SDWebImageSwiftUI
 
 struct ContentView: View {
     @AppStorage ("currentPage") var currentPage : Int = 1
@@ -38,7 +39,8 @@ struct ContentView: View {
         
         }.animation(.easeInOut, value: currentPage )
             .onAppear(){
-             
+                SDImageCache.shared.clearMemory()
+                SDImageCache.shared.clearDisk()
             }
             
    }
