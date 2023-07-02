@@ -541,7 +541,7 @@ struct Home_Screen: View {
                 
             }
             .refreshable {
-                
+                LoadingNews = false
                 StoriesAndNews.fetchAndDecodeJSON_NEWS(from: URL(string: "https://appfire.ru/news.json")!)
                 StoriesAndNews.fetchAndDecodeJSON_Stories(from: URL(string: "https://appfire.ru/news.json")!)
                 
