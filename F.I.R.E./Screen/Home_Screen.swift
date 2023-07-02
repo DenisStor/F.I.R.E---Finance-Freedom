@@ -175,7 +175,7 @@ struct Home_Screen: View {
                         }
                     }
                     
-                    VStack(spacing: spacingVs){
+                    LazyVStack(spacing: spacingVs){
                         
                         ZStack{
                             
