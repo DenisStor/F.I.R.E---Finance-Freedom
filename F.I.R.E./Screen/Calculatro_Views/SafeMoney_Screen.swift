@@ -224,12 +224,12 @@ struct SafeMoney_Screen: View {
                         HStack{
                             Text("seygihnmeq")
                                 .foregroundColor(Color("Color_font"))
-                                .font(.system(size: 30,weight: .medium))
+                                .font(.system(size: 25,weight: .medium))
                             Spacer()
                         }
                         HStack{
                             Text("\(currencyText(_string: String(procent())))")
-                                .foregroundColor(Color("Color_font"))
+                                .foregroundColor(Color("Color_font_1"))
                                 .font(.system(size: 30,weight: .medium))
                                 .onChange(of: earnMoney) { _ in
                                         updateTotal()
