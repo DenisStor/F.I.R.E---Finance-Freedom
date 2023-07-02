@@ -1,3 +1,4 @@
+
 //
 //  Termis_Screen.swift
 //  F.I.R.E.
@@ -97,304 +98,266 @@ struct Termis_Screen: View {
     @AppStorage ("test_3")  var test_3 : Int = 0
     @State private var spacing : CGFloat = 20
     var body: some View {
+        
         NavigationStack{
-            ScrollView(showsIndicators: false){
-                VStack(spacing: spacing) {
-                    NavigationLink {
-                        Medalki_Screen()
-                    } label: {
+            ZStack {
+                Color("Color_back")
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView(showsIndicators: false){
+                    
+                    VStack(spacing: spacing) {
+                        
+                        NavigationLink {
+                            Medalki_Screen()
+                        } label: {
+                            ZStack{
+                                
+                                Image("testImage")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(30)
+                                VStack{
+                                    HStack{
+                                        Text("KW1")
+                                            .font(.system(size: 23 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font"))
+                                        
+                                        Spacer()
+                                        
+                                        
+                                        
+                                    }
+                                    HStack{
+                                        Text("\(test1+test2+test3)")
+                                            .font(.system(size: 20 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font_3"))
+                                        +
+                                        Text("vt1")
+                                            .font(.system(size: 20 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font_3"))
+                                        +
+                                        Text("3 ")
+                                            .font(.system(size: 20 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font_3"))
+                                        +
+                                        Text("bg")
+                                            .font(.system(size: 20 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font_3"))
+                                        
+                                        Spacer()
+                                    }
+                                    HStack{
+                                        
+                                        bar_progress(progress:Float(test1+test2+test3), total: Float(3))
+                                            .frame(alignment: .leading)
+                                        
+                                        
+                                    }.frame(height: 12)
+                                        .padding(.trailing,150)
+                                }.padding(.horizontal,20)
+                            }
+                        }
+                        
+                        
+                        
                         ZStack{
-                            Image("testImage")
+                            
+                            
+                            VStack(alignment: .leading,spacing: 20){
+                                VStack(spacing:5) {
+                                    HStack{
+                                        Image("logoFire")
+                                            .renderingMode(.template)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .foregroundColor(Color("Color_font_1"))
+                                            .frame(height: 50)
+                                        
+                                        Spacer()
+                                        
+                                    }
+                                    HStack {
+                                        Text("sS").foregroundColor(Color("Color_font")) +
+                                        Text(" Financial Independence Retire Early").foregroundColor(Color("Color_font_1"))
+                                        
+                                        Spacer()
+                                    } .font(.system(size: 23 ,weight: .medium))
+                                    
+                                        .multilineTextAlignment(.leading)
+                                }
+                                
+                                
+                                NavigationLink {
+                                    AboutFIRE_Screen()
+                                    
+                                }
+                            label: {
+                                
+                                
+                                ZStack{
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .foregroundColor(Color("Color_font_1"))
+                                    
+                                    HStack{
+                                        
+                                        Text("More")
+                                            .foregroundColor(Color("Color_font_2"))
+                                            .font(.system(size: 20 ,weight: .medium))
+                                        
+                                        
+                                        
+                                    }  .padding(.vertical,15)
+                                }.frame(maxWidth: .infinity)
+                                
+                            }
+                            }
+                            .padding(.horizontal,20)
+                            .padding(.vertical,20)
+                            .background (
+                                RoundedRectangle(cornerRadius: 30)
+                                
+                                    .foregroundColor(Color("Color_for_home"))
+                            )
+                            
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        NavigationLink { Famous_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            
+                            Image("FamousPeople")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .cornerRadius(30)
-                            VStack{
-                                HStack{
-                                    Text("KW1")
-                                        .font(.system(size: 25 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font"))
-                                    
-                                    Spacer()
-                                    
-                                    
-                                    
-                                }
-                                HStack{
-                                    Text("\(test1+test2+test3)")
-                                        .font(.system(size: 20 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font_3"))
-                                    +
-                                    Text("vt1")
-                                        .font(.system(size: 20 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font_3"))
-                                    +
-                                    Text("3 ")
-                                        .font(.system(size: 20 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font_3"))
-                                    +
-                                    Text("bg")
-                                        .font(.system(size: 20 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font_3"))
-                                    
-                                    Spacer()
-                                }
-                                HStack{
-                                    
-                                    bar_progress(progress:Float(test1+test2+test3), total: Float(3))
-                                        .frame(alignment: .leading)
-                                    
-                                    
-                                }.frame(height: 12)
-                                    .padding(.trailing,150)
-                            }.padding(.horizontal,20)
-                        }
-                    }
-                    
-                    
-                    
-                    ZStack{
-                        
-                        
-                        VStack(alignment: .leading,spacing: 20){
-                            VStack(spacing:5) {
-                                HStack{
-                                    Image("logoFire")
-                                        .renderingMode(.template)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .foregroundColor(Color("Color_font_1"))
-                                        .frame(height: 50)
-                                    
-                                    Spacer()
-                                    
-                                }
-                                HStack {
-                                    Text("sS").foregroundColor(Color("Color_font")) +
-                                    Text(" Financial Independence Retire Early").foregroundColor(Color("Color_font_1"))
-                                    
-                                    Spacer()
-                                } .font(.system(size: 25 ,weight: .medium))
-                                
-                                    .multilineTextAlignment(.leading)
-                            }
                             
-                            
-                            NavigationLink {
-                                AboutFIRE_Screen()
-                                
-                            }
-                        label: {
-                            
-                            
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 30)
-                                    .foregroundColor(Color("Color_font_1"))
-                                
-                                HStack{
-                                    
-                                    Text("More")
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    Text("Whatarethey")
+                                        .font(.system(size: 23,weight: .medium))
                                         .foregroundColor(Color("Color_font_2"))
-                                        .font(.system(size: 20 ,weight: .medium))
                                     
                                     
                                     
-                                }  .padding(.vertical,15)
-                            }.frame(maxWidth: .infinity)
+                                    Text("homeWord1")
+                                    
+                                        .font(.system(size: 20,weight: .medium))
+                                        .foregroundColor(Color(white: 1, opacity: 0.5))
+                                    
+                                    
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
                             
                         }
-                        }
-                        .padding(.horizontal,20)
-                        .padding(.vertical,20)
-                        .background (
-                            RoundedRectangle(cornerRadius: 30)
-                            
-                                .foregroundColor(Color("Color_for_home"))
-                        )
-                        
                     }
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    NavigationLink { Famous_Screen()}
-                label: {
-                    ZStack{
                         
-                        
-                        Image("FamousPeople")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(30)
-                        
-                        HStack {
-                            VStack(alignment: .leading,spacing: 5){
-                                Text("Whatarethey")
-                                    .font(.system(size: 25,weight: .medium))
-                                    .foregroundColor(Color("Color_font_2"))
-                                
-                                
-                                
-                                Text("homeWord1")
-                                
-                                    .font(.system(size: 20,weight: .medium))
-                                    .foregroundColor(Color(white: 1, opacity: 0.5))
-                                
-                                
-                            }
-                            Spacer()
-                        }.multilineTextAlignment(.leading)
-                            .padding(.horizontal,20)
-                        
-                    }
-                }
-                    
-                    NavigationLink { Test_Screen()}
-                label: {
-                    ZStack{
-                        
-                        Image("buttest")
-                            .resizable()
-                            .cornerRadius(30)
-                            .aspectRatio(contentMode: .fill)
-                        HStack {
-                            VStack(alignment: .leading,spacing: 5){
-                                
-                                
-                                HStack {
-                                    Text("RWW")
-                                        .foregroundColor(Color("Color_font"))
-                                        .font(.system(size: 25 ,weight: .medium))
-                                    // Spacer()
-                                }
-                                HStack {
-                                    Text("FW")
-                                    
-                                        .font(.system(size: 20 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font"))
-                                        .opacity(0.5)
-                                    
-                                    Spacer()
-                                }
-                            }
-                            Spacer()
-                        }.multilineTextAlignment(.leading)
-                            .padding(.horizontal,20)
-                        
-                    }
-                }
-                    
-                    
-                    
-                    
-                    NavigationLink { InvestAgree_Screen()}
-                label: {
-                    ZStack{
-                        
-                        
-                        Image("investagr")
-                            .resizable()
-                            .cornerRadius(30)
-                        
-                        HStack {
-                            VStack(alignment: .leading,spacing: 5){
-                                Text("investagr1")
-                                    .font(.system(size: 25,weight: .medium))
-                                    .foregroundColor(Color("Color_font_2"))
-                                
-                                
-                                
-                                
-                            }
-                            Spacer()
-                        }.multilineTextAlignment(.leading)
-                            .padding(.horizontal,20)
-                        
-                    }
-                }
-                    
-                    
-                    
-                    
-                    NavigationLink { Tax_Screen()}
-                label: {
-                    ZStack{
-                        
-                        Image("imageforhome")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                        HStack {
-                            VStack(alignment: .leading,spacing: 5){
-                                HStack{
-                                    Text("tax")
-                                        .font(.system(size: 25 ,weight: .medium))
-                                        .foregroundColor(Color("Color_font_1"))
-                                    
-                                    
-                                    
-                                    
-                                    
-                                }
-                            }
-                            Spacer()
-                        }.multilineTextAlignment(.leading)
-                            .padding(.horizontal,20)
-                        
-                    }
-                }
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    NavigationLink {
+                        NavigationLink { Test_Screen()}
+                    label: {
                         ZStack{
-                            Color("Color_back")
-                                .edgesIgnoringSafeArea(.all)
-                            ScrollView(showsIndicators: false) {
-                                LazyVStack(spacing:15){
-                                    ForEach(0..<34){ index in
-                                        VStack(spacing:10){
-                                            HStack{
-                                                Text("\(Title[index])")
-                                                    .font(.system(size: 25,weight: .medium))
-                                                    .foregroundColor(Color("Color_font_1"))
-                                                    .multilineTextAlignment(.leading)
-                                                
-                                                Spacer()
-                                            }
-                                            HStack{
-                                                Text(TextIN[index])
-                                                    .font(.system(size: 20,weight: .medium))
-                                                    .foregroundColor(Color("Color_font"))
-                                                    .multilineTextAlignment(.leading)
-                                                    .lineSpacing(5)
-                                                
-                                                Spacer()
-                                            }
-                                            Divider()
-                                                .frame(height: 2)
-                                        }
-                                    }
+                            
+                            Image("buttest")
+                                .resizable()
+                                .cornerRadius(30)
+                                .aspectRatio(contentMode: .fill)
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
                                     
-                                }.padding(.horizontal,15)
-                                Rectangle()
-                                    .frame(height: 120)
-                                    .opacity(0)
-                            }
+                                    
+                                    HStack {
+                                        Text("RWW")
+                                            .foregroundColor(Color("Color_font"))
+                                            .font(.system(size: 23 ,weight: .medium))
+                                        // Spacer()
+                                    }
+                                    HStack {
+                                        Text("FW")
+                                        
+                                            .font(.system(size: 20 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font"))
+                                            .opacity(0.5)
+                                        
+                                        Spacer()
+                                    }
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
                         }
-                    } label: {
+                    }
                         
+                        
+                        
+                        
+                        NavigationLink { InvestAgree_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            
+                            Image("investagr")
+                                .resizable()
+                                .cornerRadius(30)
+                            
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    Text("investagr1")
+                                        .font(.system(size: 23,weight: .medium))
+                                        .foregroundColor(Color("Color_font_2"))
+                                    
+                                    
+                                    
+                                    
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
+                        
+                        
+                        
+                        
+                        NavigationLink { Tax_Screen()}
+                    label: {
+                        ZStack{
+                            
+                            Image("imageforhome")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            HStack {
+                                VStack(alignment: .leading,spacing: 5){
+                                    HStack{
+                                        Text("tax")
+                                            .font(.system(size: 23 ,weight: .medium))
+                                            .foregroundColor(Color("Color_font_1"))
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    }
+                                }
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
+                            
+                        }
+                    }
+                        
+                        NavigationLink { Termin_Screen()}
+                    label: {
                         ZStack{
                             
                             Image("slovar")
@@ -404,29 +367,34 @@ struct Termis_Screen: View {
                                 VStack(alignment: .leading,spacing: 5){
                                     HStack{
                                         Text("slovartext")
-                                            .font(.system(size: 25 ,weight: .medium))
+                                            .font(.system(size: 23 ,weight: .medium))
                                             .foregroundColor(Color("Color_font_2"))
-                                            .multilineTextAlignment(.leading)
-                                        Spacer()
-                                             
-                                    }   .padding(.horizontal,20)
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    }
                                 }
-                            }
-                        }
-                        
-                 
+                                Spacer()
+                            }.multilineTextAlignment(.leading)
+                                .padding(.horizontal,20)
                             
-                        
+                        }
                     }
-                }.padding(.horizontal,15)
-               
-                Rectangle()
-                .foregroundColor(.clear)
-                .frame(height: 100)
-
+                        
+                        
+                        
+                    }.padding(.horizontal,15)
                     
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(height: 100)
+                    
+                    
+                }
+                
             }
-            
         }
     }
     

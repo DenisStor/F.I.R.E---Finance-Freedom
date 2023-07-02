@@ -58,7 +58,7 @@ struct Bar_Screen: View {
                                             impactHeavy.impactOccurred()
                                         }
                                     }
-                                Image(systemName:  "book" )
+                                Image(systemName:  "rectangle.stack" )
                                     .font(.system(size:PageBar == 2 ? 30 : 25))
                                     .foregroundColor(PageBar == 2 ? Color("Color_font_1") : Color("Color_bar"))
                                     .onTapGesture {

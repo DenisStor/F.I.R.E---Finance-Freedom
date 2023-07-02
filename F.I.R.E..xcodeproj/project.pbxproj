@@ -32,6 +32,9 @@
 		B7C862042A1A5BF80031BEE8 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C862032A1A5BF80031BEE8 /* Calculator.swift */; };
 		B7DECD952A22800400C0D5CA /* Test_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DECD942A22800400C0D5CA /* Test_Screen.swift */; };
 		B7FD86A22A3CB1E700959BAA /* Termis_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FD86A12A3CB1E700959BAA /* Termis_Screen.swift */; };
+		D265365A2A50747C003037E8 /* Loading_screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26536592A50747C003037E8 /* Loading_screen.swift */; };
+		D265365D2A5074BA003037E8 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D265365C2A5074BA003037E8 /* SDWebImageSwiftUI */; };
+		D265365F2A5074CC003037E8 /* Termin_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265365E2A5074CC003037E8 /* Termin_Screen.swift */; };
 		D297796C2A30C3440067F57D /* InvestAgree_Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,8 @@
 		B7D917FB2A4DA60B004425A8 /* F-I-R-E--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "F-I-R-E--Info.plist"; sourceTree = SOURCE_ROOT; };
 		B7DECD942A22800400C0D5CA /* Test_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_Screen.swift; sourceTree = "<group>"; };
 		B7FD86A12A3CB1E700959BAA /* Termis_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Termis_Screen.swift; sourceTree = "<group>"; };
+		D26536592A50747C003037E8 /* Loading_screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Loading_screen.swift; path = ../Loading_screen.swift; sourceTree = "<group>"; };
+		D265365E2A5074CC003037E8 /* Termin_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Termin_Screen.swift; sourceTree = "<group>"; };
 		D26B5C022A33E60E00CFD4C5 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D297796B2A30C3440067F57D /* InvestAgree_Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestAgree_Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D265365D2A5074BA003037E8 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B7D917FB2A4DA60B004425A8 /* F-I-R-E--Info.plist */,
+				D26536592A50747C003037E8 /* Loading_screen.swift */,
 				B72893542A1908EA003634D7 /* F_I_R_E_App.swift */,
 				B72893562A1908EA003634D7 /* ContentView.swift */,
 				B728936A2A190AFD003634D7 /* Screen */,
@@ -123,6 +130,7 @@
 				B7C862052A1A62490031BEE8 /* Calculatro_Views */,
 				B749C09F2A3E6765001C447A /* settings */,
 				B72893622A190A76003634D7 /* Bar_Screen.swift */,
+				D265365E2A5074CC003037E8 /* Termin_Screen.swift */,
 				B7FD86A12A3CB1E700959BAA /* Termis_Screen.swift */,
 				B72893682A190AF1003634D7 /* Start_Screen.swift */,
 				B793C61C2A3CE224003C4585 /* Medalki_Screen.swift */,
@@ -210,6 +218,9 @@
 			dependencies = (
 			);
 			name = F.I.R.E.;
+			packageProductDependencies = (
+				D265365C2A5074BA003037E8 /* SDWebImageSwiftUI */,
+			);
 			productName = F.I.R.E.;
 			productReference = B72893512A1908EA003634D7 /* F.I.R.E..app */;
 			productType = "com.apple.product-type.application";
@@ -241,6 +252,9 @@
 				uk,
 			);
 			mainGroup = B72893482A1908EA003634D7;
+			packageReferences = (
+				D265365B2A5074BA003037E8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = B72893522A1908EA003634D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,6 +290,7 @@
 				B749C0A12A3E6CE9001C447A /* settings_Screen.swift in Sources */,
 				B728936C2A1915D5003634D7 /* Home_Screen.swift in Sources */,
 				B793C61D2A3CE224003C4585 /* Medalki_Screen.swift in Sources */,
+				D265365F2A5074CC003037E8 /* Termin_Screen.swift in Sources */,
 				B74F39E92A2A401700284ADF /* bar_progress.swift in Sources */,
 				B72893692A190AF1003634D7 /* Start_Screen.swift in Sources */,
 				B72893552A1908EA003634D7 /* F_I_R_E_App.swift in Sources */,
@@ -288,6 +303,7 @@
 				B73989042A1A9C4D00D887CC /* SafeMoney_Screen.swift in Sources */,
 				B73989022A1A731400D887CC /* Procent_Screen.swift in Sources */,
 				B76A7E922A22BA37000ADC09 /* Tax_Screen.swift in Sources */,
+				D265365A2A50747C003037E8 /* Loading_screen.swift in Sources */,
 				B7A6BD8D2A4F1C2100311E83 /* NewsView.swift in Sources */,
 				B7AB587C2A19417C00ABF88D /* AboutFIRE_Screen.swift in Sources */,
 				D297796C2A30C3440067F57D /* InvestAgree_Screen.swift in Sources */,
@@ -519,6 +535,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D265365B2A5074BA003037E8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D265365C2A5074BA003037E8 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D265365B2A5074BA003037E8 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B72893492A1908EA003634D7 /* Project object */;
 }
